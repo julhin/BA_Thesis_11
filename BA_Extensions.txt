@@ -272,4 +272,7 @@ nein, system ist gleich groß, nur das scope ist kleiner !!! Scope hauptsächlic
 
  BA TODO nach niko:
 
- Method fertig machen
+ Method fertig machenm dei jetzt Procedure heißt !! -> DONE
+ GQM in Foundations da es des öfteren eingesetztz wird
+ was genau ist unterschied zwischen service adapt erund webservice ???????
+ Klarmachen dass es um den Datenschutz von benutzern geht !!!!!!
