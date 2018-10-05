@@ -1,0 +1,52 @@
+Table of Contents for my bachelor thesis
+
+0) german summary (1 Seite)
+1) Introduction
+
+1.1) Basics
+  1) Dataflow
+  2) AccessControl
+  3) PCM
+   1) Rollen and attached models
+
+2) Concept
+  1) Approach
+  2) State of the Art
+    1) UMLSec
+    2) SecureUML
+
+3) Case study: CoCoME
+  1) CoCoME Basics
+  2) Limitations
+  3) Scenario 1
+  4) Scenario 2
+
+4) Evaluation
+  1) Scenario 1
+  2) Scenario 2
+  3) genrated templates
+
+5) Future Work
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Table of contents
+
+0) german summary
+0.1) abstract
+
+1) Introduction
+
+2) Basics
+  2.1) Componentbased systems
+  2.2) data flow
+  2.3) Role based access control
+  2.4) PCM
+  2.5) critical Data
+
+3) case study: CoCoME
+  3.1) CoCoME Introduction
+  3.2) CoCoME overview
+      3.2.1) basic idea
+      3.2.2) architecture
+      3.2.3) evolutionary scenario : adding a pickupshop

@@ -1,0 +1,22 @@
+%% LaTeX2e class for student theses
+%% sections/content.tex
+%% 
+%% Karlsruhe Institute of Technology
+%% Institute for Program Structures and Data Organization
+%% Chair for Software Design and Quality (SDQ)
+%%
+%% Dr.-Ing. Erik Burger
+%% burger@kit.edu
+%%
+%% Version 1.3.2, 2017-08-01
+
+\chapter{Introduction}
+\label{ch:Introduction}
+\section{Motivation}
+As software systems become more interconnected and complex, it becomes increasingly difficult to ensure security in general and data protection in particular. First of all, the financial loss through possible leaks are immense \cite{privHarm}. But the betrayal of the customer might be the greater issue. All in all, the guarantee of privacy should be a primary design goal for all commercially used systems. Privacy, on the other hand, is a non-functional requirement and it is difficult to ensure compliance. For this reason, there are three exemplary lightweight approaches to allow a privacy analysis on an architectural level. First the approach of Seifermann\cite{Seifermann16}, uses data flows to check privacy on an architectural level. UMLsec\cite{UMLSec} uses an attacker model to verify security on an architectural level. At last SecureUML\cite{SecureUML}, that defines an extension to already existing models to allow the modeling of a secure state of a system. To evaluate these kind of approaches, case studies are commonly used. \\
+It is not simple to create suitable case studies for a data-based architectural security analysis . Often these systems are modeled exactly for one approach. We have used Seifermann's approach\cite{Seifermann16} to get an approximate idea of how data based privacy analyses work. Based on this, we developed a process for creating a case study that can be used to validate data-based data privacy analysis approaches in general. To verify the applicability of our methodology we applied it to the Community Component Modeling Example (CoCoME)\cite{CoCoMETechReport} and created a case study. Further, we provide evaluation criteria to measure the quality of the defined access rights. The access rights were defined during the process.Also we provided criteria to verify which information flow classes are covered by the created case study. On this basis, it is possible to decide how appropriate the created case study is for validating an data-based privacy analysis approach.
+
+\section{Contributions}
+First of all, we defined a method to create case studies that may be used to conduct and validate data-based privacy analyses on an architectural level. Also we defined an evaluation for the created case study. The evaluation allows to validate the quality of defined access rights and the covered information flow classes. We created a sample case study from CoCoME\cite{CoCoMETechReport} and evaluated it. In procedure of creating the case study from CoCoME, we discovered some vagueness in CoCoME. Some data types were not defined at all, for example. To fix this, we provided definitions for all vague elements of CoCoME that we used in our case study. The definitions mainly include roles, data and access rights. Further, we used a meta model extension for the Palladio Component Model (PCM)\cite{PCM} provided by Seifermann\cite{MMextension} to model data flows in the resulting case study. We have evaluated the state of PCM with the metamodel extension to see if it is possible to use it in the case study.
+\section{Outline of the thesis}
+The thesis is organized as follows. In \autoref{ch:basiscs}, we introduce the foundations. In \autoref{ch:method}, the method we are using to create a case study is presented. Next, we apply the introduced method over the course of two chapters. First, we analyze CoCoME (\autoref{ch:cocome}) and define the missing elements and add it to the system, secondly, we create the case study in \autoref{casestudysystem}. In \nameref{ch:eval} we evaluate the method, case study and the used modeling language and discuss the evaluation. In \autoref{ch:relWork}, we put the contributions in the context of related work. In the \autoref{ch:Conclusion}, we conclude the thesis and discuss the future work.

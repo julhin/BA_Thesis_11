@@ -1,0 +1,24 @@
+TODO: (ORA funktioniert nur mit Interwebs, blödes ORA)
+
+-PCM Codebase forken !!!! WICHTIG !!!!
+
+- Stephan fragen, ob ich neben den SEFFs noch mehr modellieren muss
+
+- Ist der PickupShop eigenständig oer wird er implizit als Erweiterung des WebFrontend gesehen
+
+- SEFF nachschauen
+
+- meine Seffs mit denen aus dem models Projekt vergleichen !!!! Wichtig !!!!!
+    ->  nicht möglich, da ich noch nicht implemtierte Sachen benutze !!!!
+
+
+
+
+Sachen die mir auffallen:
+
+org.cocome.cloud.webservice.enterprise.reporting hat keine SEFFs
+org.cocome.cloud.webservice.enterprise hat keine SEFFs
+
+ganz schön viele haben keine Seffs
+
+https://sdqweb.ipd.kit.edu/eclipse/palladio/.

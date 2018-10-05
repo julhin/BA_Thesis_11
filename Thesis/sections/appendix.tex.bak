@@ -1,0 +1,35 @@
+%% LaTeX2e class for student theses
+%% sections/apendix.tex
+%% 
+%% Karlsruhe Institute of Technology
+%% Institute for Program Structures and Data Organization
+%% Chair for Software Design and Quality (SDQ)
+%%
+%% Dr.-Ing. Erik Burger
+%% burger@kit.edu
+%%
+%% Version 1.3.2, 2017-08-01
+
+
+\iflanguage{english}
+{\chapter{Appendix}}    % english style
+{\chapter{Anhang}}      % german style
+\label{chap:appendix}
+
+
+%% -------------------
+%% | Example content |
+%% -------------------
+\section{First Appendix Section}
+\label{sec:appendix:FirstSection}
+Github URL for PCM models for the defined scenarios.
+\begin{itemize}
+\item \textbf{stock manager requests the report for a customer}\\
+Gihub URL: \url{https://github.com/julhin/DataProcessing/tree/dataprocessing_withoutAssemble}
+\item \textbf{Support employee requests information for an order}\\
+Github URL: \url{https://github.com/julhin/ModelsUC14}
+\end{itemize}
+		
+%% ---------------------
+%% | / Example content |
+%% ---------------------

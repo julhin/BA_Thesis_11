@@ -1,0 +1,246 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{assetValue}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=55592bcb12548389fee56d4a82644f2b}{%
+           family={Breier},
+           family_i={B\bibinitperiod},
+           given={Jakub},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{55592bcb12548389fee56d4a82644f2b}
+      \strng{fullhash}{55592bcb12548389fee56d4a82644f2b}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Internet Serv. Inf. Secur.}
+      \field{number}{3}
+      \field{title}{Asset Valuation Method for Dependent Entities}
+      \field{volume}{4}
+      \field{year}{2014}
+      \field{pages}{72\bibrangedash 81}
+      \range{pages}{10}
+      \verb{url}
+      \verb http://isyou.info/jisis/vol4/no3/jisis-2014-vol4-no3-05.pdf
+      \endverb
+    \endentry
+    \entry{CaseStudyAndAccessrigths}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=007e2bcfa51a300030e77b9191333456}{%
+           family={Evered},
+           family_i={E\bibinitperiod},
+           given={Mark},
+           given_i={M\bibinitperiod}}}%
+        {{uniquename=0,hash=796ffc98f74cbe6260b6bbe6039e03dd}{%
+           family={B\"{o}geholz},
+           family_i={B\bibinitperiod},
+           given={Serge},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{20c06e4d0b29c6fafe5372aefa0aacaa}
+      \strng{fullhash}{20c06e4d0b29c6fafe5372aefa0aacaa}
+      \field{sortinit}{E}
+      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{ACSW} Frontiers 2004, 2004 {ACSW} Workshops - the Australasian Information Security Workshop (AISW2004), the Australasian Workshop on Data Mining and Web Intelligence (DMWI2004), and the Australasian Workshop on Software Internationalisation {(AWSI2004)} . Dunedin, New Zealand, January 2004}
+      \field{title}{A Case Study in Access Control Requirements for a Health Information System}
+      \field{year}{2004}
+      \field{pages}{53\bibrangedash 61}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://crpit.com/confpapers/CRPITV32Evered.pdf
+      \endverb
+    \endentry
+    \entry{UMLSec}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cc77b32c90f29ef1b08b6603fc345e45}{%
+           family={J\"{u}rjens},
+           family_i={J\bibinitperiod},
+           given={Jan},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc77b32c90f29ef1b08b6603fc345e45}
+      \strng{fullhash}{cc77b32c90f29ef1b08b6603fc345e45}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{UML} 2002 - The Unified Modeling Language, 5th International Conference, Dresden, Germany, September 30 - October 4, 2002, Proceedings}
+      \field{title}{UMLsec: Extending {UML} for Secure Systems Development}
+      \field{year}{2002}
+      \field{pages}{412\bibrangedash 425}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/3-540-45800-X_32
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/3-540-45800-X_32
+      \endverb
+    \endentry
+    \entry{Travelsystem}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=953b3cf9f1c4041be2bb129fda95a84b}{%
+           family={Katkalov},
+           family_i={K\bibinitperiod},
+           given={Kuzman},
+           given_i={K\bibinitperiod}}}%
+        {{uniquename=0,hash=c9eece0878daccae852a5f57ac234e51}{%
+           family={Stenzel},
+           family_i={S\bibinitperiod},
+           given={Kurt},
+           given_i={K\bibinitperiod}}}%
+        {{uniquename=0,hash=140d1d68c344f043ef8caafe9c05f9eb}{%
+           family={Borek},
+           family_i={B\bibinitperiod},
+           given={Marian},
+           given_i={M\bibinitperiod}}}%
+        {{uniquename=0,hash=a5db4673a90960ddd0a7ae122ff8315a}{%
+           family={Reif},
+           family_i={R\bibinitperiod},
+           given={Wolfgang},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{10a611d65839de3f72e3105ef48159eb}
+      \strng{fullhash}{8946300ae088cc4858ff67bff0cffca3}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Social Computing, SocialCom 2013, SocialCom/PASSAT/BigData/EconCom/BioMedCom 2013, Washington, DC, USA, 8-14 September, 2013}
+      \field{title}{Model-Driven Development of Information Flow-Secure Systems with IFlow}
+      \field{year}{2013}
+      \field{pages}{51\bibrangedash 56}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SocialCom.2013.14
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/SocialCom.2013.14
+      \endverb
+    \endentry
+    \entry{Noninfluence}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cf7a9a00a5adf6abae4b98b44f7c3b64}{%
+           prefix={von},
+           prefix_i={v\bibinitperiod},
+           family={Oheimb},
+           family_i={O\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf7a9a00a5adf6abae4b98b44f7c3b64}
+      \strng{fullhash}{cf7a9a00a5adf6abae4b98b44f7c3b64}
+      \field{sortinit}{O}
+      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Security - {ESORICS} 2004, 9th European Symposium on Research Computer Security, Sophia Antipolis, France, September 13-15, 2004, Proceedings}
+      \field{title}{Information Flow Control Revisited: Noninfluence = Noninterference + Nonleakage}
+      \field{year}{2004}
+      \field{pages}{225\bibrangedash 243}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/978-3-540-30108-0\_14
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-540-30108-0%5C_14
+      \endverb
+    \endentry
+    \entry{CSCS}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           family_i={R\bibinitperiod},
+           given={Per},
+           given_i={P\bibinitperiod}}}%
+        {{uniquename=0,hash=4d1752e9463ffc1043c0939de72a9097}{%
+           family={H\"{o}st},
+           family_i={H\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{fullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{number}{2}
+      \field{title}{Guidelines for conducting and reporting case study research in software engineering}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{pages}{131\bibrangedash 164}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1007/s10664-008-9102-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10664-008-9102-8
+      \endverb
+    \endentry
+    \entry{Seifermann16}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a7426da4596e8cf1d6f0cbae4ed293f9}{%
+           family={Seifermann},
+           family_i={S\bibinitperiod},
+           given={Stephan},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7426da4596e8cf1d6f0cbae4ed293f9}
+      \strng{fullhash}{a7426da4596e8cf1d6f0cbae4ed293f9}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{13th Working {IEEE/IFIP} Conference on Software Architecture, {WICSA} 2016, Venice, Italy, April 5-8, 2016}
+      \field{title}{Architectural Data Flow Analysis}
+      \field{year}{2016}
+      \field{pages}{270\bibrangedash 271}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/WICSA.2016.49
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/WICSA.2016.49
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

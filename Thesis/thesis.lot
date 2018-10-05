@@ -1,0 +1,53 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces An overview over all the requirements for the creation of a case study.}}{12}{table.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces A simple example to showcase an OpM.}}{13}{table.4.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 5.1}{\ignorespaces Overview for the requirements for a case study}}{21}{table.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces The ACM of CoCoME. The legend for the ACM is: 1 is the access right \textit {FullAccess}, 2 is the access right \textit {AccessToUsedData}, 3 is the access right \textit {AccessToOwnedData}, 4 is the access right \textit {Default}. The abbreviation \textit {p\& s data} stands for product\& sales related data.}}{25}{table.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Overview of the different types of data processing in the components. For each component, it is defined how which data class can be processed. We omitted in the top row the specifier data due to space constraints.}}{27}{table.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces The updated Version of the ACM for CoCoME after the shortcomings are fixed. The legend for the ACM is: 1 is the access right \textit {FullAccess}, 2 is the access right \textit {AccessToUsedData}, 3 is the access right \textit {AccessToOwnedData}, 4 is the access right \textit {NoAccess}. The bold entries the updated access rights.}}{30}{table.5.4}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces An ACM showing the access rights for the case study system.}}{33}{table.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}}{33}{table.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Access right for the role \textit {Support employee}. 1 refers to the access right \textit {FullAccess}, 2 refers to the access right \textit {AccessToUsedData}, 3 refers to the access right \textit {AccessToOwnedData}, 4 refers to the access right \textit {Default}.}}{37}{table.6.3}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 7.1}{\ignorespaces Overview of the evaluation result for the access rights.}}{49}{table.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 7.2}{\ignorespaces Overview over the evaluation result for the data flows.}}{49}{table.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 7.3}{\ignorespaces Overview over the results for the evaluation of PCM.}}{50}{table.7.3}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }

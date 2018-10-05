@@ -1,0 +1,275 @@
+Ba Extensions
+
+Privacy ist durch access rights definiert !!!!!
+++++++++30.09++++++++++++++++++++++
+Outline BA
+
+Intro
+foundations
+related work
+Procedure
+Anylsis of CoCoME (Endet mit der evaluation der access rights)
+Case study system (Endet mit der Eval der information flow classes)
+Evaluation (Eval von method und PCM + Zusammenfasen der bisherigen evaluationen + Threas to Validity)
+conclusion
+Future work.
+
++++++++++++++++++++++++++++++++++++
+AR eval vor Case study system
+Intro + Foundations
+Argumentatitonsstruktur
+  privacy wichtig -> compliance arch level -> mehrere Ansätze -> DBPA verwendet case studies
+  -> Methode vorgestellt um case studies zu erstellen die von DBPA Ansätzn verwendet werden können
+  ->
+Allgemein die Foundations nochmal anschauen, besonders den PCM Teil !!
+
+Related work vor Process ziehen
+
+Method
+Operations nochmal genau erklären, ein oder mehrere Daten/-typen als input ein oder mehrere als output
+R1-R4 in der Doku, R5, R6 können dann generiert werden, falls sie noch nicht vorhanden sind -> falls vorhanden
+Szenarien
+  - angelent an die use cases aber nicht zwingend, allgemein typische interaktionen mit dem System oder relaistische Datenverarbeitung
+  die im system stattfindet
+  - Aus den definierten szenarien und der OpM werden dann die datenflüsse generiert die mit der ACM die case study bilden die dann evaluiert
+  wird
+
+Analysis of CoCoME
+CoCoME overview !!
+genauere Beschreibung der Dtane und der ACM/OpM -> wie bin ich auf was gekommen
+Auf den Excerpt für den PickupShop reduzieren
+Case study system
+DFD genuer beschreiben wie der datenfluss stattfindet
+
+Evaluation
+Thtreats to validity !!! (Construct, internal, conclusion, external) !!!
+Trennen von case study eval und meta eval
+nochmal durchgehen !!!
+Related work + future work
+Nochmal suchen !!!
+++++
+Frage ob der Prozess abgeschlossen ist mit der case study diskutieren ?
+Ja und Nein
+
+Ja, scope/aim what should be achieved with the case Study
+Nein, da noch nicht alles abgedeckt ist bzw die checklisten/metriken der Evalaution noch nicht erfüllt sind
++++++++++++++++++++++++++++++
+
+
+
+
+
+Zeit plan
+
+28.9 + 29.9 Vortrag fertig machen
+30.9 Arbeitsplan detilliert ausarbeiten, wleche fixes wo
+1.9 Method (2)
+2.9 Intro und foundations (1)
+3.9 Case study systeme (3)
+4.9 vortrag üben, future work, conclusion (4)
+5.9 Application to CoCoME (5)
+6.9 Eval (6)
+9.9 Document freeze
+10.9 + 11.9 Formatierung und Sprache
+
+VortragFixes
+== 2 == done
+
+* Motivationslinie: Erst architekturbasierte Analysen motivieren,
+dann motivieren, dass Ansätze dafür schwer zu evaluieren sind (nicht durch Beweis),
+sondern durch Case Studies. Die zu erstellen ist schwer. done
+
+* Referenz DBPA und andere Ansätze done
+
+* Tool -> Deutsch
+TODO !!!!!!!!!
+* Ziel ist Privacy, die mittels Access Rights definiert ist
+TODO !!!!!
+
+
+== 3 == done
+
+* Foundations wegwerfen
+
+* Zu allgemein gehalten um nützlich zu sein
+
+(* Änderung der Daten im Beispiel nicht beschrieben)
+
+
+
+== 4 == done
+
+* Sehr schneller Einstieg in Prozess
+
+* ggf. hier Related Work, damit du deinen Fokus noch klarer machen kannst
+
+* Meilenstein ist nicht visuell dargestellt und nicht erklärt,
+warum er besonders ist done
+
+* Preconditions für Ausführung könnten hier noch dazu:
+Du brauchst ein System, das du erweitern kannst -> tonspur
+
+* Pfeil zurück, falls Qualität nicht in Ordnung? done
+
+* Evaluierung Access Rights müsste vor dem Meilenstein erfolgen done
+
+* Prozessschritte mit Pn beschriften und in Überschrift erwähnen done
+
+
+
+== 5 == done da
+
+* Englisch "bypassed" -> umgangen/tonspur
+
+* Hinschreiben, dass es CoCoME ist done
+
+* Markierung nicht deutlich zu erkennen: Schraffieren done, Schraffierung nachschauen wie die möglich ist
+
+
+
+== 6 == done
+
+* Hinschreiben, für das die Requirement sind: Requirements for privacy-considering case study done
+
+* Begründung für CBSE-Forderung. Allgemein Begründung für alle Requirements -> tonspur
+ R1: da man einfach teile betrachten kann| Intefaces definieren den möglichen Zugriff -> einfach uns strikt (?)
+R2: idee von dem system bekommen
+R3:  Daten im system für die access rigths und die Datenverarbeitung
+R4: Benutzer rollen, da benötigt für access rights
+R5: da access rights based privacy anylysiert wird
+R6: für die resultierendne datenflüsse in der case study
+
+== 7 == done
+
+* Requirement 1 nicht weglassen done
+
+* Tabelle aufteilen done
+
+* Layout: Rn und volle Namen als Überschrift, Informationen dann darunter done
+
+* Wie wurde festgelegt, was sicherheitsrelevant ist? Prozess/Vorgehen dahinter ? Gleiches für Rollen. ->tonspur
+
+* Es ist nicht klar, was du jetzt gemacht hast und was direkt aus der Doku entstanden ist. Ggf. Symbole dafür einführen.
+
+* P&S data Schreibweise
+
+* Erklärung Unterscheidung Transmission und I/O -> tonspur
+
+* Abkürzungen ungünstig done
+
+* Zeichen für selbst ausgedacht, docu , und generiert
+
+
+== 8 == done
+
+* Legende für Zahlen done
+
+* wie ist Unterschied zwischen eigenen Store Daten und fremden Store-Daten hier erfasst und wie passt es ins Schema?
+-> besser erklären, warum der StockManager nicht vollen Zugriff auf die P&S daten hat
+
+* Allgemein: Referenzen erwecken den Eindruck, dass komplette Folie von Autor stammt.
+ Entsprechend in Text einbauen oder mit Stichwort versehen.
+
+
+
+== 9 == done
+
+* UC13 sagt niemandem etwas -> done
+
+* Komplette DB nur wegen Einschrnäkungen in Modellierungssprache, konzeptionell anders
+-> datenfluss ändern done
+
+== 10 == Application to CoCoME, eval für method in Method done
+
+* Komplette Folie erklären
+
+* Teil 2 (Case Study) sollte auch bei Application (-> nicht procedure ? => ic dnele procedure) gezeigt werden
+
+* Teil 1 und 3 zusammen beschreiben, Teil 2 danach
+
+
+
+== 11 == doneDatenschutz
+
+* Layout nicht gut. Oben steht im leeren Raum. Was wird hier gerade evaluiert?
+
+* Vorher war die Rede von 5 Rollen, aber hier war nur eine verfügbar. Vorher klar machen, dass Szenario nur für eine Rolle definiert wurde.
+-> Tonspur
+
+* Wo sind die restlichen Kriterien? Zu positive Darstellung auf der Folie. Einheitlich bei beiden Tabellen. Alle Kriterien auflisten. -> Done
+
+* Erklärung verschiedene Sicherheitskontexte unklar -> tonspur
+
+
+
+== 12 == done
+
+* Es wäre besser die Erklärung nach den Kategorien zu bringen, nicht erst die Kategorien und dann die Probleme.
+
+* "information classes" ?
+
+* represented/covered
+
+
+
+== 13 == done
+
+* Case Studies werden auch in SE eingesetzt (siehe Paper, das ich geschickt hatte)
+
+* Kategorien: Dinge, die bei der Konstruktion von Case Studies unterstützen und Dinge, die Anforderungen liefern (Privacy-Ansätze)
+
+* Ist deren System tatsächlich kleiner als das, was du betrachtet hast?
+nein, system ist gleich groß, nur das scope ist kleiner !!! Scope hauptsächlich auf den Access rights.
+
+
+== 14 == done
+
+* Andere Systeme? Was ist mit restlichem CoCoME. Das hast du ja nicht abgegrast done
+
+* Concise and clear für Case Study? Woher kommt das? Quelle (Publikation) nennen done
+
+* Einteilung nach Information flow und Access rights. done
+
+
+
+== 15 == done
+
+* PIBA-Folie erläutern -> tonspur
+
+* Benefit: Vergleichbarkeit verschiedener Privacy-Ansätze check
+
+* DBPA einmal ausschreiben check
+
+
+
+== Allgemein ==
+
+* Ziel ist nicht richtig klar, was ist das Artefakt?
+
+* Titelleiste muss Titel der Arbeit und deinen Namen enthalten, Rest ist unwichtig done
+
+* Problem im Szenario? -> tonspur
+
+* Zeit 19:42
+
+* Gliederung ändern: Introduction, Related Work, Process, Application to CoCoME, Evaluation (2 ist in Application enthalten), Conclusion
+
+
+
+== Backup == done
+
+* Assets finden
+
+
+ Vortrag
+ ++  Verständlichkeit bewertet, wie gut die Zugriffsrechte von anderen verstanden werden können .Folie 13 ++
+ Comprehension -> Comprehensibility
+
+
+
+
+
+
+ BA TODO nach niko:
+
+ Method fertig machen

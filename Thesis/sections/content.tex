@@ -1,0 +1,1100 @@
+  %% LaTeX2e class for student theses
+%% sections/content.tex
+%% 
+%% Karlsruhe Institute of Technology
+%% Institute for Program Structures and Data Organization
+%% Chair for Software Design and Quality (SDQ)
+%%
+%% Dr.-Ing. Erik Burger
+%% burger@kit.edu
+%%
+%% Version 1.3.2, 2017-08-01
+
+%TODO da es noch häufiger vorkommen wird, Position der Bilder fixen, aber jetzt mal ehrlich
+\chapter{Foundations}
+\label{ch:basiscs}
+In this chapter, we will introduce the foundations that we are using in my thesis. For each, we will give a short definition and an explanatory example.
+\section{Terminology}
+\subsection{security relevant data}
+The term \textit{security relevant data} as used in this thesis, describes data which should be protected by the system. Security relevant data describes the data that causes harm for user or the system. As an example the security relevant data for a software system may consist of personal related informations, like name, address, credit card, etc. But the security relevant data is from system to system different. The term security relevant data is used in this thesis to describe data that is worth protecting in a system. 
+\subsection{Data flow}
+\begin{figure}[!htb]
+\includegraphics[scale=1]{logos/Simple_Dataflow.pdf}
+\caption{Simple data flow diagram for linking an order of different products to a mail address}
+\label{fig:simpleDataflow}
+\end{figure}
+The term data flow is used in different fields of computer science. To name a few examples, data flow is used in software architecture, hardware architecture, networking, etc. We mainly use data flow in our architectural models \\
+Data flow describes the way of data through a system. One can imagine data flows like an activity diagram. Each node in the diagram is either a process or an external entity. Processes are operations which processes the data. External entities are users or other systems which request or submit data. The edges between the nodes containing the type of the data passed. Also different data stores (most likely databases) are part of the diagram. These data stores holds different information, like the credentials, and are accessed via a process.\\
+\autoref{fig:simpleDataflow} shows the simple process of ordering products and linking them to a mail address. The customer is already authenticated and inserts the order informations. Then the system queries all the necessary informations for the products from the database and adds them to a list. After that, the mail address of the customer is queried and packed in an object together with the product list. This object is then send to the warehouse and the customer is presented a success message. Later, the warehouse will collect the products and pack them in a delivery, but this is not a part of the diagram. For the sake of simplicity, eventual errors aren't modeled. 
+
+\section{Palladio Component Model}
+\label{sec:PCMIntro}
+%The Palladio Component Model (PCM) is an ADL that is used to model component based systems. The 
+\subsection{Component based systems}
+%TODO component based systems erklären 
+Component based system are systems that consist out of components. Each component in a system is usually designed to fulfill one functionality, like connecting to a database, handling the user input, etc. It is possible that a component consists of multiply component. In such a composite component, each component also handles a single task. This allows to split larger tasks into smaller ones and assign each of them to a single component. This allows to reuse components that are designed to handle general tasks, like formatting data to a String.The definition of a component is that a component provides or requires an interface. The provided or required interfaces are used for communication between the components. Each of the interfaces is clearly defined. The components are chained together to a system using the interfaces. The main strength of the component based systems are the modularity by design. As simple example is shown in \autoref{CBS_simple}. In the model a simple oline shop is shown. As shown, there is a component for managing the warehouse, a component for handling the business logic e.g. selling products and a component for the user interface. In this component based system the  user interface is used by both customers and employees. Usually each of the components consists of different components for th different tasks. 
+%TODO bildchen malen
+\begin{figure}
+\includegraphics[scale=.8]{logos/SimpleCBS.pdf}
+\caption{A simple component based system}
+\label{CBS_simple}
+\end{figure}
+\section{Data Centric PCM}
+\subsection{Concept}
+The Palladio Component Model (PCM) is an architecture description language (ADL) , that allows more than only modeling a system. The strength of PCM is compute performance predictions for the modeled system \cite{PCM}. 
+%TODO hie rnoch genauer formulieren
+A PCM model consists of four different models, each of them encapsulate their specific design knowledge and the models build on each other. After the system is complete, an architect may compute different predictions how the system will perform when it is deployed. The predictions are for cost, reliability, performance and maintainability. In the following, we will explain the individual models and their encapsulated design knowledge in detail. \\
+First of all, for each model a role inside the PCM is assigned, which will be explained in detail later. Each of this roles conserve their design knowledge in a specific model which is used by the next role. The hierarchy of the different roles , from top to bottom, is:
+\begin{itemize}
+\item \textbf{Component Developer}\\
+The component developer specifies and implements the component. Furthermore, s/he has to provide additional information, that will be used for the predictions, PCM is able to compute. The resulting model is called \textit{repository model} and is used by the system architect.
+\item \textbf{Software Architect}\\
+The system architect builds the system using components. S/He connects the different components provided by component developers to a fully functional system. The resulting model is called \textit{system model} and is used by the system deployer.
+\item \textbf{System Deployer}\\
+The system deployer decides  how the system is distributed between the available resources. 
+This role creates two resulting models. First, the \textit{resource model}, in which the resources characteristics, for example transfer rate. Second, the \textit{allocation model}, in which the allocation of the different resources to the different parts of the system is conserved. These models are used by the domain expert.
+\item \textbf{Domain Expert}\\
+Domain experts creates the \textit{usage model} for the system. This describes user behavior. Also they specify the user workload. This workloads can be open or closed. In the closed case, a finite number of user interact with the system, in the open case the domain expert specifies the user arrival per time slice.\\
+As the domain expert is the last role in the chain, the models aren't used by another role. With the addition of the usage model the creation of the system model is complete.
+\end{itemize}
+
+After all the different models are created, a prediction may be computed and without a line of code is written and the architects can see if there are flaws in the architecture. The PCM models are more than just a system model. A lot of domain knowledge is encapsulated in the resulting models. The result are more a simulation for the upcoming system than a system model.
+\subsection{Meta model extension for data centric PCM}
+\label{MMext}
+% Meta model erklären
+In this section, we are going to explain the meta model extension to the PCM provided by Seifermann \cite{MMextension}. The extension is lightweight. It aims to embed data flows in an already existing PCM model.\\ 
+In the current state of PCM, it is not possible to model data flows. Therefore Seifermann created a meta model extension. The meta model extension is called data processing. \\
+The meta models extends the Service Effect Specification (SEFF) for a component in the repository model. SEFFs are similar to UML activity diagrams. Like Activity diagrams, SEFFs specify the observable behavior for a system, in the case of PCM SEFFs specify the observable behavior for a component. SEFFS are used to model different types of actions. These actions holds various information about the systems performance and are chained together to create a sequence of events to model the (observable) behavior of a specific component.\\ The meta model extension is specially for these SEFFs. The main goal for this meta model extension was to model data processing.  For each action in a SEFF an operation may be defined that specifies the data processing for this action. The operations model different types of manipulation of data. All SEFFs chained together in model already create a model similar to an activity diagram. For each activity a operation that processes data is specified. With this operations chained together it is possible to create a data flow for the model. 
+
+
+%TODO related work hier hinein
+\chapter{Related work}
+\newpage
+\chapter{Procedure}
+\label{ch:method}
+% was werde ich in diesem chapter vorstellen ?
+%Fertig
+
+%TODO wir stützen uns auf privacy analysen auf access rights
+In this chapter we are going to present a procedure to create a case study that can be used to evaluate a data-based privacy analysis. The privacy is defined by access rights. We will describe the procedure step by step and the places where the case study will be evaluated. During the process, the case study is evaluated based on two aspects,the quality of the access rights and the covered information flow classes. Overall, the resulting case study consists of an extended system model. The extensions include the access rights and the added data flows. \\
+First, we give a brief overview over the procedure shown in \autoref{overview_cs_rep}. After that each step will be explained in detail. \\ 
+The procedure consists of seven consecutive steps. First the current state of the system is reviewed, secondly the necessary elements for the requirements are extracted. Thereafter the fulfillment of the requirements is reviewed and the required system extensions are defined in the next step. Afterwards, the access rights are evaluated and the results are stored in a milestone. Then scenarios for the system are defined. In the final step, the information flow classes covered by the scenarios are evaluated. Finally, it is decided whether the case study is sufficient for the intended use. 
+% layout des chapters.
+\section{General procedure for the creation of a viable case study}
+\label{cs_overview}
+\begin{figure}
+\includegraphics[scale=.7]{logos/Procedure.pdf} 
+\caption{General overview over the procedure for creating a viable case study}
+\label{overview_cs_rep}
+\end{figure}
+Here we describe the procedure for creating a case study. An overview is shown in \autoref{overview_cs_rep}. We cover the steps P1-P7 that are necessary to create a case study. We further explain places when the evaluations are conducted.  \\
+% erster Schritt
+The first step is to decide whether it is worthwhile to prepare a case study based on the system under investigation. This is decided by reviewing the current documentation. The goal is to   
+%TODO das es mehr gibt al eine erste Idee oder ein Konzept (?) -> eventuell schon Systemmodelle, use cases, sequence diagrams etc
+% zweiter Schritt + dritter schritt
+In a second step, six requirements for creating a case study are introduced (see . The first requirement is that the system is modeled as a component based system or components can be derived from the current documentation of the system. The second requirements is the definition of use cases. The third requirement is to identify the data in the system and identify which of the data is security relevant. The fourth requirement is the definition of user roles in the examined system. The fifth requirement is definition of access rights between (security relevant) data and the user roles. The access rights can either be generated from the previous requirements or extracted from the documentation. The sixth and last requirement is the identification or definition of the different types of data processing. Furthermore, for each component it is either defined or identified which data is processed as in the individual component.\\
+%dritter Schritt
+In the third step, the current fulfillment of requirements are analyzed and collected in a summary. Usually there are shortcomings. If there are none, the next step can be skipped.\\  
+% vierter Schritt
+In the fourth system extensions for the missing parts of the requirements are defined. \\
+%
+%TODO wa spassiert wenn die access rights nicht gut sind ? -> zurück in den vorherign Schritt
+In the next step, the evaluation for the the access rights is conducted.\\
+After the evaluation is done and the results are sufficient, the milestone is reached. All necessary parts of the system are present, so that a case study can be created. If the results are not sufficient the procedure iterates back to the fourth step. %Iterationback to P4
+% fünfter  Schritt\\
+% sechster Schritt
+In the sixth step, scenarios are defined, from which data flows are derived. Finally, the data flows and the access rights are added to the system model.\\
+In the seventh step the covered information flow classes are evaluated. Then it is decided if enough information flow classes are covered for the planned use of the case study. If not, the procedure iterates back to the sixth step. Otherwise, the procedure is concluded and the case study is created. The case study finally consists of the system model extended by data flows and the access rights.
+%TODO ab ie rmorgne weitermachen !!!!!
+\section{P1: Investigate the current state of the system}
+%Fertig
+Before the process is started, a first glance at the present system is taken. This first glance is taken to decide whether it is worthwhile to start the process. It is checked if the system is sufficiently defined in \textit{width} and \textit{depth}. \textit{Width} checks how many different system models are already defined. \textit{Depth} checks how detailed each model is defined. The outcome is system dependent. For example, it could be important how much work one is willing to do before starting the process. The idea behind this step is to decide beforehand if the system is in a state where it is more than just a bare concept and the case study can be constructed with reasonable effort.
+%TODO requirements fertig 
+\section{P2: Extract necessary system parts for the requirements}
+\label{cs_req}
+The second step in the procedure is to extract the corresponding elements or definitions from the system for each requirement. Altogether, six requirements are necessary for the creation of a viable case study.
+\paragraph{R1: Modeled as component based system}
+%fertig
+The first requirement is that the system is modeled as a component based system or it is possible to derive a component based system from the current state. The allows to use all benefits that a component based systems has and make it much easier to construct a case study. Firstly, in component based system there are well defined interfaces. These interfaces defining points in the architecture where data is transmitted. This ease up the creation of data flows, because one can directly identify where the data is processed. Secondly, component based systems are easy to extend. Therefore, it is not that complex to add missing elements to the model. Thirdly, the component based structure enables modularity. So it is relatively easy to just took an excerpt and take a close look on just this excerpt. All in all combined, component based systems excel in their modularity and their clear defined interfaces, that ease up the creation of a case study.
+\paragraph{R2: Definition of use cases}
+%Fertig
+The second requirement is the definition of use cases in the system or it is possible to derive use cases from, for example, the documentation. This allows to get a good idea how the different users are going to interact with the system. Further, the use cases give a basic idea of the general interaction with the system.
+
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Requirements} \\ 
+\hline 
+R1 & component based system \\ 
+\hline 
+R2 & Definition of use cases \\ 
+\hline 
+R3 & Security relevant data \\ 
+\hline 
+R4 & Definition of user roles \\ 
+\hline 
+R5 & Definition of access rights \\ 
+\hline 
+R6 & Definition of the type of data processing in the components \\
+\hline
+\end{tabular} 
+\label{req_over_sec}
+\caption{An overview over all the requirements for the creation of a case study.}
+\end{table}
+\paragraph{R3: Existence of security relevant data}
+%fertig
+The third requirement for a viable case study is the existence of security relevant data in the system. If there is no critical data in the system, the entire case study that is created to verify the protection of security relevant data is pointless. The definition of security-relevant data is highly dependent on the system under investigation. This means for each system and each context there are other data that is considered security relevant, therefore a lot of domain knowledge is required to identify the data. Breier \cite{assetValue} introduced a basic approach to valuate assets. The basic idea of the approach is to value the various assets in terms of their priority within the system. 
+
+\paragraph{R4: Existence of different user roles}
+The fourth requirement for the case study is the definition of user roles, in the following briefly roles, for the system. Roles are used to model different types of user for a system. Each role maps to one type of user. Roles are used to model the different users that are interacting with the system. Different roles uses on different data inside the system. For example the security relevant data mentioned in R3. The roles depend heavily on the system being studied. Each system defines different roles. For each system under investigation the use cases (R2) are a good source of informations. One can use business processes \cite{rolesBusiness} to identify roles in a system.
+\paragraph{R5: Definition of access rights}
+%fertig
+The fifth requirement is the definition of access rights. For the definition of access rights, we use the fine-grained, higher level form proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the familiar used read/write semantics. For this step, we assume the system is in a correct state. 
+ The access rights are define on the basis of the current state of the system. As already mentioned, each component has a clearly defined interface. These interfaces are used for communication with other components. This structure is used to define a finer grained form of access control. For each component and each role, the access rights for the data types in the component are defined individually. The access rights are stored in a matrix, the so called access control matrix (ACM). In \autoref{ACMexplained} an minimal ACM is shown to get a better idea of the concept. The matrix shows that the role \textit{Employee} in the component \textit{Usermanager} has full access to username. Also it is shown, that the same role in the same component has no access to the password. It may happen that data is the combination of different data types. In this case, the more restrictive access rights applies. To clarify this, if the employee tries to access a (\textit{username, password}) tuple, s/he is granted no access to the tuple.
+
+\begin{figure}
+\begin{tabular}{|c|c|}
+\hline 
+ACM & Usermanager \\ 
+\hline 
+Employee &  
+\begin{tabular}{c}
+username: fullAccess \\
+password: noAccess
+\end{tabular}
+\\ 
+\hline 
+\end{tabular} 
+\caption{Reduced ACM to the show the concept.}
+\label{ACMexplained}
+\end{figure}
+
+\paragraph{R6: Definition of type of data processing in the components}
+In the sixth requirement the type of data processing for each data type in each component is defined. As the the requirement R5, the necessary elements for this requirement may be derived from previous ones, namely R1, R2 and R3. In R1 ensures that the system is modeled as a component-based system. With R2 (definition of use cases) and R3 (security relevant data) it is possible to identify how which data is processed. The different processing types are described through different operations. The various operations describe how and which data is processed in a specific component. Each operation has one more inputs and produces one or more outputs. The  operations needed are highly system-dependent. Operations could describe the transmission of data, processing of user inputs or operations used in the relational algebra. The identified operations are stored in an operations matrix (OpM). In this matrix, for each component it is stored with which operations data can be processed.
+In \autoref{opm_expl} an excerpt of an OpM is shown. As one can see, in the component \textit{User interface} it is only possible to transmit the login data to other components.
+
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline 
+• & Login data \\ 
+\hline 
+User interface & transmit \\ 
+\hline 
+\end{tabular} 
+\caption{A simple example to showcase an OpM.}
+\label{opm_expl}
+\end{table}
+
+\section{P3: Check fulfillment of requirements}
+\label{cs_check}
+%fertig
+In this step the current state of requirements is reviewed. The best case is, that all requirements are fulfilled. If this is the case, one can skip the next step. If it is not the case, create a summary of all shortcomings for the fulfillment of requirements in the system. After the first two steps of the procedure are done the usual case is that some of the requirements are not fulfilled. It may even happen that for some requirements are no elements present in the system. The review of the shortcomings is important to outline which parts of the system are vague. Vague in the context of the thesis means that some elements (e.g roles, access rights) are not well defined. To give an example, it may happen that roles are just mentioned but a clear definition of the role is missing. This summary of shortcomings may also show parts where the model is not well defined. This may lead to an improvement of the model in the next step. After the summary is complete, the procedure moves to the next step. The summary is done due to two reasons. Firstly, to get a comprehensive overview of the current state of the system and secondly, to enable a division of tasks. 
+
+\section{P4: Fix all shortcomings by defining system extensions}
+\label{cs_cocome_ext}
+%fertig
+In the previous step, a summary of the shortcomings in the system was created. In this summary, all system components that stand in the way of fulfilling the requirements are stored. In this step, the system extensions are defined to fulfill all requirements. When defining system extensions, the first step is to derive the needed extensions from the documentation.  In the case, the documentation isn't clear or it is not possible to derive extensions for the shortcomings, the option left is to define the system extensions to the best of your knowledge. This is sometimes necessary, but there are some dangers involved. It may happen that the resulting case study is less realistic and therefore provides less satisfying results, when used in a later analysis.
+\section{P5: Evaluation of the access rights}
+In this part of the procedure, the access rights are evaluated. The evaluation follows a GQM-plan, shown in \autoref{GQM_AR}.
+  %TODO GQM plan
+The access rights are evaluated based on seven criteria presented by Evered and Bögeholz \cite{CaseStudyAndAccessrigths}. We divided the seven criteria in three categories: \textit{specification}, \textit{comprehensibility} and \textit{implementation}. \textit{Specification} how the access rights are defined. \textit{Comprehensibility} evaluates how well access rights can be understood by others. \textit{Implementation} evaluates the way the access rights are embedded in the code. It may not be possible for all systems to evaluate all seven criteria. The seven criteria are:
+\begin{itemize}
+\item Concise : Access rights should be precise and simple.
+\item Clear: At first glance one can see what the access rights state.
+\item Aspect-oriented: The access rights may be used in different contexts
+\item Need-to-know: each role only should have the absolute necessary informations
+\item Positive: Each right to data has to be given specifically to each role.
+\item Fundamental: The access rights are realized inside the code 
+\item Efficient: The overhead caused by the checks of the access rights is reasonable.
+\end{itemize}
+The evaluation is done in a checklist manner. For each criterion it is checked whether the system fulfills the criterion or not.\\
+After the evaluation of the access rights is done, the results are analyzed. If sufficient criteria for the purpose of the case study are fulfilled, the current state of the system is considered correct. If the results are unsatisfying, the procedure moves back to the previous step P4. Otherwise the milestone is reached. The system is sufficiently defined so that is possible to add data flows and create a case study.
+%TODO evaluation done -> deckel alle vorherigen schritte und gehe zum nächsten nasonstne gehe eine schritt zurück und evaluiere neu
+%TODO sagen dass alle bisherigen definitionen zusamengesammelt werdne und der aktuelle Stand in eine EMilenstein gespeichert wird
+\begin{figure}
+\includegraphics[scale=.6]{logos/GQM_accessrights.pdf}
+\caption{Overview of the evaluation of the access rights.}
+\label{GQM_AR}
+\end{figure}
+\section{M1: Store the results in a milestone}
+After the evaluation results are sufficient, the current state of the system is stored in a milestone. This includes all definitions made for the each requirement.
+\begin{itemize}
+\item R1: The system model.
+\item R2: Use case diagram, definition for each use case.
+\item R3: The data types and the examination, which data is security relevant.
+\item R4: The different user roles.
+\item R5: The created ACM.
+\item R6: The created OpM.
+\end{itemize}
+\section{P6: Definition of scenarios}
+After the milestone is reached, scenarios for the case study are defined. Scenarios are a concrete characteristic of a use case or a concrete characteristic of an interaction with the system. The scenarios are defined taking into account requirements R2, R3, R4 and R6. R5 is omitted in order to reduce the bias of the system architects that not only scenarios are created that are consistent with the access rights. The main part of this step is to transform the created scenarios into data flows that are later added to the model. We will provide a procedure how to add data flows to the model. This is done step-by-step. The defined scenarios serve as the basis for the transformation. To realize the transformation three successive steps are needed. \\
+% Komponenten des scenarios
+In the first step, the components that are needed to realize the specific scenario are identified. Then these components are collected and added to a reduced model.
+% Interfaces zwischen den Komponenten und deren datentypen
+In the second step, the reduced model is analyzed. The aim of the analysis is to map data and the respective type of processing to components. Then the data flows can be created and added to the reduced model. 
+In an last optional step, the reduced model is added back to the originally model. This can be done,so all data flows are available in the original model. \\
+This procedure is repeated for each scenario. 
+After that, the access rights are also added to the component model. The structure of the access control matrix is used. For each component, the respective access rights of a role to the data types of a component are added to the respective components. After this is done, the definition of the scenarios is complete and the added data flows can be evaluated.
+\section{P7:Evaluation of the covered information flow classes}
+The last step, is the evaluation of the defined scenarios for the system. The scenarios are evaluated on the basis of the information flow classes covered, which may differ according to the objective or use of the case study.  The evaluation follows a GQM-plan. The plan is shown in \autoref{GQM_infoflow}.
+We propose to use Non-influence \cite{Noninfluence} and the included information flow classes to evaluate the scenarios. Non-influence consist of the two part: non-interference and non-leakage. Non-interference describes, that in a program flow inputs of high users do not influence the output for low users. Non-leakage describes that it is not possible to observe if a specific action in the system has taken place.\\
+non-interference and non-leakage may be described by four information flow classes:
+\begin{itemize}
+\item No illegal information flow:
+\item No information flow from high to low:
+\item No direct information flow:
+\item No observable information flow:
+\end{itemize}  %
+After the evaluation for the information flow classes is done, the procedure moves to the next step.
+\begin{figure}
+\includegraphics[scale=0.6]{logos/GQM_infloFlow.pdf}
+\caption{Overview over the GQM plan for the evaluation of the added data flows.}
+\label{GQM_infoflow}
+\end{figure}
+\section{Conclusion of the procedure}
+After the second evaluation is conducted, it is necessary to decide if the coverage of the information flow classes are sufficient for the goal of the cases study. If so, the procedure is finalized and the case study is created. Otherwise, the procedure moves back to the P6.\\ The created case study
+%\section{Evaluation of the case study}
+%\label{cs_evaluation}
+%In his step the evaluation the created case study is presented. The evaluation aims to verify if the created case study is usable for data-based privacy analysis. The evaluation follows a GQM plan \cite{GQM_Intro}. The idea of a GQM plan is to split the evaluation into three parts. First, a goal for the evaluation is defined. In the second step, questions are defined. The answer to this question indicates if the defined goal is reached. In the last step, metrics are defined. These metrics allows to answer the previously asked question.\\
+%The evaluation validates the created case study. It is evaluated whether the case study is suitable for a data-based privacy analysis. The evaluation is embedded in an GQM plan. The plan is shown in \autoref{fig:GQMPlan}\\
+%
+%\begin{figure}
+%\includegraphics[scale=.8, origin=c ]{logos/GQMPlanGen.pdf}
+%\caption{The GQM plan for the evaluation.}
+%\label{fig:GQMPlan}
+%\end{figure}
+%
+%The goal is to verify if the created case study is usable for a data-based privacy analysis. To verify this, we defined two questions.
+%\begin{itemize}
+%\item Are the access rights well defined ?
+%\item Are different information flow classes are covered ?
+%\end{itemize}
+%As a metric for the first question we use a checklist. Evered and Bögeholz \cite{CaseStudyAndAccessrigths} defined seven criteria for good access rights. Not all surveyed systems allows to check the seven criteria: concise, clear, fundamental, need-to-know, efficient, aspect-oriented and positive. Therefore it is case dependent which criteria are applicable. For each selected criterion, the system then checks whether the access rights meet these criteria. After that, based on the fulfilled criteria, it can than be decided if access rights are defined well.\\
+%The metric for the second question is also a checklist. To verify the question different classes of (illegal) information flows are defined. Possible information flows classes are that no information flows from higher security levels to lower ones, no direct information flow between different users, etc. Then it is checked for each information flow class whether the case study created expresses it. After that, based on the included information flows, it than can be decided, if the case study covers the desired number of different information flow classes.
+
+\chapter{Analysis of CoCoME}
+\label{ch:cocome}
+%TODO stockmanagewr 1 Store
+To check the applicability of the method presented in \autoref{ch:method}, we apply it to CoCoME. In this chapter we perform all steps up until the milestone.  First of all, we give a brief overview over the CoCoME system, afterwards the necessary elements for the requirements are identified in CoCoME. After that, we analyze the fulfillment of the requirements seen in \autoref{req_over_cocome}. Afterwards, we define system extensions to eliminate all shortcomings. Finally, we evaluate the created access rights. The results are stored in a milestone.
+\section{CoCoME overview}
+\label{cocome_overview}
+CoCoME is short for Common Component Modeling Example. For the sake of simplicity, a relatable scenario was chosen as a base for the system when it first was introduced in 2006. \\
+The basic setting for CoCoME is to abstract the products management and the sell process of a big supermarket group like Lidl or Aldi. The goal of CoCoME is to provide an open source environment, in which different paradigms for component based software development can be tested. CoCoME tries to be as close as possible to the reality to provide a realistic environment to test new modeling approaches. % Das alle ansätze auf dem gleichen realistischen systme getestet werdne kann und nicht perfekt auf dne Anstz zugeschnitte systeme gebaut werden
+%erklären warum die allgmeine Struktur so ist wie sie ist bzgl des settings
+In CoCoME there are various enterprises, each of them models an individual supermarket group. Each enterprise may has various stores, with each of them selling products . Each of these stores has various cash desk, where products are sold. Furthermore, CoCoME also handles the stock of each different stores. When a product is sold at a cash desk or a delivery from a supplier is accepted, the current stock is automatically updated. CoCoME %wirklich das beste Wort hier ?
+provides three core functionalities:
+\begin{itemize}
+\item Operating of a register cash system
+\item Processing of inventory and order process of goods
+\item Providing of an web fronted for the services
+\end{itemize} 
+CoCoME has been in development ever since. Over the years different variants emerged. Each variant was introduced to either react to new model pattern or solve problems that arose in the development or the deployment process. To keep this short, we will explain in detail only the hybrid cloud-based variant, as this is the variant we are using to apply the procedure. \\
+%TODO hybrid cloud based variant
+The hybrid cloud based variant emerged from an earlier version. We use the description of the system provided in \cite{CoCoMETechReport}. The hybrid cloud based variant was created by adding four evolutionary scenarios to CoCoME. These for evolutionary scenarios are : Platform Migration, adding a Pickup shop, database migration and addition of a service adapter. First, we will give a quick overview over the general architecture, then we will describe each of the evolutionary scenarios briefly.
+%general architecture
+The general architecture for the hybrid cloud based variant are shown in \autoref{fig:genArch}. As shown, the architecture is divided in three different layers plus one layer to abstract the database.\\
+The first layer is called the user interface. This layer includes the PickupShop and the Webfrontend components. The user interface is the point where the different users interact with CoCoME. Their request are transmitted to the underlying components and the results are displayed in this layer. \\ The second layer are the Webservices. This component transmit the requests from the user interface to the business logic. Further the webservices are used  to add dynamically functionality to CoCoME.\\ The third layer is called Tradingssystem. This component is the heart and soul of CoCoME, because all the business logic is located here. All the different request from the users are handled here.\\ At last, the Service adapter is the extra layer to abstract the database. \\
+%TODO Tradingssystem in 2 teile mit data und app teilen um zuzeigen Pickupshop abeitet nur auf den daten und braucht den klassischen teil nicht mehr
+\begin{figure}
+\includegraphics[scale=.7]{logos/ArchPickupShop.pdf}
+\caption{The figure shows a simplified overview over the hybrid cloud based variant}
+\label{fig:genArch}
+\end{figure}
+%evolutionary scenarios
+%platform migration
+\subsection{Platform migration}
+The first evolutionary scenario is platform migration. This is done to reduce costs. The CoCoME system is moved to a cloud environment for easier scalability. If, for example, the pickup shop is heavily used, additional resources can easily be purchased.\\ 
+%TODO mehr schreiben zu scalability
+\subsection{Addition of a Pickup shop}
+\label{subsec:PS}
+The next evolutionary scenario is the addition of a Pickup shop to CoCoME. The Pickup shop offers a second sales channel for CoCoME to concurrent with web shops. Customer may order products online and pick them up in their chosen store. Therefore an account in the CoCoME systme is required. With the Pickup shop, CoCoME changes from a closed to an open system. Technically, the pickup shop is realized through direct access to the database.
+
+%
+% This was done for the enterprises to stay competitive in times with web shops. All integrated enterprises concurrents with big web shops that ships their products.The Pickup shop allows the user to place their order online and pick them up at their chosen store. To use the pickup shop customers create an account. The payment is either via credit card in advance or directly in the Pickup shop. As shown in \autoref{fig:genArch}, the PickupShop accesses directly the inventory management to update the stock when products. The pickup shop offers a second sales channel in CoCoME.\\ 
+\subsection{Database migration}
+%TODO hie rnochal rein !!!!!
+In this evolutionary scenario the database is migrated to a cloud service. Due to the fact, that the Pickup shop and the stores both operate on the inventory, a higher amount of database request is expected. In order to avoid possible shortcomings in the performance, the database was moved to a cloud environment. This evolutionary scenario solves the scalability issue that arose with two sales channels. With the migration of the database a new issue arise. It may happen, for example, that data from enterprises that are located in the European Union (EU) are stored outside the EU, which does not comply with the current law.
+\subsection{Service adapter}
+Since CoCoME was always in development, CoCoME currently consists of a relatively large code base. Since this does not have to be understood by every single developer to work with CoCoME, a service adapter has been added. The service adapter allows CoCoME to dynamically add functionality.
+\paragraph{Reasons for CoCoME to apply our procedure on}
+%TODO Gründe warum CoCoME sich eignet nicht eignet, kann auch banal sein 
+% relativieren
+%TODO mal sehen ob da süberhaupt bleibt
+
+The decision to use CoCoME as the system for applying the method was based on many reasons. The first is that CoCoME has already been modeled as a component-based system. Another reason is that CoCoME is described in detail in \cite{CoCoMETechReport} and the CoCoME book \cite{CoCoMEBook}. %Hie rnoch Gründe hinzufügen
+On the other hand, CoCoME is more of a minimal solution to what is actually planned to achieve with CoCoME. One can say, CoCoME is rather a proof of concept than a fully functional system.
+%TODO  Nur der PickupShop betrachtet
+\section{Application of the method}
+\label{apllMethod}
+After an short overview over CoCoME in the previous section, we are starting with the procedure for the creation of a case study. Various publications for creating case studies other fields than computer science indicate that different sources of information should be used to create a case study \cite{CaseStudySoftware}. 
+We used as our main source of information the CoCoME tech report \cite{CoCoMETechReport} and the CoCoMe book \cite{CoCoMEBook}, were the system is described in detail. Further we used the recent code of the implementation.
+%github referenzieren
+. If there are differences between documentation and code, the definitions from the documentation applies. We favor the documentation over the because due to the fact that CoCoME is still in development. The documentation represents a stable version of CoCoME. In the implementation it may possible that at the moment new features are tested that are later quashed.\\  We do not apply the procedure to the entire CoCoME system, but only to part of it that relates to the PickupShop \autoref{PS}.
+\subsection{Investigation of the current state of CoCoME}
+The aim of this step is to decide whether it is worth using the system for a case study. We check how complete the documentation is. This means to look for e.g. if the system models are defined or easy to generate. All in all, the step is to the decide if the systems documentation is far enough developed.\\
+In the case of CoCoME, a tech report and an implementation is available. Therefore, we decided the sate of CoCoME is developed enough so that is worthwhile to apply the procedure and create a case study.
+\subsection{Identify relevant parts for the requirements}
+\label{reqCoCoME}
+In the next step, we identify the necessary parts of CoCoME for the six requirements listed in \autoref{req_over_cocome}. In the following for each requirement we identify and extract the corresponding parts of the system. 
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Requirements} \\ 
+\hline 
+R1 & Component based system \\ 
+\hline 
+R2 & Use cases \\ 
+\hline 
+R3 & Security relevant data \\ 
+\hline 
+R4 & User roles \\ 
+\hline 
+R5 & Access rights \\ 
+\hline 
+R6 & Type of data processing in components \\ 
+\hline 
+\end{tabular} 
+\caption{Overview for the requirements for a case study}
+\label{req_over_cocome}
+\end{table}
+
+\subsubsection{R1: Component based system}
+This requirement is met because a component-based system model is defined in the CoCoME tech report.The requirement was defined to take advantage of all the strengths of a component-based system model. 
+\subsubsection{R2: Existence of use cases}
+\label{req_uc}
+The CoCoME documentation defines thirteen use cases, so this requirement is also met. The use cases are important to get an idea for using the system but also to understand how different users interact with the system. 
+\subsubsection{R3: Security relevant data}
+\label{req_data}
+Since the amount of data is relatively large in the investigated excerpt of CoCoME, we have grouped the data into different equivalence classes. The data type in each class has the same security level. Composite data types are assigned to all included classes, but inherit the security levels from most restrictive class.
+\begin{itemize}
+\item customer data\\ This class describes all data types that are provided by the customer role. This includes names, addresses and credit card details, to name the most important ones. Since it is personal data of an entity , we classified it as \textbf{security relevant data}.
+\item product and sales data \\ All the data that is related to the products and the sales process. Examples for data types are price of a product, quantity of a product, date of shipping etc.  Data in this class may become security relevant if it enables traceability to security relevant data. For this fact product and sales related data is not defined strictly security relevant. Nonetheless, access to this data can cause damage to an enterprise. 
+\item account data \\ Account related data refers to the introduced accounts with he addition of the Pickup shop. It is needed that each role is registered with an account in the system. The account data type holds the \textit{username} and the credentials for an account. We classified this data as \textbf{security relevant}, because access to account data allows to log in as the role.
+\item System data \\ In this class mainly summarizes the created query for access to the underlying data. Access to the issued queries allows to cause damage in a lot of different ways. It is possible to, for example, alter the database, read user informations, etc. Therefore this data is classified \textbf{security relevant}.
+\end{itemize}
+\subsubsection{R4: roles}
+\label{req_roles}
+CoCoME defines five different roles in the tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager} and the \textit{Stockmanager}. There is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key informations we were looking are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
+\begin{itemize}
+\item  After analyzing the implementation, the \textit{Customer} role is the role of all the customers of an enterprise, be they private customers or business customers. The role buys products, either in the stores or in the Pickup shop. The data provided by the customer role are the customer related data, It requires product related data to, for example, decide which products to buy.
+\item For the \textit{Cashier} role, we rely on the defined use cases in CoCoME tech report. As shown, the role takes over the sale of products and therefore requires product \& sales data. The role provides product and sales-related data like the data that is generated when orders are placed.
+\item For the \textit{StoreManager} role, we relied on the use cases. The \textit{StoreManager} handles the tasks of a single store. The role provides and requires product\& sales related data.
+\item After an analysis of the use cases, we are not sure what the concrete tasks are for the \textit{EnterpriseManager} and the data requires requires or provide. There are only two uses cases that involves the \textit{EnterpriseManager}, therefore a clear definition is not possible. Unfortunately, the code does not contain any further information. From the name it can be derived that the role is in charge of a  whole enterprise. 
+\item After analyzing the use cases, it is clear that the \textit{StockManger} handles the stock of a single store. Therefore the role requires product\&sales related data and provides the same type in the system.
+\end{itemize}
+Since the hybrid cloud based variant is examined by us, all roles provide account data, because each role needs an account in CoCoME. 
+\subsubsection{R5: access rights}
+For the access rights, we used the finer grained, high level from proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the well known read/write semantics for access control. We tried not to rely on a read/write semantic. Therefore, as described in \nameref{ch:method}, We have defined access to the various data classes within a component for each component and for each role. We defined four different privilege level for the access to data. In the following enumeration, we used the identified elements from the previous requirements R2 (\autoref{req_uc}), R3 (\autoref{req_data}) and R4 (\autoref{req_roles}) to define fitting access rights for CoCoME. The access to data decreases with the ascending numbers.
+\begin{enumerate}
+\item \textbf{FullAccess}\\ This access rights defines that the associated role has access to all data types for the respective class in the component
+\item \textbf{AccessToUsedData}\\ This access right defines that the role has accessed to it used data types for the respective class in the component. Used data in this context means the data types that are required by the role to perform its defined tasks.
+\item \textbf{AccessToOwnedData}\\ This access right defines that the associated role has access to its , for example, own account data or customer data. This access rights ensures that roles may access data that is provided by it but not needed for their tasks.
+\item \textbf{Default} This access right forbids the complete access to all data in a class for this role and component.
+\end{enumerate}
+Another part of this requirement is the identification of the present data types in each component. After analyzing the code and the CoCoME tech report, we identified data for each class of data in each component. Also we identified that no role except the customer may access the PickupShop component. In \autoref{CoCoME_simplified} a simplified overview over the architecture of CoCoME is shown to better understand the complex matrix shown in \autoref{ACMConcept}. We omitted the webservice because this component only delegates the data to other components and therefore does not influence the result.
+\begin{figure}
+\includegraphics[scale=.8]{logos/Overview_CoCoME.pdf}
+\caption{The figure shows an simplified overview of the CoCoME. The Webservice component is omitted.}
+\label{CoCoME_simplified}
+\end{figure}
+%TODO access rights matrix für CoCoME aufstellen
+For the fact that the ACM in \autoref{ACMConcept} is rather large and complex, we point out the most important points. In the CoCoME tech report it is stated that only the customer may access the \textit{PickupShop}  component. From the role definition we identified the EnterpriseManager handles an whole enterprise, therefore the role is allowed to access all components. For this reasons, no access rights defined for other roles are defined for the PickupShop. Further, the StockManager has no access to the Tradingsystem:cashdeskline component, because it is not needed to fulfill his tasks. The role handles the stock and has therefore no tasks that involve the actual selling of products. Since no role can access CoCoME without the components Webfrontned or PickupShop, the access rights are from this components are inherited. This means that the access rights are the same in all underlying components. The idea behind this is that it is also important which role which data has entered into the system. No role has access to system related data. The StockManager has access to customer related data due to the use case 13 (UC13). 
+
+\begin{landscape}
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ACM & Webfrontend & PickupShop & TS:cashdeskline & TS:inventory \\ 
+\hline 
+customer 
+%WF
+& \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+\begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular} 
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+& 
+%Ts:inv
+\begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+ \\ 
+\hline 
+cashier 
+& 
+%WF
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular} 
+ \\ 
+\hline 
+StockManager 
+&
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+
+  \\ 
+\hline 
+EnterpriseManager & 
+ 
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+ \\ 
+\hline 
+StoreManager & 
+ 
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+ \\ 
+\hline 
+\end{tabular} 
+\caption{The ACM of CoCoME. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{Default}. The abbreviation \textit{p\& s data} stands for product\& sales related data.}
+\end{table}
+\label{ACMConcept}
+\end{landscape}
+%To clarify the 'allowed*' entries in the ACM. This entries signalizes that a role has partly access to the respective data type.
+%%für alle rollen eine Übersicht die gneau definiert welche teile der class
+\subsubsection{R6: Type of data processing in components}
+\label{relevantpartsCoCoME}
+In the last step of the procedure for each component the type of data processing is defined. we identified after an analysis of the code and the CoCoME tech report three different types of data processing.
+\begin{itemize}
+\item relational algebra \\ This type describes the operations of relational algebra on a database or similar construct. For example, if all elements of a list that have a particular ID are selected from this list
+\item transmission of data \\ This type describes the transmission of data between components.
+\item changing of data classes \\ This type includes the most operations. It describes each operation that changes the data class. Good examples are the creation of lists or the merging two or more data classes into one.
+\item I/O related processing \\  This type describes input and/or output of data by the user. 
+\end{itemize}
+Then we have assigned one or more types for each component and each role. We omitted the Webservice component because it only delegates the data to other components and has no effect on the result. The result is shown in \autoref{typeMatrix}. In the matrix for each data class it is defined how which this data class can be processed in the components.To give simple example, in the \textit{Webfrontend} the customer data can only be transmitted to other components. In the \textit{Tradingsystem:inventory:application}, the same data may also be changed to another data class. As shown, we divided the Trandingsystem:inventory component. This was done because the sub-components have different type of processing. 
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Types of  & customer & account & sales and product & system  \\ 
+data processing  & & & & \\
+\hline 
+Webfrontend &  transmit & transmit & I/O-processing & non-existent \\ 
+& & &  transmit & \\
+\hline 
+PickupShop &  transmit & transmit & I/O-processing, & non-existent \\ 
+& & & transmit & \\
+\hline 
+Tradingsystem:& change & change & change & non-existent \\ 
+inventory:app & transmit& transmit & & \\
+\hline 
+Tradingsystem: & relational algebra& relational algebra& relational algebra& change \\
+inventory:data & operations & operations & operations & \\ 
+\hline
+Tradingssystem: & change & non-existent & change & non-existent \\
+cashdeskline & transmit &  & transmit & \\
+\hline 
+\end{tabular} 
+\caption{Overview of the different types of data processing in the components. For each component, it is defined how which data class can be processed. We omitted in the top row the specifier data due to space constraints.}
+\label{typeMatrix}
+\end{table}
+
+
+\subsection{Analysis of the current state for CoCoME}
+With all necessary parts defined and identified, we analyze the current state of CoCoME.\\
+In the following, for each requirement the current state is briefly explained.
+\begin{itemize}
+%Alles da, sollte kein Problem sein
+\item R1: Modeled as a component based system \\ In the CoCoME tech report a detailed system model is defined. So this requirement is fully accomplished.
+\item R2: Existence of use cases \\ Uses cases are defined in the CoCoME documentation. So this requirement is also fulfilled.
+\item R3: Existence of security relevant data \\ In CoCoME is security relevant data present. But for some mentioned data a definition is missing.
+\item R4: definition of user roles \\ The role of the EnterpriseManager is rather vaguely defined. It is possible to set the role in context with others, but the tasks in CoCoME and the data needed/provided are not crystal clear.  There is room for interpretation as to what exact data and exact tasks this role has. This room for interpretation can also be found to a lesser extent in the roles of StoreManager and StockManager. 
+\item R5: Definition of access rights \\ As we have defined the access rights to the current state of the system, this requirement is fulfilled.  If changes or additions are made to R2-R4, the access rights must be checked and adjusted if necessary.
+\item R6: definition of the different types of data processing \\ From our current point of view, we fulfilled this requirement. We have covered every possible type of data processing that we could think of.
+\end{itemize}
+\section{Summary of shortcoming in CoCoME}
+\label{shortcommingsCoCoME}
+\subsection{Use cases}
+In the use cases, there are shortcomings. While analyzing them, we found that only the newly added ones by the addition of the pickup shop processing security relevant data. Therefore the pool of possible use cases that later may be used to create scenarios from, are limited. 
+\subsection{Security relevant data}
+% Report nicht richtig definiert, Verbindung zwischen custome rund seinen Produkten, 
+As previously said, definitions for data are missing. We have found that there is currently no definition of how to connect a customer to their purchased products. This missing data is used in the UC13 described in the CoCoME tech report \cite{CoCoMETechReport}. Another case of missing data definitions, happens in the same use case. A report data type is mentioned but never clear defined. So this data type is also missing.
+\subsection{Definition of roles}
+There are some vagueness in the roles, which possibly affects the ACM. Some provided/required data is not clear defined. But the tasks of the roles are clearly defined. 
+\subsection{Definition of access rights}
+If any changes are done in the previous requirements R2-R4, the state of the access rights has to be reviewed an possibly updated to the new version. In the current state the requirement is fulfilled.
+\subsection{Data processing in security relevant components}
+In this aspect, there are no shortcomings. All necessary types of operations are defined. 
+\section{Add system extensions}
+In the next step, we extend CoCoME so that all requirements are fulfilled. In the previous step all shortcomings are listed. We gibe a short overview how we extended the system to meet all the requirements. As previously said, the use cases are already well defined, so there is nothing to fix.
+\begin{itemize}
+\item \textbf{security relevant data}\\
+We added new data to the customer related data. The customer object now holds a list with all ordered products. With this addition, the shortcoming, that there was no connection between customer and the ordered products, is fixed.  We also defined the \textit{report} data type. This data type is used to display the purchased products of a customer to the stock manager. We defined it as a human readable list and it is placed in product\& sales data class.
+\item \textbf{roles}\\
+In the roles there is some vagueness. Especially in the \textit{StockManager} role. The setting in which the \textit{StockManager} operates is clear, but the inherited responsibility are not. So we defined, that the \textit{StockManager} only handles the stock. This includes, managing the warehouse, commissioning of goods, etc. Another resposibility we added , is to predict the future needs of products. To perform any of this tasks, no customer related data is needed. Further, we defined the role of the \textit{EnterpriseManager}. We defined it as the highest role of the respective company and therefore has access to all data within the company. 
+\end{itemize}
+After all the definitions for data and roles is added, whe review the ACM and the types of data processing. \\
+An updated version of the ACM is shown in \autoref{ACM_updated}. As defined the EnterpriseManager got access to all data except the system related data and the Stockmanager has lost access to customer related data. All changes to the matrix are displayed bold. \\
+For the types of data processing for the single components nothing changed.\\
+With all the extensions added to the system, the mile stone is reached. In CoCoME all elements are available for creating a case study for databased privacy analysis. 
+\begin{landscape}
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ACM & Webfrontend & PickupShop & TS:cashdeskline & TS:inventory \\ 
+\hline 
+customer 
+%WF
+& \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+\begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular} 
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+& 
+%Ts:inv
+\begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+ \\ 
+\hline 
+cashier 
+& 
+%WF
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 3\\
+account data & 3\\
+p\&s data & 2\\
+system data & 4\\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 3\\
+account data & 3\\
+p\&s data & 2\\
+system data & 4\\
+\end{tabular} 
+ \\ 
+\hline 
+StockManager 
+&
+%WF
+ \begin{tabular}{c|c}
+\textbf{customer data} & \textbf{4}\\
+account data & 3\\
+p\&s data & 2\\
+system data & 4\\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4\\
+account data & 4\\
+p\&s data & 4\\
+system data & 4\\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+\textbf{customer data} & \textbf{4} \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+
+  \\ 
+\hline 
+EnterpriseManager & 
+ 
+%WF
+ \begin{tabular}{c|c}
+\textbf{customer data} & \textbf{1} \\
+\textbf{account data} & \textbf{1} \\
+\textbf{p\&s data} & \textbf{1} \\
+\textbf{system data} & \textbf{4} \\
+\end{tabular}
+&
+%PS
+\begin{tabular}{c|c}
+\textbf{customer data} & \textbf{1} \\
+\textbf{account data} & \textbf{1} \\
+\textbf{p\&s data} & \textbf{1} \\
+\textbf{system data} & \textbf{4} \\
+\end{tabular}
+&
+%TS:cdl
+\begin{tabular}{c|c}
+\textbf{customer data} & \textbf{1} \\
+\textbf{account data} & \textbf{1} \\
+\textbf{p\&s data} & \textbf{1} \\
+\textbf{system data} & \textbf{4} \\
+\end{tabular}
+&
+%TS:inv
+\begin{tabular}{c|c}
+\textbf{customer data} & \textbf{1} \\
+\textbf{account data} & \textbf{1} \\
+\textbf{p\&s data} & \textbf{1} \\
+\textbf{system data} & \textbf{4} \\
+\end{tabular}
+ \\ 
+\hline 
+StoreManager & 
+ 
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+ \\ 
+\hline 
+\end{tabular} 
+\caption{The updated Version of the ACM for CoCoME after the shortcomings are fixed. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{NoAccess}. The bold entries  the updated access rights.}
+\label{ACM_updated}
+\end{table}
+\end{landscape}
+\chapter{Case study system}
+\label{ch:casestudysystem}
+%Was wir dheir geschehen und kurz einleiten
+After we reached the milestone in the last chapter, we are going to create the case study in this one. Therefore we have to define scenarios. Scenarios describe a course of actions in the system. Also the roles and data involved are specified. Scenarios are created to describe the flow of data and the course of actions in a comprehensive way.  For presented case study system, we defined two scenarios in CoCoME. All defined scenarios are later converted into data flows by using the matrices in \autoref{ACM_updated} and \autoref{typeMatrix}. The data flows then added to the system model, which concludes the creation of the case study. After that, the created case study can be evaluated. The basic structure for each scenario is: First, the scenario is briefly described. Then we identify the concrete data types for the scenario. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. The data flow can later be used for a data-based privacy analysis.
+\section{Scenario: stock manager requests the report for a customer}
+\label{descripScn_casestudy_scn1} 
+\subsection{Description}
+%\subsubsection{data used in the scenario}
+The scenario is derived from UC13. This use case is described in the CoCoME tech report \cite{CoCoMETechReport}. In this scenario, the stock manager requests an report for the purchased goods of a customer. To identify the customer among all customers, the stock manager has access to the ID of the customer.The role enters the ID in the system, then the request is processed by CoCoME. At the end, the stock manager is presented with a full report. This report contains all purchases of the customer.\\
+%The usage model for the scenario is shown in \autoref{usage_UC13}. 
+The usage model is relatively simple and will only be described here.\\ The StockManager accesses the system with a customers id and in the end is presented with a report of all purchased products for this customer.
+
+\begin{figure}
+\label{usage_UC13}
+\caption{The usage model for the Scenario: StockManager requests a report for a customer.}
+\end{figure}
+\subsection{CoCoME excerpt} 
+Before we move on to the access rights and data types, we show the excerpt of CoCoME in which this scenario takes place. This is just an excerpt of the whole system. The scenario only uses four components, the Tradingssystem:inventory:application, the Webfrontend, the Tradingsystem:inventory:data and the Webservice. 
+
+\begin{figure}
+\includegraphics[scale=0.8]{logos/ExcerptUC13.pdf}
+\caption{Excerpt of CoCoME in which the described scenarios takes place.}
+\label{scn_excerpt}
+\end{figure}
+
+\subsection{Data types and access rights} 
+\label{accesscontrol_casestudy}
+
+Previously, the data was divided into four classes.In the following enumeration the data classes and the concrete data for each class is shown.\\
+\begin{itemize}
+\item account related data \\ No data from this class is used in this scenario
+\item customer related data\\ The ID from the customer is part of the scenario
+\item product \& sales related data\\ In the scenario two concrete types are used. First, the IOrderEntries type.This type is a list of all purchased products for an order. This type is a collection of all products in an order. The second type is the report, which collects all IOrderEntries in one list and transform it to a human readable document. 
+\item system data \\ The system data are the queries used to request the IOrderEntries from the database.
+\end{itemize}
+
+
+Next, we extract the access rights and the types of data processing from the corresponding matrices. The access rights matrix for this scenario is shown in \autoref{accessrightsCSS}. We omitted the Webservice component for the fact  that it only transmits the data in this scenario.\\
+The matrix for the data processing is shown in \autoref{DataPRoc_UC13}.
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ACM & Webfrontend & TS:inv:application & TS:inv:data \\
+\hline
+stockmanager &
+\begin{tabular}{c} 
+customer data : 4 \\
+account data : 3 \\
+p\& s data : 2 \\
+system data: 4\\
+\end{tabular}
+&
+\begin{tabular}{c} 
+account : 3 \\
+customer : 4 \\
+product \& sales : 2 \\
+\end{tabular}
+&
+\begin{tabular}{c} 
+account : 3 \\\autoref{scn_excerpt})
+customer : 4 \\
+product \& sales : 2 \\
+\end{tabular}
+\\
+\hline
+\end{tabular}
+\caption{An ACM showing the access rights for the case study system.}
+\label{accessrightsCSS}
+\end{table}
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Types of data & customer data & p\&s data & system data \\
+ processing & & & \\
+\hline 
+Webfrontend & transmit & I/O operations, transmit & non-existent \\ 
+\hline 
+TS:inv:application & alter, transmit & alter & non-existent \\ 
+\hline 
+TS:inv:data & relational algebra & relational algebra & alter \\ 
+\hline 
+\end{tabular} 
+\caption{A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}
+\label{DataPRoc_UC13}
+\end{table}
+
+\subsection{Component behavior}
+%SEFF  specification
+The shown excerpt is extended with SEFFs (\autoref{MMext}). For each component a SEFF is defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components, then we define the data flow for each component. Finally, the data flow definitions are merged into one data flow for the entire scenario.
+\subsubsection{Observable Behavior}
+The ID is entered via the WebFrontend component. After that, the ID is passed through the Webservice component to the Tradingsystem:inventory. The Tradingsystem:inventory has two inner components. First the ID is passed to the Tradingsystem:inventory:apllication in which it remains for the time being. Then the whole database is queried. In the next step, first the responding database entry for the ID is selected. Secondly, the received database entry is altered into a query used to select all IOrderEntries for the customer. The result is merged into a list. This data is transmitted back to the Tradingsystem:inventory:application, where the data is transformed in a report. A Repor tis a human readable document. Then the report is passed through the Webservice back to the Webfrontend where it is presented to the stock manager.
+\subsubsection{Data flow definition}
+For each SEFF one or more operations are added which describe the data processing for the component. For each operations it is defined which type of data processing is done for which data.
+\begin{itemize}
+\item Webfrontend \\ Transmit the ID (customer data) and the report (product\& sales data).
+\item Tradingsystem:inventory:application \\ Transmits the ID (customer data), alters and transmits the report and IOrderEntries (product\& sales related data).
+\item Tradingsystem:inventory:data \\ Transmits the IOrderEntries (product\& sales related data), take the ID (customer data) alter it to a query (system data) and creates a new query (system data).
+\end{itemize}
+The different operations are added to the respective components. The resulting data flow is shown in \autoref{fig:uc13DFD}.
+%++++++++++++figures+++++++++++++++++++++++++
+
+\begin{figure}
+\includegraphics[scale=.75, angle= 90]{logos/Data_flow_UC13.pdf}
+\caption{Resulting data flow for the scenario: StockManager request the report for a customer}
+\label{fig:uc13DFD}
+\end{figure}
+The data flow is as follows. The ID from the customer is transmitted to the Tradingsystem:inventory:data. Then the respective IOrderEntries are selected and merged into a report. This report is then transmitted back to the StockManager. 
+
+
+\section{Scenario: Support employee requests information for an order}
+This scenario was not defined on the basis of an use case. After we investigated CoCoME further, we could not find any fitting use cases in which security relevant data is present. We mostly looked for use cases, that process customer related data. So we created a new scenario. 
+\subsection{Description}
+\label{scn2_ch4}
+The fundamental setting of this scenario is that a customer has a problem with an order s/he issued. To solve the problem, the customer authenticates her/himself in CoCoME and issues a ticket for the order. The support employee then request the particular order from CoCoME. After the report is received, the scenario has ended. With the report at hand, the support employee should be able to solve the customer's issue.\\
+The usage model is relatively simple for the scenario. The support employee request with the customer and order ID a report of the current state of the order.
+%TODO usage model
+%\begin{figure}
+%\caption{Usagemodel for the Scenario: Support employee requests information for an order}
+%\label{usage_uc14}
+%\end{figure}
+
+\subsection{Identification of a new use case}
+We found the scenario described in \autoref{scn2_ch4} so fitting for CoCoME, that we derived a new use case from it. First we introduce the new role of support employee before we move on to the description of the new use case.
+\subsubsection{Description the new role: Support employee}
+The support employee role processes the tickets issued by customers. A ticket is issued if there are problems with an order. The support employee receives access to the order and checks their current status. Then he takes an appropriate action to solve the issue if possible. The actions are dependent on the actual order. They can reach from resending the order to taking no action, because the customer tries to scam the enterprise.
+% Das nochmal besser erklären, die verschiedenen aktionen sin dzu weit gefächert und werden hier nicht betrachtet
+\paragraph{Role description}
+The support employee is a new role in the system, so we had to define the access rights for this role. It requires data beyond the data it owns itself, this includes customer and product \& sales related data. The role may provide customer and product \& sales related data. It may happen, for example, that an order is changed, because some products are not available and the customer decides to take a similar product. Also customer may used an invalid credit card in the order under investigation and the credit card details are changed.
+\paragraph{access rights}
+From the description we derived the access rights shown in \autoref{ACM_SE}. To point out the important definitions. The support employee got no access to the Tradingsystem:cashdeskline, because for his tasks s/he does not need to. Also no access to system data as every role. At last no access to the customer related data in the PickupShop to verify , for example, the credit card details with the bank. We omitted the Tradingsystem:cashdeskline for space purposes 
+\begin{landscape}
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ACM & Web-  & TS: & TS:cash- & Pickup & Web- \\
+ & frontend  & inventor: & deskline & Shop & service\\
+\hline
+support employee &
+\begin{tabular}{c} 
+account : 2 \\
+customer : 1 \\
+product \& : 2 \\
+sales\\
+system : 4 \\
+\end{tabular}
+&
+\begin{tabular}{c} 
+account : 2 \\
+customer : 1 \\
+product \& : 2 \\
+sales\\
+system : 4 \\
+\end{tabular}
+&
+\begin{tabular}{c} 
+account : 4 \\
+customer : 4 \\
+product \& : 4 \\
+sales\\
+system : 4\\
+\end{tabular}
+&
+\begin{tabular}{c} 
+account : 4 \\
+customer : 2 \\
+product \& : 4 \\
+sales \\
+system : 4 \\
+\end{tabular}
+&
+\begin{tabular}{c} 
+account : 2 \\
+customer : 1 \\
+product \&  : 2 \\
+sales \\
+system : 4 \\
+\end{tabular}
+\\
+\hline
+\end{tabular}
+\caption{Access right for the role \textit{Support employee}. 1 refers to the access right \textit{FullAccess}, 2 refers to the access right \textit{AccessToUsedData}, 3 refers to the access right \textit{AccessToOwnedData}, 4 refers to the access right \textit{Default}.}
+\end{table}
+\label{ACM_SE}
+\end{landscape}
+
+\subsubsection{Description of use case 14}
+\begin{itemize}
+\item \textit{Brief Description} The system provides the possibility to generate a report for the current status of a customer's order.
+\item \textit{involved actors} customer, support employee
+\item \textit{Precondition} the support employee is authenticated.
+\item \textit{Trigger} the customer submits a ticket for a certain order.
+\item \textit{Post condition} The report for the order was generated and is displayed to the support employee.
+\item \textit{Standard process}
+\begin{enumerate}
+\item The support employee enters the customers identifier and the report identifier to create the report.
+\item The report is generated and displayed
+\end{enumerate}
+\item Alternative or exceptional process
+\begin{itemize}
+\item in step 2: the order doesn't exist\\
+The system sends an error message to the customer
+\item in step 3: order is ready\\
+the support employee sends a reminder to the customer to pick up the order
+\end{itemize}
+\end{itemize}
+
+\subsection{CoCoME excerpt}
+The CoCoME excerpt is the same as in \autoref{descripScn_casestudy_scn1}. The excerpt is shown in \autoref{scn_excerpt}. The scenario is settled in the same region as the previous one. So the same components are used. This are the Tradingssystem:inventory:application, the Webfrontned, the Tradingsys-
+tem:inventory:data and the Webservice.
+\subsection{Data types and access rights}
+We divided the data in to four classes of data types. In the following listing, for each class the concrete data is summarized.
+
+\begin{itemize}
+\item account related data \\ No account related data is used in the scenario 
+\item customer related data \\ The ID of the customer is used in this scenario
+\item product \& sales related data \\ Two data types are used in this scenario. First, the ID of the order, second the report type. The report which merges the an order and a customer in a human readable document. 
+\item system data \\ The system data used are queries to request data from the database.
+\end{itemize}
+ 
+
+The access rights matrix for this scenario is shown in \autoref{ACM_SE}. We omitted the Webservice component for the fact that it only transmits the data in this scenario.
+The matrix for the data processing is shown in \autoref{DataPRoc_UC13}. It is extracted from the corresponding matrix.
+%ACM --
+\subsection{Component behavior}
+% hier eventuell en repor tin was anderes umbennen
+The shown excerpt is extended with SEFFs (\autoref{MMext}). For each component a SEFF
+is defined, which models the observable behavior for this component. In the following the
+observable behavior of the scenario is described first, then the model extension with the
+described meta model. Finally, the resulting data flow is displayed.
+\subsubsection{Observable behavior}
+First the ID of the authenticated customer and the ID of the order are entered in the Webfrontend by the support employee. Then the tuple is transmitted through the Webservice to the Tradingsystem:inventory. The Tradingssystem:inventory consists out of two compoents. First, the Tradingssystem:inventory:application transmits the tuple to Tradingssystem:inventory:data, where the tuple stays for the time being. Then the whole database is selected. In the next step, a query is created by using the customer ID. Then the query is used to select the corresponding customer. Then order ID is used to build another query and select the corresponding order. The order and the customer data is passed to the Tradingsystem:inventory:application, where it is processed to create an report. This report contains meta data in addition to the ordered products. This meta data includes,for example , the day of delivery, the payment method used, etc. Then the report is transmitted via the Webservice component back to the Webfrontend. There the report is shown to the support employee.
+\subsubsection{Data flow definition}
+Previously, the data was divided into equivalence classes.  Now we present the concrete data to be used in this scenario and specify the corresponding classes.\\
+%TODO datenklassen hinzufügen
+\begin{itemize}
+\item Webfrontend\\ Transmit the (customer ID (customer data), order ID (product\& sales related data)) tuple and the resulting report (product\& sales related data).
+\item Tradingsystem:inventory:application \\ Transmits the tuple and alters the Customer and Order object to a report and transmits it.
+\item Tradingsystem:inventory:data \\ Transmit the Customer and Order object and takes the tuple to create two queries.
+\end{itemize}
+With these informations about the data processing, we are able to build the resulting data flow, which is shown in \autoref{DF_UC14}.
+
+\begin{figure}
+\includegraphics[scale=0.8, angle = 90]{logos/DF_UC14.pdf}
+\caption{The resulting data flow for the scenario: Support employee requests information for an order.}
+\label{DF_UC14}
+\end{figure}
+

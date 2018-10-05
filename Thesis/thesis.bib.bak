@@ -1,0 +1,267 @@
+
+@inproceedings{Seifermann16,
+  author    = {Stephan Seifermann},
+  title     = {Architectural Data Flow Analysis},
+  booktitle = {13th Working {IEEE/IFIP} Conference on Software Architecture, {WICSA}
+               2016, Venice, Italy, April 5-8, 2016},
+  pages     = {270--271},
+  year      = {2016},
+  url       = {https://doi.org/10.1109/WICSA.2016.49},
+  doi       = {10.1109/WICSA.2016.49},
+  timestamp = {Thu, 25 May 2017 00:41:59 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/wicsa/Seifermann16},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+% Secure UML, UMLSec
+@techreport{PCM,
+    author       = {Reussner, Ralf and Becker, Steffen and Burger, Erik and Happe, Jens and Hauck, Michael and Koziolek, Anne and Koziolek, Heiko and Krogmann, Klaus and Kuperberg, Michael},
+    year         = {2011},
+    title        = {The Palladio Component Model},
+    publisher    = {{Karlsruhe}},
+    issn         = {2190-4782},
+    series       = {Karlsruhe Reports in Informatics (früher: Interner Bericht. Fakultät für Informatik, Karlsruher Institut für Technologie)},
+    pagetotal    = {193},
+    language     = {english},
+    volume       = {2011},
+    number       = {14}
+  }
+@inproceedings{SecureUML,
+  author    = {Torsten Lodderstedt and
+               David A. Basin and
+               J{\"{u}}rgen Doser},
+  title     = {SecureUML: {A} UML-Based Modeling Language for Model-Driven Security},
+  booktitle = {{UML} 2002 - The Unified Modeling Language, 5th International Conference,
+               Dresden, Germany, September 30 - October 4, 2002, Proceedings},
+  pages     = {426--441},
+  year      = {2002},
+  crossref  = {DBLP:conf/uml/2002},
+  url       = {https://doi.org/10.1007/3-540-45800-X_33},
+  doi       = {10.1007/3-540-45800-X_33},
+  timestamp = {Mon, 05 Mar 2018 17:08:30 +0100},
+  biburl    = {https://dblp.org/rec/bib/conf/uml/LodderstedtBD02},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+@inproceedings{UMLSec,
+  author    = {Jan J{\"{u}}rjens},
+  title     = {UMLsec: Extending {UML} for Secure Systems Development},
+  booktitle = {{UML} 2002 - The Unified Modeling Language, 5th International Conference,
+               Dresden, Germany, September 30 - October 4, 2002, Proceedings},
+  pages     = {412--425},
+  year      = {2002},
+  crossref  = {DBLP:conf/uml/2002},
+  url       = {https://doi.org/10.1007/3-540-45800-X_32},
+  doi       = {10.1007/3-540-45800-X_32},
+  timestamp = {Mon, 05 Mar 2018 17:08:30 +0100},
+  biburl    = {https://dblp.org/rec/bib/conf/uml/Jurjens02},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{GQM_Intro,
+  author    = {Victor R. Basili and
+               David M. Weiss},
+  title     = {A Methodology for Collecting Valid Software Engineering Data},
+  journal   = {{IEEE} Trans. Software Eng.},
+  volume    = {10},
+  number    = {6},
+  pages     = {728--738},
+  year      = {1984},
+  url       = {https://doi.org/10.1109/TSE.1984.5010301},
+  doi       = {10.1109/TSE.1984.5010301},
+  timestamp = {Wed, 17 May 2017 10:56:35 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/tse/BasiliW84},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@misc{MMextension,
+  author = {Stephan Seifermann},
+  title = {PCM-DataProcessing-Metamodel},
+  year = {2018},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/seiferma/PCM-DataProcessing-MetaModel}},
+  commit = {2948b294650d453da2f294ddbf2a120dce0cedde}
+}
+
+@ARTICLE{CoCoMETechReport,
+author = {Robert Heinrich and Kiana Rostami and Ralf Reussner},
+title = {{The CoCoME Platform for
+Collaborative Empirical Research
+on Information System Evolution}},
+year = 2016
+}
+
+@article{hybridcloud,
+  author    = {Ursula Goltz and
+               Ralf H. Reussner and
+               Michael Goedicke and
+               Wilhelm Hasselbring and
+               Lukas M{\"{a}}rtin and
+               Birgit Vogel{-}Heuser},
+  title     = {Design for future: managed software evolution},
+  journal   = {Computer Science - R{\&}D},
+  volume    = {30},
+  number    = {3-4},
+  pages     = {321--331},
+  year      = {2015},
+  url       = {https://doi.org/10.1007/s00450-014-0273-9},
+  doi       = {10.1007/s00450-014-0273-9},
+  timestamp = {Sat, 16 Sep 2017 12:03:35 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/ife/GoltzRGHMV15},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{CaseStudyAndAccessrigths,
+  author    = {Mark Evered and
+               Serge B{\"{o}}geholz},
+  title     = {A Case Study in Access Control Requirements for a Health Information
+               System},
+  booktitle = {{ACSW} Frontiers 2004, 2004 {ACSW} Workshops - the Australasian Information
+               Security Workshop (AISW2004), the Australasian Workshop on Data Mining
+               and Web Intelligence (DMWI2004), and the Australasian Workshop on
+               Software Internationalisation {(AWSI2004)} . Dunedin, New Zealand,
+               January 2004},
+  pages     = {53--61},
+  year      = {2004},
+  crossref  = {DBLP:conf/acsw/2004},
+  url       = {http://crpit.com/confpapers/CRPITV32Evered.pdf},
+  timestamp = {Thu, 05 Oct 2017 11:44:23 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/acsw/EveredB04},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inbook{lilja_2000,
+ place={Cambridge}, title={Benchmark programs}, DOI={10.1017/CBO9780511612398.008}, booktitle={Measuring Computer Performance: A Practitioner's Guide}, publisher={Cambridge University Press}, author={Lilja, David J.}, year={2000}, pages={111–138}}
+
+@article{assetValue,
+  author    = {Jakub Breier},
+  title     = {Asset Valuation Method for Dependent Entities},
+  journal   = {J. Internet Serv. Inf. Secur.},
+  volume    = {4},
+  number    = {3},
+  pages     = {72--81},
+  year      = {2014},
+  url       = {http://isyou.info/jisis/vol4/no3/jisis-2014-vol4-no3-05.pdf},
+  timestamp = {Thu, 02 Feb 2017 11:52:24 +0100},
+  biburl    = {https://dblp.org/rec/bib/journals/jisis/Breier14},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{McLean90,
+  author    = {John McLean},
+  title     = {Security Models and Information Flow},
+  booktitle = {Proceedings of the 1990 {IEEE} Symposium on Security and Privacy,
+               Oakland, California, USA, May 7-9, 1990},
+  pages     = {180--189},
+  year      = {1990},
+  crossref  = {DBLP:conf/sp/1990},
+  url       = {https://doi.org/10.1109/RISP.1990.63849},
+  doi       = {10.1109/RISP.1990.63849},
+  timestamp = {Fri, 26 May 2017 00:50:05 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/sp/McLean90},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@article{CaseStudySoftware,
+  author    = {Per Runeson and
+               Martin H{\"{o}}st},
+  title     = {Guidelines for conducting and reporting case study research in software
+               engineering},
+  journal   = {Empirical Software Engineering},
+  volume    = {14},
+  number    = {2},
+  pages     = {131--164},
+  year      = {2009},
+  url       = {https://doi.org/10.1007/s10664-008-9102-8},
+  doi       = {10.1007/s10664-008-9102-8},
+  timestamp = {Thu, 15 Jun 2017 21:30:26 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/ese/RunesonH09},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{rolesBusiness,
+  author = {Pilipchuk, Roman and Seifermann, Stephan and Taspolatoglu, Emre},
+  series = {Softwaretechnik Trends},
+  booktitle = {4nd Collaborative Workshop on Evolution and Maintenance of Long-Living Software Systems (EMLS'17)},
+  title = {Defining a Security-Oriented Evolution Scenario for the CoCoME Case Study},
+  year = {2017},
+  pages = {60--77},
+  number = {2},
+  volume = {37},
+  pdf = {http://sdqweb.ipd.kit.edu/publications/pdfs/pilipchuk2017a.pdf}
+}
+
+@inproceedings{Noninfluence,
+  author    = {David von Oheimb},
+  title     = {Information Flow Control Revisited: Noninfluence = Noninterference
+               + Nonleakage},
+  booktitle = {Computer Security - {ESORICS} 2004, 9th European Symposium on Research
+               Computer Security, Sophia Antipolis, France, September 13-15, 2004,
+               Proceedings},
+  pages     = {225--243},
+  year      = {2004},
+  crossref  = {DBLP:conf/esorics/2004},
+  url       = {https://doi.org/10.1007/978-3-540-30108-0\_14},
+  doi       = {10.1007/978-3-540-30108-0\_14},
+  timestamp = {Tue, 30 May 2017 12:57:44 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/esorics/Oheimb04},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{UMLSecCS,
+  author    = {Jan J{\"{u}}rjens},
+  title     = {Model-based Security Testing Using UMLsec: {A} Case Study},
+  journal   = {Electr. Notes Theor. Comput. Sci.},
+  volume    = {220},
+  number    = {1},
+  pages     = {93--104},
+  year      = {2008},
+  url       = {https://doi.org/10.1016/j.entcs.2008.11.008},
+  doi       = {10.1016/j.entcs.2008.11.008},
+  timestamp = {Sun, 28 May 2017 13:22:56 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/entcs/Jurjens08},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@proceedings{CoCoMEBook,
+  editor    = {Andreas Rausch and
+               Ralf H. Reussner and
+               Raffaela Mirandola and
+               Frantisek Plasil},
+  title     = {The Common Component Modeling Example: Comparing Software Component
+               Models [result from the Dagstuhl research seminar for CoCoME, August
+               1-3, 2007]},
+  pages     = {16--53},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {5153},
+  publisher = {Springer},
+  year      = {2008},
+  url       = {https://doi.org/10.1007/978-3-540-85289-6},
+  doi       = {10.1007/978-3-540-85289-6},
+  isbn      = {978-3-540-85288-9},
+  timestamp = {Tue, 13 Jun 2017 10:37:56 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/dagstuhl/2007cocome},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@Article{privHarm,
+  author = 	"van der Sloot, Bart",
+  title = 	"Where is the Harm in a Privacy Violation? Calculating the Damages Afforded in Privacy Cases by the European Court of Human Rights",
+  journal = 	"JIPITEC",
+  year = 	"2017",
+  volume = 	"8",
+  number = 	"4",
+  pages = 	"322--351",
+  keywords = 	"Privacy; damage; financial compensation; harm; statistical analysis",
+  abstract = 	"It has always been difficult to pinpoint what harm follows a privacy violation. What harm is done by someone entering your home without permission, or by the state eavesdropping on a telephone conversation when no property is stolen or information disclosed to third parties? The question is becoming ever more difficult to answer now that data gathering and processing initiatives have grown and are no longer focused on specific individuals, but on large groups or society as a whole. What specific harm is done by the NSA and other intelligence services gathering data on almost everyone or by the thousands of CCTV cameras registering the daily life of citizens on the corner of almost every street? There has been a longstanding debate within the literature regarding whether `dignitary' or `immaterial' harm should be protected under the right to privacy. Or should only harm that can be measured and quantified in monetary terms (economic harm) be taken into account? This article takes a descriptive and statistical approach to provide an insight into what types of damages are awarded, how they are calculated, and how the damages relate to the type of harm that is inflicted. It does so by analysing the damages awarded by the European Court of Human Rights with respect to privacy violations.",
+  issn = 	"2190-3387",
+  url = 	"http://nbn-resolving.de/urn:nbn:de:0009-29-46414",
+  urldate = "2018-09-13"
+}
+
+@Article{cs2sources,
+author = {Zucker, Donna M.},
+title = {How to Do Case Study Research},
+year = {2009},
+journal = {Teaching Research Methods in the Social Sciences}
+}

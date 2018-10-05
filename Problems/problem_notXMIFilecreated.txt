@@ -1,0 +1,142 @@
+WARNING: Using incubator modules: jdk.incubator.httpclient
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.eclipse.emf.ecore.xmi.impl.XMLHandler (file:/home/julez/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.13.0.v20170609-0707.jar) to method com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser$LocatorProxy.getEncoding()
+WARNING: Please consider reporting this to the maintainers of org.eclipse.emf.ecore.xmi.impl.XMLHandler
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+14:26:54.512 [Worker-0] DEBUG org.eclipse.jgit.util.FS - readpipe [git, --version],/usr/bin
+14:26:54.618 [Worker-0] DEBUG org.eclipse.jgit.util.FS - readpipe may return 'git version 2.7.4'
+14:26:54.618 [Worker-0] DEBUG org.eclipse.jgit.util.FS - remaining output:
+
+14:26:54.630 [Worker-0] DEBUG org.eclipse.jgit.util.FS - readpipe [git, config, --system, --edit],/usr/bin
+14:26:54.662 [Worker-0] DEBUG org.eclipse.jgit.util.FS - readpipe may return '/etc/gitconfig'
+14:26:54.662 [Worker-0] DEBUG org.eclipse.jgit.util.FS - remaining output:
+
+14:27:14.899 [Worker-7] DEBUG o.e.m.c.i.p.r.ProjectRegistryRefreshJob - Queued refresh request: [/HAHA_YO/pom.xml, /edu.kit.kastel.scbs.travelplanner/pom.xml, /org.palladiosimulator.pcm.dataprocessing/pom.xml, /org.palladiosimulator.pcm.dataprocessing.accesscontrol/pom.xml, /org.palladiosimulator.pcm.dataprocessing.edit/pom.xml, /org.palladiosimulator.pcm.dataprocessing.editor/pom.xml, /org.palladiosimulator.pcm.dataprocessing.mwe2/pom.xml, /org.palladiosimulator.pcm.dataprocessing.profile/pom.xml]
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+14:27:16.917 [Worker-10] DEBUG o.e.a.i.i.DefaultLocalRepositoryProvider - Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/julez/.m2/repository
+14:27:16.959 [Worker-10] DEBUG o.e.a.i.i.DefaultLocalRepositoryProvider - Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/julez/.m2/repository
+14:27:16.960 [Worker-10] DEBUG o.e.m.c.i.p.r.ProjectRegistryManager - Refreshing: [L/HAHA_YO/pom.xml, L/edu.kit.kastel.scbs.travelplanner/pom.xml, L/org.palladiosimulator.pcm.dataprocessing/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.accesscontrol/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.edit/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.editor/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.mwe2/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.profile/pom.xml]
+14:27:16.965 [Worker-10] DEBUG o.e.m.c.i.p.r.ProjectRegistryManager - Refreshed: [L/HAHA_YO/pom.xml, L/edu.kit.kastel.scbs.travelplanner/pom.xml, L/org.palladiosimulator.pcm.dataprocessing/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.accesscontrol/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.edit/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.editor/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.mwe2/pom.xml, L/org.palladiosimulator.pcm.dataprocessing.profile/pom.xml]
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+*** BUG ***
+In pixman_region32_init_rect: Invalid rectangle passed
+Set a breakpoint on '_pixman_log_error' to debug
+
+14:28:44.502 [Worker-15] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+14:28:48.513 [Worker-17] DEBUG o.e.jgit.transport.PacketLineIn - git< # service=git-upload-pack
+14:28:48.513 [Worker-17] DEBUG o.e.jgit.transport.PacketLineIn - git< 0000
+14:28:48.522 [Worker-17] DEBUG o.e.jgit.transport.PacketLineIn - git< e0868f0942386ec12bebcfa2820ed01f56c10c74 HEAD
+14:28:48.523 [Worker-17] DEBUG o.e.jgit.transport.PacketLineIn - git< f4ca32ab40bb881b5ba8cc41e974a6a599952b89 refs/heads/dataProcessing
+14:28:48.523 [Worker-17] DEBUG o.e.jgit.transport.PacketLineIn - git< e0868f0942386ec12bebcfa2820ed01f56c10c74 refs/heads/master
+14:28:48.523 [Worker-17] DEBUG o.e.jgit.transport.PacketLineIn - git< 0000
+!SESSION 2018-06-11 14:26:28.445 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /home/julez/eclipse-workspace-bachelor/../runtime-EclipseApplication -dev file:/home/julez/eclipse-workspace-bachelor/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.emf.edit.ui 2 0 2018-06-11 14:46:13.918
+!MESSAGE org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'null' not found. (platform:/resource/org.palladiosimulator.pcm.dataprocessing/plugin.xml, 7, 9)
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'null' not found. (platform:/resource/org.palladiosimulator.pcm.dataprocessing/plugin.xml, 7, 9)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at org.eclipse.emf.edit.ui.action.LoadResourceAction$LoadResourceDialog.processResources(LoadResourceAction.java:136)
+	at org.eclipse.emf.common.ui.dialogs.ResourceDialog.okPressed(ResourceDialog.java:372)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4602)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4183)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.emf.edit.ui.action.LoadResourceAction.run(LoadResourceAction.java:74)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5348)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1348)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4602)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4183)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1472)
+Caused by: org.eclipse.emf.ecore.xmi.PackageNotFoundException: Package with uri 'null' not found. (platform:/resource/org.palladiosimulator.pcm.dataprocessing/plugin.xml, 7, 9)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createObjectByType(XMLHandler.java:1343)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.createTopObject(XMLHandler.java:1504)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.processElement(XMLHandler.java:1026)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.processElement(XMIHandler.java:78)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:1008)
+	at org.eclipse.emf.ecore.xmi.impl.XMLHandler.startElement(XMLHandler.java:719)
+	at org.eclipse.emf.ecore.xmi.impl.XMIHandler.startElement(XMIHandler.java:190)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:746)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1394)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.scanRootElementHook(XMLDocumentScannerImpl.java:1251)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3058)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:820)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:601)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:531)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:887)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:823)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:639)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:323)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 45 more
+
+
+
++++++++++++++++++++++++++++++++++++++++++++

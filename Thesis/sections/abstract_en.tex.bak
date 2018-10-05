@@ -1,0 +1,14 @@
+%% LaTeX2e class for student theses
+%% sections/abstract_en.tex
+%% 
+%% Karlsruhe Institute of Technology
+%% Institute for Program Structures and Data Organization
+%% Chair for Software Design and Quality (SDQ)
+%%
+%% Dr.-Ing. Erik Burger
+%% burger@kit.edu
+%%
+%% Version 1.3.2, 2017-08-01
+
+\Abstract
+There approaches that are aiming to ensure compliance on an architectural level. This is accomplished by conducting a data-based privacy analysis. Most commonly these approaches uses case studies for an evaluation.\\ In this thesis, we introduced a method to create case studies. The created case studies may be used to evaluate data-based privacy analysis. We also provided evaluation criteria to verify if the created case study is usable. Further, we applied our method on a realistic system and evaluated the resulting case study. In the end, we verified that for the excerpt we were investigating the method is applicable. Also the created case study was evaluated. The findings were that the case study doe snot cover all the investigated information flow classes. At last, we also evaluated the used modeling language.
