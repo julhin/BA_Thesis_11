@@ -362,6 +362,7 @@ This requirement is met because a component-based system model is defined in the
 The CoCoME documentation defines thirteen use cases, so this requirement is also met. The use cases are important to get an idea of the systems usage but also to how different users interact with the system. 
 \subsubsection{R3: Security relevant data}
 \label{req_data}
+%Sollte fertig ein !!!
 Since the amount of data is relatively large in the investigated excerpt of CoCoME, we have grouped the data into different equivalence classes. The data type in each class has the same security level. Composite data types are assigned to all included classes, but inherit the security levels from most restrictive class. All in all, we defined four classes: customer data, account data, product\&sales data ans system data. 
 \begin{itemize}
 \item customer data\\ This class describes all data types that are provided by the customer role. This includes names, addresses and credit card details, to name the most important ones. %Since it is personal data of an entity , we classified it as \textbf{security relevant data}.
@@ -372,16 +373,19 @@ Since the amount of data is relatively large in the investigated excerpt of CoCo
 The security relevance for each class is defined according to Breier's approach \cite{assetValue}. The approach is based on the possible damage the loss of an asset could cause. So for each asset the level of damage a loss of the asset could cause is defined. Further, for each asset the dependencies to other assets is defined. Based on this, it is possible to calculate the value of an asset. This approach is not one-to-one applicable to our case, but we can use the basic idea. We evaluated for each data class the possible impact a leak of data from this class may have in CoCoME. Keep in mind that the primary goal is to protect persons that are using CoCoME. Therefore, the customer data is the most relevant and defined as \textbf{security relevant}. The account data allows to log in as the specific role, which may lead to leaks of the customer's personal data. So the account data is also \textbf{security relevant}. The system data mostly consists of queries. If one may gain access to the query, it is to alter the database. So this data is especially \textbf{security relevant}, because access to it may cause damage to the customer and the enterprise in the same scale. At last, the product\&sales data is not considered strictly security relevant, because in the sales process the payment process as we identify it is part of the customer data. This data becomes relevant in composite data types or if it allows traceability to customer data. Nonetheless, leak in this class may cause heavy damages to the respective enterprise, which is not in the scope of the thesis.
 \subsubsection{R4: roles}
 \label{req_roles}
-CoCoME defines six different roles in the tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager} and the \textit{Stockmanager}. There is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key informations we were looking are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
+CoCoME defines six different roles in the CoCoME tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager} and the \textit{Stockmanager}. There is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key informations we were looking are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
 \begin{itemize}
 \item  After analyzing the implementation, the \textit{Customer} role is the role of all the customers of an enterprise, be they private customers or business customers. The role buys products, either in the stores or in the Pickup shop. The data provided by the customer role are the customer related data, It requires product related data to, for example, decide which products to buy.
 \item For the \textit{Cashier} role, we rely on the defined use cases in CoCoME tech report. As shown, the role takes over the sale of products and therefore requires product \& sales data. The role provides product and sales-related data like the data that is generated when orders are placed.
 \item For the \textit{StoreManager} role, we relied on the use cases. The \textit{StoreManager} handles the tasks of a single store. The role provides and requires product\& sales related data.
 \item After an analysis of the use cases, we are not sure what the concrete tasks are for the \textit{EnterpriseManager} and the data requires requires or provide. There are only two uses cases that involves the \textit{EnterpriseManager}, therefore a clear definition is not possible. Unfortunately, the code does not contain any further information. From the name it can be derived that the role is in charge of a  whole enterprise. 
 \item After analyzing the use cases, it is clear that the \textit{StockManger} handles the stock of a single store. Therefore the role requires product\&sales related data and provides the same type in the system.
+\item After analyzing the code we found a sixth role, the \textit{Admin} role. This role is not mentioned in the use cases. From the name alone, we assume that this role keep a watch on the system. 
+%TODO revist admin in the system extension
 \end{itemize}
 Since the hybrid cloud based variant is examined by us, all roles provide account data, because each role needs an account in CoCoME. 
 \subsubsection{R5: access rights}
+%TODO Admin in der Matrix hinzufügen !!!!!!!!!! %TODO
 For the access rights, we used the finer grained, high level from proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the well known read/write semantics for access control. We tried not to rely on a read/write semantic. Therefore, as described in \nameref{ch:method}, We have defined access to the various data classes within a component for each component and for each role. We defined four different privilege level for the access to data. In the following enumeration, we used the identified elements from the previous requirements R2 (\autoref{req_uc}), R3 (\autoref{req_data}) and R4 (\autoref{req_roles}) to define fitting access rights for CoCoME. The access to data decreases with the ascending numbers.
 \begin{enumerate}
 \item \textbf{FullAccess}\\ This access rights defines that the associated role has access to all data types for the respective class in the component
@@ -588,9 +592,9 @@ system data & 4 \\
 %%für alle rollen eine Übersicht die gneau definiert welche teile der class
 \subsubsection{R6: Type of data processing in components}
 \label{relevantpartsCoCoME}
-In the last step of the procedure for each component the type of data processing is defined. we identified after an analysis of the code and the CoCoME tech report three different types of data processing.
+The last requirement defines the type of data processing. For each component, it is defined how the data from each class is processed in this component. All in all, we defined four types of data processing in CoCoME.
 \begin{itemize}
-\item relational algebra \\ This type describes the operations of relational algebra on a database or similar construct. For example, if all elements of a list that have a particular ID are selected from this list
+\item relational algebra \\ This type describes the operations of relational algebra on a database or similar construct. For example, if all elements of a list that have a particular ID are selected from this list.
 \item transmission of data \\ This type describes the transmission of data between components.
 \item changing of data classes \\ This type includes the most operations. It describes each operation that changes the data class. Good examples are the creation of lists or the merging two or more data classes into one.
 \item I/O related processing \\  This type describes input and/or output of data by the user. 
@@ -847,6 +851,9 @@ system data & 4 \\
 \label{ACM_updated}
 \end{table}
 \end{landscape}
+\section{Define system extensions}
+%TODO Admin role genauer definieren
+\section{Evaluation of the defined access rights}
 \chapter{Case study system}
 \label{ch:casestudysystem}
 %Was wir dheir geschehen und kurz einleiten
