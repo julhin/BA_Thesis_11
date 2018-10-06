@@ -153,7 +153,7 @@ The fourth requirement for the case study is the definition of user roles, in th
 \paragraph{R5: Definition of access rights}
 %fertig
 The fifth requirement is the definition of access rights. For the definition of access rights, we use the fine-grained, higher level form proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the familiar used read/write semantics. For this step, we assume the system is in a correct state. 
- The access rights are define on the basis of the current state of the system. As already mentioned, each component has a clearly defined interface. These interfaces are used for communication with other components. This structure is used to define a finer grained form of access control. For each component and each role, the access rights for the data types in the component are defined individually. The access rights are stored in a matrix, the so called access control matrix (ACM). In \autoref{ACMexplained} an minimal ACM is shown to get a better idea of the concept. The matrix shows that the role \textit{Employee} in the component \textit{Usermanager} has full access to username. Also it is shown, that the same role in the same component has no access to the password. It may happen that data is the combination of different data types. In this case, the more restrictive access rights applies. To clarify this, if the employee tries to access a (\textit{username, password}) tuple, s/he is granted no access to the tuple.
+ The access rights are define on the basis of the current state of the system. As already mentioned, each component has a clearly defined interface. These interfaces are used for communication with other components. This structure is used to define a higher level, finer grained form of access control. For each component and each role, the access rights for the data types in the component are defined individually. The access rights are stored in a matrix, the so called access control matrix (ACM). In \autoref{ACMexplained} an minimal ACM is shown to get a better idea of the concept. The matrix shows that the role \textit{Employee} in the component \textit{Usermanager} has full access to username. Also it is shown, that the same role in the same component has no access to the password. It may happen that data is the combination of different data types. In this case, the more restrictive access rights applies. To clarify this, if the employee tries to access a (\textit{username, password}) tuple, s/he is granted no access to the tuple.
 
 \begin{figure}
 \begin{tabular}{|c|c|}
@@ -328,7 +328,8 @@ After an short overview over CoCoME in the previous section, we are starting wit
 . If there are differences between documentation and code, the definitions from the documentation applies. We favour the documentation over the code because CoCoME is still in development. The documentation represents a stable version of CoCoME. In the implementation it may possible that at the moment new features are tested that are later quashed.\\  We do not apply the process to the entire CoCoME system, but concentrate on only part of the system. The selected part of CoCoME is the PickupShop (\autoref{PS}).
 \subsection{P1: Investigation of the current state of CoCoME}
 %done
-In this first step we take a first look at CoCoME. We are looking for two main aspects here. First, if the system is extendable. Secondly, how wide spread the system model already is defined\\
+In this first step we take a first look at CoCoME. We are looking for two main aspects here. First, if the system is extendable. Secondly, how wide spread the system model already is defined. The CoCoME include a book \cite{CoCoMEBook}, a tech report \cite{CoCoMETechReport} and an implementation. In the documentation CoCoME various system models for CoCoME are available and CoCoME is modeled as an component-based system and therefore extendable. So we decided that the system is in viable state.%TODO githubs referenzieren
+%TODO hier noch genauer werden \\
 In the case of CoCoME, a tech report \cite{CoCoMETechReport}, a book \cite{CoCoMEBook} and an implementation is available. For the fact, that CoCoME is modelled as a component-based system, the system is also  extendable.
 \subsection{P2: Extract the necessary system parts for the requirements}
 \label{reqCoCoME}
@@ -356,10 +357,10 @@ R6 & Type of data processing in components \\
 \end{table}
 
 \subsubsection{R1: Component based system}
-This requirement is met because a component-based system model is defined in the CoCoME tech report.The requirement was defined to take advantage of all the strengths of a component-based system model. 
+This requirement is met because a component-based system model is defined in the CoCoME tech report\cite{CoCoMETechReport}.
 \subsubsection{R2: Existence of use cases}
 \label{req_uc}
-The CoCoME documentation defines thirteen use cases, so this requirement is also met. The use cases are important to get an idea of the systems usage but also to how different users interact with the system. 
+The CoCoME documentation defines thirteen use cases, so this requirement is also met. The use cases are defined in detail either in the CoCoME book \cite{CoCoMEBook} in the CoCoME tech report \cite{CoCoMETechreport}. 
 \subsubsection{R3: Security relevant data}
 \label{req_data}
 %Sollte fertig ein !!!
@@ -373,7 +374,7 @@ Since the amount of data is relatively large in the investigated excerpt of CoCo
 The security relevance for each class is defined according to Breier's approach \cite{assetValue}. The approach is based on the possible damage the loss of an asset could cause. So for each asset the level of damage a loss of the asset could cause is defined. Further, for each asset the dependencies to other assets is defined. Based on this, it is possible to calculate the value of an asset. This approach is not one-to-one applicable to our case, but we can use the basic idea. We evaluated for each data class the possible impact a leak of data from this class may have in CoCoME. Keep in mind that the primary goal is to protect persons that are using CoCoME. Therefore, the customer data is the most relevant and defined as \textbf{security relevant}. The account data allows to log in as the specific role, which may lead to leaks of the customer's personal data. So the account data is also \textbf{security relevant}. The system data mostly consists of queries. If one may gain access to the query, it is to alter the database. So this data is especially \textbf{security relevant}, because access to it may cause damage to the customer and the enterprise in the same scale. At last, the product\&sales data is not considered strictly security relevant, because in the sales process the payment process as we identify it is part of the customer data. This data becomes relevant in composite data types or if it allows traceability to customer data. Nonetheless, leak in this class may cause heavy damages to the respective enterprise, which is not in the scope of the thesis.
 \subsubsection{R4: roles}
 \label{req_roles}
-CoCoME defines six different roles in the CoCoME tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager} and the \textit{Stockmanager}. There is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key informations we were looking are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
+CoCoME defines six different roles. Five are defined in the CoCoME tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager}, \textit{Stockmanager}. The last role, the \textit{Admin} only appears in the code. There is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key informations we were looking are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
 \begin{itemize}
 \item  After analyzing the implementation, the \textit{Customer} role is the role of all the customers of an enterprise, be they private customers or business customers. The role buys products, either in the stores or in the Pickup shop. The data provided by the customer role are the customer related data, It requires product related data to, for example, decide which products to buy.
 \item For the \textit{Cashier} role, we rely on the defined use cases in CoCoME tech report. As shown, the role takes over the sale of products and therefore requires product \& sales data. The role provides product and sales-related data like the data that is generated when orders are placed.
@@ -381,19 +382,19 @@ CoCoME defines six different roles in the CoCoME tech report \cite{CoCoMETechRep
 \item After an analysis of the use cases, we are not sure what the concrete tasks are for the \textit{EnterpriseManager} and the data requires requires or provide. There are only two uses cases that involves the \textit{EnterpriseManager}, therefore a clear definition is not possible. Unfortunately, the code does not contain any further information. From the name it can be derived that the role is in charge of a  whole enterprise. 
 \item After analyzing the use cases, it is clear that the \textit{StockManger} handles the stock of a single store. Therefore the role requires product\&sales related data and provides the same type in the system.
 \item After analyzing the code we found a sixth role, the \textit{Admin} role. This role is not mentioned in the use cases. From the name alone, we assume that this role keep a watch on the system. 
-%TODO revist admin in the system extension
+%TODO revisit admin in the system extension
 \end{itemize}
-Since the hybrid cloud based variant is examined by us, all roles provide account data, because each role needs an account in CoCoME. 
+Since the hybrid cloud based variant is examined by us, all roles provide account data, because each role ,in the hybrid cloud-based variant, needs an account in CoCoME. 
 \subsubsection{R5: access rights}
 %TODO Admin in der Matrix hinzufügen !!!!!!!!!! %TODO
-For the access rights, we used the finer grained, high level from proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the well known read/write semantics for access control. We tried not to rely on a read/write semantic. Therefore, as described in \nameref{ch:method}, We have defined access to the various data classes within a component for each component and for each role. We defined four different privilege level for the access to data. In the following enumeration, we used the identified elements from the previous requirements R2 (\autoref{req_uc}), R3 (\autoref{req_data}) and R4 (\autoref{req_roles}) to define fitting access rights for CoCoME. The access to data decreases with the ascending numbers.
+To define the access rights, we use the finer grained, high level from proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the well known read/write semantics for access control. We tried not to rely on a read/write semantic to allow a more detailed description of the access rights. Therefore, as described in \nameref{ch:method}, we defined access to the various data  within a component for each component and for each role. We defined four different privilege level for the access to data. In the following enumeration, we present the defined access rights. We used the  elements from the previous requirements R2 (\autoref{req_uc}), R3 (\autoref{req_data}) and R4 (\autoref{req_roles}) to define the access rights for CoCoME. The access to data decreases with the ascending numbers.
 \begin{enumerate}
-\item \textbf{FullAccess}\\ This access rights defines that the associated role has access to all data types for the respective class in the component
+\item \textbf{FullAccess}\\ This access rights defines that the associated role has access to all data types for the respective class in the component.
 \item \textbf{AccessToUsedData}\\ This access right defines that the role has accessed to it used data types for the respective class in the component. Used data in this context means the data types that are required by the role to perform its defined tasks.
-\item \textbf{AccessToOwnedData}\\ This access right defines that the associated role has access to its , for example, own account data or customer data. This access rights ensures that roles may access data that is provided by it but not needed for their tasks.
+\item \textbf{AccessToOwnedData}\\ This access right defines that the associated role has access to its , for example, own account data or customer data. This access rights ensures that roles may access data that is provided by it but not necessarily needed for their tasks.
 \item \textbf{Default} This access right forbids the complete access to all data in a class for this role and component.
 \end{enumerate}
-Another part of this requirement is the identification of the present data types in each component. After analyzing the code and the CoCoME tech report, we identified data for each class of data in each component. Also we identified that no role except the customer may access the PickupShop component. In \autoref{CoCoME_simplified} a simplified overview over the architecture of CoCoME is shown to better understand the complex matrix shown in \autoref{ACMConcept}. We omitted the webservice because this component only delegates the data to other components and therefore does not influence the result.
+Another part of this requirement is the identification of the present data types in each component. After analyzing the code and the CoCoME tech report, we identified data for each class of data in each component. Also we identified that no role except the \textit{customer}  may access the PickupShop component. In \autoref{CoCoME_simplified} a simplified overview over the architecture of CoCoME is shown to better understand the complex matrix shown in \autoref{ACMConcept}. We omitted the webservice because this component only delegates the data to other components and therefore does not influence the result.
 \begin{figure}
 \includegraphics[scale=.8]{logos/Overview_CoCoME.pdf}
 \caption{The figure shows an simplified overview of the CoCoME. The Webservice component is omitted.}
@@ -402,6 +403,230 @@ Another part of this requirement is the identification of the present data types
 %TODO access rights matrix für CoCoME aufstellen
 For the fact that the ACM in \autoref{ACMConcept} is rather large and complex, we point out the most important points. In the CoCoME tech report it is stated that only the customer may access the \textit{PickupShop}  component. From the role definition we identified the EnterpriseManager handles an whole enterprise, therefore the role is allowed to access all components. For this reasons, no access rights defined for other roles are defined for the PickupShop. Further, the StockManager has no access to the Tradingsystem:cashdeskline component, because it is not needed to fulfill his tasks. The role handles the stock and has therefore no tasks that involve the actual selling of products. Since no role can access CoCoME without the components Webfrontned or PickupShop, the access rights are from this components are inherited. This means that the access rights are the same in all underlying components. The idea behind this is that it is also important which role which data has entered into the system. No role has access to system related data. The StockManager has access to customer related data due to the use case 13 (UC13). 
 
+\begin{landscape}
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ACM & Webfrontend & PickupShop & TS:inventory & TS:inventory \\ 
+& & app & data \\
+\hline 
+customer 
+%WF
+& \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+\begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular} 
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+& 
+%Ts:inv
+\begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 3 \\
+system data & 4 \\
+\end{tabular}
+ \\ 
+\hline 
+cashier 
+& 
+%WF
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 3 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular} 
+ \\ 
+\hline 
+StockManager 
+&
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+
+  \\ 
+\hline 
+EnterpriseManager & 
+ 
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 2 \\
+p\&s data & 2 \\
+system data & 2 \\
+\end{tabular}
+ \\ 
+\hline 
+StoreManager & 
+ 
+%WF
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & 4 \\
+account data & 4 \\
+p\&s data & 4 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:cdl
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+&
+%TS:inv
+ \begin{tabular}{c|c}
+customer data & 2 \\
+account data & 3 \\
+p\&s data & 2 \\
+system data & 4 \\
+\end{tabular}
+ \\ 
+\hline 
+admin 
+%WF
+& \begin{tabular}{c|c}
+customer data & ? \\
+account data & ? \\
+p\&s data & ? \\
+system data & 1 \\
+\end{tabular}
+&
+%PS
+\begin{tabular}{c|c}
+customer data & ? \\
+account data & ? \\
+p\&s data & ? \\
+system data & 1 \\
+\end{tabular} 
+&
+%TS:inv:app
+ \begin{tabular}{c|c}
+customer data & 1 \\
+account data & 1 \\
+p\&s data & 1 \\
+system data & 1 \\
+\end{tabular}
+& 
+%Ts:inv
+\begin{tabular}{c|c}
+customer data & 1 \\
+account data & 1 \\
+p\&s data & 1 \\
+system data & 1 \\
+\end{tabular}
+ \\ 
+\hline 
+\end{tabular} 
+\caption{The ACM of CoCoME. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{Default}. The abbreviation \textit{p\& s data} stands for product\& sales related data.}
+\end{table}
+\label{ACMConcept}
+\end{landscape}
+
+
+%alte version !!!
 \begin{landscape}
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
@@ -588,6 +813,10 @@ system data & 4 \\
 \end{table}
 \label{ACMConcept}
 \end{landscape}
+%alte version
+
+
+
 %To clarify the 'allowed*' entries in the ACM. This entries signalizes that a role has partly access to the respective data type.
 %%für alle rollen eine Übersicht die gneau definiert welche teile der class
 \subsubsection{R6: Type of data processing in components}
@@ -628,7 +857,7 @@ cashdeskline & transmit &  & transmit & \\
 \end{table}
 
 
-\subsection{Analysis of the current state for CoCoME}
+\subsection{P3: Analysis of the current state for CoCoME}
 With all necessary parts defined and identified, we analyze the current state of CoCoME.\\
 In the following, for each requirement the current state is briefly explained.
 \begin{itemize}
