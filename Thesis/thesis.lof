@@ -34,19 +34,17 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces The usage model for the Scenario: StockManager requests a report for a customer.}}{31}{figure.6.1}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces The usage model for the Scenario: StockManager requests a report for a customer.}}{33}{figure.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Excerpt of CoCoME in which the described scenarios takes place.}}{32}{figure.6.2}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Excerpt of CoCoME in which the described scenarios takes place.}}{34}{figure.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Resulting data flow for the scenario: StockManager request the report for a customer}}{35}{figure.6.3}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Resulting data flow for the scenario: StockManager request the report for a customer}}{37}{figure.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces The resulting data flow for the scenario: Support employee requests information for an order.}}{41}{figure.6.4}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces The GQM plan for the three parts of the evaluation. Each part is divided into }}{44}{figure.7.1}
+\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces The resulting data flow for the scenario: Support employee requests information for an order.}}{43}{figure.6.4}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 7.1}{\ignorespaces The GQM plan for the three parts of the evaluation. Each part is divided into }}{46}{figure.7.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
