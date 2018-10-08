@@ -691,21 +691,21 @@ Also, no need to define an extensions. This requirement is also met.
 \paragraph{R3: security relevant data}
 As identified previously in \autoref{shortcommingsCoCoME}, two data types are missing. First, there are no connection defined between a customer and its purchased products. Secondly, the \textit{Report} data type is only mentioned but is not defined.
 \begin{itemize}
-\item Connection between customer and purchased products\\ We defined that the connection is realized by adding a list of all orders to the customer object. Each order in CoCoME includes the involved products and other information like the total price.
+\item Connection between customer and purchased products\\ We defined that the connection is realized by adding a list of all orders to the customer object. Each order in CoCoME includes the involved products and other information like the total price. 
 %TODO WARUM -> overhead, cust obj is eh schon geschützt, .... GUT muss sie sein
 \item Report data type\\ We have defined this data type as a string that can be read by humans.
 \end{itemize}
-\paragraph{R4: roles}
+\paragraph{R4: definition of roles}
+For the fourth requirement, two roles need a clearer definition: the \textit{EnterpriseManager} and the \textit{Admin}.In the case of the \textit{EnterpriseManager} there are too few use cases are defined to clearly derive tasks for this role. In the case of the \textit{Admin} there are no use cases defined. because this role only exists in the code. 
 \begin{itemize}
-\item \textbf{security relevant data}\\
-We added new data to the customer related data. The customer object now holds a list with all ordered products. With this addition, the shortcoming, that there was no connection between customer and the ordered products, is fixed.  We also defined the \textit{report} data type. This data type is used to display the purchased products of a customer to the stock manager. We defined it as a human readable list and it is placed in product\& sales data class.
-\item \textbf{roles}\\
-In the roles there is some vagueness. Especially in the \textit{StockManager} role. The setting in which the \textit{StockManager} operates is clear, but the inherited responsibility are not. So we defined, that the \textit{StockManager} only handles the stock. This includes, managing the warehouse, commissioning of goods, etc. Another resposibility we added , is to predict the future needs of products. To perform any of this tasks, no customer related data is needed. Further, we defined the role of the \textit{EnterpriseManager}. We defined it as the highest role of the respective company and therefore has access to all data within the company. 
+\item EnterpriseManager \\
+Due to the fact, that only one use case is defined for the \textit{EnterpriseManager}, the actual tasks for this role are not clear. So determined that the role is in charge of a whole enterprise. For the fact that a \textit{StockManager} manages the stock for each store, we defined the \textit{EnterpriseManager} works on a larger scale. The role monitors the workflows within an enterprise and calculates forecasts for, for example, the CPU capacity required. Therefore, the \textit{EnterpriseManager} provides product\&sales data and requires customer data, account data and product\&sales data. For the customer and account data, the role only requires meta data, like the number of registered accounts and therefore no explicit data. 
+\item Admin \\
+The \textit{Admin} has no use cases associated, so we relied on the implementation. In the implementation, the role has access to all data, so we defined the \textit{Admin} to be the master role in the system, that has access to all data. With access to all data any small or big problems may be reviewed and fixed. Therefore the role provides and requires all data types.
 \end{itemize}
-After all the definitions for data and roles is added, whe review the ACM and the types of data processing. \\
-An updated version of the ACM is shown in \autoref{ACM_updated}. As defined the EnterpriseManager got access to all data except the system related data and the Stockmanager has lost access to customer related data. All changes to the matrix are displayed bold. \\
-For the types of data processing for the single components nothing changed.\\
-With all the extensions added to the system, the mile stone is reached. In CoCoME all elements are available for creating a case study for databased privacy analysis. 
+\paragraph{R5: definition of access rights}
+Since the previous requirements are  fulfilled with the defined system extensions, in this step the ACM is reviewed and updated. The updated ACM is shown in \autoref{ACM_updated}. The entries that have changed since the old version are shown in bold.
+
 \begin{landscape}
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
@@ -892,6 +892,9 @@ system data & 4 \\
 \label{ACM_updated}
 \end{table}
 \end{landscape}
+\paragraph{R6: types of data processing in the components}
+%TODO eventuell noch ein bisschen besser schreiben !!!!
+Even with the system extensions for the previous requirements, there is no need to review and update the different types of data processing.
 \subsection{P5: Evaluation of the defined access rights}
 \subsubsection{Are the access rights well defined ?}
 Well defined access rights means in this context that the defined access rights meet the criteria defined by Evered and Bögeholz\cite{CaseStudyAndAccessrigths}.The two authors defined seven different criteria. In order to ensure clearly defined access rights, the defined criteria should be met. In our case, it is not possible to evaluate all seven criteria. This seven criteria are : Concise, clear, aspect-oriented, fundamental, positive, need-to-know and efficient. Clear and concise are omitted, because for the verification of these two criteria a survey is needed. It was also not possible to check the fundamental criterion, because it needs code to verify if the access rights are embedded in it. At last the efficient criterion also needs running code. This criterion measures the overhead that access rights cause in a system. Since the thesis is oriented on the conceptual level instead of on a code level, this criterion was not included in our scope. 
