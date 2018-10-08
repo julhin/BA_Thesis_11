@@ -35,45 +35,38 @@
 \BOOKMARK [1][-]{section.5.2}{Application of the method}{chapter.5}% 35
 \BOOKMARK [2][-]{subsection.5.2.1}{P1: Investigation of the current state of CoCoME}{section.5.2}% 36
 \BOOKMARK [2][-]{subsection.5.2.2}{P2: Extract the necessary system parts for the requirements}{section.5.2}% 37
-\BOOKMARK [2][-]{subsection.5.2.3}{DEPRECATED Analysis of the current state for CoCoME}{section.5.2}% 38
-\BOOKMARK [1][-]{section.5.3}{P3: Check the fulfillment of the requirements}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.3.1}{Use cases}{section.5.3}% 40
-\BOOKMARK [2][-]{subsection.5.3.2}{Security relevant data}{section.5.3}% 41
-\BOOKMARK [2][-]{subsection.5.3.3}{Definition of roles}{section.5.3}% 42
-\BOOKMARK [2][-]{subsection.5.3.4}{Definition of access rights}{section.5.3}% 43
-\BOOKMARK [2][-]{subsection.5.3.5}{Data processing in security relevant components}{section.5.3}% 44
-\BOOKMARK [1][-]{section.5.4}{Add system extensions}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.5}{P4: Define system extensions}{chapter.5}% 46
-\BOOKMARK [1][-]{section.5.6}{P5: Evaluation of the defined access rights}{chapter.5}% 47
-\BOOKMARK [0][-]{chapter.6}{Case study system}{}% 48
-\BOOKMARK [1][-]{section.6.1}{Scenario: stock manager requests the report for a customer}{chapter.6}% 49
-\BOOKMARK [2][-]{subsection.6.1.1}{Description}{section.6.1}% 50
-\BOOKMARK [2][-]{subsection.6.1.2}{CoCoME excerpt}{section.6.1}% 51
-\BOOKMARK [2][-]{subsection.6.1.3}{Data types and access rights}{section.6.1}% 52
-\BOOKMARK [2][-]{subsection.6.1.4}{Component behavior}{section.6.1}% 53
-\BOOKMARK [1][-]{section.6.2}{Scenario: Support employee requests information for an order}{chapter.6}% 54
-\BOOKMARK [2][-]{subsection.6.2.1}{Description}{section.6.2}% 55
-\BOOKMARK [2][-]{subsection.6.2.2}{Identification of a new use case}{section.6.2}% 56
-\BOOKMARK [2][-]{subsection.6.2.3}{CoCoME excerpt}{section.6.2}% 57
-\BOOKMARK [2][-]{subsection.6.2.4}{Data types and access rights}{section.6.2}% 58
-\BOOKMARK [2][-]{subsection.6.2.5}{Component behavior}{section.6.2}% 59
-\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 60
-\BOOKMARK [1][-]{section.7.1}{GQM plan}{chapter.7}% 61
-\BOOKMARK [1][-]{section.7.2}{Applicability of the introduced method}{chapter.7}% 62
-\BOOKMARK [2][-]{subsection.7.2.1}{Is the introduced method applicable to a concrete system}{section.7.2}% 63
-\BOOKMARK [1][-]{section.7.3}{Usability of the created case study for data-based privacy analysis}{chapter.7}% 64
-\BOOKMARK [2][-]{subsection.7.3.1}{Are the access rights well defined ?}{section.7.3}% 65
-\BOOKMARK [2][-]{subsection.7.3.2}{Is the created case Study usable for different information flow classes?}{section.7.3}% 66
-\BOOKMARK [1][-]{section.7.4}{Expressiveness of data centric PCM}{chapter.7}% 67
-\BOOKMARK [2][-]{subsection.7.4.1}{Is the created case study expressible with PCM ?}{section.7.4}% 68
-\BOOKMARK [2][-]{subsection.7.4.2}{Number of missing elements for the different}{section.7.4}% 69
-\BOOKMARK [1][-]{section.7.5}{Discussion}{chapter.7}% 70
-\BOOKMARK [0][-]{chapter.8}{Conclusion and future work}{}% 71
-\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 72
-\BOOKMARK [1][-]{section.8.2}{Benefits of our work}{chapter.8}% 73
-\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 74
-\BOOKMARK [2][-]{subsection.8.3.1}{Method}{section.8.3}% 75
-\BOOKMARK [2][-]{subsection.8.3.2}{Case study system}{section.8.3}% 76
-\BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 77
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 78
-\BOOKMARK [1][-]{section.A.1}{First Appendix Section}{appendix.A}% 79
+\BOOKMARK [2][-]{subsection.5.2.3}{P3: Check the fulfillment of the requirements}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.4}{P4: Define system extensions}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.5}{P5: Evaluation of the defined access rights}{section.5.2}% 40
+\BOOKMARK [2][-]{subsection.5.2.6}{M1: Store the current state in a milestone}{section.5.2}% 41
+\BOOKMARK [0][-]{chapter.6}{Case study system}{}% 42
+\BOOKMARK [1][-]{section.6.1}{Scenario: stock manager requests the report for a customer}{chapter.6}% 43
+\BOOKMARK [2][-]{subsection.6.1.1}{Description}{section.6.1}% 44
+\BOOKMARK [2][-]{subsection.6.1.2}{CoCoME excerpt}{section.6.1}% 45
+\BOOKMARK [2][-]{subsection.6.1.3}{Data types and access rights}{section.6.1}% 46
+\BOOKMARK [2][-]{subsection.6.1.4}{Component behavior}{section.6.1}% 47
+\BOOKMARK [1][-]{section.6.2}{Scenario: Support employee requests information for an order}{chapter.6}% 48
+\BOOKMARK [2][-]{subsection.6.2.1}{Description}{section.6.2}% 49
+\BOOKMARK [2][-]{subsection.6.2.2}{Identification of a new use case}{section.6.2}% 50
+\BOOKMARK [2][-]{subsection.6.2.3}{CoCoME excerpt}{section.6.2}% 51
+\BOOKMARK [2][-]{subsection.6.2.4}{Data types and access rights}{section.6.2}% 52
+\BOOKMARK [2][-]{subsection.6.2.5}{Component behavior}{section.6.2}% 53
+\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 54
+\BOOKMARK [1][-]{section.7.1}{GQM plan}{chapter.7}% 55
+\BOOKMARK [1][-]{section.7.2}{Applicability of the introduced method}{chapter.7}% 56
+\BOOKMARK [2][-]{subsection.7.2.1}{Is the introduced method applicable to a concrete system}{section.7.2}% 57
+\BOOKMARK [1][-]{section.7.3}{Usability of the created case study for data-based privacy analysis}{chapter.7}% 58
+\BOOKMARK [2][-]{subsection.7.3.1}{Is the created case Study usable for different information flow classes?}{section.7.3}% 59
+\BOOKMARK [1][-]{section.7.4}{Expressiveness of data centric PCM}{chapter.7}% 60
+\BOOKMARK [2][-]{subsection.7.4.1}{Is the created case study expressible with PCM ?}{section.7.4}% 61
+\BOOKMARK [2][-]{subsection.7.4.2}{Number of missing elements for the different}{section.7.4}% 62
+\BOOKMARK [1][-]{section.7.5}{Discussion}{chapter.7}% 63
+\BOOKMARK [0][-]{chapter.8}{Conclusion and future work}{}% 64
+\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.2}{Benefits of our work}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 67
+\BOOKMARK [2][-]{subsection.8.3.1}{Method}{section.8.3}% 68
+\BOOKMARK [2][-]{subsection.8.3.2}{Case study system}{section.8.3}% 69
+\BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 70
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 71
+\BOOKMARK [1][-]{section.A.1}{First Appendix Section}{appendix.A}% 72

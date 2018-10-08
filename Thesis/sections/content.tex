@@ -704,13 +704,14 @@ Due to the fact, that only one use case is defined for the \textit{EnterpriseMan
 The \textit{Admin} has no use cases associated, so we relied on the implementation. In the implementation, the role has access to all data, so we defined the \textit{Admin} to be the master role in the system, that has access to all data. With access to all data any small or big problems may be reviewed and fixed. Therefore the role provides and requires all data types.
 \end{itemize}
 \paragraph{R5: definition of access rights}
-Since the previous requirements are  fulfilled with the defined system extensions, in this step the ACM is reviewed and updated. The updated ACM is shown in \autoref{ACM_updated}. The entries that have changed since the old version are shown in bold.
+Since the previous requirements are  fulfilled with the defined system extensions, in this step the ACM is reviewed and updated. The updated ACM is shown in \autoref{ACM_updated}. The entries that have changed since the old version are shown in bold. As before, the \textit{Webservice} component is omitted.
 
 \begin{landscape}
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
-ACM & Webfrontend & PickupShop & TS:cashdeskline & TS:inventory \\ 
+ACM & Webfrontend & PickupShop & TS:inventory: & TS:inventory: \\ 
+& & & data & application \\
 \hline 
 customer 
 %WF
@@ -870,7 +871,7 @@ p\&s data & 4 \\
 system data & 4 \\
 \end{tabular}
 &
-%TS:cdl
+%TS:inv:data
  \begin{tabular}{c|c}
 customer data & 2 \\
 account data & 3 \\
@@ -878,7 +879,7 @@ p\&s data & 2 \\
 system data & 4 \\
 \end{tabular}
 &
-%TS:inv
+%TS:inv:app
  \begin{tabular}{c|c}
 customer data & 2 \\
 account data & 3 \\
@@ -887,20 +888,95 @@ system data & 4 \\
 \end{tabular}
  \\ 
 \hline 
+admin & 
+%WF
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+&
+%TS:inv:data
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+&
+%TS:inv:app
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+ \\ 
+\hline 
 \end{tabular} 
-\caption{The updated Version of the ACM for CoCoME after the shortcomings are fixed. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{NoAccess}. The bold entries  the updated access rights.}
+\caption{The updated Version of the ACM for CoCoME after the shortcomings are fixed. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{NoAccess}. The bold entries changed since the old version.}
 \label{ACM_updated}
 \end{table}
 \end{landscape}
 \paragraph{R6: types of data processing in the components}
 %TODO eventuell noch ein bisschen besser schreiben !!!!
-Even with the system extensions for the previous requirements, there is no need to review and update the different types of data processing.
+The different types of data processing are also derived from the requirements R1-R4. After reviewing the different types of data processing that were defined, there are no need to extend anything. 
 \subsection{P5: Evaluation of the defined access rights}
-\subsubsection{Are the access rights well defined ?}
-Well defined access rights means in this context that the defined access rights meet the criteria defined by Evered and Bögeholz\cite{CaseStudyAndAccessrigths}.The two authors defined seven different criteria. In order to ensure clearly defined access rights, the defined criteria should be met. In our case, it is not possible to evaluate all seven criteria. This seven criteria are : Concise, clear, aspect-oriented, fundamental, positive, need-to-know and efficient. Clear and concise are omitted, because for the verification of these two criteria a survey is needed. It was also not possible to check the fundamental criterion, because it needs code to verify if the access rights are embedded in it. At last the efficient criterion also needs running code. This criterion measures the overhead that access rights cause in a system. Since the thesis is oriented on the conceptual level instead of on a code level, this criterion was not included in our scope. 
-%Gewählte Kriterien beschreiben
-The three chosen criteria that we are utilizing for our evaluation are aspect-oriented, positive and need to know. The criterion aspect-oriented describes that the access rights should be separated from the code. This allows a better understanding of the code and more importantly it allows that different code is used in different contexts. The criterion positive describes, that each access to data classes must be explicitly given to a subject. The default value for access rights is no access. The criterion need-to-know describes the state of access rights where each role has just access to the absolute necessary data that is used to fulfill the tasks of the role.This criterion intends to ensure that access rights are define fine-grained. To give a simple example, a role requires the customer address to perform its tasks.  Fine-grained access rights ensure that the role can only access the address data. Access to other customer data must then be restricted.\\ The number of met criteria is the metric to answer the question. The evaluation of the access rights has to be taken with a grain of salt. Since the access rights are dependent on the security relevant data, the defined roles and the system model, the access rights needs to be reviewed each time one of the dependencies changes.
-\subsubsection{Number of satisfied criteria}
+After all system extensions are done, in this step  the defined access rights are evaluated. The evaluation follows a GQM-plan %TODO ref auf foundations
+The GQM-plan for the evaluation of the access rights is shown in
+\begin{figure}
+
+\caption{GQM-plan for the evaluation of the defined access rights. The evaluation focus on the highlighted parts.}
+\label{evalAR}
+\end{figure}
+ %TODO ref figure
+\subsubsection{Goal: Evaluation of the case study}
+The goal is to evaluate the case study. A shown in \autoref{evalAR} the evaluation of the case study is split into two parts. In this we will only focus on the highlighted plan, the evaluation of the access rights.
+\subsubsection{Question: Are the access rights well defined ?}
+Well defined access rights means in this context that the defined access rights meet the criteria defined by Evered and Bögeholz\cite{CaseStudyAndAccessrigths}.The two authors defined seven different criteria. In order to ensure well defined access rights, the seven criteria should be met. The seven criteria are : Concise, clear, aspect-oriented, fundamental, positive, need-to-know and efficient. We categorized the criteria into three classes: specification, comprehensibility and implementation. The division of the individual criteria into classes is shown in \autoref{fig:Class_ARC}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Access rights} \\ 
+\hline 
+Specification & Aspect-oriented  \\ 
+\hline 
+ & Positive  \\ 
+\hline 
+ & Need-to-know \\ 
+\hline 
+Comprehensibility & Clear \\ 
+\hline 
+ & Concise  \\ 
+\hline 
+Implementation & Fundamental \\ 
+\hline 
+ & Efficient \\ 
+\hline 
+\end{tabular} 
+\caption{Classification of the criteria for good access rights.}
+\label{fig:Class_ARC}
+\end{table}
+The criteria in the class \textit{Specification} evaluate the properties of the defined access and the general access levels that that well defined access rights cover.\\
+The criteria in the class\textit{Comprehensibility} evaluates the complexity of the notation.\\
+The criteria in the class \textit{Implementation} evaluate the embedding of the access rights in the implementation.\\
+It was possible to only evaluate three of the seven criteria due to various reasons. \textit{Comprehensibility} criteria ware not possible due to time constraint. The criteria in this class are checked by conducting a survey. This was not possible in the time frame of this thesis. For the \textit{Implementation} criteria an integration of the access rights into the implementation of CoCoME is needed. This implementation is missing, so it was also not possible to check this class.\\
+The remaining criteria \textit{Aspect-oriented}, \textit{Positive} and \textit{Need-to-know} located in the \textit{Specification} class. \\
+\textit{Aspect-oriented} deswcribes, that the implementation and the access rights are sperate stored and define. This alloows that the implementation and the access rights can be used in different contexts. Further, both are easier to understand , if they are separated.  \\
+\textit{Positive} describes, that the access to data have to explicitly given to the entities. The default level of access is \textit{no access}. This avoid that access is implicitly granted.\\
+\textit{Need-to-know} describes, that well defined access rights only allow access to the absolute minimum of data that are used by the entities. \\
+
+\subsubsection{Metric Number of satisfied criteria}
 The evaluation is done in a checklist manner. For each criterion the defined access rights are evaluated whether they fulfill this criterion. 
 \paragraph{Aspect-oriented}
 %Beschreibung des Kriteriums danach 
@@ -910,6 +986,7 @@ The created case study achieves this criterion. First, granular access control r
 \paragraph{Need-to-know}
 This criterion is achieved by the created case study. We split the data in four classes. For each component it is defined which role has access to which data. With this we can model, for example, that the support employee may access customer data in the Tradingsystem:inventory, but not in Tradingsystem:cashdeskline. The role doesn't need access to customer data in Tradingsystem:cashdeskline for its tasks. It is possible to model that each role only get access to the absolutely necessary data in a component. So this criteria is met.
 
+%TODO Bildchen aus vortrag und kurz erklären !!!
 
 
 \subsection{M1: Store the current state in a milestone}

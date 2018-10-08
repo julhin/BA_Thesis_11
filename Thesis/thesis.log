@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.8.27)  8 OCT 2018 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.8.27)  8 OCT 2018 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2228,7 +2228,7 @@ pdfTeX warning: /bin/pdflatex (file ./logos/ExcerptRelComps.pdf): PDF inclusion
 : invalid other resource which is no dict (key 'ProcSets', type <array>); ignor
 ed.
 >] [25] [26]
-Overfull \hbox (8.20378pt too wide) in paragraph at lines 636--639
+Overfull \hbox (8.20378pt too wide) in paragraph at lines 637--640
 \T1/LinuxLibertineT-TLF/m/it/12 (-20) System \T1/LinuxLibertineT-TLF/m/n/12 (-2
 0) data is not avail-able in any other com-po-nent other than \T1/LinuxLibertin
 eT-TLF/m/it/12 (-20) Trad-ingssys-tem:inventory:data\T1/LinuxLibertineT-TLF/m/n
@@ -2236,75 +2236,93 @@ eT-TLF/m/it/12 (-20) Trad-ingssys-tem:inventory:data\T1/LinuxLibertineT-TLF/m/n
  []
 
 
-Overfull \hbox (24.28549pt too wide) in paragraph at lines 643--664
+Overfull \hbox (24.28549pt too wide) in paragraph at lines 644--665
 [][] 
  []
+
+
+LaTeX Warning: Citation 'CoCoMETechReport' on page 27 undefined on input line 6
+72.
+
+
+Overfull \hbox (66.56088pt too wide) in paragraph at lines 672--673
+\T1/LinuxLibertineT-TLF/m/n/12 (-20) This re-quire-ment is ful-filled, a very d
+e-tailed com-po-nent for Co-CoME is pro-vided [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'CoCoMETechReport' on page 27 undefined on input line 6
+74.
 
 [27
 
 
-] [28]
+] [28] [29] [30]
 
-LaTeX Warning: Citation 'CoCoMETechReport' on page 29 undefined on input line 6
-87.
+LaTeX Warning: Float too large for page by 2.21759pt on input line 928.
 
-[29] [30] [31] [32
+[31]
+
+LaTeX Warning: Citation 'CaseStudyAndAccessrigths' on page 32 undefined on inpu
+t line 936.
+
+[32
+
+
+] [33] [34
 
 
 ]
 chapter 6.
 
-LaTeX Warning: Citation 'CoCoMETechReport' on page 33 undefined on input line 9
-04.
+LaTeX Warning: Citation 'CoCoMETechReport' on page 35 undefined on input line 9
+61.
 
-<logos/ExcerptUC13.pdf, id=884, 549.05125pt x 524.96124pt>
+<logos/ExcerptUC13.pdf, id=913, 549.05125pt x 524.96124pt>
 File: logos/ExcerptUC13.pdf Graphic file (type pdf)
 
 <use logos/ExcerptUC13.pdf>
-Package pdftex.def Info: logos/ExcerptUC13.pdf used on input line 916.
+Package pdftex.def Info: logos/ExcerptUC13.pdf used on input line 973.
 (pdftex.def)             Requested size: 439.2416pt x 419.96956pt.
 
-Overfull \hbox (6.75964pt too wide) in paragraph at lines 916--917
-[][] 
- []
-
-[33
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 924--926
-
- []
-
-[34 <./logos/ExcerptUC13.pdf
-
-pdfTeX warning: /bin/pdflatex (file ./logos/ExcerptUC13.pdf): PDF inclusion: in
-valid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
-Overfull \hbox (11.91084pt too wide) in paragraph at lines 937--963
+Overfull \hbox (6.75964pt too wide) in paragraph at lines 973--974
 [][] 
  []
 
 [35]
+Underfull \hbox (badness 10000) in paragraph at lines 981--983
 
-pdfTeX warning: /bin/pdflatex (file ./logos/Data_flow_UC13.pdf): PDF inclusion:
- found PDF version <1.7>, but at most version <1.5> allowed
-<logos/Data_flow_UC13.pdf, id=918, 796.9775pt x 615.29875pt>
-File: logos/Data_flow_UC13.pdf Graphic file (type pdf)
+ []
 
-<use logos/Data_flow_UC13.pdf>
-Package pdftex.def Info: logos/Data_flow_UC13.pdf used on input line 1000.
-(pdftex.def)             Requested size: 597.73164pt x 461.47293pt.
+[36 <./logos/ExcerptUC13.pdf
 
-Overfull \hbox (28.99098pt too wide) in paragraph at lines 1000--1001
+pdfTeX warning: /bin/pdflatex (file ./logos/ExcerptUC13.pdf): PDF inclusion: in
+valid other resource which is no dict (key 'ProcSets', type <array>); ignored.
+>]
+Overfull \hbox (11.91084pt too wide) in paragraph at lines 994--1020
 [][] 
  []
 
-[36] [37 <./logos/Data_flow_UC13.pdf>] [38] [39] [40
+[37]
+
+pdfTeX warning: /bin/pdflatex (file ./logos/Data_flow_UC13.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<logos/Data_flow_UC13.pdf, id=946, 796.9775pt x 615.29875pt>
+File: logos/Data_flow_UC13.pdf Graphic file (type pdf)
+
+<use logos/Data_flow_UC13.pdf>
+Package pdftex.def Info: logos/Data_flow_UC13.pdf used on input line 1057.
+(pdftex.def)             Requested size: 597.73164pt x 461.47293pt.
+
+Overfull \hbox (28.99098pt too wide) in paragraph at lines 1057--1058
+[][] 
+ []
+
+[38] [39 <./logos/Data_flow_UC13.pdf>] [40] [41] [42
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1133
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1190
 
  []
 
@@ -2312,89 +2330,81 @@ Underfull \hbox (badness 10000) in paragraph at lines 1130--1133
 
 pdfTeX warning: /bin/pdflatex (file ./logos/DF_UC14.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<logos/DF_UC14.pdf, id=961, 795.97375pt x 615.29875pt>
+<logos/DF_UC14.pdf, id=989, 795.97375pt x 615.29875pt>
 File: logos/DF_UC14.pdf Graphic file (type pdf)
  <use logos/DF_UC14.pdf>
-Package pdftex.def Info: logos/DF_UC14.pdf used on input line 1140.
+Package pdftex.def Info: logos/DF_UC14.pdf used on input line 1197.
 (pdftex.def)             Requested size: 636.77988pt x 492.23967pt.
 
-Overfull \hbox (59.75772pt too wide) in paragraph at lines 1140--1141
+Overfull \hbox (59.75772pt too wide) in paragraph at lines 1197--1198
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 26.77986pt on input line 1143.
+LaTeX Warning: Float too large for page by 26.77986pt on input line 1200.
 
-[41]) (./sections/evaluation.tex [42] [43 <./logos/DF_UC14.pdf>] [44
+[43]) (./sections/evaluation.tex [44] [45 <./logos/DF_UC14.pdf>] [46
 
 
 ]
 chapter 7.
 
-LaTeX Warning: Citation 'GQM_Intro' on page 45 undefined on input line 19.
+LaTeX Warning: Citation 'GQM_Intro' on page 47 undefined on input line 18.
 
-<logos/OverviewEval.pdf, id=986, 433.62pt x 716.6775pt>
+<logos/OverviewEval.pdf, id=1015, 433.62pt x 716.6775pt>
 File: logos/OverviewEval.pdf Graphic file (type pdf)
 
 <use logos/OverviewEval.pdf>
-Package pdftex.def Info: logos/OverviewEval.pdf used on input line 21.
+Package pdftex.def Info: logos/OverviewEval.pdf used on input line 20.
 (pdftex.def)             Requested size: 346.89647pt x 573.34279pt.
 
 
-LaTeX Warning: Reference `casestudysystem' on page 45 undefined on input line 3
-3.
+LaTeX Warning: Reference `casestudysystem' on page 47 undefined on input line 3
+2.
 
 
-LaTeX Warning: Reference `casestudysystem' on page 45 undefined on input line 3
-3.
+LaTeX Warning: Reference `casestudysystem' on page 47 undefined on input line 3
+2.
 
-[45] [46 <./logos/OverviewEval.pdf
+[47] [48 <./logos/OverviewEval.pdf
 
 pdfTeX warning: /bin/pdflatex (file ./logos/OverviewEval.pdf): PDF inclusion: i
 nvalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 
 >]
 
-LaTeX Warning: Citation 'CaseStudyAndAccessrigths' on page 47 undefined on inpu
-t line 38.
-
-
-Underfull \vbox (badness 1389) has occurred while \output is active []
-
- [47]
-
-LaTeX Warning: Citation 'Noninfluence' on page 48 undefined on input line 53.
-
-[48]
-
-LaTeX Warning: Citation 'MMextension' on page 49 undefined on input line 71.
+LaTeX Warning: Citation 'Noninfluence' on page 49 undefined on input line 40.
 
 [49]
 
-LaTeX Warning: Citation 'CaseStudyAndAccessrigths' on page 50 undefined on inpu
-t line 92.
+LaTeX Warning: Citation 'MMextension' on page 50 undefined on input line 58.
 
-[50]) (./sections/conclusion.tex
+[50]
+
+LaTeX Warning: Citation 'CaseStudyAndAccessrigths' on page 51 undefined on inpu
+t line 79.
+
+[51]) (./sections/conclusion.tex
 Underfull \vbox (badness 2237) has occurred while \output is active []
 
- [51]
-[52]
+ [52]
+[53] [54
+
+
+]
 chapter 8.
 
-LaTeX Warning: Citation 'PCM' on page 53 undefined on input line 17.
+LaTeX Warning: Citation 'PCM' on page 55 undefined on input line 17.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53
-
-
-]
-[54])
+ [55]
+[56])
 
 LaTeX Warning: Empty bibliography on input line 136.
 
-(./sections/appendix.tex [55] [56
+(./sections/appendix.tex [57] [58
 
 
 ]
@@ -2411,16 +2421,25 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             See the microtype manual for details.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
- [57]
+ [59]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
  (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1F9FD2B429FB6C8F6610C2892992CBFB;5972.
 
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 1F9FD2B429FB6C8F6610C2892992CBFB;5972
+(rerunfilecheck)             After:  55673B0FD053FFBED4B676D876DB503C;5432.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run Biber on the file:
@@ -2432,29 +2451,59 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25155 strings out of 493041
- 462362 string characters out of 6137190
- 1057958 words of memory out of 5000000
+ 25179 strings out of 493041
+ 462790 string characters out of 6137190
+ 1058958 words of memory out of 5000000
  27802 multiletter control sequences out of 15000+600000
- 173583 words of font info for 255 fonts, out of 8000000 for 9000
+ 174325 words of font info for 259 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,20n,88p,8849b,3464s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
-e/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/sourcesanspro/a_ggs4wk.enc}{/usr/share/texlive/texmf-dis
-t/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/font
-s/enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/libertine/lbtn_76gpa5.enc}</usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/libertine/LinLibertineTI.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe
-/sourcesanspro/SourceSansPro-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/adobe/sourcesanspro/SourceSansPro-Semibold.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/bera/fvmr8a.pfb>
-Output written on thesis.pdf (73 pages, 821250 bytes).
+pdfTeX warning (dest): name{subsection.7.3.2} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.3} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/sourcesanspro/a_ggs4wk.enc}{/usr/share/texlive/texmf-dist/
+fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/share/texlive/texmf-dist/fonts/
+enc/dvips/libertine/lbtn_nh77jq.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dv
+ips/libertine/lbtn_76gpa5.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
+/libertine/LinLibertineT.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+libertine/LinLibertineTB.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+libertine/LinLibertineTI.pfb></usr/share/texlive/texmf-dist/fonts/type1/adobe/s
+ourcesanspro/SourceSansPro-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+adobe/sourcesanspro/SourceSansPro-Semibold.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/bera/fvmr8a.pfb>
+Output written on thesis.pdf (75 pages, 822824 bytes).
 PDF statistics:
- 1162 PDF objects out of 1200 (max. 8388607)
- 1010 compressed objects within 11 object streams
- 220 named destinations out of 1000 (max. 500000)
+ 1189 PDF objects out of 1200 (max. 8388607)
+ 1035 compressed objects within 11 object streams
+ 238 named destinations out of 1000 (max. 500000)
  28863 words of extra memory for PDF output out of 29859 (max. 10000000)
 
