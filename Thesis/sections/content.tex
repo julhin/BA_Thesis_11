@@ -192,7 +192,7 @@ User interface & transmit \\
 \section{P3: Check fulfillment of requirements}
 \label{cs_check}
 %fertig
-In this step the current state of requirements is reviewed. The best case is, that all requirements are fulfilled. If this is the case, one can skip the next step. If it is not the case, create a summary of all shortcomings for the fulfillment of requirements in the system. After the first two steps of the procedure are done the usual case is that some of the requirements are not fulfilled. It may even happen that for some requirements are no elements present in the system. The review of the shortcomings is important to outline which parts of the system are vague. Vague in the context of the thesis means that some elements (e.g roles, access rights) are not well defined. To give an example, it may happen that roles are just mentioned but a clear definition of the role is missing. This summary of shortcomings may also show parts where the model is not well defined. This may lead to an improvement of the model in the next step. After the summary is complete, the procedure moves to the next step. The summary is done due to two reasons. Firstly, to get a comprehensive overview of the current state of the system and secondly, to enable a division of tasks. 
+In this step the current state of requirements is reviewed. The best case is, that all requirements are fulfilled. If this is the case, one can skip the next step. If it is not the case, create a summary of all shortcomings for the fulfillment of requirements in the system. After the first two steps of the procedure are done the usual case is that some of the requirements are not fulfilled. It may even happen that for some requirements are no elements present in the system. The review of the shortcomings is important to outline which parts of the system are vague. Vague in the context of the thesis means that some elements (e.g roles, access rights) are not well defined. To give an example, it may happen that roles are just mentioned but a clear definition of the role is missing. This summary of shortcomings may also show parts where the model is not well defined. This may lead to an improvement of the model in the next step. After the summary is complete, the procedure moves to the next step. The summary is done due to two reasons. Firstly, to get a comprehensive overview of the current state of the system and secondly, to enable a division of tasks. The second reason is that you get an overview of the big picture and define possible system extensions not as soon as a shortcoming is encountered but with the big picture in mind. This ensures that system extensions are defined in the context of the whole system.
 
 \section{P4: Fix all shortcomings by defining system extensions}
 \label{cs_cocome_ext}
@@ -667,17 +667,18 @@ Webservice & transmit & transmit & transmit & transmit \\
 \end{table}
 \subsection{P3: Check the fulfillment of the requirements}
 \label{shortcommingsCoCoME}
-After all system parts for each requirement is identified and/or defined, a short review for the fulfillment of each requirement is done
+Once the system parts for each requirement have been identified, defined or derived, a brief check is made to ensure that each requirement has been met. For each requirement it is checked whether the individual system elements are complete. It is possible that some definitions are vague or missing. Vague means that there is room for interpretation or that different definitions contradict each other. \\ In the following, we analyzed the fulfillment for each individual requirement. 
 \subsubsection{R1: component-based systems}
+This requirement is fulfilled, a very detailed component for CoCoME is provided \cite{CoCoMETechReport}.
 \subsubsection{R2: use cases}
-In the use cases, there are shortcomings. While analyzing them, we found that only the newly added ones by the addition of the pickup shop processing security relevant data. Therefore the pool of possible use cases that later may be used to create scenarios from, are limited. 
+A detailed use case diagram with a brief description of each use case is provided in the CoCoME tech report \cite{CoCoMETechReport}. All in all, 13 use cases are defined, which cover the main aspects of CoCoME.
 \subsubsection{R3: security relevant data}
 % Report nicht richtig definiert, Verbindung zwischen custome rund seinen Produkten, 
-As previously said, definitions for data are missing. We have found that there is currently no definition of how to connect a customer to their purchased products. This missing data is used in the UC13 described in the CoCoME tech report \cite{CoCoMETechReport}. Another case of missing data definitions, happens in the same use case. A report data type is mentioned but never clear defined. So this data type is also missing.
+In the definition of the data, a lot of data is already defined by the implementation. Nonetheless, some data mentioned in the use cases is missing. We identified in the investigated excerpt two missing data types. First, there is no connection defined between the customer and the purchased products. Secondly, the \textit{Report} data type mentioned in the use cases is also not defined.
 \subsubsection{R4: definition of roles}
-There are some vagueness in the roles, which possibly affects the ACM. Some provided/required data is not clear defined. But the tasks of the roles are clearly defined. 
+For some roles the actual tasks are not clear because some use cases contradict each other. Further, for the \textit{EnterpriseManager} there are too few use cases to clearly define the tasks. For the \textit{Admin} role use cases are completely missing, because this role is only present in the code.
 \subsubsection{R5: definition of access rights}
-If any changes are done in the previous requirements R2-R4, the state of the access rights has to be reviewed an possibly updated to the new version. In the current state the requirement is fulfilled.
+In the case of the 
 \subsubsection{R6: types of data processing in the components}
 In this aspect, there are no shortcomings. All necessary types of operations are defined. 
 \subsection{P4: Define system extensions}
