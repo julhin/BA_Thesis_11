@@ -180,7 +180,7 @@ In \autoref{opm_expl} an excerpt of an OpM is shown. As one can see, in the comp
 \begin{table}
 \begin{tabular}{|c|c|}
 \hline 
-• & Login data \\ 
+ & Login data \\ 
 \hline 
 User interface & transmit \\ 
 \hline 
@@ -977,58 +977,92 @@ The remaining criteria \textit{Aspect-oriented}, \textit{Positive} and \textit{N
 \textit{Need-to-know} describes, that well defined access rights only allow access to the absolute minimum of data that are used by the entities. \\
 
 \subsubsection{Metric Number of satisfied criteria}
-The evaluation is done in a checklist manner. For each criterion the defined access rights are evaluated whether they fulfill this criterion. 
+The evaluation is done in a checklist manner. For each criterion the defined access rights are evaluated whether they fulfill this criterion. The results of the metric are summarized in \autoref{AR_EVAL_SUM}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Access rights} & fulfilled \\ 
+\hline 
+Specification & Aspect-oriented & \cmark \\ 
+\hline 
+ & Positive & \cmark \\ 
+\hline 
+ & Need-to-know & \cmark \\ 
+\hline 
+Comprehensibility & Clear & ? \\ 
+\hline 
+ & Concise & ? \\ 
+\hline 
+Implementation & Fundamental & n/a \\ 
+\hline 
+ & Efficient & n/a \\ 
+\hline 
+\end{tabular} 
+\caption{Summary for the evaluation of the defined access rights.} 
+\label{AR_EVAL_SUM}
+\end{table} 
 \paragraph{Aspect-oriented}
 %Beschreibung des Kriteriums danach 
-The access rights are stored separately from the code and even from the data flows. The access rights are changeable in the context of the case study. This allows that a scenario may be evaluated in different security contexts. So this criterion is met
+The access rights are stored separately from the code and even from the defined data flows. The access rights are changeable in the context of the case study. This allows that a scenario may be evaluated in different security contexts. So this criterion is met.
 \paragraph{Positive}
-The created case study achieves this criterion. First, granular access control rights have been defined. The access rights are differentiated in four different levels. We also defined a default value, which represents \textit{no access} to data.
+The created case study achieves this criterion. First, granular access control rights have been defined. The access rights are differentiated in four different levels and each level represents fine grained access. We also defined a default value, which represents \textit{no access} to data. 
 \paragraph{Need-to-know}
-This criterion is achieved by the created case study. We split the data in four classes. For each component it is defined which role has access to which data. With this we can model, for example, that the support employee may access customer data in the Tradingsystem:inventory, but not in Tradingsystem:cashdeskline. The role doesn't need access to customer data in Tradingsystem:cashdeskline for its tasks. It is possible to model that each role only get access to the absolutely necessary data in a component. So this criteria is met.
-
-%TODO Bildchen aus vortrag und kurz erklären !!!
-
-
+This criterion is achieved by the created case study. We split the data in four classes. For each component it is defined which role has access to which data. With this we can model, for example, that a role may access data in component A but not in component B. Further the differentiation in four levels allows, for example, to explicitly distinguish between access to data provided by that role and access to data that is not provided, but needed for the role's tasks. so this criteria is also met 
+\paragraph{Concise and clear}
+Due to the time frame of the thesis, we could not make a qualified statement if these criteria are met.
+\paragraph{Fundamental and Efficient}
+Since access control is not yet part of the implementation, it was not possible to check it at all.
 \subsection{M1: Store the current state in a milestone}
-
+Before the current system state is saved in the milestone, one have to decide if the access rights are well defined. After that the milestone is created. The milestone stores for each requirement the necessary model elements.
+\paragraph{Quality of access rights}
+The defined access rights achieved all criteria that we were able to check. So we summarize that the defined access rights are for the moment well defined. So the procedure moves to the next step and the current system state is stored in a milestone.
+\paragraph{Milestone}
+For each requirement the associated system elements are stored.
+\begin{itemize}
+\item R1: The system model\\ In this particular milestone, the system model from the CoCoME tech report \cite{CoCoMETechReport} is stored.
+\item R2: Use case diagram, definition for each use case.\\  In this particular milestone, the use case digram from the CoCoME tech report \cite{CoCoMETechReport} is stored.
+\item R3: The data types and the examination, which data is security relevant. \\ the four data classes ans the respective description of them are stored.
+\item R4: The different user roles\\ The description of the tasks and the provided/required data for each role are stored. The \textit{Admin} role is explicitly stored, because this role is not mentioned in the stored use case diagram.
+\item R5: The created ACM \autoref{ACM_updated}.
+\item R6: The created OpM \autoref{typeMatrix}.
+\end{itemize}
 \chapter{Case study system}
 \label{ch:casestudysystem}
 %Was wir dheir geschehen und kurz einleiten
-After we reached the milestone in the last chapter, we are going to create the case study in this one. Therefore we have to define scenarios. Scenarios describe a course of actions in the system. Also the roles and data involved are specified. Scenarios are created to describe the flow of data and the course of actions in a comprehensive way.  For presented case study system, we defined two scenarios in CoCoME. All defined scenarios are later converted into data flows by using the matrices in \autoref{ACM_updated} and \autoref{typeMatrix}. The data flows then added to the system model, which concludes the creation of the case study. After that, the created case study can be evaluated. The basic structure for each scenario is: First, the scenario is briefly described. Then we identify the concrete data types for the scenario. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. The data flow can later be used for a data-based privacy analysis.
+After we reached the milestone in the last chapter, we are going to define scenarios, evaluating the defined scenarios and concluding the procedure in this one.\\
+A scenario is a actual characteristics from, for example, a use case. But scenarios in general describe a actual interaction by one or more users with the system. This scenarios are later converted in data flows that are added to the system model. The scenario created by using the ACM \autoref{ACM_updated} and the OpM \autoref{typeMatrix}. We defined two scenarios for CoCoME.\\ The basic structure for each scenario is: First, the scenario is briefly described. Then the specific data types for the scenario are identified. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. \\
+After the generated data flows have been added to the system model, they are evaluated based on the number of covered information flow classes. \\
+Finally, it is checked whether the number of covered information flow classes aqre sufficient. Then the process is concluded.
+
+
+
+\section{Excerpt of the system}
+Before the individual scenarios are discussed, the extract from CoCoME in which the two scenarios take place is briefly presented. As shown in \autoref{scn_excerpt}, the sceanrios takin place in the PickupShop 
+\begin{figure}
+\includegraphics[scale=0.8]{logos/ExcerptUC13.pdf}
+\caption{Excerpt of CoCoME for which the described scenarios are defined.}
+\label{scn_excerpt}
+\end{figure}
 \section{Scenario: stock manager requests the report for a customer}
 \label{descripScn_casestudy_scn1} 
 \subsection{Description}
 %\subsubsection{data used in the scenario}
-The scenario is derived from UC13. This use case is described in the CoCoME tech report \cite{CoCoMETechReport}. In this scenario, the stock manager requests an report for the purchased goods of a customer. To identify the customer among all customers, the stock manager has access to the ID of the customer.The role enters the ID in the system, then the request is processed by CoCoME. At the end, the stock manager is presented with a full report. This report contains all purchases of the customer.\\
-%The usage model for the scenario is shown in \autoref{usage_UC13}. 
-The usage model is relatively simple and will only be described here.\\ The StockManager accesses the system with a customers id and in the end is presented with a report of all purchased products for this customer.
+This scenario is derived from the use cases described in the CoCoME tech report \cite{CoCoMETechReport}, more explicit the use case 13. \\
+In this scenario, the \textit{StockManager} requests a report for the purchased products of a customer. To identify the customer among all customers, the \textit{StockManager} has access to the ID of the specific customer. The \textit{StockManager} enters the ID in CoCoME, then the request is processed. At the end, the stock manager is presented with a full report for the customer. This report contains all purchased products of the customer.\\
 
-\begin{figure}
-\label{usage_UC13}
-\caption{The usage model for the Scenario: StockManager requests a report for a customer.}
-\end{figure}
-\subsection{CoCoME excerpt} 
-Before we move on to the access rights and data types, we show the excerpt of CoCoME in which this scenario takes place. This is just an excerpt of the whole system. The scenario only uses four components, the Tradingssystem:inventory:application, the Webfrontend, the Tradingsystem:inventory:data and the Webservice. 
-
-\begin{figure}
-\includegraphics[scale=0.8]{logos/ExcerptUC13.pdf}
-\caption{Excerpt of CoCoME in which the described scenarios takes place.}
-\label{scn_excerpt}
-\end{figure}
-
-\subsection{Data types and access rights} 
+\subsection{Extract the data types, access rights and types of data processing for the scenario} 
 \label{accesscontrol_casestudy}
-
-Previously, the data was divided into four classes.In the following enumeration the data classes and the concrete data for each class is shown.\\
+%TODO in drei Schritte aufteilen, erst die verwendeten daten, danch die R dan ToDP 
+In this paragraph, we will 
+As stated in the milestone, the data is divided into four classes: customer data, account data, product\&sales data and system data. In the following enumeration for each data class the used data in the scenario is described.
 \begin{itemize}
-\item account related data \\ No data from this class is used in this scenario
-\item customer related data\\ The ID from the customer is part of the scenario
-\item product \& sales related data\\ In the scenario two concrete types are used. First, the IOrderEntries type.This type is a list of all purchased products for an order. This type is a collection of all products in an order. The second type is the report, which collects all IOrderEntries in one list and transform it to a human readable document. 
-\item system data \\ The system data are the queries used to request the IOrderEntries from the database.
+\item account data \\ No data from this class is used in this scenario.
+\item customer data\\ The ID from the customer is part of the scenario.
+\item product\&sales data\\ In the scenario two data types are used. First, the \textit{IOrderEntries} are used. The \textit{IOrderEntries} are a collection of all data that is generated after an order successful passed.  The second used data type is the \textit{Report} data type, which is a human readable string. 
+\item system data \\ This class provides the data that is used to create the queries to the underlying database.
 \end{itemize}
-
-
-Next, we extract the access rights and the types of data processing from the corresponding matrices. The access rights matrix for this scenario is shown in \autoref{accessrightsCSS}. We omitted the Webservice component for the fact  that it only transmits the data in this scenario.\\
+Int he next step, we extract the access rights and the types of data processing from the corresponding matrices. The access rights matrix for this scenario is shown in \autoref{accessrightsCSS}. We omitted the Webservice component for the fact  that it only transmits the data in this scenario.\\
 The matrix for the data processing is shown in \autoref{DataPRoc_UC13}.
 
 \begin{table}
