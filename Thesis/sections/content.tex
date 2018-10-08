@@ -678,11 +678,24 @@ In the definition of the data, a lot of data is already defined by the implement
 \subsubsection{R4: definition of roles}
 For some roles the actual tasks are not clear because some use cases contradict each other. Further, for the \textit{EnterpriseManager} there are too few use cases to clearly define the tasks. For the \textit{Admin} role use cases are completely missing, because this role is only present in the code.
 \subsubsection{R5: definition of access rights}
-In the case of the 
+In the case of the access rights we cannot say in general if they are fulfilled, because the access rights are derived from the previous requirements R1-R4. If there are changes in R1-R4, the defined access rights have to be reviewed and if necessary updated. Nonetheless, in the case \textit{Admin} the tasks for this role are not clear, therefore it was not possible to derive access rights in some cases. 
 \subsubsection{R6: types of data processing in the components}
-In this aspect, there are no shortcomings. All necessary types of operations are defined. 
+This requirement is adjacent to R5: definiton of the access rights. The different types of data processing are derived from the previous requirements R1-R4. If there are changes in R1-R4, the different types of data processing have to be reviewed and if necessary updated.
 \subsection{P4: Define system extensions}
-In the next step, we extend CoCoME so that all requirements are fulfilled. In the previous step all shortcomings are listed. We gibe a short overview how we extended the system to meet all the requirements. As previously said, the use cases are already well defined, so there is nothing to fix.
+In the next step, we define system extensions for CoCoME to fix all shortcomings for the requirements. In the previous step all shortcomings were summarized. In the following, we give an overview how CoCoME was extended to meet all requirements.
+
+\paragraph{R1: component-based system}
+Here, no extensions was needed, because this requirement is met.
+\paragraph{R2: definition of use cases}
+Also, no need to define an extensions. This requirement is also met.
+\paragraph{R3: security relevant data}
+As identified previously in \autoref{shortcommingsCoCoME}, two data types are missing. First, there are no connection defined between a customer and its purchased products. Secondly, the \textit{Report} data type is only mentioned but is not defined.
+\begin{itemize}
+\item Connection between customer and purchased products\\ We defined that the connection is realized by adding a list of all orders to the customer object. Each order in CoCoME includes the involved products and other information like the total price.
+%TODO WARUM -> overhead, cust obj is eh schon geschützt, .... GUT muss sie sein
+\item Report data type\\ We have defined this data type as a string that can be read by humans.
+\end{itemize}
+\paragraph{R4: roles}
 \begin{itemize}
 \item \textbf{security relevant data}\\
 We added new data to the customer related data. The customer object now holds a list with all ordered products. With this addition, the shortcoming, that there was no connection between customer and the ordered products, is fixed.  We also defined the \textit{report} data type. This data type is used to display the purchased products of a customer to the stock manager. We defined it as a human readable list and it is placed in product\& sales data class.
