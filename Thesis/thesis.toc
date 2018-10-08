@@ -1,0 +1,263 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{i}{chapter*.1}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Zusammenfassung}{iii}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Contributions}{1}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Outline of the thesis}{2}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Foundations}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Terminology}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}security relevant data}{3}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Data flow}{3}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Palladio Component Model}{4}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Component based systems}{4}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Data Centric PCM}{5}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Concept}{5}{subsection.2.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}Meta model extension for data centric PCM}{6}{subsection.2.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Goal-Question-Metric approach}{6}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Related work}{7}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Procedure}{9}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}General procedure for the creation of a viable case study}{9}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}P1: Investigate the current state of the system}{11}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}P2: Extract necessary system parts for the requirements}{11}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R1: Modeled as component based system}{11}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R2: Definition of use cases}{12}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R3: Existence of security relevant data}{12}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R4: Existence of different user roles}{12}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R5: Definition of access rights}{12}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R6: Definition of type of data processing in the components}{13}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}P3: Check fulfillment of requirements}{13}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}P4: Fix all shortcomings by defining system extensions}{14}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}P5: Evaluation of the access rights}{14}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.7}M1: Store the results in a milestone}{15}{section.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.8}P6: Definition of scenarios}{15}{section.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.9}P7:Evaluation of the covered information flow classes}{16}{section.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.10}Conclusion of the procedure}{16}{section.4.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Analysis of CoCoME}{17}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}CoCoME overview}{17}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Platform migration}{18}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Addition of a Pickup shop}{18}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}Database migration}{18}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.4}Service adapter}{20}{subsection.5.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Reasons for CoCoME to apply our procedure on}{20}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Application of the method}{20}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}P1: Investigation of the current state of CoCoME}{20}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}P2: Extract the necessary system parts for the requirements}{21}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2.1}R1: Component based system}{21}{subsubsection.5.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2.2}R2: Existence of use cases}{21}{subsubsection.5.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2.3}R3: Security relevant data}{21}{subsubsection.5.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2.4}R4: roles}{22}{subsubsection.5.2.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2.5}R5: access rights}{23}{subsubsection.5.2.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.2.6}R6: Type of data processing in components}{27}{subsubsection.5.2.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}P3: Check the fulfillment of the requirements}{27}{subsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3.1}R1: component-based systems}{27}{subsubsection.5.2.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3.2}R2: use cases}{28}{subsubsection.5.2.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3.3}R3: security relevant data}{28}{subsubsection.5.2.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3.4}R4: definition of roles}{28}{subsubsection.5.2.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3.5}R5: definition of access rights}{28}{subsubsection.5.2.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.3.6}R6: types of data processing in the components}{29}{subsubsection.5.2.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.4}P4: Define system extensions}{29}{subsection.5.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R1: component-based system}{29}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R2: definition of use cases}{29}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R3: security relevant data}{29}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R4: definition of roles}{29}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R5: definition of access rights}{30}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline R6: types of data processing in the components}{32}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.5}P5: Evaluation of the defined access rights}{32}{subsection.5.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.5.1}Goal: Evaluation of the case study}{32}{subsubsection.5.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.5.2}Question: Are the access rights well defined ?}{32}{subsubsection.5.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.2.5.3}Metric Number of satisfied criteria}{33}{subsubsection.5.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Aspect-oriented}{33}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Positive}{33}{section*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Need-to-know}{33}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Concise and clear}{34}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Fundamental and Efficient}{34}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.6}M1: Store the current state in a milestone}{34}{subsection.5.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Quality of access rights}{34}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Milestone}{34}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Case study system}{35}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Excerpt of the system}{35}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Scenario: stock manager requests the report for a customer}{35}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Description}{35}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Extract the data types, access rights and types of data processing for the scenario}{37}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Component behavior}{38}{subsection.6.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.3.1}Observable Behavior}{38}{subsubsection.6.2.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.2.3.2}Data flow definition}{38}{subsubsection.6.2.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Scenario: Support employee requests information for an order}{40}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Description}{40}{subsection.6.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Identification of a new use case}{40}{subsection.6.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.2.1}Description the new role: Support employee}{40}{subsubsection.6.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Role description}{40}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline access rights}{40}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.2.2}Description of use case 14}{43}{subsubsection.6.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.3}CoCoME excerpt}{43}{subsection.6.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.4}Data types and access rights}{43}{subsection.6.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.5}Component behavior}{44}{subsection.6.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.5.1}Observable behavior}{44}{subsubsection.6.3.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.3.5.2}Data flow definition}{44}{subsubsection.6.3.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Evaluation}{47}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}GQM plan}{47}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Applicability of the introduced method}{47}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Is the introduced method applicable to a concrete system}{47}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.2.1.1}Application to the CoCoME system}{47}{subsubsection.7.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Usability of the created case study for data-based privacy analysis}{49}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}Is the created case Study usable for different information flow classes?}{49}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.3.1.1}Number of different covered information flow classes}{49}{subsubsection.7.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Illegal information flow}{50}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Information flow from higher security levels to lower ones}{50}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Observable information flow}{50}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Direct information flow between roles}{50}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Expressiveness of data centric PCM}{50}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.1}Is the created case study expressible with PCM ?}{50}{subsection.7.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {7.4.1.1}Number of available elements to model the different types of data processing}{51}{subsubsection.7.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Operations relational algebra}{51}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline I/O- operations}{51}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Transmission data}{51}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Change Access rights}{51}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Alternation of data}{51}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.2}Number of missing elements for the different}{51}{subsection.7.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.5}Discussion}{51}{section.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Conclusion and future work}{55}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Conclusion}{55}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Benefits of our work}{56}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Future work}{56}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.1}Method}{56}{subsection.8.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.2}Case study system}{56}{subsection.8.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3.3}Meta model extension}{57}{subsection.8.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Appendix}{61}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}First Appendix Section}{61}{section.A.1}

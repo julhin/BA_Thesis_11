@@ -979,16 +979,18 @@ The remaining criteria \textit{Aspect-oriented}, \textit{Positive} and \textit{N
 \subsubsection{Metric Number of satisfied criteria}
 The evaluation is done in a checklist manner. For each criterion the defined access rights are evaluated whether they fulfill this criterion. The results of the metric are summarized in \autoref{AR_EVAL_SUM}.
 \begin{table}
-\centering
 \begin{tabular}{|c|c|c|}
 \hline 
-\multicolumn{2}{|c|}{Access rights} & fulfilled \\ 
+\multicolumn{2}{|c|}{Access rights} & fulfilled? \\ 
 \hline 
-Specification & Aspect-oriented & \cmark \\ 
+Specification & Aspect-oriented & %\cmark
+ \\ 
 \hline 
- & Positive & \cmark \\ 
+ & Positive & %\cmark 
+ \\ 
 \hline 
- & Need-to-know & \cmark \\ 
+ & Need-to-know & %\cmark 
+ \\ 
 \hline 
 Comprehensibility & Clear & ? \\ 
 \hline 
@@ -1034,9 +1036,6 @@ After we reached the milestone in the last chapter, we are going to define scena
 A scenario is a actual characteristics from, for example, a use case. But scenarios in general describe a actual interaction by one or more users with the system. This scenarios are later converted in data flows that are added to the system model. The scenario created by using the ACM \autoref{ACM_updated} and the OpM \autoref{typeMatrix}. We defined two scenarios for CoCoME.\\ The basic structure for each scenario is: First, the scenario is briefly described. Then the specific data types for the scenario are identified. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. \\
 After the generated data flows have been added to the system model, they are evaluated based on the number of covered information flow classes. \\
 Finally, it is checked whether the number of covered information flow classes aqre sufficient. Then the process is concluded.
-
-
-
 \section{Excerpt of the system}
 Before the individual scenarios are discussed, the extract from CoCoME in which the two scenarios take place is briefly presented. As shown in \autoref{scn_excerpt}, the sceanrios takin place in the PickupShop 
 \begin{figure}
