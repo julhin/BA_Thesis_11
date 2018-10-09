@@ -1303,12 +1303,21 @@ With these informations about the data processing, we are able to build the resu
 \section{Discussion}
 %TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
 % warum wir die query explizit definiert, warum wurde die DF notation angepasst, 
+In this section, we are going to discuss the single design decision that were made during the creation of the case study. Further, we discuss we if the process can be concluded.
 \section{Evaluation of the scenarios}
+After all data flow are defined and added to the system, the second part of the evalaution for the case study is conducted in this section. The overview is shown in \autoref{Overview_CSS_Eval}. 
+\begin{figure}
+\caption{Overview for the evaluation for the \nameref{ch:casestudysystem}}
+\label{Overview_CSS_Eval}
+\end{figure}
+\subsection{Goal: Evaluation for the created case study}
+The goal is to evaluate the case study. As shown in \autoref{Overview_CSS_Eval} the evaluation of the case study is split into two parts. In this we will only focus on the highlighted plan, the evaluation of the defined scenarios.
+\subsection{Question: Is the case study usable for a data-based privacy analysis?}
+To verify if the created case study are usable for the evaluation of a data-based privacy analysis, it is checked which information flow classes the created case study covers. We relied on the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire information from a role that inherits a higher security level. In the course of a program flow, user with a high security level and user with low security level inserts data in the system and receive outputs from the system. If there is no interference in the system, inputs from high level user have no effect to the outputs of low level user. The effects of \textit{Non-inteference} can be expressed by three infromtion flow classes: Non-leakage describes the issue that it is not observable what specific actions are performed by a system. All in all the problem statements comes down to different classes of information flow. So we use the different information flow classes as a metric to verify the question. This is done in a checklist manner. 
 
-subsection{Is the created case Study usable for different information flow classes?}
 To verify if a case study system is created that may be used to for data-based privacy analysis, we evaluated as a second aspect, the defined data flows. The following question is defined to indicate whether the goal is reached:\\
 Is the created case study usable for different problem statements?\\
-In the evaluation we only check the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire informations from a role that inherits a higher security level. Non-leakage describes the issue that it is not observable what specific actions are performed by a system. All in all the problem statements comes down to different classes of information flow. So we use the different information flow classes as a metric to verify the question. This is done in a checklist manner. 
+In the evaluation we only check the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire information from a role that inherits a higher security level. Non-leakage describes the issue that it is not observable what specific actions are performed by a system. All in all the problem statements comes down to different classes of information flow. So we use the different information flow classes as a metric to verify the question. This is done in a checklist manner. 
 \subsubsection{Number of different covered information flow classes}
 We evaluate the variety of covered information flow classes for the defined scenarios int the case study. We defined four information flow classes to cover non-interference and non-leakage. The covered information flow classes are: Illegal information flow, information flow from higher security levels to lower ones, observable information flow and direct informations flow between roles.  
 \begin{itemize}
