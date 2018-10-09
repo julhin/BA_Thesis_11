@@ -1117,12 +1117,19 @@ The excerpt of CoCoME  is extended with \textit{operations}. For each component 
 First, we describe the observable behavior of the scenario across all components and the data processing for each component. All operations are then combined in a data flow.
 \subsubsection{Observable Behavior}
 %TODO hier weiter machen
+%TODO noch genauere Komps
 In the scenario, the \textit{StockManager} interacts with CoCoME by requesting a report for  a customer. In the following, the behavior of the system when processing the request is shown.\\
-The \textit{StockManager} enters the \textit{ID} of a customer through the \textit{Webfrontend} into CoCoME. The \textit{Webfrontend} processes the ID by transmitting it to the \textit{Webservice} component, which also transmitting the \textit{ID} to the \textit{Tradingssystem:inventory} component. The \textit{Tradingsystem:invetory} consists of two sub components. First, the \textit{ID} is transmitted to the \textit{Tradingsystem:inventory:application}, where it is further transmitted to the \textit{Tradingsystem:inventory:data} component. In this component a \textit{query} is created by using the \textit{ID}. This query is then send to the \textit{ServiceAdapter}, where the database is requested.  
-
-
-The ID is entered via the WebFrontend component. After that, the ID is passed through the Webservice component to the Tradingsystem:inventory. The Tradingsystem:inventory has two inner components. First the ID is passed to the Tradingsystem:inventory:apllication in which it remains for the time being. Then the whole database is queried. In the next step, first the responding database entry for the ID is selected. Secondly, the received database entry is altered into a query used to select all IOrderEntries for the customer. The result is merged into a list. This data is transmitted back to the Tradingsystem:inventory:application, where the data is transformed in a report. A Repor tis a human readable document. Then the report is passed through the Webservice back to the Webfrontend where it is presented to the stock manager.
+The \textit{StockManager} enters the \textit{ID} of a customer through the \textit{Webfrontend} into CoCoME. The \textit{Webfrontend} processes the ID by transmitting it to the \textit{Webservice} component, which also transmitting the \textit{ID} to the \textit{Tradingssystem:inventory} component. The \textit{Tradingsystem:invetory} consists of two sub components. First, the \textit{ID} is transmitted to the \textit{Tradingsystem:inventory:application}, where it is further transmitted to the \textit{Tradingsystem:inventory:data} component. In this component a \textit{query} is created by using the \textit{ID}. This query is then send to the \textit{ServiceAdapter}, where the database is requested. The query first selects the respective customer for the \textit{ID}. Then it projects all \textit{IOrderEntries}. The \textit{IOrderEntries} represents an order for a customer. In the \textit{IOrderEntries}, beside other data, which occur with an order, the purchased products are included. The list of all \textit{IOrderEntries} is then transmitted back to the \textit{Tradingssystem:inventory:data} and then on to the \textit{Tradingsystem:inventory:application}. In this component, the list is then processed in a \textit{Report}. This \textit{Report} is then transmitted via the \textit{Webservice} back to the \textit{Webfrontend}, where the result is shown to the \textit{StockManager}.
 \subsubsection{Data flow definition}
+Once the general behavior of the scenario within the system has been described, the data flow is created. For each component, the operations and processed data that are used are identified and added to the current component. The operations are then linked in the correct order to complete the creation of the data flow.\\
+The overview which data and which operations is shown in 
+\begin{table}
+\caption{Overview over the used operations and the used data for the Scenario: StockManager requests a report for a customer}
+\label{tab:overview_UC13_DF}
+\end{table}
+he resulting data flow is shown in \autoref{fig:uc13DFD}. 
+
+
 For each SEFF one or more operations are added which describe the data processing for the component. For each operations it is defined which type of data processing is done for which data.
 \begin{itemize}
 \item Webfrontend \\ Transmit the ID (customer data) and the report (product\& sales data).
@@ -1277,4 +1284,6 @@ With these informations about the data processing, we are able to build the resu
 \caption{The resulting data flow for the scenario: Support employee requests information for an order.}
 \label{DF_UC14}
 \end{figure}
-
+\section{Discussion}
+%TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
+\section{Evaluation of the scenarios}
