@@ -1113,12 +1113,15 @@ TS:inv:data & relational algebra & relational algebra & alter \\
 
 \subsection{Component behavior}
 %SEFF  specification
-The excerpt is extended with \textit{operations}. For each component one or more operations are defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components with the data processing for each component. Secondly, all operations are merged into a data flow.
+The excerpt of CoCoME  is extended with \textit{operations}. For each component one or more operations are defined. These model the data processing in this component. An operation is associated with one of the data processing classes in the OpM \autoref{DataPRoc_UC13}. Each operation has one or more inputs and one more outputs. For each input and each output the data types are known. \\
+First, we describe the observable behavior of the scenario across all components and the data processing for each component. All operations are then combined in a data flow.
 \subsubsection{Observable Behavior}
 %TODO hier weiter machen
+In the scenario, the \textit{StockManager} interacts with CoCoME by requesting a report for  a customer. In the following, the behavior of the system when processing the request is shown.\\
+The \textit{StockManager} enters the \textit{ID} of a customer through the \textit{Webfrontend} into CoCoME. The \textit{Webfrontend} processes the ID by transmitting it to the \textit{Webservice} component, which also transmitting the \textit{ID} to the \textit{Tradingssystem:inventory} component. The \textit{Tradingsystem:invetory} consists of two sub components. First, the \textit{ID} is transmitted to the \textit{Tradingsystem:inventory:application}, where it is further transmitted to the \textit{Tradingsystem:inventory:data} component. In this component a \textit{query} is created by using the \textit{ID}. This query is then send to the \textit{ServiceAdapter}, where the database is requested.  
+
+
 The ID is entered via the WebFrontend component. After that, the ID is passed through the Webservice component to the Tradingsystem:inventory. The Tradingsystem:inventory has two inner components. First the ID is passed to the Tradingsystem:inventory:apllication in which it remains for the time being. Then the whole database is queried. In the next step, first the responding database entry for the ID is selected. Secondly, the received database entry is altered into a query used to select all IOrderEntries for the customer. The result is merged into a list. This data is transmitted back to the Tradingsystem:inventory:application, where the data is transformed in a report. A Repor tis a human readable document. Then the report is passed through the Webservice back to the Webfrontend where it is presented to the stock manager.
-\subsection{Data processing in the components}
-In this scenario
 \subsubsection{Data flow definition}
 For each SEFF one or more operations are added which describe the data processing for the component. For each operations it is defined which type of data processing is done for which data.
 \begin{itemize}
