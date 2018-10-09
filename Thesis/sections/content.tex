@@ -1048,12 +1048,12 @@ Before the individual scenarios are discussed, the extract from CoCoME in which 
 \subsection{Description}
 %\subsubsection{data used in the scenario}
 This scenario is derived from the use cases described in the CoCoME tech report \cite{CoCoMETechReport}, more explicit the use case 13. \\
-In this scenario, the \textit{StockManager} requests a report for the purchased products of a customer. To identify the customer among all customers, the \textit{StockManager} has access to the ID of the specific customer. The \textit{StockManager} enters the ID in CoCoME, then the request is processed. At the end, the stock manager is presented with a full report for the customer. This report contains all purchased products of the customer.\\
+In this scenario, the \textit{StockManager} is already authenticated and then requests a report for the purchased products of a customer. To identify the customer among all customers, the \textit{StockManager} has access to the ID of the specific customer. The \textit{StockManager} enters the ID in CoCoME, then the request is processed. At the end, the stock manager is presented with a full report for the customer. This report contains all purchased products of the customer.\\
 
 \subsection{Extract the data types, access rights and types of data processing for the scenario} 
 \label{accesscontrol_casestudy}
-%TODO in drei Schritte aufteilen, erst die verwendeten daten, danch die R dan ToDP 
-In this paragraph, we will 
+%TODO in drei Schritte aufteilen, erst die verwendeten daten, danch die AR dan ToDP 
+In this section, we will first determine what actual data will be used in each component. Next, we obtain the corresponding parts of the two matrices for access rights (ACM) \autoref{ACM_updated} and data processing (OpM) \autoref{typeMatrix}.\\
 As stated in the milestone, the data is divided into four classes: customer data, account data, product\&sales data and system data. In the following enumeration for each data class the used data in the scenario is described.
 \begin{itemize}
 \item account data \\ No data from this class is used in this scenario.
@@ -1061,9 +1061,8 @@ As stated in the milestone, the data is divided into four classes: customer data
 \item product\&sales data\\ In the scenario two data types are used. First, the \textit{IOrderEntries} are used. The \textit{IOrderEntries} are a collection of all data that is generated after an order successful passed.  The second used data type is the \textit{Report} data type, which is a human readable string. 
 \item system data \\ This class provides the data that is used to create the queries to the underlying database.
 \end{itemize}
-Int he next step, we extract the access rights and the types of data processing from the corresponding matrices. The access rights matrix for this scenario is shown in \autoref{accessrightsCSS}. We omitted the Webservice component for the fact  that it only transmits the data in this scenario.\\
-The matrix for the data processing is shown in \autoref{DataPRoc_UC13}.
 
+Int he next step, we extract the corresponding parts of the ACM and the OpM. The ACM for this scenario is shown in \autoref{accessrightsCSS} and the OpM is shown in \autoref{DataPRoc_UC13}. We omitted the Webservice component for the fact that it only transmits the data.\\
 \begin{table}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -1114,9 +1113,12 @@ TS:inv:data & relational algebra & relational algebra & alter \\
 
 \subsection{Component behavior}
 %SEFF  specification
-The shown excerpt is extended with SEFFs (\autoref{MMext}). For each component a SEFF is defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components, then we define the data flow for each component. Finally, the data flow definitions are merged into one data flow for the entire scenario.
+The excerpt is extended with \textit{operations}. For each component one or more operations are defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components with the data processing for each component. Secondly, all operations are merged into a data flow.
 \subsubsection{Observable Behavior}
+%TODO hier weiter machen
 The ID is entered via the WebFrontend component. After that, the ID is passed through the Webservice component to the Tradingsystem:inventory. The Tradingsystem:inventory has two inner components. First the ID is passed to the Tradingsystem:inventory:apllication in which it remains for the time being. Then the whole database is queried. In the next step, first the responding database entry for the ID is selected. Secondly, the received database entry is altered into a query used to select all IOrderEntries for the customer. The result is merged into a list. This data is transmitted back to the Tradingsystem:inventory:application, where the data is transformed in a report. A Repor tis a human readable document. Then the report is passed through the Webservice back to the Webfrontend where it is presented to the stock manager.
+\subsection{Data processing in the components}
+In this scenario
 \subsubsection{Data flow definition}
 For each SEFF one or more operations are added which describe the data processing for the component. For each operations it is defined which type of data processing is done for which data.
 \begin{itemize}

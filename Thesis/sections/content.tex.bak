@@ -43,7 +43,7 @@ Component based system are systems that consist out of components. Each componen
 \subsection{Concept}
 The Palladio Component Model (PCM) is an architecture description language (ADL) , that allows more than only modeling a system. The strength of PCM is compute performance predictions for the modeled system \cite{PCM}. 
 %TODO hie rnoch genauer formulieren
-A PCM model consists of four different models, each of them encapsulate their specific design knowledge and the models build on each other. After the system is complete, an architect may compute different predictions how the system will perform when it is deployed. The predictions are for cost, reliability, performance andAfter the evaluation for the information flow classes is done, the procedure moves to the next step. maintainability. In the following, we will explain the individual models and their encapsulated design knowledge in detail. \\
+A PCM model consists of four different models, each of them encapsulate their specific design knowledge and the models build on each other. After the system is complete, an architect may compute different predictions how the system will perform when it is deployed. The predictions are for cost, reliability, performance and maintainability. In the following, we will explain the individual models and their encapsulated design knowledge in detail. \\
 First of all, for each model a role inside the PCM is assigned, which will be explained in detail later. Each of this roles conserve their design knowledge in a specific model which is used by the next role. The hierarchy of the different roles , from top to bottom, is:
 \begin{itemize}
 \item \textbf{Component Developer}\\
@@ -192,7 +192,7 @@ User interface & transmit \\
 \section{P3: Check fulfillment of requirements}
 \label{cs_check}
 %fertig
-In this step the current state of requirements is reviewed. The best case is, that all requirements are fulfilled. If this is the case, one can skip the next step. If it is not the case, create a summary of all shortcomings for the fulfillment of requirements in the system. After the first two steps of the procedure are done the usual case is that some of the requirements are not fulfilled. It may even happen that for some requirements are no elements present in the system. The review of the shortcomings is important to outline which parts of the system are vague. Vague in the context of the thesis means that some elements (e.g roles, access rights) are not well defined. To give an example, it may happen that roles are just mentioned but a clear definition of the role is missing. This summary of shortcomings may also show parts where the model is not well defined. This may lead to an improvement of the model in the next step. After the summary is complete, the procedure moves to the next step. The summary is done due to two reasons. Firstly, to get a comprehensive overview of the current state of the system and secondly, to enable a division of tasks. 
+In this step the current state of requirements is reviewed. The best case is, that all requirements are fulfilled. If this is the case, one can skip the next step. If it is not the case, create a summary of all shortcomings for the fulfillment of requirements in the system. After the first two steps of the procedure are done the usual case is that some of the requirements are not fulfilled. It may even happen that for some requirements are no elements present in the system. The review of the shortcomings is important to outline which parts of the system are vague. Vague in the context of the thesis means that some elements (e.g roles, access rights) are not well defined. To give an example, it may happen that roles are just mentioned but a clear definition of the role is missing. This summary of shortcomings may also show parts where the model is not well defined. This may lead to an improvement of the model in the next step. After the summary is complete, the procedure moves to the next step. The summary is done due to two reasons. Firstly, to get a comprehensive overview of the current state of the system and secondly, to enable a division of tasks. The second reason is that you get an overview of the big picture and define possible system extensions not as soon as a shortcoming is encountered but with the big picture in mind. This ensures that system extensions are defined in the context of the whole system.
 
 \section{P4: Fix all shortcomings by defining system extensions}
 \label{cs_cocome_ext}
@@ -281,7 +281,7 @@ After the second evaluation is conducted, it is necessary to decide if the cover
 In this chapter we are starting to apply the procedure described in \autoref{ch:method} to CoCoME. The procedure is applied up until the milestone is reached, as seen in % neues bild in dem alle snach dem milestone ausgegraut ist
 First we describe CoCoME briefly. Then the steps P1-P5 of the presented procedure are carried out. First we briefly examine the current state of CoCoME, then the system parts necessary for the requirements are identified and/or extracted from the documentation. After that, a summary of the shortcomings is created and in the next step the identified shortcomings are eliminated by defining system extensions. The defined access rights are then evaluated. Finally, the current state of the system is saved in the milestone.
 \section{CoCoME overview}
-\label{cocome_overview}
+\label{sec:cocome_overview}
 CoCoME is short for Common Component Modelling Example. The goal of CoCoME is to provide an open source environment, in which different paradigms for component based software development can be tested. CoCoME tries to be as close as possible to the reality to provide a realistic environment to test new modelling approaches. % Das alle ansätze auf dem gleichen realistischen systme getestet werdne kann und nicht perfekt auf dne Anstz zugeschnitte systeme gebaut werden
 %erklären warum die allgmeine Struktur so ist wie sie ist bzgl des settings
 CoCoME abstract the selling process and the warehousing of supermarket and provides three core functionalities:
@@ -374,44 +374,44 @@ Since the amount of data is relatively large in the investigated excerpt of CoCo
 The security relevance for each class is defined according to Breier's approach \cite{assetValue}. The approach is based on the possible damage the loss of an asset could cause. So for each asset the level of damage a loss of the asset could cause is defined. Further, for each asset the dependencies to other assets is defined. Based on this, it is possible to calculate the value of an asset. This approach is not one-to-one applicable to our case, but we can use the basic idea. We evaluated for each data class the possible impact a leak of data from this class may have in CoCoME. Keep in mind that the primary goal is to protect persons that are using CoCoME. Therefore, the customer data is the most relevant and defined as \textbf{security relevant}.\\ The account data allows to log in as the specific role, which may lead to leaks of the customer's personal data. So the account data is also \textbf{security relevant}. The system data mostly consists of queries. If one may gain access to the query, it is to alter the database. So this data is especially \textbf{security relevant}, because access to it may cause damage to the customer and the enterprise in the same scale.\\ At last, the product\&sales data is not considered strictly security relevant, because in the sales process the payment process as we identify it is part of the customer data. This data becomes relevant in composite data types or if it allows traceability to customer data. Nonetheless, leak in this class may cause heavy damages to the respective enterprise, which is not in the scope of the thesis.
 \subsubsection{R4: roles}
 \label{req_roles}
-CoCoME defines six different roles. Five are defined in the CoCoME tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager}, and the \textit{Stockmanager}. The last role, the \textit{Admin}, only appears in the code. In the documentation, there is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key informations we were looking are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
+CoCoME defines six different roles. Five are defined in the CoCoME tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager}, and the \textit{Stockmanager}. The last role, the \textit{Admin},  appears in the code. In the documentation, there is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key information we are looking for, are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
 \begin{itemize}
 \item  After analyzing the implementation, the \textit{Customer} role is the role of all the customers of an enterprise, be they private customers or business customers. The role buys products, either in the stores or in the Pickup shop. The data provided by the customer role are the customer related data, It requires product related data to, for example, decide which products to buy.
 \item For the \textit{Cashier} role, we rely on the defined use cases in CoCoME tech report. As shown, the role takes over the sale of products and therefore requires product \& sales data. The role provides product and sales-related data like the data that is generated when orders are placed.
 \item For the \textit{StoreManager} role, we relied on the use cases. The \textit{StoreManager} handles the tasks of a single store. The role provides and requires product\& sales related data.
 \item After an analysis of the use cases, we are not sure what the concrete tasks are for the \textit{EnterpriseManager} and the data requires requires or provide. There are only two uses cases that involves the \textit{EnterpriseManager}, therefore a clear definition is not possible. Unfortunately, the code does not contain any further information. From the name it can be derived that the role is in charge of a  whole enterprise. 
 \item After analyzing the use cases, it is clear that the \textit{StockManger} handles the stock of a single store. Therefore the role requires product\&sales related data and provides the same type in the system.
-\item After analyzing the code we found a sixth role, the \textit{Admin} role. This role is not mentioned in the use cases. From the name alone, we assume that this role keep a watch on the system. 
+\item After analyzing the code we found a sixth role, the \textit{Admin} role. This role is not mentioned in the use cases. From the name alone, we assume that this role keep a watch on the system. But use cases are missing and the implementation do not allow to define neither the tasks nor the provided/required data.
 %TODO revisit admin in the system extension
 \end{itemize}
 Since the hybrid cloud based variant is examined by us, all roles provide account data, because each role, in the hybrid cloud-based variant, needs an account in CoCoME to access the system. 
 \subsubsection{R5: access rights}
 To define the access rights, we use the finer grained, high level from proposed by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} in contrast to the well known read/write semantics for access control. %We tried not to rely on a read/write semantic to allow a more detailed description of the access rights.
-Therefore, as described in \autoref{ch:method}, it was defined for the data in a component how which role can access it. We defined four different privilege level for the access to data. In the following enumeration, we present the defined access rights. We used the  elements from the previous requirements (\nameref{req_uc}), (\nameref{req_data}) and (\nameref{req_roles}) to define the access rights for CoCoME. The access to data decreases with the ascending numbers.
+Therefore, as described in \autoref{ch:method}, it is defined for the data present in a component how which role can access it. We defined four different privilege level for the access to data, presented in the following enumeration. We used the  elements from the previous requirements R2 (\nameref{req_uc}), R3 (\nameref{req_data}) and R4 (\nameref{req_roles}) to derive the access rights for CoCoME. The access to data decreases with the ascending numbers.
 \begin{enumerate}
 \item \textbf{FullAccess}\\ This access rights defines that the associated role has access to all data types for the respective class in the component.
 \item \textbf{AccessToUsedData}\\ This access right defines that the role has accessed to it used data types for the respective class in the component. Used data in this context means the data types that are required by the role to perform its defined tasks.
 \item \textbf{AccessToOwnedData}\\ This access right defines that the associated role has access to its , for example, own account data or customer data. This access rights ensures that roles may access data that is provided by it but not necessarily needed for their tasks.
 \item \textbf{Default} This access right forbids the complete access to all data in a class for this role and component.
 \end{enumerate}
-Another part of this requirement is the identification of the present data types in each component. After analyzing the code and the CoCoME tech report, we identified data for each class of data in each component. Also we identified that no role except the \textit{customer}  may access the PickupShop component. In \autoref{CoCoME_simplified} a simplified overview over the architecture of CoCoME is shown to better understand the complex matrix shown in \autoref{ACMConcept}. We omitted the webservice because this component only delegates the data to other components and therefore does not influence the result.
+
 \begin{figure}
 \includegraphics[scale=.8]{logos/ExcerptRelComps.pdf}
 \caption{The figure shows an simplified overview of the CoCoME. The Webservice component is omitted.}
 \label{CoCoME_simplified}
 \end{figure}
 %TODO access rights matrix für CoCoME aufstellen
-For the fact that the ACM in \autoref{ACMConcept} is rather large and complex, we point out the most important points. In the CoCoME tech report it is stated that only the customer may access the \textit{PickupShop}  component. From the role definition we identified the \textit{EnterpriseManager} handles an whole enterprise, therefore the role is allowed to access all components. For this reasons, no access rights defined for other roles are defined for the \textit{PickupShop}. Further, the \textit{StockManager} has no access to the Tradingsystem:cashdeskline component, because it is not needed to fulfill his tasks. The role handles the stock and has therefore no tasks that involve the actual selling of products. Since no role can access CoCoME without the components \textit{Webfrontend} or \textit{PickupShop}, the access rights are from this components are inherited. This means that the access rights are the same in all underlying components. The idea behind this is that it is also important which role which data has entered into the system. No role has access to system related data. The \textit{StockManager} has access to customer related data due to the use case 13 (UC13). 
-
+Another part of this requirement is the identification of the present data types in each component. After analyzing the code and the CoCoME tech report, we identified data for each class of data in each component. Also we identified that no role except the \textit{customer} may access the \textit{PickupShop} component. A  reduced system model is displayed in \autoref{CoCoME_simplified}. As already mentioned in \autoref{sec:cocome_overview}, it is only possible for individual users to interact with CoCoME via the components \textit{Webfrontend} and \textit{PickupShop}. No role except the admin has direct access to the \textit{Tradingsystem:inventory} component in which the data is processed. Therefore, all access rights to data are cascaded for the individual roles (except the admin). This ensures that it is always visible which role receives which data or has provided which data. \\
+For the fact that the ACM in \autoref{ACMConcept} is rather large and complex, we only point out the most important points. We omitted the \textit{Webservice} component, as it only transmits data between the user interface and the \textit{Tradingsystem:inventory} and therefore has no effect on the data. As stated before, only the \textit{customer} may access the \textit{PickupShop}, therefore no other role may access the data in this component. For the \textit{Admin} it is not clear if the role may access data. Also, the \textit{Admin} it the only role that may access \textit{system} data. The \textit{StockManager} has access to customer data due to the use cases. In 
 \begin{landscape}
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
-ACM & Webfrontend & PickupShop & TS:inventAfter the evaluation for the information flow classes is done, the procedure moves to the next step.ory & TS:inventory \\ 
+ACM & Webfrontend & PickupShop & TS:inventory & TS:inventory \\ 
 & & & data & application \\
 \hline 
+
 customer 
-%WF
 & \begin{tabular}{c|c}
 customer data & 3 \\
 account data & 3 \\
@@ -419,7 +419,6 @@ p\&s data & 3 \\
 system data & 4 \\
 \end{tabular}
 &
-%PS
 \begin{tabular}{c|c}
 customer data & 3 \\
 account data & 3 \\
@@ -427,7 +426,7 @@ p\&s data & 3 \\
 system data & 4 \\
 \end{tabular} 
 &
-%TS:cdl
+%TS:inv:data
  \begin{tabular}{c|c}
 customer data & 3 \\
 account data & 3 \\
@@ -435,7 +434,7 @@ p\&s data & 3 \\
 system data & 4 \\
 \end{tabular}
 & 
-%Ts:inv
+%Ts:inv:app
 \begin{tabular}{c|c}
 customer data & 3 \\
 account data & 3 \\
@@ -620,25 +619,26 @@ system data & 1 \\
  \\ 
 \hline 
 \end{tabular} 
-\caption{The ACM of CoCoME. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{Default}. The abbreviation \textit{p\&s data} stands for product\& sales  data.}
+\caption{The ACM of CoCoME. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{Default}. The abbreviation \textit{p\&s data} stands for product\&sales  data.}
 \end{table}
 \label{ACMConcept}
 \end{landscape}
 
 \subsubsection{R6: Type of data processing in components}
 \label{relevantpartsCoCoME}
-The last requirement defines the type of data processing. For each component, it is defined how the data from the different data classes is processed in this component. To identify the different types of processing we analyzed the code and the use cases. All in all, we defined four different types how data is processed in CoCoME. 
+%TODO hier ist meine achilles ferse !!!!!
+The last requirement defines the different types how data is processed in CoCoME. For each component, it is defined how the data from the different data classes is processed in this specific component. To identify the different types of processing we analyzed the code and the use cases. All in all, we defined four different classes how data is processed in CoCoME. Each class may consists of various operations.
 \begin{itemize}
 \item relational algebra \\ This type describes the operations of relational algebra on a database or similar construct. For example, if all elements of a list that have a particular ID are selected from this list.
 \item transmission of data \\ This type describes the transmission of data between components.
-\item changing of data \\ This type includes the most operations. It describes each operation that changes the data class. Good examples are the creation of lists or the merging two or more data classes into one.
+\item alternation of data \\ This type includes the most operations. It describes each operation that changes the data class. Good examples are the creation of lists or the merging two or more data classes into one.
 \item I/O related processing \\  This type describes the user interaction with CoCoME. 
 \end{itemize}
-After the different types of data processing are identified, we analyzed the components to identify how which data is processed in each component. The each type of processing is assigned to the respective components. The result is shown in \autoref{typeMatrix}. \\
+After the different classes of data processing are identified, we analyzed how which data is processed in each component. The respective type(s) of data processing are assigned to the respective components. The result is shown in \autoref{typeMatrix}. \\
 %Erklärung warum wie zugeordnet wurde.
-\textit{System} data is not available in any other component other than \textit{Tradingssystem:inventory:data}, because in this component queries are created. The \textit{Webservice} component only transmit data to other components. The \textit{PickupShop} and \textit{Webfrontend} transmits the \textit{customer} and \textit{account} data. In these to components the user interfaces are located and customer may fill a shopping cart in there, therefore \textit{products\&sales} data 
+\textit{System} data is not available in any other component other than \textit{Tradingssystem:inventory:data}, because in this component queries are created. The \textit{Webservice} component only transmit data to other components. The \textit{PickupShop} and \textit{Webfrontend} transmits the \textit{customer} and \textit{account} data. In these to components the user interfaces are located and customer, for example, fill their shopping cart, therefore \textit{products\&sales} data is processed with the \textit{I/O} processing.
 
-Then we have assigned one or more types for each component and each role. We omitted the Webservice component because it only delegates the data to other components and has no effect on the result. The result is shown in \autoref{typeMatrix}. In the matrix for each data class it is defined how which this data class can be processed in the components.To give simple example, in the \textit{Webfrontend} the customer data can only be transmitted to other components. In the \textit{Tradingsystem:inventory:application}, the same data may also be changed to another data class. As shown, we divided the Trandingsystem:inventory component. This was done because the sub-components have different type of processing. 
+%Then we have assigned one or more types for each component and each role. We omitted the Webservice component because it only delegates the data to other components and has no effect on the result. The result is shown in \autoref{typeMatrix}. In the matrix for each data class it is defined how which this data class can be processed in the components.To give simple example, in the \textit{Webfrontend} the customer data can only be transmitted to other components. In the \textit{Tradingsystem:inventory:application}, the same data may also be changed to another data class. As shown, we divided the Trandingsystem:inventory component. This was done because the sub-components have different type of processing. 
 
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
@@ -652,11 +652,11 @@ Webfrontend &  transmit & transmit & I/O-processing & non-existent \\
 PickupShop &  transmit & transmit & I/O-processing, & non-existent \\ 
 & & & transmit & \\
 \hline 
-Tradingsystem:& change & change & change & non-existent \\ 
+Tradingsystem:& change & alter & alter & non-existent \\ 
 inventory: & transmit& transmit & & \\
 application & & & & \\
 \hline 
-Tradingsystem: & relational algebra& relational algebra& relational algebra& change \\
+Tradingsystem: & relational algebra& relational algebra& relational algebra& alter \\
 inventory:data & operations & operations & operations & \\ 
 \hline
 Webservice & transmit & transmit & transmit & transmit \\
@@ -665,50 +665,53 @@ Webservice & transmit & transmit & transmit & transmit \\
 \caption{Overview of the different types of data processing in the components. For each component, it is defined how which data class can be processed.}
 \label{typeMatrix}
 \end{table}
-
-
-\subsection{DEPRECATED Analysis of the current state for CoCoME}
-With all necessary parts defined and identified, we analyze the current state of CoCoME.\\
-In the following, for each requirement the current state is briefly explained.
-\begin{itemize}
-%Alles da, sollte kein Problem sein
-\item R1: Modeled as a component based system \\ In the CoCoME tech report a detailed system model is defined. So this requirement is fully accomplished.
-\item R2: Existence of use cases \\ Uses cases are defined in the CoCoME documentation. So this requirement is also fulfilled.
-\item R3: Existence of security relevant data \\ In CoCoME is security relevant data present. But for some mentioned data a definition is missing.
-\item R4: definition of user roles \\ The role of the EnterpriseManager is rather vaguely defined. It is possible to set the role in context with others, but the tasks in CoCoME and the data needed/provided are not crystal clear.  There is room for interpretation as to what exact data and exact tasks this role has. This room for interpretation can also be found to a lesser extent in the roles of StoreManager and StockManager. 
-\item R5: Definition of access rights \\ As we have defined the access rights to the current state of the system, this requirement is fulfilled.  If changes or additions are made to R2-R4, the access rights must be checked and adjusted if necessary.
-\item R6: definition of the different types of data processing \\ From our current point of view, we fulfilled this requirement. We have covered every possible type of data processing that we could think of.
-\end{itemize}
-\section{P3: Check the fulfillment of the requirements}
+\subsection{P3: Check the fulfillment of the requirements}
 \label{shortcommingsCoCoME}
-\subsection{Use cases}
-In the use cases, there are shortcomings. While analyzing them, we found that only the newly added ones by the addition of the pickup shop processing security relevant data. Therefore the pool of possible use cases that later may be used to create scenarios from, are limited. 
-\subsection{Security relevant data}
+Once the system parts for each requirement have been identified, defined or derived, a brief check is made to ensure that each requirement has been met. For each requirement it is checked whether the individual system elements are complete. It is possible that some definitions are vague or missing. Vague means that there is room for interpretation or that different definitions contradict each other. \\ In the following, we analyzed the fulfillment for each individual requirement. 
+\subsubsection{R1: component-based systems}
+This requirement is fulfilled, a very detailed component for CoCoME is provided \cite{CoCoMETechReport}.
+\subsubsection{R2: use cases}
+A detailed use case diagram with a brief description of each use case is provided in the CoCoME tech report \cite{CoCoMETechReport}. All in all, 13 use cases are defined, which cover the main aspects of CoCoME.
+\subsubsection{R3: security relevant data}
 % Report nicht richtig definiert, Verbindung zwischen custome rund seinen Produkten, 
-As previously said, definitions for data are missing. We have found that there is currently no definition of how to connect a customer to their purchased products. This missing data is used in the UC13 described in the CoCoME tech report \cite{CoCoMETechReport}. Another case of missing data definitions, happens in the same use case. A report data type is mentioned but never clear defined. So this data type is also missing.
-\subsection{Definition of roles}
-There are some vagueness in the roles, which possibly affects the ACM. Some provided/required data is not clear defined. But the tasks of the roles are clearly defined. 
-\subsection{Definition of access rights}
-If any changes are done in the previous requirements R2-R4, the state of the access rights has to be reviewed an possibly updated to the new version. In the current state the requirement is fulfilled.
-\subsection{Data processing in security relevant components}
-In this aspect, there are no shortcomings. All necessary types of operations are defined. 
-\section{Add system extensions}
-In the next step, we extend CoCoME so that all requirements are fulfilled. In the previous step all shortcomings are listed. We gibe a short overview how we extended the system to meet all the requirements. As previously said, the use cases are already well defined, so there is nothing to fix.
+In the definition of the data, a lot of data is already defined by the implementation. Nonetheless, some data mentioned in the use cases is missing. We identified in the investigated excerpt two missing data types. First, there is no connection defined between the customer and the purchased products. Secondly, the \textit{Report} data type mentioned in the use cases is also not defined.
+\subsubsection{R4: definition of roles}
+For some roles the actual tasks are not clear because some use cases contradict each other. Further, for the \textit{EnterpriseManager} there are too few use cases to clearly define the tasks. For the \textit{Admin} role use cases are completely missing, because this role is only present in the code.
+\subsubsection{R5: definition of access rights}
+In the case of the access rights we cannot say in general if they are fulfilled, because the access rights are derived from the previous requirements R1-R4. If there are changes in R1-R4, the defined access rights have to be reviewed and if necessary updated. Nonetheless, in the case \textit{Admin} the tasks for this role are not clear, therefore it was not possible to derive access rights in some cases. 
+\subsubsection{R6: types of data processing in the components}
+This requirement is adjacent to R5: definiton of the access rights. The different types of data processing are derived from the previous requirements R1-R4. If there are changes in R1-R4, the different types of data processing have to be reviewed and if necessary updated.
+\subsection{P4: Define system extensions}
+In the next step, we define system extensions for CoCoME to fix all shortcomings for the requirements. In the previous step all shortcomings were summarized. In the following, we give an overview how CoCoME was extended to meet all requirements.
+
+\paragraph{R1: component-based system}
+Here, no extensions was needed, because this requirement is met.
+\paragraph{R2: definition of use cases}
+Also, no need to define an extensions. This requirement is also met.
+\paragraph{R3: security relevant data}
+As identified previously in \autoref{shortcommingsCoCoME}, two data types are missing. First, there are no connection defined between a customer and its purchased products. Secondly, the \textit{Report} data type is only mentioned but is not defined.
 \begin{itemize}
-\item \textbf{security relevant data}\\
-We added new data to the customer related data. The customer object now holds a list with all ordered products. With this addition, the shortcoming, that there was no connection between customer and the ordered products, is fixed.  We also defined the \textit{report} data type. This data type is used to display the purchased products of a customer to the stock manager. We defined it as a human readable list and it is placed in product\& sales data class.
-\item \textbf{roles}\\
-In the roles there is some vagueness. Especially in the \textit{StockManager} role. The setting in which the \textit{StockManager} operates is clear, but the inherited responsibility are not. So we defined, that the \textit{StockManager} only handles the stock. This includes, managing the warehouse, commissioning of goods, etc. Another resposibility we added , is to predict the future needs of products. To perform any of this tasks, no customer related data is needed. Further, we defined the role of the \textit{EnterpriseManager}. We defined it as the highest role of the respective company and therefore has access to all data within the company. 
+\item Connection between customer and purchased products\\ We defined that the connection is realized by adding a list of all orders to the customer object. Each order in CoCoME includes the involved products and other information like the total price. 
+%TODO WARUM -> overhead, cust obj is eh schon geschützt, .... GUT muss sie sein
+\item Report data type\\ We have defined this data type as a string that can be read by humans.
 \end{itemize}
-After all the definitions for data and roles is added, whe review the ACM and the types of data processing. \\
-An updated version of the ACM is shown in \autoref{ACM_updated}. As defined the EnterpriseManager got access to all data except the system related data and the Stockmanager has lost access to customer related data. All changes to the matrix are displayed bold. \\
-For the types of data processing for the single components nothing changed.\\
-With all the extensions added to the system, the mile stone is reached. In CoCoME all elements are available for creating a case study for databased privacy analysis. 
+\paragraph{R4: definition of roles}
+For the fourth requirement, two roles need a clearer definition: the \textit{EnterpriseManager} and the \textit{Admin}.In the case of the \textit{EnterpriseManager} there are too few use cases are defined to clearly derive tasks for this role. In the case of the \textit{Admin} there are no use cases defined. because this role only exists in the code. 
+\begin{itemize}
+\item EnterpriseManager \\
+Due to the fact, that only one use case is defined for the \textit{EnterpriseManager}, the actual tasks for this role are not clear. So determined that the role is in charge of a whole enterprise. For the fact that a \textit{StockManager} manages the stock for each store, we defined the \textit{EnterpriseManager} works on a larger scale. The role monitors the workflows within an enterprise and calculates forecasts for, for example, the CPU capacity required. Therefore, the \textit{EnterpriseManager} provides product\&sales data and requires customer data, account data and product\&sales data. For the customer and account data, the role only requires meta data, like the number of registered accounts and therefore no explicit data. 
+\item Admin \\
+The \textit{Admin} has no use cases associated, so we relied on the implementation. In the implementation, the role has access to all data, so we defined the \textit{Admin} to be the master role in the system, that has access to all data. With access to all data any small or big problems may be reviewed and fixed. Therefore the role provides and requires all data types.
+\end{itemize}
+\paragraph{R5: definition of access rights}
+Since the previous requirements are  fulfilled with the defined system extensions, in this step the ACM is reviewed and updated. The updated ACM is shown in \autoref{ACM_updated}. The entries that have changed since the old version are shown in bold. As before, the \textit{Webservice} component is omitted.
+
 \begin{landscape}
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
-ACM & Webfrontend & PickupShop & TS:cashdeskline & TS:inventory \\ 
+ACM & Webfrontend & PickupShop & TS:inventory: & TS:inventory: \\ 
+& & & data & application \\
 \hline 
 customer 
 %WF
@@ -868,7 +871,7 @@ p\&s data & 4 \\
 system data & 4 \\
 \end{tabular}
 &
-%TS:cdl
+%TS:inv:data
  \begin{tabular}{c|c}
 customer data & 2 \\
 account data & 3 \\
@@ -876,7 +879,7 @@ p\&s data & 2 \\
 system data & 4 \\
 \end{tabular}
 &
-%TS:inv
+%TS:inv:app
  \begin{tabular}{c|c}
 customer data & 2 \\
 account data & 3 \\
@@ -885,55 +888,181 @@ system data & 4 \\
 \end{tabular}
  \\ 
 \hline 
+admin & 
+%WF
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+&
+%PS
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+&
+%TS:inv:data
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+&
+%TS:inv:app
+ \begin{tabular}{c|c}
+customer data & \textbf{1} \\
+account data & \textbf{1} \\
+p\&s data & \textbf{1} \\
+system data & \textbf{1} \\
+\end{tabular}
+ \\ 
+\hline 
 \end{tabular} 
-\caption{The updated Version of the ACM for CoCoME after the shortcomings are fixed. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{NoAccess}. The bold entries  the updated access rights.}
+\caption{The updated Version of the ACM for CoCoME after the shortcomings are fixed. The legend for the ACM is: 1 is the access right \textit{FullAccess}, 2 is the access right \textit{AccessToUsedData}, 3 is the access right \textit{AccessToOwnedData}, 4 is the access right \textit{NoAccess}. The bold entries changed since the old version.}
 \label{ACM_updated}
 \end{table}
 \end{landscape}
-\section{P4: Define system extensions}
-%TODO Admin role genauer definieren
- 
-\section{P5: Evaluation of the defined access rights}
+\paragraph{R6: types of data processing in the components}
+%TODO eventuell noch ein bisschen besser schreiben !!!!
+The different types of data processing are also derived from the requirements R1-R4. After reviewing the different types of data processing that were defined, there are no need to extend anything. 
+\subsection{P5: Evaluation of the defined access rights}
+After all system extensions are done, in this step  the defined access rights are evaluated. The evaluation follows a GQM-plan %TODO ref auf foundations
+The GQM-plan for the evaluation of the access rights is shown in
+\begin{figure}
+
+\caption{GQM-plan for the evaluation of the defined access rights. The evaluation focus on the highlighted parts.}
+\label{evalAR}
+\end{figure}
+ %TODO ref figure
+\subsubsection{Goal: Evaluation of the case study}
+The goal is to evaluate the case study. A shown in \autoref{evalAR} the evaluation of the case study is split into two parts. In this we will only focus on the highlighted plan, the evaluation of the access rights.
+\subsubsection{Question: Are the access rights well defined ?}
+Well defined access rights means in this context that the defined access rights meet the criteria defined by Evered and Bögeholz\cite{CaseStudyAndAccessrigths}.The two authors defined seven different criteria. In order to ensure well defined access rights, the seven criteria should be met. The seven criteria are : Concise, clear, aspect-oriented, fundamental, positive, need-to-know and efficient. We categorized the criteria into three classes: specification, comprehensibility and implementation. The division of the individual criteria into classes is shown in \autoref{fig:Class_ARC}.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Access rights} \\ 
+\hline 
+Specification & Aspect-oriented  \\ 
+\hline 
+ & Positive  \\ 
+\hline 
+ & Need-to-know \\ 
+\hline 
+Comprehensibility & Clear \\ 
+\hline 
+ & Concise  \\ 
+\hline 
+Implementation & Fundamental \\ 
+\hline 
+ & Efficient \\ 
+\hline 
+\end{tabular} 
+\caption{Classification of the criteria for good access rights.}
+\label{fig:Class_ARC}
+\end{table}
+The criteria in the class \textit{Specification} evaluate the properties of the defined access and the general access levels that that well defined access rights cover.\\
+The criteria in the class\textit{Comprehensibility} evaluates the complexity of the notation.\\
+The criteria in the class \textit{Implementation} evaluate the embedding of the access rights in the implementation.\\
+It was possible to only evaluate three of the seven criteria due to various reasons. \textit{Comprehensibility} criteria ware not possible due to time constraint. The criteria in this class are checked by conducting a survey. This was not possible in the time frame of this thesis. For the \textit{Implementation} criteria an integration of the access rights into the implementation of CoCoME is needed. This implementation is missing, so it was also not possible to check this class.\\
+The remaining criteria \textit{Aspect-oriented}, \textit{Positive} and \textit{Need-to-know} located in the \textit{Specification} class. \\
+\textit{Aspect-oriented} deswcribes, that the implementation and the access rights are sperate stored and define. This alloows that the implementation and the access rights can be used in different contexts. Further, both are easier to understand , if they are separated.  \\
+\textit{Positive} describes, that the access to data have to explicitly given to the entities. The default level of access is \textit{no access}. This avoid that access is implicitly granted.\\
+\textit{Need-to-know} describes, that well defined access rights only allow access to the absolute minimum of data that are used by the entities. \\
+
+\subsubsection{Metric Number of satisfied criteria}
+The evaluation is done in a checklist manner. For each criterion the defined access rights are evaluated whether they fulfill this criterion. The results of the metric are summarized in \autoref{AR_EVAL_SUM}.
+\begin{table}
+\begin{tabular}{|c|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Access rights} & fulfilled? \\ 
+\hline 
+Specification & Aspect-oriented & %\cmark
+ \\ 
+\hline 
+ & Positive & %\cmark 
+ \\ 
+\hline 
+ & Need-to-know & %\cmark 
+ \\ 
+\hline 
+Comprehensibility & Clear & ? \\ 
+\hline 
+ & Concise & ? \\ 
+\hline 
+Implementation & Fundamental & n/a \\ 
+\hline 
+ & Efficient & n/a \\ 
+\hline 
+\end{tabular} 
+\caption{Summary for the evaluation of the defined access rights.} 
+\label{AR_EVAL_SUM}
+\end{table} 
+\paragraph{Aspect-oriented}
+%Beschreibung des Kriteriums danach 
+The access rights are stored separately from the code and even from the defined data flows. The access rights are changeable in the context of the case study. This allows that a scenario may be evaluated in different security contexts. So this criterion is met.
+\paragraph{Positive}
+The created case study achieves this criterion. First, granular access control rights have been defined. The access rights are differentiated in four different levels and each level represents fine grained access. We also defined a default value, which represents \textit{no access} to data. 
+\paragraph{Need-to-know}
+This criterion is achieved by the created case study. We split the data in four classes. For each component it is defined which role has access to which data. With this we can model, for example, that a role may access data in component A but not in component B. Further the differentiation in four levels allows, for example, to explicitly distinguish between access to data provided by that role and access to data that is not provided, but needed for the role's tasks. so this criteria is also met 
+\paragraph{Concise and clear}
+Due to the time frame of the thesis, we could not make a qualified statement if these criteria are met.
+\paragraph{Fundamental and Efficient}
+Since access control is not yet part of the implementation, it was not possible to check it at all.
+\subsection{M1: Store the current state in a milestone}
+Before the current system state is saved in the milestone, one have to decide if the access rights are well defined. After that the milestone is created. The milestone stores for each requirement the necessary model elements.
+\paragraph{Quality of access rights}
+The defined access rights achieved all criteria that we were able to check. So we summarize that the defined access rights are for the moment well defined. So the procedure moves to the next step and the current system state is stored in a milestone.
+\paragraph{Milestone}
+For each requirement the associated system elements are stored.
+\begin{itemize}
+\item R1: The system model\\ In this particular milestone, the system model from the CoCoME tech report \cite{CoCoMETechReport} is stored.
+\item R2: Use case diagram, definition for each use case.\\  In this particular milestone, the use case digram from the CoCoME tech report \cite{CoCoMETechReport} is stored.
+\item R3: The data types and the examination, which data is security relevant. \\ the four data classes ans the respective description of them are stored.
+\item R4: The different user roles\\ The description of the tasks and the provided/required data for each role are stored. The \textit{Admin} role is explicitly stored, because this role is not mentioned in the stored use case diagram.
+\item R5: The created ACM \autoref{ACM_updated}.
+\item R6: The created OpM \autoref{typeMatrix}.
+\end{itemize}
 \chapter{Case study system}
 \label{ch:casestudysystem}
 %Was wir dheir geschehen und kurz einleiten
-After we reached the milestone in the last chapter, we are going to create the case study in this one. Therefore we have to define scenarios. Scenarios describe a course of actions in the system. Also the roles and data involved are specified. Scenarios are created to describe the flow of data and the course of actions in a comprehensive way.  For presented case study system, we defined two scenarios in CoCoME. All defined scenarios are later converted into data flows by using the matrices in \autoref{ACM_updated} and \autoref{typeMatrix}. The data flows then added to the system model, which concludes the creation of the case study. After that, the created case study can be evaluated. The basic structure for each scenario is: First, the scenario is briefly described. Then we identify the concrete data types for the scenario. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. The data flow can later be used for a data-based privacy analysis.
+After we reached the milestone in the last chapter, we are going to define scenarios, evaluating the defined scenarios and concluding the procedure in this one.\\
+A scenario is a actual characteristics from, for example, a use case. But scenarios in general describe a actual interaction by one or more users with the system. This scenarios are later converted in data flows that are added to the system model. The scenario created by using the ACM \autoref{ACM_updated} and the OpM \autoref{typeMatrix}. We defined two scenarios for CoCoME.\\ The basic structure for each scenario is: First, the scenario is briefly described. Then the specific data types for the scenario are identified. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. \\
+After the generated data flows have been added to the system model, they are evaluated based on the number of covered information flow classes. \\
+Finally, it is checked whether the number of covered information flow classes aqre sufficient. Then the process is concluded.
+\section{Excerpt of the system}
+Before the individual scenarios are discussed, the extract from CoCoME in which the two scenarios take place is briefly presented. As shown in \autoref{scn_excerpt}, the sceanrios takin place in the PickupShop 
+\begin{figure}
+\includegraphics[scale=0.8]{logos/ExcerptUC13.pdf}
+\caption{Excerpt of CoCoME for which the described scenarios are defined.}
+\label{scn_excerpt}
+\end{figure}
 \section{Scenario: stock manager requests the report for a customer}
 \label{descripScn_casestudy_scn1} 
 \subsection{Description}
 %\subsubsection{data used in the scenario}
-The scenario is derived from UC13. This use case is described in the CoCoME tech report \cite{CoCoMETechReport}. In this scenario, the stock manager requests an report for the purchased goods of a customer. To identify the customer among all customers, the stock manager has access to the ID of the customer.The role enters the ID in the system, then the request is processed by CoCoME. At the end, the stock manager is presented with a full report. This report contains all purchases of the customer.\\
-%The usage model for the scenario is shown in \autoref{usage_UC13}. 
-The usage model is relatively simple and will only be described here.\\ The StockManager accesses the system with a customers id and in the end is presented with a report of all purchased products for this customer.
+This scenario is derived from the use cases described in the CoCoME tech report \cite{CoCoMETechReport}, more explicit the use case 13. \\
+In this scenario, the \textit{StockManager} is already authenticated and then requests a report for the purchased products of a customer. To identify the customer among all customers, the \textit{StockManager} has access to the ID of the specific customer. The \textit{StockManager} enters the ID in CoCoME, then the request is processed. At the end, the stock manager is presented with a full report for the customer. This report contains all purchased products of the customer.\\
 
-\begin{figure}
-\label{usage_UC13}
-\caption{The usage model for the Scenario: StockManager requests a report for a customer.}
-\end{figure}
-\subsection{CoCoME excerpt} 
-Before we move on to the access rights and data types, we show the excerpt of CoCoME in which this scenario takes place. This is just an excerpt of the whole system. The scenario only uses four components, the Tradingssystem:inventory:application, the Webfrontend, the Tradingsystem:inventory:data and the Webservice. 
-
-\begin{figure}
-\includegraphics[scale=0.8]{logos/ExcerptUC13.pdf}
-\caption{Excerpt of CoCoME in which the described scenarios takes place.}
-\label{scn_excerpt}
-\end{figure}
-
-\subsection{Data types and access rights} 
+\subsection{Extract the data types, access rights and types of data processing for the scenario} 
 \label{accesscontrol_casestudy}
-
-Previously, the data was divided into four classes.In the following enumeration the data classes and the concrete data for each class is shown.\\
+%TODO in drei Schritte aufteilen, erst die verwendeten daten, danch die AR dan ToDP 
+In this section, we will first determine what actual data will be used in each component. Next, we obtain the corresponding parts of the two matrices for access rights (ACM) \autoref{ACM_updated} and data processing (OpM) \autoref{typeMatrix}.\\
+As stated in the milestone, the data is divided into four classes: customer data, account data, product\&sales data and system data. In the following enumeration for each data class the used data in the scenario is described.
 \begin{itemize}
-\item account related data \\ No data from this class is used in this scenario
-\item customer related data\\ The ID from the customer is part of the scenario
-\item product \& sales related data\\ In the scenario two concrete types are used. First, the IOrderEntries type.This type is a list of all purchased products for an order. This type is a collection of all products in an order. The second type is the report, which collects all IOrderEntries in one list and transform it to a human readable document. 
-\item system data \\ The system data are the queries used to request the IOrderEntries from the database.
+\item account data \\ No data from this class is used in this scenario.
+\item customer data\\ The ID from the customer is part of the scenario.
+\item product\&sales data\\ In the scenario two data types are used. First, the \textit{IOrderEntries} are used. The \textit{IOrderEntries} are a collection of all data that is generated after an order successful passed.  The second used data type is the \textit{Report} data type, which is a human readable string. 
+\item system data \\ This class provides the data that is used to create the queries to the underlying database.
 \end{itemize}
 
-
-Next, we extract the access rights and the types of data processing from the corresponding matrices. The access rights matrix for this scenario is shown in \autoref{accessrightsCSS}. We omitted the Webservice component for the fact  that it only transmits the data in this scenario.\\
-The matrix for the data processing is shown in \autoref{DataPRoc_UC13}.
-
+Int he next step, we extract the corresponding parts of the ACM and the OpM. The ACM for this scenario is shown in \autoref{accessrightsCSS} and the OpM is shown in \autoref{DataPRoc_UC13}. We omitted the Webservice component for the fact that it only transmits the data.\\
 \begin{table}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -984,9 +1113,11 @@ TS:inv:data & relational algebra & relational algebra & alter \\
 
 \subsection{Component behavior}
 %SEFF  specification
-The shown excerpt is extended with SEFFs (\autoref{MMext}). For each component a SEFF is defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components, then we define the data flow for each component. Finally, the data flow definitions are merged into one data flow for the entire scenario.
+The excerpt is extended with \textit{operations}. For each component one or more operations are defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components, then we derive the data processing for each component. Finally, all operations are merged into one data flow.
 \subsubsection{Observable Behavior}
 The ID is entered via the WebFrontend component. After that, the ID is passed through the Webservice component to the Tradingsystem:inventory. The Tradingsystem:inventory has two inner components. First the ID is passed to the Tradingsystem:inventory:apllication in which it remains for the time being. Then the whole database is queried. In the next step, first the responding database entry for the ID is selected. Secondly, the received database entry is altered into a query used to select all IOrderEntries for the customer. The result is merged into a list. This data is transmitted back to the Tradingsystem:inventory:application, where the data is transformed in a report. A Repor tis a human readable document. Then the report is passed through the Webservice back to the Webfrontend where it is presented to the stock manager.
+\subsection{Data processing in the components}
+In this scenario
 \subsubsection{Data flow definition}
 For each SEFF one or more operations are added which describe the data processing for the component. For each operations it is defined which type of data processing is done for which data.
 \begin{itemize}
