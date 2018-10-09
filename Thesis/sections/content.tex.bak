@@ -1035,9 +1035,9 @@ For each requirement the associated system elements are stored.
 After we reached the milestone in the last chapter, we are going to define scenarios, evaluating the defined scenarios and concluding the procedure in this one.\\
 A scenario is a actual characteristics from, for example, a use case. But scenarios in general describe a actual interaction by one or more users with the system. This scenarios are later converted in data flows that are added to the system model. The scenario created by using the ACM \autoref{ACM_updated} and the OpM \autoref{typeMatrix}. We defined two scenarios for CoCoME.\\ The basic structure for each scenario is: First, the scenario is briefly described. Then the specific data types for the scenario are identified. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. \\
 After the generated data flows have been added to the system model, they are evaluated based on the number of covered information flow classes. \\
-Finally, it is checked whether the number of covered information flow classes aqre sufficient. Then the process is concluded.
+Finally, it is checked whether the number of covered information flow classes are sufficient. Then the process is concluded.
 \section{Excerpt of the system}
-Before the individual scenarios are discussed, the extract from CoCoME in which the two scenarios take place is briefly presented. As shown in \autoref{scn_excerpt}, the sceanrios takin place in the PickupShop 
+First of al, the excerpt where both scenarios ar elocate dis brifely prsented. Both scenarios ar elocate din the \textit{PickupShop} scenario from the CoCoME tech report \cite{CoCoMETechReport}. In \autoref{scn_excerpt} 
 \begin{figure}
 \includegraphics[scale=0.8]{logos/ExcerptUC13.pdf}
 \caption{Excerpt of CoCoME for which the described scenarios are defined.}
@@ -1048,8 +1048,7 @@ Before the individual scenarios are discussed, the extract from CoCoME in which 
 \subsection{Description}
 %\subsubsection{data used in the scenario}
 This scenario is derived from the use cases described in the CoCoME tech report \cite{CoCoMETechReport}, more explicit the use case 13. \\
-In this scenario, the \textit{StockManager} is already authenticated and then requests a report for the purchased products of a customer. To identify the customer among all customers, the \textit{StockManager} has access to the ID of the specific customer. The \textit{StockManager} enters the ID in CoCoME, then the request is processed. At the end, the stock manager is presented with a full report for the customer. This report contains all purchased products of the customer.\\
-
+In this scenario, the \textit{StockManager} is already authenticated and then requests a report for the purchased products of a customer. To identify the customer among all customers, the \textit{StockManager} has access to the ID of the specific customer. The \textit{StockManager} enters the ID in CoCoME, then the request is processed. At the end, the stock manager is presented with a full report for the customer. This report contains all purchased products of the customer.
 \subsection{Extract the data types, access rights and types of data processing for the scenario} 
 \label{accesscontrol_casestudy}
 %TODO in drei Schritte aufteilen, erst die verwendeten daten, danch die AR dan ToDP 
@@ -1066,7 +1065,7 @@ Int he next step, we extract the corresponding parts of the ACM and the OpM. The
 \begin{table}
 \begin{tabular}{|c|c|c|c|}
 \hline
-ACM & Webfrontend & TS:inv:application & TS:inv:data \\
+ACM & Webfrontend & TS:inv:application:store & TS:inv:data:store \\
 \hline
 stockmanager &
 \begin{tabular}{c} 
@@ -1113,43 +1112,52 @@ TS:inv:data & relational algebra & relational algebra & alter \\
 
 \subsection{Component behavior}
 %SEFF  specification
-The excerpt is extended with \textit{operations}. For each component one or more operations are defined, which models the observable behavior for this component. First, we describe the observable behavior of the scenario across all components, then we derive the data processing for each component. Finally, all operations are merged into one data flow.
+The excerpt of the system model of CoCoME in which the scenario is located is extended with \textit{operations}. For each component one or more operations are defined. These model the data processing in this component. An operation is associated with one of the data processing classes in the OpM \autoref{DataPRoc_UC13}. Each operation has one or more inputs and one more outputs. For each input and each output the data types are known. \\
+First, we describe the observable behavior of the scenario across all components and the data processing for each component. All operations are then combined in a data flow.
 \subsubsection{Observable Behavior}
-The ID is entered via the WebFrontend component. After that, the ID is passed through the Webservice component to the Tradingsystem:inventory. The Tradingsystem:inventory has two inner components. First the ID is passed to the Tradingsystem:inventory:apllication in which it remains for the time being. Then the whole database is queried. In the next step, first the responding database entry for the ID is selected. Secondly, the received database entry is altered into a query used to select all IOrderEntries for the customer. The result is merged into a list. This data is transmitted back to the Tradingsystem:inventory:application, where the data is transformed in a report. A Repor tis a human readable document. Then the report is passed through the Webservice back to the Webfrontend where it is presented to the stock manager.
-\subsection{Data processing in the components}
-In this scenario
+%TODO hier weiter machen
+%TODO noch genauere Komps
+In the scenario, the \textit{StockManager} interacts with CoCoME by requesting a report for a customer. In the following, the behavior of the system  is described.\\
+The \textit{StockManager} enters the \textit{ID} of a customer through the \textit{Webfrontend} into CoCoME. The \textit{Webfrontend} processes the ID by transmitting it to the \textit{Webservice} component, which also transmitting the \textit{ID} to the \textit{Tradingssystem:inventory} component. The \textit{Tradingsystem:invetory} consists of two sub components. First, the \textit{ID} is transmitted to the \textit{Tradingsystem:inventory:application:store}, where it is further transmitted to the \textit{Tradingsystem:inventory:data:store} component. In this component a \textit{query} is created by using the \textit{ID}. This query is then send to the \textit{ServiceAdapter}, where the database is requested. The query first selects the respective customer for the \textit{ID}. Then it projects all \textit{IOrderEntries}. The \textit{IOrderEntries} represents an order for a customer. In the \textit{IOrderEntries}, beside other data, which occur with an order, the purchased products are included. The list of all \textit{IOrderEntries} is then transmitted back to the \textit{Tradingssystem:inventory:data:store} and then on to the \textit{Tradingsystem:inventory:application:store}. In this component, the list is then processed in a \textit{Report}. This \textit{Report} is then transmitted via the \textit{Webservice} back to the \textit{Webfrontend}, where the result is shown to the \textit{StockManager}. The resulting report contains a list of all purchased products. In addition, to each entry the date of purchase is added.
 \subsubsection{Data flow definition}
-For each SEFF one or more operations are added which describe the data processing for the component. For each operations it is defined which type of data processing is done for which data.
-\begin{itemize}
-\item Webfrontend \\ Transmit the ID (customer data) and the report (product\& sales data).
-\item Tradingsystem:inventory:application \\ Transmits the ID (customer data), alters and transmits the report and IOrderEntries (product\& sales related data).
-\item Tradingsystem:inventory:data \\ Transmits the IOrderEntries (product\& sales related data), take the ID (customer data) alter it to a query (system data) and creates a new query (system data).
-\end{itemize}
-The different operations are added to the respective components. The resulting data flow is shown in \autoref{fig:uc13DFD}.
-%++++++++++++figures+++++++++++++++++++++++++
-
-\begin{figure}
-\includegraphics[scale=.75, angle= 90]{logos/Data_flow_UC13.pdf}
-\caption{Resulting data flow for the scenario: StockManager request the report for a customer}
-\label{fig:uc13DFD}
-\end{figure}
-The data flow is as follows. The ID from the customer is transmitted to the Tradingsystem:inventory:data. Then the respective IOrderEntries are selected and merged into a report. This report is then transmitted back to the StockManager. 
-
-
+Once the general behavior of the scenario within the system has been described, the data flow is created. For each component, the operations and processed data that are used are identified and added to the current component. The operations are then linked in the correct order to complete the creation of the data flow.\\
+The overview which data and which operations is shown in \autoref{tab:overview_UC13_DF}.
+\begin{table}
+\begin{tabular}{|c|c|c|}
+\hline 
+Components & Operations & Data \\ 
+\hline 
+Webfrontend & transmit & I: ID  \\
+& & II: Report \\
+\hline 
+Webservice & transmit & I: ID \\ 
+& & II: Report \\ 
+\hline 
+TS:inv:data:store & rel. Algebra & IV: query \\ 
+\hline 
+TS:inv:app:store & transmit & I: ID  \\ 
+& alter data & II: List<IOrderEntries>  \\
+\hline 
+\end{tabular} 
+\caption{Overview over the used operations and the used data for the Scenario: StockManager requests a report for a customer. \textbf{I}}
+\label{tab:overview_UC13_DF}
+\end{table}
+In \autoref{tab:overview_UC13_DF} the association between the components, the used operations and the data is shown. To give a brief explanation of how to read this table. In line 1, the \textit{Webfrontend} only uses the operation \textbf{transmit} and data from a total of 2 classes,  \textbf{customer} data and the \textbf{product\&sales} data. From these classes the concrete data \textit{ID} and \textit{Report} are used.\\
+The resulting data flow is shown in \autoref{fig:uc13DFD}.The data flow notation has been extended to include the corresponding component and operations for the processes. The data is still on the edges. Also nothing has changed for the entities.\\
+In this scenario a violation for the customer's privacy is displayed. According to the defined access rights tow violations are modeled. First, the \textit{StockManager} should not have access to the \textit{ID} of a customer. And secondly, the \textit{Report} is in combination with the \textit{ID} security relevant. This  data flow should normally prohibited by the system.
+%TODO nochmal kurz den Datenfluss beschreiben 
 \section{Scenario: Support employee requests information for an order}
-This scenario was not defined on the basis of an use case. After we investigated CoCoME further, we could not find any fitting use cases in which security relevant data is present. We mostly looked for use cases, that process customer related data. So we created a new scenario. 
+This scenario was not defined on the basis of an use case. We defined this scenario for various reasons. First, we wanted to define a counterpart to the already existing scenario (\autoref{descripScn_casestudy_scn1}). The scenario is located in the same system part and therefore operates on the same components. The idea behind this is to provide a violation and a non-violation. An data-based privacy approach my be evaluated by checking if the violation and the non-violation is identified correctly. Due to the fact that CoCoME is a rather minimal system for the goal the system aims for, we couldn't find further use cases where multiple classes of data and/or multiple roles are involved.
 \subsection{Description}
 \label{scn2_ch4}
-The fundamental setting of this scenario is that a customer has a problem with an order s/he issued. To solve the problem, the customer authenticates her/himself in CoCoME and issues a ticket for the order. The support employee then request the particular order from CoCoME. After the report is received, the scenario has ended. With the report at hand, the support employee should be able to solve the customer's issue.\\
-The usage model is relatively simple for the scenario. The support employee request with the customer and order ID a report of the current state of the order.
-%TODO usage model
-%\begin{figure}
-%\caption{Usagemodel for the Scenario: Support employee requests information for an order}
-%\label{usage_uc14}
-%\end{figure}
+The fundamental setting of this scenario is that a customer has a problem with an issued order. To solve the problem, the customer authenticates himself in CoCoME and issues a ticket for the order. The support employee then request a report for the particular order from CoCoME. After the report is presented to the support employee, the scenario has ended. With the report at hand, the support employee should be able to solve the customer's issue.\\
 
-\subsection{Identification of a new use case}
-We found the scenario described in \autoref{scn2_ch4} so fitting for CoCoME, that we derived a new use case from it. First we introduce the new role of support employee before we move on to the description of the new use case.
+\subsection{Description of a new use case}
+We decided to add the scenario described in \autoref{scn2_ch4} as a new use case to CoCoME. The embedding in the already present use cases can be seen in \autoref{UCD_new}.  First we briefly describe the new role added to CoCoME, then the new use case is described.
+\begin{figure}
+\caption{Use case diagram for CoCoME with the addition of the new use case.}
+\label{UCD_new}
+\end{figure}
 \subsubsection{Description the new role: Support employee}
 The support employee role processes the tickets issued by customers. A ticket is issued if there are problems with an order. The support employee receives access to the order and checks their current status. Then he takes an appropriate action to solve the issue if possible. The actions are dependent on the actual order. They can reach from resending the order to taking no action, because the customer tries to scam the enterprise.
 % Das nochmal besser erklären, die verschiedenen aktionen sin dzu weit gefächert und werden hier nicht betrachtet
@@ -1157,14 +1165,17 @@ The support employee role processes the tickets issued by customers. A ticket is
 The support employee is a new role in the system, so we had to define the access rights for this role. It requires data beyond the data it owns itself, this includes customer and product \& sales related data. The role may provide customer and product \& sales related data. It may happen, for example, that an order is changed, because some products are not available and the customer decides to take a similar product. Also customer may used an invalid credit card in the order under investigation and the credit card details are changed.
 \paragraph{access rights}
 From the description we derived the access rights shown in \autoref{ACM_SE}. To point out the important definitions. The support employee got no access to the Tradingsystem:cashdeskline, because for his tasks s/he does not need to. Also no access to system data as every role. At last no access to the customer related data in the PickupShop to verify , for example, the credit card details with the bank. We omitted the Tradingsystem:cashdeskline for space purposes 
-\begin{landscape}
+%\begin{landscape}
 \begin{table}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-ACM & Web-  & TS: & TS:cash- & Pickup & Web- \\
- & frontend  & inventor: & deskline & Shop & service\\
+ACM & Web-  & TS: & TS: & Pickup  \\
+ & frontend  & inventory: & inventory & Shop \\
+&  & app:store & data:store &  \\
 \hline
-support employee &
+support & & & &  \\
+employee & & & &  \\
+&
 \begin{tabular}{c} 
 account : 2 \\
 customer : 1 \\
@@ -1196,26 +1207,27 @@ product \& : 4 \\
 sales \\
 system : 4 \\
 \end{tabular}
-&
-\begin{tabular}{c} 
-account : 2 \\
-customer : 1 \\
-product \&  : 2 \\
-sales \\
-system : 4 \\
-\end{tabular}
+%&
+%\begin{tabular}{c} 
+%account : 2 \\
+%customer : 1 \\
+%product \&  : 2 \\
+%sales \\
+%system : 4 \\
+%\end{tabular}
 \\
 \hline
 \end{tabular}
 \caption{Access right for the role \textit{Support employee}. 1 refers to the access right \textit{FullAccess}, 2 refers to the access right \textit{AccessToUsedData}, 3 refers to the access right \textit{AccessToOwnedData}, 4 refers to the access right \textit{Default}.}
 \end{table}
 \label{ACM_SE}
-\end{landscape}
+%\end{landscape}
 
 \subsubsection{Description of use case 14}
+\label{decription_uc14}
 \begin{itemize}
 \item \textit{Brief Description} The system provides the possibility to generate a report for the current status of a customer's order.
-\item \textit{involved actors} customer, support employee
+\item \textit{Involved actors} customer, support employee
 \item \textit{Precondition} the support employee is authenticated.
 \item \textit{Trigger} the customer submits a ticket for a certain order.
 \item \textit{Post condition} The report for the order was generated and is displayed to the support employee.
@@ -1227,36 +1239,51 @@ system : 4 \\
 \item Alternative or exceptional process
 \begin{itemize}
 \item in step 2: the order doesn't exist\\
-The system sends an error message to the customer
+The system sends an error message to the customer.
 \item in step 3: order is ready\\
-the support employee sends a reminder to the customer to pick up the order
+the support employee sends a reminder to the customer to pick up the order.
 \end{itemize}
 \end{itemize}
 
-\subsection{CoCoME excerpt}
-The CoCoME excerpt is the same as in \autoref{descripScn_casestudy_scn1}. The excerpt is shown in \autoref{scn_excerpt}. The scenario is settled in the same region as the previous one. So the same components are used. This are the Tradingssystem:inventory:application, the Webfrontned, the Tradingsys-
-tem:inventory:data and the Webservice.
-\subsection{Data types and access rights}
-We divided the data in to four classes of data types. In the following listing, for each class the concrete data is summarized.
 
+\subsection{Extract the data types, access rights and types of data processing for the scenario}
+In this section, we will first determine for the scenario what actual data will be used in each component. Next, we obtain the corresponding parts of the two matrices for access rights (ACM) \autoref{ACM_updated} and data processing (OpM) \autoref{typeMatrix}.\\
+As stated in the milestone, the data is divided into four classes: customer data, account data, product\&sales data and system data. In the following enumeration for each data class the used data in the scenario is described.
 \begin{itemize}
-\item account related data \\ No account related data is used in the scenario 
-\item customer related data \\ The ID of the customer is used in this scenario
-\item product \& sales related data \\ Two data types are used in this scenario. First, the ID of the order, second the report type. The report which merges the an order and a customer in a human readable document. 
-\item system data \\ The system data used are queries to request data from the database.
+\item account data \\ No data from this class is used in this scenario.
+\item customer data\\ The ID from the customer is part of the scenario.
+\item product\&sales data\\ In the scenario two data types are used. First, the \textit{IOrderEntries} are used. The \textit{IOrderEntries} are a collection of all data that is generated after an order successful passed. The second used data type is the \textit{Report} data type, which is a human readable string. 
+\item system data \\ In this class the data is located provides the queries to the underlying database.
 \end{itemize}
- 
 
-The access rights matrix for this scenario is shown in \autoref{ACM_SE}. We omitted the Webservice component for the fact that it only transmits the data in this scenario.
-The matrix for the data processing is shown in \autoref{DataPRoc_UC13}. It is extracted from the corresponding matrix.
-%ACM --
+Int he next step, we extract the corresponding parts of the ACM and the OpM. The ACM for this scenario is the same as defined in the new scenario and shown in \autoref{ACM_SE},  and the OpM is shown in \autoref{DataPRoc_UC13}. We omitted the Webservice component for the fact that it only transmits the data.\\
+
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Types of data & customer data & p\&s data & system data \\
+ processing & & & \\
+\hline 
+Webfrontend & transmit & I/O operations, transmit & non-existent \\ 
+\hline 
+TS:inv:application & alter, transmit & alter & non-existent \\ 
+\hline 
+TS:inv:data & relational algebra & relational algebra & alter \\ 
+\hline 
+\end{tabular} 
+\caption{A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}
+\label{DataPRoc_UC14}
+\end{table}
+
 \subsection{Component behavior}
 % hier eventuell en repor tin was anderes umbennen
-The shown excerpt is extended with SEFFs (\autoref{MMext}). For each component a SEFF
-is defined, which models the observable behavior for this component. In the following the
-observable behavior of the scenario is described first, then the model extension with the
-described meta model. Finally, the resulting data flow is displayed.
+The excerpt of CoCoME  is extended with \textit{operations}. For each component one or more operations are defined. These model the data processing in this component. An operation is associated with one of the data processing classes in the OpM \autoref{DataPRoc_UC14}. Each operation has one or more inputs and one more outputs. For each input and each output the data types are known. \\
+First, we describe the observable behavior of the scenario across all components and the data processing for each component. All operations are then combined in a data flow.
 \subsubsection{Observable behavior}
+In the scenario the \textit{SupportEmployee} requests and receive a report for a specific order of a customer. In the following, the behavior of the system  is described.\\
+The \textit{SupportEmployee} enters the \textit{ID} of the customer and the \textit{ID} of the order. Then the tuple is transmitted via the \textit{Webservice} component and the \textit{Tradingsystem:inventory:application:store} component to the \textit{Tradingsystem:inventory:data:store} component. In this component the tuple is utilizied to create a query that is transmitted to the \textit{ServiceAdapter}. In this component the query is executed and the result is transmitted through the \textit{Tradingsystem:inventory:data:store} component to the \textit{Tradingsystem:inventory:application:store} component. There the result of the query is processed into a \textit{Report}. This \textit{Report} is then transmitted via the \textit{Webservice} component to the \textit{Webfrontend}, where it is shown to the \textit{SupportEmployee}. The resulting report contains meta data in addition to the ordered products. This meta data includes, for example, delivery day, the used payment method, etc.
+
+
 First the ID of the authenticated customer and the ID of the order are entered in the Webfrontend by the support employee. Then the tuple is transmitted through the Webservice to the Tradingsystem:inventory. The Tradingssystem:inventory consists out of two compoents. First, the Tradingssystem:inventory:application transmits the tuple to Tradingssystem:inventory:data, where the tuple stays for the time being. Then the whole database is selected. In the next step, a query is created by using the customer ID. Then the query is used to select the corresponding customer. Then order ID is used to build another query and select the corresponding order. The order and the customer data is passed to the Tradingsystem:inventory:application, where it is processed to create an report. This report contains meta data in addition to the ordered products. This meta data includes,for example , the day of delivery, the payment method used, etc. Then the report is transmitted via the Webservice component back to the Webfrontend. There the report is shown to the support employee.
 \subsubsection{Data flow definition}
 Previously, the data was divided into equivalence classes.  Now we present the concrete data to be used in this scenario and specify the corresponding classes.\\
@@ -1273,4 +1300,38 @@ With these informations about the data processing, we are able to build the resu
 \caption{The resulting data flow for the scenario: Support employee requests information for an order.}
 \label{DF_UC14}
 \end{figure}
+\section{Evaluation of the scenarios}
+After all data flow are defined and added to the system, the second part of the evalaution for the case study is conducted in this section. The overview is shown in \autoref{Overview_CSS_Eval}. 
+\begin{figure}
+\caption{Overview for the evaluation for the \nameref{ch:casestudysystem}}
+\label{Overview_CSS_Eval}
+\end{figure}
+\subsection{Goal: Evaluation for the created case study}
+The goal is to evaluate the case study. As shown in \autoref{Overview_CSS_Eval} the evaluation of the case study is split into two parts. In this we will only focus on the highlighted plan, the evaluation of the defined scenarios.
+\subsection{Question: Is the case study usable for a data-based privacy analysis?}
+To verify if the created case study are usable for the evaluation of a data-based privacy analysis, it is checked which information flow classes the created case study covers. We relied on the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire information from a role that inherits a higher security level. In the course of a program flow, user with a high security level and user with low security level inserts data in the system and receive outputs from the system. If there is no interference in the system, inputs from high level user have no effect to the outputs of low level user. The effects of \textit{Non-inteference} can be expressed by three infromtion flow classes: \textbf{Illegal information flow}, \textbf{Direct information flow between roles} and \textbf{Information flow form high to low}. \\
+Illegal information flow describes that a role can receive information for which it is not authorized.\\
+Direct information flow describes the flow of information between two roles for which  is not cleared to either receive or transmit.\\
+Information from high to low describes flow of information, even if not intended, from a higher security level to a lower security level.
+\textit{Non-leakage} describes the issue that it is not observable what specific actions are taken place by a system. This can be expressed by the information flow class \textbf{Observable information flow}.\\
+The metric is the number of covered information flow classes in the case study. The evaluation is conducted in a checklist manner. 
 
+\subsubsection{Number of different covered information flow classes}
+We evaluate the variety of covered information flow classes for the defined scenarios in the case study. We defined four information flow classes to cover \textit{Non-influence}(\textit{non-interference} + \textit{non-leakage}. The covered information flow classes are: Illegal information flow, information flow from higher security levels to lower ones, observable information flow and direct information flow between roles. W
+\paragraph{Illegal information flow}
+The first scenario covers illegal data flow. The stock manager in this scenario has access to the \textit{ID} of an customer. The role has no rights to have access \textit{customer} data. Then, the stock manager request a report of this specific customer and receives a full report for this customer. The stock manager has the security level \textit{AccessToUSedData}. The report for one customer is no necessary data for the stock manager to perform its tasks. In this scenario an illegal data flow is modeled. Therefore, the illegal data flow class is part of the created case study.
+\paragraph{Information flow from high to low}
+In the defined scenarios, for the role involved, data from different security levels is present. The data associated also flows to lower levels. This information flow class is also covered.
+\paragraph{Direct information flow between roles} For the fact that no scenario with more than one role is defined, this class is also not covered in the case study.
+\paragraph{Observable information flow}
+This information flow class is not modeled in the scenarios. 
+%TODO Tabelle fehlt noch 
+\begin{table}
+
+\caption{Resulting checklist for the evaluation of the case study.}
+\end{table}
+
+\section{Discussion}
+%TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
+% warum wir die query explizit definiert, warum wurde die DF notation angepasst, 
+In this section, we are going to discuss the single design decision that were made during the creation of the case study. Further, we discuss we if the process can be concluded.
