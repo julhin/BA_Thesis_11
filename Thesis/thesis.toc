@@ -178,7 +178,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.1}Description}{39}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Identification of a new use case}{40}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Description of a new use case}{40}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.3.2.1}Description the new role: Support employee}{40}{subsubsection.6.3.2.1}
 \defcounter {refsection}{0}\relax 
@@ -196,19 +196,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.3.4.2}Data flow definition}{43}{subsubsection.6.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Discussion}{43}{section.6.4}
+\contentsline {section}{\numberline {6.4}Evaluation of the scenarios}{43}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Evaluation of the scenarios}{43}{section.6.5}
+\contentsline {subsection}{\numberline {6.4.1}Goal: Evaluation for the created case study}{43}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.5.0.1}Number of different covered information flow classes}{43}{subsubsection.6.5.0.1}
+\contentsline {subsection}{\numberline {6.4.2}Question: Is the case study usable for a data-based privacy analysis?}{45}{subsection.6.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.4.2.1}Number of different covered information flow classes}{45}{subsubsection.6.4.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Illegal information flow}{45}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Information flow from higher security levels to lower ones}{45}{section*.29}
+\contentsline {paragraph}{\nonumberline Information flow from high to low}{46}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Observable information flow}{45}{section*.30}
+\contentsline {paragraph}{\nonumberline Direct information flow between roles}{46}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Direct information flow between roles}{45}{section*.31}
+\contentsline {paragraph}{\nonumberline Observable information flow}{46}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Discussion}{46}{section.6.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Evaluation}{47}{chapter.7}
 \defcounter {refsection}{0}\relax 

@@ -1300,10 +1300,6 @@ With these informations about the data processing, we are able to build the resu
 \caption{The resulting data flow for the scenario: Support employee requests information for an order.}
 \label{DF_UC14}
 \end{figure}
-\section{Discussion}
-%TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
-% warum wir die query explizit definiert, warum wurde die DF notation angepasst, 
-In this section, we are going to discuss the single design decision that were made during the creation of the case study. Further, we discuss we if the process can be concluded.
 \section{Evaluation of the scenarios}
 After all data flow are defined and added to the system, the second part of the evalaution for the case study is conducted in this section. The overview is shown in \autoref{Overview_CSS_Eval}. 
 \begin{figure}
@@ -1325,11 +1321,17 @@ We evaluate the variety of covered information flow classes for the defined scen
 \paragraph{Illegal information flow}
 The first scenario covers illegal data flow. The stock manager in this scenario has access to the \textit{ID} of an customer. The role has no rights to have access \textit{customer} data. Then, the stock manager request a report of this specific customer and receives a full report for this customer. The stock manager has the security level \textit{AccessToUSedData}. The report for one customer is no necessary data for the stock manager to perform its tasks. In this scenario an illegal data flow is modeled. Therefore, the illegal data flow class is part of the created case study.
 \paragraph{Information flow from high to low}
-F
-\paragraph{Observable information flow}
-We did not change the base system of CoCoME. In the base system of CoCoME it is possible to observe when, for example, users finish authenticating, because they are then allowed to perform different actions. So this information flow class is not modeled in a scenario. 
+In the defined scenarios, for the role involved, data from different security levels is present. The data associated also flows to lower levels. This information flow class is also covered.
 \paragraph{Direct information flow between roles} For the fact that no scenario with more than one role is defined, this class is also not covered in the case study.
+\paragraph{Observable information flow}
+This information flow class is not modeled in the scenarios. 
 %TODO Tabelle fehlt noch 
 \begin{table}
-\caption{Resulting checklist for }
+
+\caption{Resulting checklist for the evaluation of the case study.}
 \end{table}
+
+\section{Discussion}
+%TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
+% warum wir die query explizit definiert, warum wurde die DF notation angepasst, 
+In this section, we are going to discuss the single design decision that were made during the creation of the case study. Further, we discuss we if the process can be concluded.
