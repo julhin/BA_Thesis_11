@@ -36,17 +36,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {\relax 6.1}{\ignorespaces An ACM showing the access rights for the case study system.}}{37}{table.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}}{37}{table.6.2}
+\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}}{38}{table.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Access right for the role \textit {Support employee}. 1 refers to the access right \textit {FullAccess}, 2 refers to the access right \textit {AccessToUsedData}, 3 refers to the access right \textit {AccessToOwnedData}, 4 refers to the access right \textit {Default}.}}{42}{table.6.3}
+\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Overview over the used operations and the used data for the Scenario: StockManager requests a report for a customer. \textbf {I}}}{39}{table.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 6.4}{\ignorespaces Access right for the role \textit {Support employee}. 1 refers to the access right \textit {FullAccess}, 2 refers to the access right \textit {AccessToUsedData}, 3 refers to the access right \textit {AccessToOwnedData}, 4 refers to the access right \textit {Default}.}}{41}{table.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {\relax 6.5}{\ignorespaces A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}}{42}{table.6.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 7.1}{\ignorespaces Overview of the evaluation result for the access rights.}}{52}{table.7.1}
+\contentsline {table}{\numberline {\relax 7.1}{\ignorespaces Overview of the evaluation result for the access rights.}}{51}{table.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 7.2}{\ignorespaces Overview over the evaluation result for the data flows.}}{52}{table.7.2}
+\contentsline {table}{\numberline {\relax 7.2}{\ignorespaces Overview over the evaluation result for the data flows.}}{51}{table.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {\relax 7.3}{\ignorespaces Overview over the results for the evaluation of PCM.}}{53}{table.7.3}
+\contentsline {table}{\numberline {\relax 7.3}{\ignorespaces Overview over the results for the evaluation of PCM.}}{51}{table.7.3}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -168,15 +168,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.2}Extract the data types, access rights and types of data processing for the scenario}{37}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Component behavior}{38}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.3}Component behavior}{37}{subsection.6.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.2.3.1}Observable Behavior}{38}{subsubsection.6.2.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {6.2.3.2}Data flow definition}{38}{subsubsection.6.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Scenario: Support employee requests information for an order}{40}{section.6.3}
+\contentsline {section}{\numberline {6.3}Scenario: Support employee requests information for an order}{39}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Description}{40}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Description}{39}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.2}Identification of a new use case}{40}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
@@ -186,17 +186,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline access rights}{40}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.2.2}Description of use case 14}{43}{subsubsection.6.3.2.2}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Description of use case 14}{40}{subsubsection.6.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}CoCoME excerpt}{43}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Extract the data types, access rights and types of data processing for the scenario}{41}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.4}Data types and access rights}{43}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.4}Component behavior}{42}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.5}Component behavior}{44}{subsection.6.3.5}
+\contentsline {subsubsection}{\numberline {6.3.4.1}Observable behavior}{42}{subsubsection.6.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.5.1}Observable behavior}{44}{subsubsection.6.3.5.1}
+\contentsline {subsubsection}{\numberline {6.3.4.2}Data flow definition}{43}{subsubsection.6.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.5.2}Data flow definition}{44}{subsubsection.6.3.5.2}
+\contentsline {section}{\numberline {6.4}Discussion}{43}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.5}Evaluation of the scenarios}{43}{section.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {6.5.0.1}Number of different covered information flow classes}{43}{subsubsection.6.5.0.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Illegal information flow}{45}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Information flow from higher security levels to lower ones}{45}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Observable information flow}{45}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Direct information flow between roles}{45}{section*.31}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Evaluation}{47}{chapter.7}
 \defcounter {refsection}{0}\relax 
@@ -210,54 +222,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.3}Usability of the created case study for data-based privacy analysis}{49}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Is the created case Study usable for different information flow classes?}{49}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.4}Expressiveness of data centric PCM}{49}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.1.1}Number of different covered information flow classes}{49}{subsubsection.7.3.1.1}
+\contentsline {subsection}{\numberline {7.4.1}Is the created case study expressible with PCM ?}{49}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Illegal information flow}{50}{section*.28}
+\contentsline {subsubsection}{\numberline {7.4.1.1}Number of available elements to model the different types of data processing}{49}{subsubsection.7.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Information flow from higher security levels to lower ones}{50}{section*.29}
+\contentsline {paragraph}{\nonumberline Operations relational algebra}{49}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Observable information flow}{50}{section*.30}
+\contentsline {paragraph}{\nonumberline I/O- operations}{49}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Direct information flow between roles}{50}{section*.31}
+\contentsline {paragraph}{\nonumberline Transmission data}{49}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Expressiveness of data centric PCM}{50}{section.7.4}
+\contentsline {paragraph}{\nonumberline Change Access rights}{50}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Is the created case study expressible with PCM ?}{50}{subsection.7.4.1}
+\contentsline {paragraph}{\nonumberline Alternation of data}{50}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.4.1.1}Number of available elements to model the different types of data processing}{51}{subsubsection.7.4.1.1}
+\contentsline {subsection}{\numberline {7.4.2}Number of missing elements for the different}{50}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Operations relational algebra}{51}{section*.32}
+\contentsline {section}{\numberline {7.5}Discussion}{50}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline I/O- operations}{51}{section*.33}
+\contentsline {chapter}{\numberline {8}Conclusion and future work}{53}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Transmission data}{51}{section*.34}
+\contentsline {section}{\numberline {8.1}Conclusion}{53}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Change Access rights}{51}{section*.35}
+\contentsline {section}{\numberline {8.2}Benefits of our work}{54}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Alternation of data}{51}{section*.36}
+\contentsline {section}{\numberline {8.3}Future work}{54}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Number of missing elements for the different}{51}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {8.3.1}Method}{54}{subsection.8.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Discussion}{51}{section.7.5}
+\contentsline {subsection}{\numberline {8.3.2}Case study system}{54}{subsection.8.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Conclusion and future work}{55}{chapter.8}
+\contentsline {subsection}{\numberline {8.3.3}Meta model extension}{55}{subsection.8.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Conclusion}{55}{section.8.1}
+\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Benefits of our work}{56}{section.8.2}
+\contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Future work}{56}{section.8.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1}Method}{56}{subsection.8.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.2}Case study system}{56}{subsection.8.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.3}Meta model extension}{57}{subsection.8.3.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.37}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{61}{appendix.A}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}First Appendix Section}{61}{section.A.1}
+\contentsline {section}{\numberline {A.1}First Appendix Section}{59}{section.A.1}

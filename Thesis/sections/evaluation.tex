@@ -34,26 +34,7 @@ In the chapters \autoref{ch:cocome} and \autoref{casestudysystem}, the applicati
 \label{usage_DBPA}
 The next aspect we evaluated the usability of the created case study. A case study is not useful if it does not meet criteria. The criteria ensure that the case study is in a state where it can be used for data-based data privacy analysis. To ensure this, we evaluate two different parts of the case study. First, we evaluate the defined access rights, then the defined data flows. 
 
-\subsection{Is the created case Study usable for different information flow classes?}
-To verify if a case study system is created that may be used to for data-based privacy analysis, we evaluated as a second aspect, the defined data flows. The following question is defined to indicate whether the goal is reached:\\
-Is the created case study usable for different problem statements?\\
-In the evaluation we only check the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire informations from a role that inherits a higher security level. Non-leakage describes the issue that it is not observable what specific actions are performed by a system. All in all the problem statements comes down to different classes of information flow. So we use the different information flow classes as a metric to verify the question. This is done in a checklist manner. 
-\subsubsection{Number of different covered information flow classes}
-We evaluate the variety of covered information flow classes for the defined scenarios int the case study. We defined four information flow classes to cover non-interference and non-leakage. The covered information flow classes are: Illegal information flow, information flow from higher security levels to lower ones, observable information flow and direct informations flow between roles.  
-\begin{itemize}
-\item Illegal information flow \\
-This class includes the information flow of data to roles that  have no access to data of this type. %TODO nochmal genau reingehen
-\item Information flow from higher security levels to lower ones\\ In the thesis, we use data flows as the main source of informations. The data is altered with specific operations. So our definition for information flow from high to low is: a sequence of actions, so that is possible for a role that inherit a certain security level to get access to data that are only accessible by higher security levels. 
-\item Observable information flow \\ This class describes if the data flow are observable from the outside and to determine, for example, if a security relevant operation is performed. The acquired informations may be used for an attack on the system.
-\item Direct information flow between roles\\ This information flow class models data flow between two roles while both interact simultaneously with a system. This refers especially to the security relevant data that may be transferred between two roles with different security levels.
-\end{itemize}
-\paragraph{Illegal information flow}
-The first scenario model illegal data flow. The stock manager in this scenario has access to the ID of an customer. the role has no rights to have access customer related data. Then, the stock manager request a report of this specific customer and receives a full report for this customer. The stock manager has the security level \textit{AccessToUSedData}. The report for one customer is no necessary data for the stock manager to perform its tasks. In this scenario an illegal data flow is modeled. Therefore, the illegal data flow class is part of the created case study.
-\paragraph{Information flow from higher security levels to lower ones}
-For each data type in each component the access for each role is regulated, therefore it is possible that the security levels change. To check if the information flow is in place, we have analyzed the data flows to determine if a role within the data flow is accessing  unauthorized data.  
-\paragraph{Observable information flow}
-We did not change the base system of CoCoME. In the base system of CoCoME it is possible to observe when, for example, users finish authenticating, because they are then allowed to perform different actions. So this information flow class is not modeled in a scenario. 
-\paragraph{Direct information flow between roles} For the fact that no scenario with more than one role is defined, this class is also not covered in the case study.
+
 \section{Expressiveness of data centric PCM}
 The last evaluation aspect of this thesis is to evaluate the chosen modeling language, in this case data-centric PCM. We want to check to what extent PCM is able to add the access rights and data flows in the already existing system model. To allow the extension, Seifermann \cite{MMextension} provided a meta model extension. This meta model extension is the central point of the evaluation. Without the meta model extension, PCM is not able to store data flows and access control rights directly in a system model. 
 \subsection{Is the created case study expressible with PCM ?}

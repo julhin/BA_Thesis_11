@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.6 $
+% $ biblatex bbl format version 2.8 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,24 +18,26 @@
 
 
 \refsection{0}
-  \sortlist[entry]{nty/global}
+  \sortlist[entry]{nty/global/}
     \entry{GQM_Intro}{article}{}
       \name{author}{2}{}{%
         {{hash=b3e93c0c9ed4d402b3831eb55f36053e}{%
            family={Basili},
-           family_i={B\bibinitperiod},
+           familyi={B\bibinitperiod},
            given={Victor\bibnamedelima R.},
-           given_i={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
         {{hash=ac3cc8fe012627f8b28504b286e810df}{%
            family={Weiss},
-           family_i={W\bibinitperiod},
+           familyi={W\bibinitperiod},
            given={David\bibnamedelima M.},
-           given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \strng{namehash}{4985ec3c6ed6f631d5e83800ee0ab85e}
       \strng{fullhash}{4985ec3c6ed6f631d5e83800ee0ab85e}
+      \strng{authornamehash}{4985ec3c6ed6f631d5e83800ee0ab85e}
+      \strng{authorfullhash}{4985ec3c6ed6f631d5e83800ee0ab85e}
       \field{sortinit}{B}
-      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Trans. Software Eng.}
@@ -56,14 +58,16 @@
       \name{author}{1}{}{%
         {{hash=55592bcb12548389fee56d4a82644f2b}{%
            family={Breier},
-           family_i={B\bibinitperiod},
+           familyi={B\bibinitperiod},
            given={Jakub},
-           given_i={J\bibinitperiod}}}%
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{55592bcb12548389fee56d4a82644f2b}
       \strng{fullhash}{55592bcb12548389fee56d4a82644f2b}
+      \strng{authornamehash}{55592bcb12548389fee56d4a82644f2b}
+      \strng{authorfullhash}{55592bcb12548389fee56d4a82644f2b}
       \field{sortinit}{B}
-      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Internet Serv. Inf. Secur.}
@@ -81,19 +85,21 @@
       \name{author}{2}{}{%
         {{hash=007e2bcfa51a300030e77b9191333456}{%
            family={Evered},
-           family_i={E\bibinitperiod},
+           familyi={E\bibinitperiod},
            given={Mark},
-           given_i={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod}}}%
         {{hash=796ffc98f74cbe6260b6bbe6039e03dd}{%
            family={Bögeholz},
-           family_i={B\bibinitperiod},
+           familyi={B\bibinitperiod},
            given={Serge},
-           given_i={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod}}}%
       }
       \strng{namehash}{20c06e4d0b29c6fafe5372aefa0aacaa}
       \strng{fullhash}{20c06e4d0b29c6fafe5372aefa0aacaa}
+      \strng{authornamehash}{20c06e4d0b29c6fafe5372aefa0aacaa}
+      \strng{authorfullhash}{20c06e4d0b29c6fafe5372aefa0aacaa}
       \field{sortinit}{E}
-      \field{sortinithash}{fefc5210ef4721525b2a478df41efcd4}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{ACSW} Frontiers 2004, 2004 {ACSW} Workshops - the Australasian Information Security Workshop (AISW2004), the Australasian Workshop on Data Mining and Web Intelligence (DMWI2004), and the Australasian Workshop on Software Internationalisation {(AWSI2004)} . Dunedin, New Zealand, January 2004}
@@ -109,24 +115,26 @@
       \name{author}{3}{}{%
         {{hash=3560bc0cad59a19a23274e4da94b8d57}{%
            family={Heinrich},
-           family_i={H\bibinitperiod},
+           familyi={H\bibinitperiod},
            given={Robert},
-           given_i={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod}}}%
         {{hash=e9289cc0b84de2757d0201a475e4a9d9}{%
            family={Rostami},
-           family_i={R\bibinitperiod},
+           familyi={R\bibinitperiod},
            given={Kiana},
-           given_i={K\bibinitperiod}}}%
+           giveni={K\bibinitperiod}}}%
         {{hash=4e41ac50a44ea2d2e0fbdd12c485c1b2}{%
            family={Reussner},
-           family_i={R\bibinitperiod},
+           familyi={R\bibinitperiod},
            given={Ralf},
-           given_i={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod}}}%
       }
       \strng{namehash}{2964bf33062d42cd2c6467af63253fa2}
       \strng{fullhash}{2964bf33062d42cd2c6467af63253fa2}
+      \strng{authornamehash}{2964bf33062d42cd2c6467af63253fa2}
+      \strng{authorfullhash}{2964bf33062d42cd2c6467af63253fa2}
       \field{sortinit}{H}
-      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{The CoCoME Platform for Collaborative Empirical Research on Information System Evolution}}
@@ -136,14 +144,16 @@
       \name{author}{1}{}{%
         {{hash=cc77b32c90f29ef1b08b6603fc345e45}{%
            family={Jürjens},
-           family_i={J\bibinitperiod},
+           familyi={J\bibinitperiod},
            given={Jan},
-           given_i={J\bibinitperiod}}}%
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{cc77b32c90f29ef1b08b6603fc345e45}
       \strng{fullhash}{cc77b32c90f29ef1b08b6603fc345e45}
+      \strng{authornamehash}{cc77b32c90f29ef1b08b6603fc345e45}
+      \strng{authorfullhash}{cc77b32c90f29ef1b08b6603fc345e45}
       \field{sortinit}{J}
-      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Electr. Notes Theor. Comput. Sci.}
@@ -164,14 +174,16 @@
       \name{author}{1}{}{%
         {{hash=cc77b32c90f29ef1b08b6603fc345e45}{%
            family={Jürjens},
-           family_i={J\bibinitperiod},
+           familyi={J\bibinitperiod},
            given={Jan},
-           given_i={J\bibinitperiod}}}%
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{cc77b32c90f29ef1b08b6603fc345e45}
       \strng{fullhash}{cc77b32c90f29ef1b08b6603fc345e45}
+      \strng{authornamehash}{cc77b32c90f29ef1b08b6603fc345e45}
+      \strng{authorfullhash}{cc77b32c90f29ef1b08b6603fc345e45}
       \field{sortinit}{J}
-      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{UML} 2002 - The Unified Modeling Language, 5th International Conference, Dresden, Germany, September 30 - October 4, 2002, Proceedings}
@@ -190,24 +202,26 @@
       \name{author}{3}{}{%
         {{hash=c810c6e897884044b611eb7a087c09e3}{%
            family={Lodderstedt},
-           family_i={L\bibinitperiod},
+           familyi={L\bibinitperiod},
            given={Torsten},
-           given_i={T\bibinitperiod}}}%
+           giveni={T\bibinitperiod}}}%
         {{hash=c6e31ac19bfce52002085948633cc398}{%
            family={Basin},
-           family_i={B\bibinitperiod},
+           familyi={B\bibinitperiod},
            given={David\bibnamedelima A.},
-           given_i={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
         {{hash=39b8dfb97018dce1b4bf2be96e774f2b}{%
            family={Doser},
-           family_i={D\bibinitperiod},
+           familyi={D\bibinitperiod},
            given={Jürgen},
-           given_i={J\bibinitperiod}}}%
+           giveni={J\bibinitperiod}}}%
       }
       \strng{namehash}{cfc058f71b9bb7ac084d9a761c47ba3f}
       \strng{fullhash}{cfc058f71b9bb7ac084d9a761c47ba3f}
+      \strng{authornamehash}{cfc058f71b9bb7ac084d9a761c47ba3f}
+      \strng{authorfullhash}{cfc058f71b9bb7ac084d9a761c47ba3f}
       \field{sortinit}{L}
-      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{UML} 2002 - The Unified Modeling Language, 5th International Conference, Dresden, Germany, September 30 - October 4, 2002, Proceedings}
@@ -224,18 +238,20 @@
     \endentry
     \entry{Noninfluence}{inproceedings}{}
       \name{author}{1}{}{%
-        {{hash=cf7a9a00a5adf6abae4b98b44f7c3b64}{%
-           prefix={von},
-           prefix_i={v\bibinitperiod},
+        {{hash=74ced7c9d2f0396c3c0201d4bd5eac90}{%
            family={Oheimb},
-           family_i={O\bibinitperiod},
+           familyi={O\bibinitperiod},
            given={David},
-           given_i={D\bibinitperiod}}}%
+           giveni={D\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
       }
-      \strng{namehash}{cf7a9a00a5adf6abae4b98b44f7c3b64}
-      \strng{fullhash}{cf7a9a00a5adf6abae4b98b44f7c3b64}
+      \strng{namehash}{74ced7c9d2f0396c3c0201d4bd5eac90}
+      \strng{fullhash}{74ced7c9d2f0396c3c0201d4bd5eac90}
+      \strng{authornamehash}{74ced7c9d2f0396c3c0201d4bd5eac90}
+      \strng{authorfullhash}{74ced7c9d2f0396c3c0201d4bd5eac90}
       \field{sortinit}{O}
-      \field{sortinithash}{7803d2715d5e795e70382b084ab8d00e}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Computer Security - {ESORICS} 2004, 9th European Symposium on Research Computer Security, Sophia Antipolis, France, September 13-15, 2004, Proceedings}
@@ -254,24 +270,26 @@
       \name{author}{3}{}{%
         {{hash=4f8a8c0f0e09192918e79534aeeb1cf8}{%
            family={Pilipchuk},
-           family_i={P\bibinitperiod},
+           familyi={P\bibinitperiod},
            given={Roman},
-           given_i={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod}}}%
         {{hash=a7426da4596e8cf1d6f0cbae4ed293f9}{%
            family={Seifermann},
-           family_i={S\bibinitperiod},
+           familyi={S\bibinitperiod},
            given={Stephan},
-           given_i={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod}}}%
         {{hash=9cf7a843caf56a1fc1cbd8cdfe89d84d}{%
            family={Taspolatoglu},
-           family_i={T\bibinitperiod},
+           familyi={T\bibinitperiod},
            given={Emre},
-           given_i={E\bibinitperiod}}}%
+           giveni={E\bibinitperiod}}}%
       }
       \strng{namehash}{39970954dc4e5fa6a3071b3842688a4c}
       \strng{fullhash}{39970954dc4e5fa6a3071b3842688a4c}
+      \strng{authornamehash}{39970954dc4e5fa6a3071b3842688a4c}
+      \strng{authorfullhash}{39970954dc4e5fa6a3071b3842688a4c}
       \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{4nd Collaborative Workshop on Evolution and Maintenance of Long-Living Software Systems (EMLS'17)}
@@ -290,32 +308,34 @@
       \name{editor}{4}{}{%
         {{hash=60c5c4b16191f78e70fffb6492d9e6fd}{%
            family={Rausch},
-           family_i={R\bibinitperiod},
+           familyi={R\bibinitperiod},
            given={Andreas},
-           given_i={A\bibinitperiod}}}%
+           giveni={A\bibinitperiod}}}%
         {{hash=2768d1cf3290b0ade34ff41f81aa1506}{%
            family={Reussner},
-           family_i={R\bibinitperiod},
+           familyi={R\bibinitperiod},
            given={Ralf\bibnamedelima H.},
-           given_i={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=94a3bbc6e98da3ebe25cd9dc968b89d3}{%
            family={Mirandola},
-           family_i={M\bibinitperiod},
+           familyi={M\bibinitperiod},
            given={Raffaela},
-           given_i={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod}}}%
         {{hash=16efabc19a5b35001f63ddd7f91d3469}{%
            family={Plasil},
-           family_i={P\bibinitperiod},
+           familyi={P\bibinitperiod},
            given={Frantisek},
-           given_i={F\bibinitperiod}}}%
+           giveni={F\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Springer}%
       }
       \strng{namehash}{246ad21e85b91e86f9aeb75da50fc1c0}
       \strng{fullhash}{1d90a4c95ec77193d831bf86d10b0f6f}
+      \strng{editornamehash}{246ad21e85b91e86f9aeb75da50fc1c0}
+      \strng{editorfullhash}{1d90a4c95ec77193d831bf86d10b0f6f}
       \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-540-85288-9}
@@ -336,49 +356,49 @@
       \name{author}{9}{}{%
         {{hash=4e41ac50a44ea2d2e0fbdd12c485c1b2}{%
            family={Reussner},
-           family_i={R\bibinitperiod},
+           familyi={R\bibinitperiod},
            given={Ralf},
-           given_i={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod}}}%
         {{hash=8deefb02d038861e0dd2e38fd1500e03}{%
            family={Becker},
-           family_i={B\bibinitperiod},
+           familyi={B\bibinitperiod},
            given={Steffen},
-           given_i={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod}}}%
         {{hash=3e06bb0fa0071643497a324850780e6e}{%
            family={Burger},
-           family_i={B\bibinitperiod},
+           familyi={B\bibinitperiod},
            given={Erik},
-           given_i={E\bibinitperiod}}}%
+           giveni={E\bibinitperiod}}}%
         {{hash=043027b1c88b24970aaf5b61b3bde1ce}{%
            family={Happe},
-           family_i={H\bibinitperiod},
+           familyi={H\bibinitperiod},
            given={Jens},
-           given_i={J\bibinitperiod}}}%
+           giveni={J\bibinitperiod}}}%
         {{hash=ded73cf954c9fe2248dbb76c1e348d8f}{%
            family={Hauck},
-           family_i={H\bibinitperiod},
+           familyi={H\bibinitperiod},
            given={Michael},
-           given_i={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod}}}%
         {{hash=c3aaf4ee46b2c36357c970d426e834d2}{%
            family={Koziolek},
-           family_i={K\bibinitperiod},
+           familyi={K\bibinitperiod},
            given={Anne},
-           given_i={A\bibinitperiod}}}%
+           giveni={A\bibinitperiod}}}%
         {{hash=ba7ecc5039717e22ccf225ab7421719b}{%
            family={Koziolek},
-           family_i={K\bibinitperiod},
+           familyi={K\bibinitperiod},
            given={Heiko},
-           given_i={H\bibinitperiod}}}%
+           giveni={H\bibinitperiod}}}%
         {{hash=ea463e7d98843baebb721149834e04e4}{%
            family={Krogmann},
-           family_i={K\bibinitperiod},
+           familyi={K\bibinitperiod},
            given={Klaus},
-           given_i={K\bibinitperiod}}}%
+           giveni={K\bibinitperiod}}}%
         {{hash=b73d24ba6569f0d9aec84f56bc1a30c6}{%
            family={Kuperberg},
-           family_i={K\bibinitperiod},
+           familyi={K\bibinitperiod},
            given={Michael},
-           given_i={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {english}%
@@ -388,8 +408,10 @@
       }
       \strng{namehash}{46eb86b938f5eab2ca4d31761329e83d}
       \strng{fullhash}{a19b115d4ab61b8756853a690474b3e9}
+      \strng{authornamehash}{46eb86b938f5eab2ca4d31761329e83d}
+      \strng{authorfullhash}{a19b115d4ab61b8756853a690474b3e9}
       \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2190-4782}
@@ -405,19 +427,21 @@
       \name{author}{2}{}{%
         {{hash=306f73791e107dd9b83d45ee22e6b523}{%
            family={Runeson},
-           family_i={R\bibinitperiod},
+           familyi={R\bibinitperiod},
            given={Per},
-           given_i={P\bibinitperiod}}}%
+           giveni={P\bibinitperiod}}}%
         {{hash=4d1752e9463ffc1043c0939de72a9097}{%
            family={Höst},
-           family_i={H\bibinitperiod},
+           familyi={H\bibinitperiod},
            given={Martin},
-           given_i={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod}}}%
       }
       \strng{namehash}{d487493fbde07f44f703e74cfc39b73d}
       \strng{fullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authornamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorfullhash}{d487493fbde07f44f703e74cfc39b73d}
       \field{sortinit}{R}
-      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Empirical Software Engineering}
@@ -438,14 +462,16 @@
       \name{author}{1}{}{%
         {{hash=a7426da4596e8cf1d6f0cbae4ed293f9}{%
            family={Seifermann},
-           family_i={S\bibinitperiod},
+           familyi={S\bibinitperiod},
            given={Stephan},
-           given_i={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod}}}%
       }
       \strng{namehash}{a7426da4596e8cf1d6f0cbae4ed293f9}
       \strng{fullhash}{a7426da4596e8cf1d6f0cbae4ed293f9}
+      \strng{authornamehash}{a7426da4596e8cf1d6f0cbae4ed293f9}
+      \strng{authorfullhash}{a7426da4596e8cf1d6f0cbae4ed293f9}
       \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{13th Working {IEEE/IFIP} Conference on Software Architecture, {WICSA} 2016, Venice, Italy, April 5-8, 2016}
@@ -464,17 +490,19 @@
       \name{author}{1}{}{%
         {{hash=a7426da4596e8cf1d6f0cbae4ed293f9}{%
            family={Seifermann},
-           family_i={S\bibinitperiod},
+           familyi={S\bibinitperiod},
            given={Stephan},
-           given_i={S\bibinitperiod}}}%
+           giveni={S\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {GitHub}%
       }
       \strng{namehash}{a7426da4596e8cf1d6f0cbae4ed293f9}
       \strng{fullhash}{a7426da4596e8cf1d6f0cbae4ed293f9}
+      \strng{authornamehash}{a7426da4596e8cf1d6f0cbae4ed293f9}
+      \strng{authorfullhash}{a7426da4596e8cf1d6f0cbae4ed293f9}
       \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/seiferma/PCM-DataProcessing-MetaModel}}
@@ -484,18 +512,20 @@
     \endentry
     \entry{privHarm}{article}{}
       \name{author}{1}{}{%
-        {{hash=ccd3a4401e81fa0c7a13c0d24f379ef7}{%
-           prefix={van\bibnamedelima der},
-           prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+        {{hash=7a3b255025a610b68451ce10d2818554}{%
            family={Sloot},
-           family_i={S\bibinitperiod},
+           familyi={S\bibinitperiod},
            given={Bart},
-           given_i={B\bibinitperiod}}}%
+           giveni={B\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
       }
-      \strng{namehash}{ccd3a4401e81fa0c7a13c0d24f379ef7}
-      \strng{fullhash}{ccd3a4401e81fa0c7a13c0d24f379ef7}
+      \strng{namehash}{7a3b255025a610b68451ce10d2818554}
+      \strng{fullhash}{7a3b255025a610b68451ce10d2818554}
+      \strng{authornamehash}{7a3b255025a610b68451ce10d2818554}
+      \strng{authorfullhash}{7a3b255025a610b68451ce10d2818554}
       \field{sortinit}{S}
-      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{It has always been difficult to pinpoint what harm follows a privacy violation. What harm is done by someone entering your home without permission, or by the state eavesdropping on a telephone conversation when no property is stolen or information disclosed to third parties? The question is becoming ever more difficult to answer now that data gathering and processing initiatives have grown and are no longer focused on specific individuals, but on large groups or society as a whole. What specific harm is done by the NSA and other intelligence services gathering data on almost everyone or by the thousands of CCTV cameras registering the daily life of citizens on the corner of almost every street? There has been a longstanding debate within the literature regarding whether `dignitary' or `immaterial' harm should be protected under the right to privacy. Or should only harm that can be measured and quantified in monetary terms (economic harm) be taken into account? This article takes a descriptive and statistical approach to provide an insight into what types of damages are awarded, how they are calculated, and how the damages relate to the type of harm that is inflicted. It does so by analysing the damages awarded by the European Court of Human Rights with respect to privacy violations.}
@@ -504,10 +534,11 @@
       \field{number}{4}
       \field{title}{Where is the Harm in a Privacy Violation? Calculating the Damages Afforded in Privacy Cases by the European Court of Human Rights}
       \field{urlday}{13}
-      \field{urlmonth}{09}
+      \field{urlmonth}{9}
       \field{urlyear}{2018}
       \field{volume}{8}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \field{pages}{322\bibrangedash 351}
       \range{pages}{30}
       \verb{url}
@@ -519,14 +550,16 @@
       \name{author}{1}{}{%
         {{hash=e80aefaccf3c8cdfa029813367b99a2b}{%
            family={Zucker},
-           family_i={Z\bibinitperiod},
+           familyi={Z\bibinitperiod},
            given={Donna\bibnamedelima M.},
-           given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
       \strng{namehash}{e80aefaccf3c8cdfa029813367b99a2b}
       \strng{fullhash}{e80aefaccf3c8cdfa029813367b99a2b}
+      \strng{authornamehash}{e80aefaccf3c8cdfa029813367b99a2b}
+      \strng{authorfullhash}{e80aefaccf3c8cdfa029813367b99a2b}
       \field{sortinit}{Z}
-      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{sortinithash}{156173bd08b075d7295bc3e0f4735a04}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Teaching Research Methods in the Social Sciences}
