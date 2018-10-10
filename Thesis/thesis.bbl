@@ -19,41 +19,6 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global/}
-    \entry{GQM_Intro}{article}{}
-      \name{author}{2}{}{%
-        {{hash=b3e93c0c9ed4d402b3831eb55f36053e}{%
-           family={Basili},
-           familyi={B\bibinitperiod},
-           given={Victor\bibnamedelima R.},
-           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=ac3cc8fe012627f8b28504b286e810df}{%
-           family={Weiss},
-           familyi={W\bibinitperiod},
-           given={David\bibnamedelima M.},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{4985ec3c6ed6f631d5e83800ee0ab85e}
-      \strng{fullhash}{4985ec3c6ed6f631d5e83800ee0ab85e}
-      \strng{authornamehash}{4985ec3c6ed6f631d5e83800ee0ab85e}
-      \strng{authorfullhash}{4985ec3c6ed6f631d5e83800ee0ab85e}
-      \field{sortinit}{B}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{{IEEE} Trans. Software Eng.}
-      \field{number}{6}
-      \field{title}{A Methodology for Collecting Valid Software Engineering Data}
-      \field{volume}{10}
-      \field{year}{1984}
-      \field{pages}{728\bibrangedash 738}
-      \range{pages}{11}
-      \verb{doi}
-      \verb 10.1109/TSE.1984.5010301
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1109/TSE.1984.5010301
-      \endverb
-    \endentry
     \entry{assetValue}{article}{}
       \name{author}{1}{}{%
         {{hash=55592bcb12548389fee56d4a82644f2b}{%
@@ -424,6 +389,41 @@
       \field{year}{2011}
     \endentry
     \entry{CaseStudySoftware}{article}{}
+      \name{author}{2}{}{%
+        {{hash=306f73791e107dd9b83d45ee22e6b523}{%
+           family={Runeson},
+           familyi={R\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4d1752e9463ffc1043c0939de72a9097}{%
+           family={Höst},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{fullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authornamehash}{d487493fbde07f44f703e74cfc39b73d}
+      \strng{authorfullhash}{d487493fbde07f44f703e74cfc39b73d}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Empirical Software Engineering}
+      \field{number}{2}
+      \field{title}{Guidelines for conducting and reporting case study research in software engineering}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{pages}{131\bibrangedash 164}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1007/s10664-008-9102-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10664-008-9102-8
+      \endverb
+    \endentry
+    \entry{TtoV}{article}{}
       \name{author}{2}{}{%
         {{hash=306f73791e107dd9b83d45ee22e6b523}{%
            family={Runeson},

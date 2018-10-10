@@ -9,6 +9,7 @@
 %% burger@kit.edu
 %%
 %% Version 1.3.2, 2017-08-
+
 \chapter{Evaluation}
 \label{ch:eval}
 After we evaluated the created case study in \autoref{ch:cocome} and \autoref{ch:apllMethod}, in this chapter the procedure (\autoref{ch:method}) and the used modeling language (PCM \cite{PCM}) are evaluated. The evaluation are also based on a GQM-plan \autoref{GQM_Expl}. The plan for the whole evaluation can be seen in \autoref{GQMPlan}. \\ First, we conduct the evaluation for the applicability of the presente dprocedure, then the expressibility of the modleing language. Afterwards, we summarize the results for the created case study. To conclude the chapter, we discuss the \textit{threats to validity} (\cite{TtoV}).
@@ -19,27 +20,15 @@ After we evaluated the created case study in \autoref{ch:cocome} and \autoref{ch
 \label{GQMPlan}
 \end{figure}
 
-\section{GQM plan}
-Three aspects of the thesis are evaluated. First, the applicability of the introduced method, secondly the usability of the created case study for data based privacy analysis and and last but not least to what extent it is possible to model the created case study with PCM. 
-%Reicht das als Hinweis ?
- Each evaluation follow a GQM plan \cite{GQM_Intro}, which is shown in \autoref{GQMPlan}. 
-\begin{figure}
-\includegraphics[scale=.8, origin=c ]{logos/OverviewEval.pdf}
-\caption{The GQM plan for the three parts of the evaluation. Each part is divided into }01
-\label{GQMPlan}
-\end{figure}
-\section{Applicability of the introduced method}
-The first aspect we want to evaluate is applicability of the introduced method for software systems. We check this so the method an be used to create further case studies. 
-\subsection{Is the introduced method applicable to a concrete system}
-To verify if the goal is achieved, we defined the following question:\\
-Is the method applicable for a system that models a PickupShop?\\
-Pickupshop in this case means, that orders are placed online and picked up later by the customer.
-As a metric for answering the question, we take the successful application of the method to CoCoME. 
+\section{Goal: Applicability of the introduced procedure}
+The first aspect we are evaluating is the applicability of the introduced procedure to create case studies from software systems. We evaluate the applicability to verify if its possible to create case studies that later may be used to evaluate approaches for a data-based privacy analysis. The examination if the quality of the created study is sufficient is a separate part and has to be done on a case-by-case basis.  
+\subsection{Question: Is the introduced method applicable to an actual system?}
+To verify if the goal is achieved, we check if the introduced procedure is applicable to a software system that abstracts the selling process and warehousing of a supermarket group. The metric to answer the question is a successful application to an actual system.  
 \subsubsection{Application to the CoCoME system}
-In the chapters \autoref{ch:cocome} and \autoref{casestudysystem}, the application of the method to CoCoME is shown. It is possible to create case study for the CoCoME. We followed the steps described in chapter \nameref{ch:method} and after all the steps were taken we successfully created a case study. The use to carry out data-based data protection analyses is evaluated in  \autoref{usage_DBPA}. In \autoref{casestudysystem} we successfully created a case study for the examined excerpt. Therefore, we concluded that the method is applicable for the reduced system.
-\section{Usability of the created case study for data-based privacy analysis}
-\label{usage_DBPA}
-The next aspect we evaluated the usability of the created case study. A case study is not useful if it does not meet criteria. The criteria ensure that the case study is in a state where it can be used for data-based data privacy analysis. To ensure this, we evaluate two different parts of the case study. First, we evaluate the defined access rights, then the defined data flows. 
+The system we chose to apply the method on is CoCoME. We applied the procedure not the whole CoCoME system but only to an excerpt of it. The application to the excerpt and resulting case studies is conducted in \autoref{ch:cocome} and \autoref{casestudysystem}.\\ We successfully applied the procedure to an actual system and created a case study. Therefore, we conclude that the procedure is applicable.
+%\section{Usability of the created case study for data-based privacy analysis}
+%\label{usage_DBPA}
+%The next aspect we evaluated the usability of the created case study. A case study is not useful if it does not meet criteria. The criteria ensure that the case study is in a state where it can be used for data-based data privacy analysis. To ensure this, we evaluate two different parts of the case study. First, we evaluate the defined access rights, then the defined data flows. 
 
 
 \section{Expressiveness of data centric PCM}
@@ -66,21 +55,21 @@ After all the evaluations are conducted, we discuss the findings. This discussio
 We were able to verify that the method is applicable to a system that models a pickup shop. The method should also be applied to other systems. Possible other systems are flight booking systems, food suppliers, etc. The weakness in this part of the evaluation is that the method has not been applied often enough to different systems to make a statement about its applicability.\\
 In the next part, the evaluation results of the access rights and data flows are discussed. First, the defined access rights in the case study. We evaluated based on predefined criteria by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} the access rights. Not all criteria were applicable to the case study, because for some criteria one need running code which is not in the scope of the case study. Other criteria weren't applicable due to time constraints. All in all, as shown in \autoref{eval_AR}, we achieved with our definition of the access rights all three criteria. There is surely some work to be done to allow to check more criteria, like conducting a survey for the criteria clear and concise. For the criteria fundamental and efficient a deployment of CoCoME which includes the access rights is needed. The evaluation of the access rights has to be taken with a grain of salt. Since the access rights depend on the security-relevant data and the roles defined in the system, they must be reevaluated if something has changed.  The evaluation is therefore only a snapshot of the current quality of the access rights. Next, we discuss the evaluation for the different covered information flow classes. We achieved to cover two of the four information flow classes, which is a pretty solid. As we see it, the desirable state is to cover all information flow classes in width and depth. Width means that at least each class is covered by at least one data flow. Depth means that for each class a data flow is defined that is illegal for the class and one that it is not.As shown in \autoref{eval_DF}, we only cover two information flow classes. 
 At last we discuss the results for our modeling language PCM. We defined five types of data processing and evaluated whether they are possible to model in PCM. The result is shown in \autoref{eval_MM}. As shown, all types of data processing are modeled. Therefore, we conclude it is be possible to model all created case studies with PCM. But it is not possible to store the ACM in the same model. 
-\begin{table}
-\begin{tabular}{|c|c|}
-\hline 
-Access Rights & fulfilled ? \\ 
-\hline 
-Aspect-oriented & yes \\ 
-\hline 
-Positive & yes \\ 
-\hline 
-Need-to-know & yes \\ 
-\hline 
-\end{tabular} 
-\caption{Overview of the evaluation result for the access rights.}
-\label{eval_AR}
-\end{table}
+%\begin{table}
+%\begin{tabular}{|c|c|}
+%\hline 
+%Access Rights & fulfilled ? \\ 
+%\hline 
+%Aspect-oriented & \cmark \\ 
+%\hline 
+%Positive & yes \\ 
+%\hline 
+%Need-to-know & yes \\ 
+%\hline 
+%\end{tabular} 
+%\caption{Overview of the evaluation result for the access rights.}
+%\label{eval_AR}
+%\end{table}
 
 \begin{table}
 \begin{tabular}{|c|c|}

@@ -216,21 +216,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Evaluation}{47}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}GQM plan}{47}{section.7.1}
+\contentsline {section}{\numberline {7.1}Goal: Applicability of the introduced procedure}{47}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Applicability of the introduced method}{47}{section.7.2}
+\contentsline {subsection}{\numberline {7.1.1}Question: Is the introduced method applicable to an actual system?}{47}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}Is the introduced method applicable to a concrete system}{47}{subsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.1.1.1}Application to the CoCoME system}{47}{subsubsection.7.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.1.1}Application to the CoCoME system}{47}{subsubsection.7.2.1.1}
+\contentsline {section}{\numberline {7.2}Usability of the created case study for data-based privacy analysis}{47}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Usability of the created case study for data-based privacy analysis}{49}{section.7.3}
+\contentsline {section}{\numberline {7.3}Expressiveness of data centric PCM}{49}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Expressiveness of data centric PCM}{49}{section.7.4}
+\contentsline {subsection}{\numberline {7.3.1}Is the created case study expressible with PCM ?}{49}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Is the created case study expressible with PCM ?}{49}{subsection.7.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.4.1.1}Number of available elements to model the different types of data processing}{49}{subsubsection.7.4.1.1}
+\contentsline {subsubsection}{\numberline {7.3.1.1}Number of available elements to model the different types of data processing}{49}{subsubsection.7.3.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Operations relational algebra}{49}{section*.32}
 \defcounter {refsection}{0}\relax 
@@ -238,13 +236,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Transmission data}{49}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Change Access rights}{50}{section*.35}
+\contentsline {paragraph}{\nonumberline Change Access rights}{49}{section*.35}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\nonumberline Alternation of data}{50}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Number of missing elements for the different}{50}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.3.2}Number of missing elements for the different}{50}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Discussion}{50}{section.7.5}
+\contentsline {section}{\numberline {7.4}Discussion}{50}{section.7.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Conclusion and future work}{53}{chapter.8}
 \defcounter {refsection}{0}\relax 
