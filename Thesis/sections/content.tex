@@ -983,13 +983,13 @@ The evaluation is done in a checklist manner. For each criterion the defined acc
 \hline 
 \multicolumn{2}{|c|}{Access rights} & fulfilled? \\ 
 \hline 
-Specification & Aspect-oriented & %\cmark
+Specification & Aspect-oriented & \cmark
  \\ 
 \hline 
- & Positive & %\cmark 
+ & Positive & \cmark 
  \\ 
 \hline 
- & Need-to-know & %\cmark 
+ & Need-to-know & \cmark 
  \\ 
 \hline 
 Comprehensibility & Clear & ? \\ 
@@ -1326,9 +1326,24 @@ In the defined scenarios, for the role involved, data from different security le
 \paragraph{Observable information flow}
 This information flow class is not modeled in the scenarios. 
 %TODO Tabelle fehlt noch 
-\begin{table}
 
+\begin{table}
+\centering
+\begin{tabular}{|c|c|} 
+\hline 
+Data flow & fulfilled? \\ 
+\hline 
+Illegal information flow & \cmark \\ 
+\hline 
+Information flow from high to low & \cmark \\  
+\hline 
+Direct information flow between roles & \xmark \\ 
+\hline 
+No observable information  flow & \xmark \\
+\hline 
+\end{tabular}
 \caption{Resulting checklist for the evaluation of the case study.}
+\label{Eval_infoFlowClasses}
 \end{table}
 
 \section{Discussion}

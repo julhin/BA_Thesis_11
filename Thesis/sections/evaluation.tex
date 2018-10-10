@@ -71,43 +71,49 @@ At last we discuss the results for our modeling language PCM. We defined five ty
 %\label{eval_AR}
 %\end{table}
 
-\begin{table}
-\begin{tabular}{|c|c|}
-\hline 
-Data flow & fulfilled \\ 
-\hline 
-Illegal information flow & yes \\ 
-\hline 
-Information flow from high to low & yes \\ 
-\hline 
-Observable information  flow & no \\ 
-\hline 
-Direct information flow between roles & no \\ 
-\hline 
-\end{tabular} 
-\caption{Overview over the evaluation result for the data flows.}
-\label{eval_DF}
-\end{table}
+%\begin{table}
+%\begin{tabular}{|c|c|}
+%\hline 
+%Data flow & fulfilled \\ 
+%\hline 
+%Illegal information flow & yes \\ 
+%\hline 
+%Information flow from high to low & yes \\ 
+%\hline 
+%Observable information  flow & no \\ 
+%\hline 
+%Direct information flow between roles & no \\ 
+%\hline 
+%\end{tabular} 
+%\caption{Overview over the evaluation result for the data flows.}
+%\label{eval_DF}
+%\end{table}
  
 \begin{table}
 \begin{tabular}{|c|c|}
 \hline 
 Meta model  & possible ? \\ 
 \hline 
-relational algebra & yes \\ 
+relational algebra & \cmark \\ 
 \hline 
-I/O operations & yes \\ 
+I/O operations & \cmark \\ 
 \hline 
-Transmission of data & yes \\ 
+Transmission of data & \cmark \\ 
 \hline 
-Change of access rights & yes \\ 
+Change of access rights & \cmark \\ 
 \hline 
-Alternation of data & yes \\ 
+Alternation of data & \cmark \\ 
 \hline 
-ACM in system model & no \\
+ACM in system model & \xmark \\
 \hline
 \end{tabular} 
 \caption{Overview over the results for the evaluation of PCM.}
 \label{eval_MM}
 \end{table}
 To conclude the evaluation, one can say that we introduced an applicable method for a certain typ eof systems to create data flows for a data-based privacy analysis. For the sample case study, we say it is a proof-of-concept, because only two class of information are modeled. The defined access rights are well defined in the current evaluation, but it is imperative to apply the other criteria to get a more complete picture. It must also be said that access rights are relatively volatile, as there is a need to check even small changes in the system. At last, the used modeling language is able to model all types of data processing and is therefore usable for data-based privacy analysis. The only throwback for the modeling language is that the ACM must be stored separately, this may lead to inconsistency and should be fixed soon.
+\section{Evaluation of the created case study}
+%schon passiert, hier nur eine kurze zusammenfassung
+\section{Threats to validity}
+In this section we discuss possible threats to the validity of the evaluation. %hie rmal von HEinrich klauen, eventuell
+ The threats are divided into four categories: internal validity, external validity, construct validity and conclusion validity.
+
