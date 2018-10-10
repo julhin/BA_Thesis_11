@@ -222,27 +222,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {7.1.1.1}Application to the CoCoME system}{47}{subsubsection.7.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Usability of the created case study for data-based privacy analysis}{47}{section.7.2}
+\contentsline {section}{\numberline {7.2}Goal: Expressiveness of data-centric PCM}{47}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Expressiveness of data centric PCM}{49}{section.7.3}
+\contentsline {subsection}{\numberline {7.2.1}Is the created case study expressible with data-centric PCM ?}{49}{subsection.7.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Is the created case study expressible with PCM ?}{49}{subsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.2.1.1}Number of available elements to model the different types of data processing}{49}{subsubsection.7.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.3.1.1}Number of available elements to model the different types of data processing}{49}{subsubsection.7.3.1.1}
+\contentsline {paragraph}{\nonumberline Transmission data}{49}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Operations relational algebra}{49}{section*.32}
+\contentsline {paragraph}{\nonumberline Alternation of data}{49}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline I/O- operations}{49}{section*.33}
+\contentsline {paragraph}{\nonumberline Operations relational algebra}{49}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Transmission data}{49}{section*.34}
+\contentsline {paragraph}{\nonumberline I/O- operations}{49}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Change Access rights}{49}{section*.35}
+\contentsline {subsubsection}{\numberline {7.2.1.2}Number of missing elements for the different}{49}{subsubsection.7.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Alternation of data}{50}{section*.36}
+\contentsline {subsubsection}{\numberline {7.2.1.3}Summary: expressiveness of data-centric PCM}{50}{subsubsection.7.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Number of missing elements for the different}{50}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.3}Evaluation of the created case study}{50}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Discussion}{50}{section.7.4}
+\contentsline {subsection}{\numberline {7.3.1}Access rights}{50}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Covered information flow classes}{51}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.3}Summary for the evaluation of the case study}{51}{subsection.7.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Threats to validity}{51}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Internal validity}{51}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline External validity}{51}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Construct validity}{52}{section*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Conclusion validity}{52}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.4.1}Analysis of the evaluation}{52}{subsection.7.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline I: Procedure}{52}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline II: Access rights}{52}{section*.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline III: Information flow classes}{52}{section*.42}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Conclusion and future work}{53}{chapter.8}
 \defcounter {refsection}{0}\relax 
@@ -258,7 +280,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {8.3.3}Meta model extension}{55}{subsection.8.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.37}
+\contentsline {chapter}{\nonumberline Bibliography}{57}{chapter*.43}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
 \defcounter {refsection}{0}\relax 

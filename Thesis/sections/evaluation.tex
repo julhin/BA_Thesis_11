@@ -16,7 +16,7 @@ After we evaluated the created case study in \autoref{ch:cocome} and \autoref{ch
 
 \begin{figure}
 \includegraphics[scale=.8, origin=c ]{logos/OverviewEval.pdf}
-\caption{The GQM plan for the three parts of the evaluation. Each part is divided into }01
+\caption{The GQM plan for the three parts of the evaluation. Each part is divided into }
 \label{GQMPlan}
 \end{figure}
 
@@ -53,8 +53,7 @@ creation of data, merging many points in, for example, into list or set, the spl
 This type of data processing describes the manipulation of database or data requested from databases. The operations for this are available in the meta model extension. 
 
 \paragraph{I/O- operations}
-To model the user interactions an operation is also available.
-
+Operations to model the user interactions are also available.
 
 \subsubsection{Number of missing elements for the different }
 Currently it is not possible to store the ACM in the same system model. It is possible to define access rights for each data in each component for each role. First, for each data a new access right has to be defined and , secondly, it is not or only with disproportionate effort possible to swap out the access rights or generating the ACM form the model. For the fact, we created our case study \textit{aspect-oriented} (see \cite{}) the current modeling contradicts the concept. Therefore, a model element for the ACM is missing.
@@ -140,75 +139,46 @@ No observable information  flow & \xmark \\
 \label{Eval_infoFlowClasses}
 \end{table}
 
-\subsection{Summary}
+\subsection{Summary for the evaluation of the case study}
+We achieved to cover three out of seven criteria (~43\%) for good access right. The evaluation of the criteria in the \textit{Comprehensibilty} class would have exceeded the scope of the thesis. So we cannot make a qualified statement for these criteria. The criteria associated with \textit{Implementaation} class may be omitted in a purely conceptual case study. For instance, this may happen when a complete system is modeled but not implemented yet. We achieved all of the \textit{Specification} criteria with our defined access rights.\\ All in all, we say the number of applicable criteria are dependent on the goal for that the specific case study is created. \newline
+We also achieved to cover 50\% of the information flow classes. We coul not achieve to cover all classes due to time constraints of the thesis and therefore missing scenarios.
 
-%tabellen hie reinfügen 
-\section{Discussion}
+%TODO in die conclusion
 %After all the evaluations are conducted, we discuss the findings. This discussion will be divided into three parts. Each parts covers one of the evaluation aspects shown in \autoref{GQMPlan}.\\
 %We were able to verify that the method is applicable to a system that models a pickup shop. The method should also be applied to other systems. Possible other systems are flight booking systems, food suppliers, etc. The weakness in this part of the evaluation is that the method has not been applied often enough to different systems to make a statement about its applicability.\\
 %In the next part, the evaluation results of the access rights and data flows are discussed. First, the defined access rights in the case study. We evaluated based on predefined criteria by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} the access rights. Not all criteria were applicable to the case study, because for some criteria one need running code which is not in the scope of the case study. Other criteria weren't applicable due to time constraints. All in all, as shown in \autoref{eval_AR}, we achieved with our definition of the access rights all three criteria. There is surely some work to be done to allow to check more criteria, like conducting a survey for the criteria clear and concise. For the criteria fundamental and efficient a deployment of CoCoME which includes the access rights is needed. The evaluation of the access rights has to be taken with a grain of salt. Since the access rights depend on the security-relevant data and the roles defined in the system, they must be reevaluated if something has changed.  The evaluation is therefore only a snapshot of the current quality of the access rights. Next, we discuss the evaluation for the different covered information flow classes. We achieved to cover two of the four information flow classes, which is a pretty solid. As we see it, the desirable state is to cover all information flow classes in width and depth. Width means that at least each class is covered by at least one data flow. Depth means that for each class a data flow is defined that is illegal for the class and one that it is not.As shown in \autoref{eval_DF}, we only cover two information flow classes. 
 %At last we discuss the results for our modeling language PCM. We defined five types of data processing and evaluated whether they are possible to model in PCM. The result is shown in \autoref{eval_MM}. As shown, all types of data processing are modeled. Therefore, we conclude it is be possible to model all created case studies with PCM. But it is not possible to store the ACM in the same model. 
-
-
-
-%\begin{table}
-%\begin{tabular}{|c|c|}
-%\hline 
-%Access Rights & fulfilled ? \\ 
-%\hline 
-%Aspect-oriented & \cmark \\ 
-%\hline 
-%Positive & yes \\ 
-%\hline 
-%Need-to-know & yes \\ 
-%\hline 
-%\end{tabular} 
-%\caption{Overview of the evaluation result for the access rights.}
-%\label{eval_AR}
-%\end{table}
-
-%\begin{table}
-%\begin{tabular}{|c|c|}
-%\hline 
-%Data flow & fulfilled \\ 
-%\hline 
-%Illegal information flow & yes \\ 
-%\hline 
-%Information flow from high to low & yes \\ 
-%\hline 
-%Observable information  flow & no \\ 
-%\hline 
-%Direct information flow between roles & no \\ 
-%\hline 
-%\end{tabular} 
-%\caption{Overview over the evaluation result for the data flows.}
-%\label{eval_DF}
-%\end{table}
- 
-\begin{table}
-\begin{tabular}{|c|c|}
-\hline 
-Meta model  & possible ? \\ 
-\hline 
-relational algebra & \cmark \\ 
-\hline 
-I/O operations & \cmark \\ 
-\hline 
-Transmission of data & \cmark \\ 
-\hline 
-Change of access rights & \cmark \\ 
-\hline 
-Alternation of data & \cmark \\ 
-\hline 
-ACM in system model & \xmark \\
-\hline
-\end{tabular} 
-\caption{Overview over the results for the evaluation of PCM.}
-\label{eval_MM}
-\end{table}
-To conclude the evaluation, one can say that we introduced an applicable method for a certain typ eof systems to create data flows for a data-based privacy analysis. For the sample case study, we say it is a proof-of-concept, because only two class of information are modeled. The defined access rights are well defined in the current evaluation, but it is imperative to apply the other criteria to get a more complete picture. It must also be said that access rights are relatively volatile, as there is a need to check even small changes in the system. At last, the used modeling language is able to model all types of data processing and is therefore usable for data-based privacy analysis. The only throwback for the modeling language is that the ACM must be stored separately, this may lead to inconsistency and should be fixed soon.
+%To conclude the evaluation, one can say that we introduced an applicable method for a certain typ eof systems to create data flows for a data-based privacy analysis. For the sample case study, we say it is a proof-of-concept, because only two class of information are modeled. The defined access rights are well defined in the current evaluation, but it is imperative to apply the other criteria to get a more complete picture. It must also be said that access rights are relatively volatile, as there is a need to check even small changes in the system. At last, the used modeling language is able to model all types of data processing and is therefore usable for data-based privacy analysis. The only throwback for the modeling language is that the ACM must be stored separately, this may lead to inconsistency and should be fixed soon.
 
 \section{Threats to validity}
-In this section we discuss possible threats to the validity of the evaluation. %hie rmal von HEinrich klauen, eventuell
- The threats are divided into four categories: internal validity, external validity, construct validity and conclusion validity.
 
+In this section we discuss possible threats to the validity of the evaluation. The general description for this threats are published by Runeson and Höst \cite{TtoV} %hie rmal von HEinrich klauen, eventuell
+The possible threats are divided into four categories: internal validity, external validity, construct validity and conclusion validity.
+\paragraph{Internal validity}
+Internal validity describes if the evaluation supports the conclusion. 
+\paragraph{External validity}
+External validity describes that the results can be generalized.
+\paragraph{Construct validity}
+Construct validity describes that the measurements for the construct under investigation are correct. In particular, this means that the measurement is not influenced by other factors.
+\paragraph{Conclusion validity}
+Conclusion validity describes that evaluation is based on \textit{reasonable} data, for instance statistical data, to minimize or eliminate the subjective view of the researcher.
+\subsection{Analysis of the evaluation}
+We analyze the three parts for the evaluation carried out and identified aspects that could pose a threat to the validity of the results. The aspects are: the procedure, the defined access rights and the covered information flow classes. In \autoref{TtoV_sum} a categorization for the aspects is shown.
+\paragraph{I: Procedure}
+The introduced procedure has only been applied to an excerpt of a system. This endangers the \textit{external validity}. The procedure works for CoCoME but this cannot be ensured in general.
+\paragraph{II: Access rights}
+Three out of seven criteria were evaluated for different reasons. This could be a threat to the \textit{Internal validity}. A case study generates qualitative data and therefore unchecked categories may backfire. So we could not say with certainty that our evaluation supports the results. Further, the %TODO eventuell noch construct validity
+\paragraph{III: Information flow classes}
+The information flow classes were defined based on one problem statement. Due to that fact, the information flow classes are a threat to the \textit{conclusion validity} because the impact of the researcher. Other information flow classes could be defined which probably give more insights. Further, the \textit{internal validity} is endangered. As with access rights, qualitative data is used and missing categories can alter the evaluation.
+\begin{table}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Internal & External & Construct & Conclusion \\ 
+Validity & Validity & Validity & Validity\\
+\hline 
+II, III & I & II & III \\ 
+\hline 
+\end{tabular} 
+\caption{Threats to validity for the thesis.}
+\label{TtoV_sum}
+\end{table}

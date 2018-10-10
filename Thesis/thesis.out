@@ -57,18 +57,21 @@
 \BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 57
 \BOOKMARK [1][-]{section.7.1}{Goal: Applicability of the introduced procedure}{chapter.7}% 58
 \BOOKMARK [2][-]{subsection.7.1.1}{Question: Is the introduced method applicable to an actual system?}{section.7.1}% 59
-\BOOKMARK [1][-]{section.7.2}{Usability of the created case study for data-based privacy analysis}{chapter.7}% 60
-\BOOKMARK [1][-]{section.7.3}{Expressiveness of data centric PCM}{chapter.7}% 61
-\BOOKMARK [2][-]{subsection.7.3.1}{Is the created case study expressible with PCM ?}{section.7.3}% 62
-\BOOKMARK [2][-]{subsection.7.3.2}{Number of missing elements for the different}{section.7.3}% 63
-\BOOKMARK [1][-]{section.7.4}{Discussion}{chapter.7}% 64
-\BOOKMARK [0][-]{chapter.8}{Conclusion and future work}{}% 65
-\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 66
-\BOOKMARK [1][-]{section.8.2}{Benefits of our work}{chapter.8}% 67
-\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 68
-\BOOKMARK [2][-]{subsection.8.3.1}{Method}{section.8.3}% 69
-\BOOKMARK [2][-]{subsection.8.3.2}{Case study system}{section.8.3}% 70
-\BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 71
-\BOOKMARK [0][-]{chapter*.37}{Bibliography}{}% 72
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 73
-\BOOKMARK [1][-]{section.A.1}{First Appendix Section}{appendix.A}% 74
+\BOOKMARK [1][-]{section.7.2}{Goal: Expressiveness of data-centric PCM}{chapter.7}% 60
+\BOOKMARK [2][-]{subsection.7.2.1}{Is the created case study expressible with data-centric PCM ?}{section.7.2}% 61
+\BOOKMARK [1][-]{section.7.3}{Evaluation of the created case study}{chapter.7}% 62
+\BOOKMARK [2][-]{subsection.7.3.1}{Access rights}{section.7.3}% 63
+\BOOKMARK [2][-]{subsection.7.3.2}{Covered information flow classes}{section.7.3}% 64
+\BOOKMARK [2][-]{subsection.7.3.3}{Summary for the evaluation of the case study}{section.7.3}% 65
+\BOOKMARK [1][-]{section.7.4}{Threats to validity}{chapter.7}% 66
+\BOOKMARK [2][-]{subsection.7.4.1}{Analysis of the evaluation}{section.7.4}% 67
+\BOOKMARK [0][-]{chapter.8}{Conclusion and future work}{}% 68
+\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 69
+\BOOKMARK [1][-]{section.8.2}{Benefits of our work}{chapter.8}% 70
+\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 71
+\BOOKMARK [2][-]{subsection.8.3.1}{Method}{section.8.3}% 72
+\BOOKMARK [2][-]{subsection.8.3.2}{Case study system}{section.8.3}% 73
+\BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 74
+\BOOKMARK [0][-]{chapter*.43}{Bibliography}{}% 75
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 76
+\BOOKMARK [1][-]{section.A.1}{First Appendix Section}{appendix.A}% 77
