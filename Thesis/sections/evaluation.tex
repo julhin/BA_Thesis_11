@@ -59,7 +59,7 @@ To model the user interactions an operation is also available.
 \subsubsection{Number of missing elements for the different }
 Currently it is not possible to store the ACM in the same system model. It is possible to define access rights for each data in each component for each role. First, for each data a new access right has to be defined and , secondly, it is not or only with disproportionate effort possible to swap out the access rights or generating the ACM form the model. For the fact, we created our case study \textit{aspect-oriented} (see \cite{}) the current modeling contradicts the concept. Therefore, a model element for the ACM is missing.
 \subsubsection{Summary: expressiveness of data-centric PCM}
-The summary of the both metrics is shown in 
+Now that the two metrics have been collected, we summarize them. The summary of the both metrics is shown in \autoref{PCM_eval_sum}. As it is shown, the only flaw is that the ACM cannot be included in the system model. 
 \begin{table}
 \begin{tabular}{|c|c|}
 \hline 
@@ -82,7 +82,64 @@ ACM in system model & \xmark \\
 \label{PCM_eval_sum}
 \end{table}
 \section{Evaluation of the created case study}
-%schon passiert, hier nur eine kurze zusammenfassung
+The evaluation of the created case study is split into two parts: the quality of the access rights and the covered information flow classes. Each part is already conducted in % ref und ref
+Here we shortly summarize the results of the single evaluations.
+\subsection{Access rights}
+Further details on this evaluation can be seen in % ref
+Evered and Bögeholz \cite{CaseStudyAndAccessrigths}%
+defined seven criteria to review the quality of defined access rights. All in all, the criteria can be divided in three categories: Specification, Comprehensibility and Implementation. \\
+\textit{Specification} criteria review the definition of the access rights. \textit{Comprehensibility} criteria mainly reviews the notation and ho clear each is defined. \textit{Implementation} criteria reviews the embedding of the access rights in the implementation.\\
+The result of the evaluation are displayed in \autoref{AR_EVAL_SUM}.
+\begin{table}
+\begin{tabular}{|c|c|c|}
+\hline 
+\multicolumn{2}{|c|}{Access rights} & fulfilled? \\ 
+\hline 
+Specification & Aspect-oriented & \cmark
+ \\ 
+\hline 
+ & Positive & \cmark 
+ \\ 
+\hline 
+ & Need-to-know & \cmark 
+ \\ 
+\hline 
+Comprehensibility & Clear & ? \\ 
+\hline 
+ & Concise & ? \\ 
+\hline 
+Implementation & Fundamental & n/a \\ 
+\hline 
+ & Efficient & n/a \\ 
+\hline 
+\end{tabular} 
+\caption{Summary for the evaluation of the defined access rights.} 
+\label{AR_EVAL_SUM}
+\end{table}  
+
+\subsection{Covered information flow classes}
+Further details on this evaluation can be seen in % ref
+In teh evaluation we examine which different information flows are covered by the created case study and may later be checked in a data-based privacy analysis. To define different information flow classes, we relied the problem statement \textit{Non-influence} \cite{Noninfluence}. This problem statement includes four different information flow classes: illegal information flow, information flow from high to low, direct information flow between roles and observable information flow. The summary of the covered information flow classes is displayed in 
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|} 
+\hline 
+Data flow & fulfilled? \\ 
+\hline 
+Illegal information flow & \cmark \\ 
+\hline 
+Information flow from high to low & \cmark \\  
+\hline 
+Direct information flow between roles & \xmark \\ 
+\hline 
+No observable information  flow & \xmark \\
+\hline 
+\end{tabular}
+\caption{Summary for the evaluation of the covered information flow classes of the case study.}
+\label{Eval_infoFlowClasses}
+\end{table}
+
 \subsection{Summary}
 
 %tabellen hie reinfügen 
