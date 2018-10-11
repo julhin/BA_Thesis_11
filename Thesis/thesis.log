@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.8.27)  11 OCT 2018 18:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.8.27)  11 OCT 2018 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2274,7 +2274,7 @@ chapter 3.
 
 ]
 chapter 4.
-<logos/Procedure.pdf, id=723, 600.2425pt x 463.7325pt>
+<logos/Procedure.pdf, id=725, 600.2425pt x 463.7325pt>
 File: logos/Procedure.pdf Graphic file (type pdf)
 
 <use logos/Procedure.pdf>
@@ -2288,7 +2288,7 @@ lid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/sb/n' will be
 (Font)              scaled to size 11.03998pt on input line 136.
  [13] [14] [15]
-<logos/GQM_accessrights.pdf, id=792, 440.64626pt x 73.27374pt>
+<logos/GQM_accessrights.pdf, id=794, 440.64626pt x 73.27374pt>
 File: logos/GQM_accessrights.pdf Graphic file (type pdf)
 
 <use logos/GQM_accessrights.pdf>
@@ -2299,7 +2299,7 @@ Package pdftex.def Info: logos/GQM_accessrights.pdf used on input line 233.
 pdfTeX warning: /bin/pdflatex (file ./logos/GQM_accessrights.pdf): PDF inclusio
 n: invalid other resource which is no dict (key 'ProcSets', type <array>); igno
 red.
->] <logos/GQM_infloFlow.pdf, id=812, 440.64626pt x 73.27374pt>
+>] <logos/GQM_infloFlow.pdf, id=814, 440.64626pt x 73.27374pt>
 File: logos/GQM_infloFlow.pdf Graphic file (type pdf)
 
 <use logos/GQM_infloFlow.pdf>
@@ -2312,7 +2312,7 @@ invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
 .
 >]
 chapter 5.
-<logos/ArchPickupShop.pdf, id=829, 563.10374pt x 680.5425pt>
+<logos/ArchPickupShop.pdf, id=831, 563.10374pt x 680.5425pt>
 File: logos/ArchPickupShop.pdf Graphic file (type pdf)
 
 <use logos/ArchPickupShop.pdf>
@@ -2335,7 +2335,7 @@ d.
 
 LaTeX Warning: Reference `PS' on page 22 undefined on input line 342.
 
-[22] [23] [24] [25] <logos/ExcerptRelComps.pdf, id=912, 433.62pt x 499.8675pt>
+[22] [23] [24] [25] <logos/ExcerptRelComps.pdf, id=914, 433.62pt x 499.8675pt>
 File: logos/ExcerptRelComps.pdf Graphic file (type pdf)
 
 <use logos/ExcerptRelComps.pdf>
@@ -2376,7 +2376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 959--993
 
 ] [35] [36]
 chapter 6.
-<logos/ExcerptUC13.pdf, id=1019, 549.05125pt x 524.96124pt>
+<logos/ExcerptUC13.pdf, id=1021, 549.05125pt x 524.96124pt>
 File: logos/ExcerptUC13.pdf Graphic file (type pdf)
 
 <use logos/ExcerptUC13.pdf>
@@ -2439,7 +2439,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1304--1307
 
 pdfTeX warning: /bin/pdflatex (file ./logos/DF_UC14.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<logos/DF_UC14.pdf, id=1096, 795.97375pt x 615.29875pt>
+<logos/DF_UC14.pdf, id=1098, 795.97375pt x 615.29875pt>
 File: logos/DF_UC14.pdf Graphic file (type pdf)
 
 <use logos/DF_UC14.pdf>
@@ -2475,7 +2475,7 @@ chapter 7.
 LaTeX Warning: Reference `ch:apllMethod' on page 51 undefined on input line 15.
 
 
-<logos/OverviewEval.pdf, id=1148, 433.62pt x 716.6775pt>
+<logos/OverviewEval.pdf, id=1150, 433.62pt x 716.6775pt>
 File: logos/OverviewEval.pdf Graphic file (type pdf)
 
 <use logos/OverviewEval.pdf>
@@ -2551,11 +2551,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25534 strings out of 493041
- 470206 string characters out of 6137190
- 1062360 words of memory out of 5000000
- 28008 multiletter control sequences out of 15000+600000
- 190121 words of font info for 323 fonts, out of 8000000 for 9000
+ 25540 strings out of 493041
+ 470369 string characters out of 6137190
+ 1061375 words of memory out of 5000000
+ 28010 multiletter control sequences out of 15000+600000
+ 190492 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,20n,88p,8849b,3464s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
@@ -2572,10 +2572,10 @@ esanspro/SourceSansPro-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/adob
 e/sourcesanspro/SourceSansPro-Semibold.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/za
 pfding/uzdr.pfb>
-Output written on thesis.pdf (79 pages, 867288 bytes).
+Output written on thesis.pdf (79 pages, 866538 bytes).
 PDF statistics:
- 1382 PDF objects out of 1440 (max. 8388607)
- 1221 compressed objects within 13 object streams
- 288 named destinations out of 1000 (max. 500000)
+ 1391 PDF objects out of 1440 (max. 8388607)
+ 1230 compressed objects within 13 object streams
+ 289 named destinations out of 1000 (max. 500000)
  32962 words of extra memory for PDF output out of 35830 (max. 10000000)
 

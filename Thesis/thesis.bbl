@@ -198,6 +198,49 @@
       \verb https://doi.org/10.1007/3-540-45800-X_32
       \endverb
     \endentry
+    \entry{ModelDriven}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=953b3cf9f1c4041be2bb129fda95a84b}{%
+           family={Katkalov},
+           familyi={K\bibinitperiod},
+           given={Kuzman},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c9eece0878daccae852a5f57ac234e51}{%
+           family={Stenzel},
+           familyi={S\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=140d1d68c344f043ef8caafe9c05f9eb}{%
+           family={Borek},
+           familyi={B\bibinitperiod},
+           given={Marian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a5db4673a90960ddd0a7ae122ff8315a}{%
+           family={Reif},
+           familyi={R\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{10a611d65839de3f72e3105ef48159eb}
+      \strng{fullhash}{8946300ae088cc4858ff67bff0cffca3}
+      \strng{authornamehash}{10a611d65839de3f72e3105ef48159eb}
+      \strng{authorfullhash}{8946300ae088cc4858ff67bff0cffca3}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Social Computing, SocialCom 2013, SocialCom/PASSAT/BigData/EconCom/BioMedCom 2013, Washington, DC, USA, 8-14 September, 2013}
+      \field{title}{Model-Driven Development of Information Flow-Secure Systems with IFlow}
+      \field{year}{2013}
+      \field{pages}{51\bibrangedash 56}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SocialCom.2013.14
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/SocialCom.2013.14
+      \endverb
+    \endentry
     \entry{Travelsystem}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=953b3cf9f1c4041be2bb129fda95a84b}{%
@@ -239,6 +282,34 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1109/SocialCom.2013.14
+      \endverb
+    \endentry
+    \entry{McLean90}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=24e149fd925e70610dabcb1829cdfe57}{%
+           family={McLean},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{24e149fd925e70610dabcb1829cdfe57}
+      \strng{fullhash}{24e149fd925e70610dabcb1829cdfe57}
+      \strng{authornamehash}{24e149fd925e70610dabcb1829cdfe57}
+      \strng{authorfullhash}{24e149fd925e70610dabcb1829cdfe57}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1990 {IEEE} Symposium on Security and Privacy, Oakland, California, USA, May 7-9, 1990}
+      \field{title}{Security Models and Information Flow}
+      \field{year}{1990}
+      \field{pages}{180\bibrangedash 189}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/RISP.1990.63849
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/RISP.1990.63849
       \endverb
     \endentry
     \entry{Noninfluence}{inproceedings}{}
@@ -585,26 +656,6 @@
       \verb http://nbn-resolving.de/urn:nbn:de:0009-29-46414
       \endverb
       \keyw{Privacy; damage; financial compensation; harm; statistical analysis}
-    \endentry
-    \entry{cs2sources}{article}{}
-      \name{author}{1}{}{%
-        {{hash=e80aefaccf3c8cdfa029813367b99a2b}{%
-           family={Zucker},
-           familyi={Z\bibinitperiod},
-           given={Donna\bibnamedelima M.},
-           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{e80aefaccf3c8cdfa029813367b99a2b}
-      \strng{fullhash}{e80aefaccf3c8cdfa029813367b99a2b}
-      \strng{authornamehash}{e80aefaccf3c8cdfa029813367b99a2b}
-      \strng{authorfullhash}{e80aefaccf3c8cdfa029813367b99a2b}
-      \field{sortinit}{Z}
-      \field{sortinithash}{156173bd08b075d7295bc3e0f4735a04}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Teaching Research Methods in the Social Sciences}
-      \field{title}{How to Do Case Study Research}
-      \field{year}{2009}
     \endentry
   \endsortlist
   \missing{CaseStudysoftwaresystems}
