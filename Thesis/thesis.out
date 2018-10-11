@@ -53,25 +53,26 @@
 \BOOKMARK [1][-]{section.6.4}{Evaluation of the scenarios}{chapter.6}% 53
 \BOOKMARK [2][-]{subsection.6.4.1}{Goal: Evaluation for the created case study}{section.6.4}% 54
 \BOOKMARK [2][-]{subsection.6.4.2}{Question: Is the case study usable for a data-based privacy analysis?}{section.6.4}% 55
-\BOOKMARK [1][-]{section.6.5}{Discussion}{chapter.6}% 56
-\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 57
-\BOOKMARK [1][-]{section.7.1}{Goal: Applicability of the introduced procedure}{chapter.7}% 58
-\BOOKMARK [2][-]{subsection.7.1.1}{Question: Is the introduced method applicable to an actual system?}{section.7.1}% 59
-\BOOKMARK [1][-]{section.7.2}{Goal: Expressiveness of data-centric PCM}{chapter.7}% 60
-\BOOKMARK [2][-]{subsection.7.2.1}{Is the created case study expressible with data-centric PCM ?}{section.7.2}% 61
-\BOOKMARK [1][-]{section.7.3}{Evaluation of the created case study}{chapter.7}% 62
-\BOOKMARK [2][-]{subsection.7.3.1}{Access rights}{section.7.3}% 63
-\BOOKMARK [2][-]{subsection.7.3.2}{Covered information flow classes}{section.7.3}% 64
-\BOOKMARK [2][-]{subsection.7.3.3}{Summary for the evaluation of the case study}{section.7.3}% 65
-\BOOKMARK [1][-]{section.7.4}{Threats to validity}{chapter.7}% 66
-\BOOKMARK [2][-]{subsection.7.4.1}{Analysis of the evaluation}{section.7.4}% 67
-\BOOKMARK [0][-]{chapter.8}{Conclusion and future work}{}% 68
-\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 69
-\BOOKMARK [1][-]{section.8.2}{Benefits of our work}{chapter.8}% 70
-\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 71
-\BOOKMARK [2][-]{subsection.8.3.1}{Method}{section.8.3}% 72
-\BOOKMARK [2][-]{subsection.8.3.2}{Case study system}{section.8.3}% 73
-\BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 74
-\BOOKMARK [0][-]{chapter*.43}{Bibliography}{}% 75
-\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 76
-\BOOKMARK [1][-]{section.A.1}{First Appendix Section}{appendix.A}% 77
+\BOOKMARK [2][-]{subsection.6.4.3}{Conclusion}{section.6.4}% 56
+\BOOKMARK [1][-]{section.6.5}{Discussion}{chapter.6}% 57
+\BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 58
+\BOOKMARK [1][-]{section.7.1}{Goal: Applicability of the introduced procedure}{chapter.7}% 59
+\BOOKMARK [2][-]{subsection.7.1.1}{Question: Is the introduced method applicable to an actual system?}{section.7.1}% 60
+\BOOKMARK [1][-]{section.7.2}{Goal: Expressiveness of data-centric PCM}{chapter.7}% 61
+\BOOKMARK [2][-]{subsection.7.2.1}{Is the created case study expressible with data-centric PCM ?}{section.7.2}% 62
+\BOOKMARK [1][-]{section.7.3}{Evaluation of the created case study}{chapter.7}% 63
+\BOOKMARK [2][-]{subsection.7.3.1}{Access rights}{section.7.3}% 64
+\BOOKMARK [2][-]{subsection.7.3.2}{Covered information flow classes}{section.7.3}% 65
+\BOOKMARK [2][-]{subsection.7.3.3}{Summary for the evaluation of the case study}{section.7.3}% 66
+\BOOKMARK [1][-]{section.7.4}{Threats to validity}{chapter.7}% 67
+\BOOKMARK [2][-]{subsection.7.4.1}{Analysis of the evaluation}{section.7.4}% 68
+\BOOKMARK [0][-]{chapter.8}{Conclusion and future work}{}% 69
+\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 70
+\BOOKMARK [1][-]{section.8.2}{Benefits of our work}{chapter.8}% 71
+\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 72
+\BOOKMARK [2][-]{subsection.8.3.1}{Procedure}{section.8.3}% 73
+\BOOKMARK [2][-]{subsection.8.3.2}{Case study system}{section.8.3}% 74
+\BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 75
+\BOOKMARK [0][-]{chapter*.49}{Bibliography}{}% 76
+\BOOKMARK [0][-]{appendix.A}{Appendix}{}% 77
+\BOOKMARK [1][-]{section.A.1}{First Appendix Section}{appendix.A}% 78

@@ -163,6 +163,49 @@
       \verb https://doi.org/10.1007/3-540-45800-X_32
       \endverb
     \endentry
+    \entry{Travelsystem}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=953b3cf9f1c4041be2bb129fda95a84b}{%
+           family={Katkalov},
+           familyi={K\bibinitperiod},
+           given={Kuzman},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c9eece0878daccae852a5f57ac234e51}{%
+           family={Stenzel},
+           familyi={S\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=140d1d68c344f043ef8caafe9c05f9eb}{%
+           family={Borek},
+           familyi={B\bibinitperiod},
+           given={Marian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a5db4673a90960ddd0a7ae122ff8315a}{%
+           family={Reif},
+           familyi={R\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{10a611d65839de3f72e3105ef48159eb}
+      \strng{fullhash}{8946300ae088cc4858ff67bff0cffca3}
+      \strng{authornamehash}{10a611d65839de3f72e3105ef48159eb}
+      \strng{authorfullhash}{8946300ae088cc4858ff67bff0cffca3}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Social Computing, SocialCom 2013, SocialCom/PASSAT/BigData/EconCom/BioMedCom 2013, Washington, DC, USA, 8-14 September, 2013}
+      \field{title}{Model-Driven Development of Information Flow-Secure Systems with IFlow}
+      \field{year}{2013}
+      \field{pages}{51\bibrangedash 56}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SocialCom.2013.14
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/SocialCom.2013.14
+      \endverb
+    \endentry
     \entry{SecureUML}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=c810c6e897884044b611eb7a087c09e3}{%
@@ -567,6 +610,7 @@
       \field{year}{2009}
     \endentry
   \endsortlist
+  \missing{NonInfluence}
 \endrefsection
 \endinput
 

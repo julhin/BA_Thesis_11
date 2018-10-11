@@ -1,20 +1,23 @@
 [0] Config.pm:354> INFO - This is Biber 2.6
 [0] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[21] biber:302> INFO - === Mi Okt 10, 2018, 19:30:53
-[68] Biber.pm:359> INFO - Reading 'thesis.bcf'
-[119] Biber.pm:823> INFO - Found 16 citekeys in bib section 0
-[129] Biber.pm:3658> INFO - Processing section 0
-[153] Biber.pm:3828> INFO - Looking for bibtex format file 'thesis.bib' for section 0
-[156] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
-[159] bibtex.pm:1282> INFO - Found BibTeX data source 'thesis.bib'
-[215] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/uml/2002' in entry 'UMLSec' - ignoring (section 0)
-[215] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/uml/2002' in entry 'SecureUML' - ignoring (section 0)
-[215] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/acsw/2004' in entry 'CaseStudyAndAccessrigths' - ignoring (section 0)
-[216] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/esorics/2004' in entry 'Noninfluence' - ignoring (section 0)
-[230] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[230] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[230] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[230] Biber.pm:3493> INFO - No sort tailoring available for locale 'en-US'
-[241] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[243] bbl.pm:701> INFO - Output to thesis.bbl
-[284] Biber.pm:109> INFO - WARNINGS: 4
+[21] biber:302> INFO - === Do Okt 11, 2018, 11:44:35
+[53] Biber.pm:359> INFO - Reading 'thesis.bcf'
+[103] Biber.pm:823> INFO - Found 18 citekeys in bib section 0
+[113] Biber.pm:3658> INFO - Processing section 0
+[136] Biber.pm:3828> INFO - Looking for bibtex format file 'thesis.bib' for section 0
+[140] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
+[142] bibtex.pm:1282> INFO - Found BibTeX data source 'thesis.bib'
+[195] Utils.pm:164> WARN - Possible typo (case mismatch) between citation and datasource keys: 'NonInfluence' and 'Noninfluence' in file 'thesis.bib'
+[197] Utils.pm:164> WARN - I didn't find a database entry for 'NonInfluence' (section 0)
+[197] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/uml/2002' in entry 'UMLSec' - ignoring (section 0)
+[197] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/uml/2002' in entry 'SecureUML' - ignoring (section 0)
+[198] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/acsw/2004' in entry 'CaseStudyAndAccessrigths' - ignoring (section 0)
+[198] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/esorics/2004' in entry 'Noninfluence' - ignoring (section 0)
+[198] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/socialcom/2013' in entry 'Travelsystem' - ignoring (section 0)
+[215] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[215] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[215] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[215] Biber.pm:3493> INFO - No sort tailoring available for locale 'en-US'
+[227] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[229] bbl.pm:701> INFO - Output to thesis.bbl
+[231] Biber.pm:109> INFO - WARNINGS: 7
