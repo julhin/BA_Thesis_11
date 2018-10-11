@@ -85,8 +85,8 @@ The Goal-Question-Metric approach divides the evaluation process into three step
 \chapter{Related work}
 \label{relWork}
 After the foundations were presented, we discuss here the related work. In this chapter, we discuss the related work for this thesis. In this thesis, we strayed away from the most common use of case studies. Case studies are most commonly used to investigate a certain problem and collect the different approaches. Then, the different approaches are discussed. In contrast, the purpose of the created case study strays away from the common use of case studies. Therefore, we searched for related work from researchers that are creating a case study on the base of a software system. \\
-The publication from Jürjens \cite{UMLSecCS} creates a case study for the architectural security analysis approach UMLSec \cite{UMLSec}. UMLSec utilizes a meta model extension for the UML language. Compared to the procedure presented in this thesis, only the process for the creation of a case study is similar.\\ Another related publication is the publication of Katlakov et al. \cite{ModelDriven}. In this publication, a case study based on information flows for a software systems is build. The presented procedure also utilize information flow to later allow to check the security of a software system. The contrast to our work is that this publication also works on an UML model.\\ The last related work to our thesis is the one from evered and Bögeholz \cite{CaseStudyAndAccessrigths}. This publication is the most adjacent to our work. The researcher also create a case study on the basis of a component-based system. For the definition of the access rights, we adopted the their definition for component-based systems. Further, Evered and Bögeholz defined evaluation criteria for good access rights. We also adopted the defined criteria for our evaluation of the access rights. most importantly, Evered and Bögeholz also created a case study for a component-based system. The focus whilst the creation were on the access rights. So the created case study has a much smaller scope.  Similar to the procedure in this thesis, a component-based system was used.\\
-To conclude the related work. We found in different publications characteristic aspects for the created case study in this thesis and compared the corresponding parts. From Jürjens \cite{UMLSecCS} we could compare the basic procedure and further , Jürjens showcased a concrete example for an architectural security analysis. From Katlakov et al. \cite{ModelDriven}, we could compare the usage of data flows in an architectural security analysis. From Evered and Bögeholz \cite{CaseStudyAndAccessrigths} we adopted the definition of access rights in component-based system and the criteria to measure well defined access rights. Further an example case study for a much smaller scope was created which we could compare to ours.
+The publication from Jürjens \cite{UMLSecCS} creates a case study for the architectural security analysis approach UMLSec \cite{UMLSec}. UMLSec utilizes a meta model extension for the UML language. Compared to the procedure presented in this thesis, only the process for the creation of a case study is similar.\\ Another related publication is the publication of Katlakov et al. \cite{Travelsystem}. In this publication, a case study based on information flows for a software systems is build. The presented procedure also utilize information flow to later allow to check the security of a software system. The contrast to our work is that this publication also works on an UML model.\\ The last related work to our thesis is the one from evered and Bögeholz \cite{CaseStudyAndAccessrigths}. This publication is the most adjacent to our work. The researcher also create a case study on the basis of a component-based system. For the definition of the access rights, we adopted the their definition for component-based systems. Further, Evered and Bögeholz defined evaluation criteria for good access rights. We also adopted the defined criteria for our evaluation of the access rights. most importantly, Evered and Bögeholz also created a case study for a component-based system. The focus whilst the creation were on the access rights. So the created case study has a much smaller scope.  Similar to the procedure in this thesis, a component-based system was used.\\
+To conclude the related work. We found in different publications characteristic aspects for the created case study in this thesis and compared the corresponding parts. From Jürjens \cite{UMLSecCS} we could compare the basic procedure and further , Jürjens showcased a concrete example for an architectural security analysis. From Katlakov et al. \cite{Travelsystem}, we could compare the usage of data flows in an architectural security analysis. From Evered and Bögeholz \cite{CaseStudyAndAccessrigths} we adopted the definition of access rights in component-based system and the criteria to measure well defined access rights. Further an example case study for a much smaller scope was created which we could compare to ours.
 
 
 \chapter{Procedure}
@@ -124,11 +124,9 @@ After the evaluation is done and the results are sufficient, the milestone is re
 % sechster Schritt
 In the sixth step, scenarios are defined, from which data flows are derived. Finally, the data flows and the access rights are added to the system model.\\
 In the seventh step the covered information flow classes are evaluated. Then it is decided if enough information flow classes are covered for the planned use of the case study. If not, the procedure iterates back to the sixth step. Otherwise, the procedure is concluded and the case study is created. The case study finally consists of the system model extended by data flows and the access rights.
-%TODO ab ie rmorgne weitermachen !!!!!
 \section{P1: Investigate the current state of the system}
 %Fertig
 Before the process is started, a first glance at the present system is taken. This first glance is taken to decide whether it is worthwhile to start the process. It is checked if the system is sufficiently defined in \textit{width} and \textit{depth}. \textit{Width} checks how many different system models are already defined. \textit{Depth} checks how detailed each model is defined. The outcome is system dependent. For example, it could be important how much work one is willing to do before starting the process. The idea behind this step is to decide beforehand if the system is in a state where it is more than just a bare concept and the case study can be constructed with reasonable effort.
-%TODO requirements fertig 
 \section{P2: Extract necessary system parts for the requirements}
 \label{cs_req}
 The second step in the procedure is to extract the corresponding elements or definitions from the system for each requirement. Altogether, six requirements are necessary for the creation of a viable case study.
@@ -297,9 +295,9 @@ In this chapter we are starting to apply the procedure described in \autoref{ch:
 First we describe CoCoME briefly. Then the steps P1-P5 of the presented procedure are carried out. First we briefly examine the current state of CoCoME, then the system parts necessary for the requirements are identified and/or extracted from the documentation. After that, a summary of the shortcomings is created and in the next step the identified shortcomings are eliminated by defining system extensions. The defined access rights are then evaluated. Finally, the current state of the system is saved in the milestone.
 \section{CoCoME overview}
 \label{sec:cocome_overview}
-CoCoME is short for Common Component Modelling Example. The goal of CoCoME is to provide an open source environment, in which different paradigms for component based software development can be tested. CoCoME tries to be as close as possible to the reality to provide a realistic environment to test new modelling approaches. % Das alle ansätze auf dem gleichen realistischen systme getestet werdne kann und nicht perfekt auf dne Anstz zugeschnitte systeme gebaut werden
+CoCoME is short for Common Component Modeling Example. The goal of CoCoME is to provide an open source environment, in which different paradigms for component based software development can be tested. CoCoME tries to be as close as possible to the reality to provide a realistic environment to test new modeling approaches. % Das alle ansätze auf dem gleichen realistischen systme getestet werdne kann und nicht perfekt auf dne Anstz zugeschnitte systeme gebaut werden
 %erklären warum die allgmeine Struktur so ist wie sie ist bzgl des settings
-CoCoME abstract the selling process and the warehousing of supermarket and provides three core functionalities:
+CoCoME abstract the selling process and the warehousing of supermarket and provides three core functions:
 \begin{itemize}
 \item Operating of a register cash system.
 \item Management of a warehouse.
@@ -330,17 +328,16 @@ The next evolutionary scenario is the addition of a Pickup shop to CoCoME. The P
 \subsection{Database migration}
 In this evolutionary scenario the database is migrated to a cloud service. Due to the fact, that the PickupShop and the stores both operate on the inventory, a higher amount of database request is expected. In order to avoid possible shortcomings in the performance, the database was moved to a cloud environment. This allows to easily purchase additional bandwidth or space to solve upcoming scalability issues. With the migration of the database a new issue arise. It may happen, for example, that data from enterprises that are located in the European Union (EU) are stored outside the EU, which does not comply with the current law.
 \subsection{Service adapter}
-%TODO nochmal genauer, Unterschied zu Webservice
+
 Since CoCoME was always in development, CoCoME currently consists of a relatively large code base. Since this does not have to be understood by every single developer to work with CoCoME, a service adapter has been added. The service adapter allows CoCoME to dynamically add functionality.
 \paragraph{Reasons for CoCoME to apply our procedure on}
 The decision to use CoCoME as the system for applying the method was based on many reasons. The first is that CoCoME has already been modeled as a component-based system. Another reason is that CoCoME is described in detail in \cite{CoCoMETechReport} and the CoCoME book \cite{CoCoMEBook}. 
 On the other hand, CoCoME is more of a minimal solution to what is actually planned to achieve with CoCoME. One can say, CoCoME is rather a proof of concept than a fully functional system.
-%TODO  Nur der PickupShop betrachtet
+
 \section{Application of the method}
 \label{apllMethod}
-After an short overview over CoCoME in the previous section, we are starting with the procedure for the creation of a case study. The presented paper from Runeson and H\"ost \cite{CaseStudySoftware}, which is could be seen as a fundamental source for the creation of case studies, states that one should use more than one source of information for the investigated case. We used as our main source of information the CoCoME tech report \cite{CoCoMETechReport} and the CoCoMe book \cite{CoCoMEBook}, were the system is described in detail. Further we used the code of the implementation.
-%github referenzieren
-. If there are differences between documentation and code, the definitions from the documentation applies. We favour the documentation over the code because CoCoME is still in development. The documentation represents a stable version of CoCoME. In the implementation it may possible that at the moment new features are tested that are later quashed.\\  We do not apply the process to the entire CoCoME system, but concentrate on only part of the system. The selected part of CoCoME are components that belong to the PickupShop (\autoref{PS}).
+After an short overview over CoCoME in the previous section, we are starting with the procedure for the creation of a case study. The presented paper from Runeson and H\"ost \cite{CaseStudySoftware}, which is could be seen as a fundamental source for the creation of case studies, states that one should use more than one source of information for the investigated case. We used as our main source of information the CoCoME tech report \cite{CoCoMETechReport} and the CoCoMe book \cite{CoCoMEBook}, were the system is described in detail. Further we used the code of the implementation \cite{CoCoME_impl}.
+. If there are differences between documentation and code, the definitions from the documentation applies. We favour the documentation over the code because CoCoME is still in development. The documentation represents a stable version of CoCoME. In the implementation it may possible that at the moment new features are tested that are later quashed.\\  We do not apply the process to the entire CoCoME system, but concentrate on only part of the system. The selected part of CoCoME are components that belong to the PickupShop (\autoref{subsec:PS}).
 \subsection{P1: Investigation of the current state of CoCoME}
 %done
 In this first step we take a first look at CoCoME. We are looking for two main aspects here. First, if the system is extendable. Secondly, how wide spread the system model already is defined. The CoCoME include a book \cite{CoCoMEBook}, a tech report \cite{CoCoMETechReport} and an implementation. In the documentation CoCoME various system models for CoCoME are available and CoCoME is modeled as an component-based system and therefore extendable. So we decided that the system is in viable state.%TODO githubs referenzieren
@@ -1085,22 +1082,24 @@ ACM & Webfrontend & TS:inv:application:store & TS:inv:data:store \\
 \hline
 stockmanager &
 \begin{tabular}{c} 
-customer data : 4 \\
-account data : 3 \\
-p\& s data : 2 \\
-system data: 4\\
+customer : 4 \\
+account : 3 \\
+p\&s : 2 \\
+system : 4\\
 \end{tabular}
 &
 \begin{tabular}{c} 
 account : 3 \\
 customer : 4 \\
-product \& sales : 2 \\
+product\&sales : 2 \\
+system: 4 \\
 \end{tabular}
 &
 \begin{tabular}{c} 
-account : 3 \\\autoref{scn_excerpt})
+account : 3 \\)
 customer : 4 \\
-product \& sales : 2 \\
+product\&sales : 2 \\
+system : 4 \\
 \end{tabular}
 \\
 \hline
@@ -1155,12 +1154,17 @@ TS:inv:app:store & transmit & I: ID  \\
 & alter data & II: List<IOrderEntries>  \\
 \hline 
 \end{tabular} 
-\caption{Overview over the used operations and the used data for the Scenario: StockManager requests a report for a customer. \textbf{I}}
+\caption{Overview over the used operations and the used data for the Scenario: StockManager requests a report for a customer.}
 \label{tab:overview_UC13_DF}
 \end{table}
 In \autoref{tab:overview_UC13_DF} the association between the components, the used operations and the data is shown. To give a brief explanation of how to read this table. In line 1, the \textit{Webfrontend} only uses the operation \textbf{transmit} and data from a total of 2 classes,  \textbf{customer} data and the \textbf{product\&sales} data. From these classes the concrete data \textit{ID} and \textit{Report} are used.\\
-The resulting data flow is shown in \autoref{fig:uc13DFD}.The data flow notation has been extended to include the corresponding component and operations for the processes. The data is still on the edges. Also nothing has changed for the entities.\\
+The resulting data flow is shown in \autoref{fig:DFUC13}.The data flow notation has been extended to include the corresponding component and operations for the processes. The data is still on the edges. Also nothing has changed for the entities.\\
 In this scenario a violation for the customer's privacy is displayed. According to the defined access rights tow violations are modeled. First, the \textit{StockManager} should not have access to the \textit{ID} of a customer. And secondly, the \textit{Report} is in combination with the \textit{ID} security relevant. This  data flow should normally prohibited by the system.
+\begin{figure}
+\includegraphics[scale=0.7, angle=90]{logos/Data_flow_UC13.pdf}
+\caption{The resulting data flow for the Scenario: StockMangaer request a report for a customer.}
+\label{fig:DFUC13}
+\end{figure}
 %TODO nochmal kurz den Datenfluss beschreiben 
 \section{Scenario: Support employee requests information for an order}
 This scenario was not defined on the basis of an use case. We defined this scenario for various reasons. First, we wanted to define a counterpart to the already existing scenario (\autoref{descripScn_casestudy_scn1}). The scenario is located in the same system part and therefore operates on the same components. The idea behind this is to provide a violation and a non-violation. An data-based privacy approach my be evaluated by checking if the violation and the non-violation is identified correctly. Due to the fact that CoCoME is a rather minimal system for the goal the system aims for, we couldn't find further use cases where multiple classes of data and/or multiple roles are involved.
@@ -1189,13 +1193,12 @@ ACM & Web-  & TS: & TS: & Pickup  \\
  & frontend  & inventory: & inventory & Shop \\
 &  & app:store & data:store &  \\
 \hline
-support & & & &  \\
-employee & & & &  \\
+suppEmp & & & &  \\
 &
 \begin{tabular}{c} 
 account : 2 \\
 customer : 1 \\
-product \& : 2 \\
+product\& : 2 \\
 sales\\
 system : 4 \\
 \end{tabular}
@@ -1203,7 +1206,7 @@ system : 4 \\
 \begin{tabular}{c} 
 account : 2 \\
 customer : 1 \\
-product \& : 2 \\
+product\& : 2 \\
 sales\\
 system : 4 \\
 \end{tabular}
@@ -1211,7 +1214,7 @@ system : 4 \\
 \begin{tabular}{c} 
 account : 4 \\
 customer : 4 \\
-product \& : 4 \\
+product\& : 4 \\
 sales\\
 system : 4\\
 \end{tabular}
@@ -1219,7 +1222,7 @@ system : 4\\
 \begin{tabular}{c} 
 account : 4 \\
 customer : 2 \\
-product \& : 4 \\
+product\& : 4 \\
 sales \\
 system : 4 \\
 \end{tabular}
@@ -1234,7 +1237,7 @@ system : 4 \\
 \\
 \hline
 \end{tabular}
-\caption{Access right for the role \textit{Support employee}. 1 refers to the access right \textit{FullAccess}, 2 refers to the access right \textit{AccessToUsedData}, 3 refers to the access right \textit{AccessToOwnedData}, 4 refers to the access right \textit{Default}.}
+\caption{Access right for the role \textit{Support employee}. 1 refers to the access right \textit{FullAccess}, 2 refers to the access right \textit{AccessToUsedData}, 3 refers to the access right \textit{AccessToOwnedData}, 4 refers to the access right \textit{Default}. The abbreviate \textit{suppEmp} refers to the role support employee.}
 \end{table}
 \label{ACM_SE}
 %\end{landscape}
@@ -1287,7 +1290,7 @@ TS:inv:application & alter, transmit & alter & non-existent \\
 TS:inv:data & relational algebra & relational algebra & alter \\ 
 \hline 
 \end{tabular} 
-\caption{A matrix showing the data processing for each component. the abbreviate p\& s data stands for product and sales data.}
+\caption{A matrix showing the data processing for each component. The abbreviate p\&s data stands for product and sales data.}
 \label{DataPRoc_UC14}
 \end{table}
 
@@ -1325,7 +1328,7 @@ After all data flow are defined and added to the system, the second part of the 
 \subsection{Goal: Evaluation for the created case study}
 The goal is to evaluate the case study. As shown in \autoref{Overview_CSS_Eval} the evaluation of the case study is split into two parts. In this we will only focus on the highlighted plan, the evaluation of the defined scenarios.
 \subsection{Question: Is the case study usable for a data-based privacy analysis?}
-To verify if the created case study are usable for the evaluation of a data-based privacy analysis, it is checked which information flow classes the created case study covers. We relied on the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire information from a role that inherits a higher security level. In the course of a program flow, user with a high security level and user with low security level inserts data in the system and receive outputs from the system. If there is no interference in the system, inputs from high level user have no effect to the outputs of low level user. The effects of \textit{Non-inteference} can be expressed by three infromtion flow classes: \textbf{Illegal information flow}, \textbf{Direct information flow between roles} and \textbf{Information flow form high to low}. \\
+To verify if the created case study are usable for the evaluation of a data-based privacy analysis, it is checked which information flow classes the created case study covers. We relied on the problem statement \textit{Non-influence} \cite{Noninfluence}. Non-influence combines two sub problem statements, \textit{Non-interference} and \textit{Non-leakage}. Non-inference describes that no role may acquire information from a role that inherits a higher security level. In the course of a program flow, user with a high security level and user with low security level inserts data in the system and receive outputs from the system. If there is no interference in the system, inputs from high level user have no effect to the outputs of low level user. The effects of \textit{Non-inteference} can be expressed by three information flow classes: \textbf{Illegal information flow}, \textbf{Direct information flow between roles} and \textbf{Information flow form high to low}. \\
 Illegal information flow describes that a role can receive information for which it is not authorized.\\
 Direct information flow describes the flow of information between two roles for which  is not cleared to either receive or transmit.\\
 Information from high to low describes flow of information, even if not intended, from a higher security level to a lower security level.
@@ -1362,7 +1365,7 @@ No observable information  flow & \xmark \\
 \label{Eval_infoFlowClasses}
 \end{table}
 \subsection{Conclusion}
-The last step of the procedure is to decide whether the procedure can be concluded. If the procedure cannot be concluded the procedure moves back to the SThe decision is based on the covered information flow classes. After the evaluation in % ref
+The last step of the procedure is to decide whether the procedure can be concluded. If the procedure cannot be concluded the procedure moves back to the P5. The decision is based on the covered information flow classes. After the evaluation in % ref
 the access rights are already well defined. In this decision it is going to be decided if the covered information flow classes are sufficient for the objective to be achieved with the created case study. \\
 For the created case study in \autoref{ch:cocome} and \autoref{ch:casestudysystem}, the answer is yes and no. The particular answer is heavily dependent on \\
 \paragraph{Conclude the procedure}
@@ -1372,4 +1375,4 @@ Given the fact, that not all information flow classes are covered, we could say 
 \section{Discussion}
 %TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
 % warum wir die query explizit definiert, warum wurde die DF notation angepasst, 
-In this section, we are going to discuss the single design decision that were made during the creation of the case study. Further, we discuss we if the process can be concluded.
+In this section, we are going to discuss the single design decision that were made during the creation of the case study. 

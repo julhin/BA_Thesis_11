@@ -81,6 +81,30 @@
       \verb http://isyou.info/jisis/vol4/no3/jisis-2014-vol4-no3-05.pdf
       \endverb
     \endentry
+    \entry{CoCoME_impl}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d06ceabe0c84430d6d1dc5c65cd6a41b}{%
+           family={(CoCoME)},
+           familyi={(\bibinitperiod},
+           given={The\bibnamedelimb Common\bibnamedelimb Component\bibnamedelimb Modeling\bibnamedelima Example},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{d06ceabe0c84430d6d1dc5c65cd6a41b}
+      \strng{fullhash}{d06ceabe0c84430d6d1dc5c65cd6a41b}
+      \strng{authornamehash}{d06ceabe0c84430d6d1dc5c65cd6a41b}
+      \strng{authorfullhash}{d06ceabe0c84430d6d1dc5c65cd6a41b}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/cocome-community-case-study/cocome-cloud-jee-web-shop}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{CoCoME PickupShop implementation}
+      \field{year}{2017}
+    \endentry
     \entry{CaseStudyAndAccessrigths}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=007e2bcfa51a300030e77b9191333456}{%
@@ -196,49 +220,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1007/3-540-45800-X_32
-      \endverb
-    \endentry
-    \entry{ModelDriven}{inproceedings}{}
-      \name{author}{4}{}{%
-        {{hash=953b3cf9f1c4041be2bb129fda95a84b}{%
-           family={Katkalov},
-           familyi={K\bibinitperiod},
-           given={Kuzman},
-           giveni={K\bibinitperiod}}}%
-        {{hash=c9eece0878daccae852a5f57ac234e51}{%
-           family={Stenzel},
-           familyi={S\bibinitperiod},
-           given={Kurt},
-           giveni={K\bibinitperiod}}}%
-        {{hash=140d1d68c344f043ef8caafe9c05f9eb}{%
-           family={Borek},
-           familyi={B\bibinitperiod},
-           given={Marian},
-           giveni={M\bibinitperiod}}}%
-        {{hash=a5db4673a90960ddd0a7ae122ff8315a}{%
-           family={Reif},
-           familyi={R\bibinitperiod},
-           given={Wolfgang},
-           giveni={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{10a611d65839de3f72e3105ef48159eb}
-      \strng{fullhash}{8946300ae088cc4858ff67bff0cffca3}
-      \strng{authornamehash}{10a611d65839de3f72e3105ef48159eb}
-      \strng{authorfullhash}{8946300ae088cc4858ff67bff0cffca3}
-      \field{sortinit}{K}
-      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{International Conference on Social Computing, SocialCom 2013, SocialCom/PASSAT/BigData/EconCom/BioMedCom 2013, Washington, DC, USA, 8-14 September, 2013}
-      \field{title}{Model-Driven Development of Information Flow-Secure Systems with IFlow}
-      \field{year}{2013}
-      \field{pages}{51\bibrangedash 56}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/SocialCom.2013.14
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1109/SocialCom.2013.14
       \endverb
     \endentry
     \entry{Travelsystem}{inproceedings}{}
@@ -534,41 +515,6 @@
       \verb https://doi.org/10.1007/s10664-008-9102-8
       \endverb
     \endentry
-    \entry{TtoV}{article}{}
-      \name{author}{2}{}{%
-        {{hash=306f73791e107dd9b83d45ee22e6b523}{%
-           family={Runeson},
-           familyi={R\bibinitperiod},
-           given={Per},
-           giveni={P\bibinitperiod}}}%
-        {{hash=4d1752e9463ffc1043c0939de72a9097}{%
-           family={Höst},
-           familyi={H\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{d487493fbde07f44f703e74cfc39b73d}
-      \strng{fullhash}{d487493fbde07f44f703e74cfc39b73d}
-      \strng{authornamehash}{d487493fbde07f44f703e74cfc39b73d}
-      \strng{authorfullhash}{d487493fbde07f44f703e74cfc39b73d}
-      \field{sortinit}{R}
-      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Empirical Software Engineering}
-      \field{number}{2}
-      \field{title}{Guidelines for conducting and reporting case study research in software engineering}
-      \field{volume}{14}
-      \field{year}{2009}
-      \field{pages}{131\bibrangedash 164}
-      \range{pages}{34}
-      \verb{doi}
-      \verb 10.1007/s10664-008-9102-8
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/s10664-008-9102-8
-      \endverb
-    \endentry
     \entry{Seifermann16}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=a7426da4596e8cf1d6f0cbae4ed293f9}{%
@@ -658,8 +604,7 @@
       \keyw{Privacy; damage; financial compensation; harm; statistical analysis}
     \endentry
   \endsortlist
-  \missing{CaseStudysoftwaresystems}
-  \missing{NonInfluence}
+  \missing{TtoV}
 \endrefsection
 \endinput
 

@@ -12,7 +12,7 @@
 
 \chapter{Evaluation}
 \label{ch:eval}
-After we evaluated the created case study in \autoref{ch:cocome} and \autoref{ch:apllMethod}, in this chapter the procedure (\autoref{ch:method}) and the used modeling language (PCM \cite{PCM}) are evaluated. The evaluation are also based on a GQM-plan \autoref{GQM_Expl}. The plan for the whole evaluation can be seen in \autoref{GQMPlan}. \\ First, we conduct the evaluation for the applicability of the presente dprocedure, then the expressibility of the modleing language. Afterwards, we summarize the results for the created case study. To conclude the chapter, we discuss the \textit{threats to validity} (\cite{TtoV}).
+After we evaluated the created case study in \autoref{ch:cocome} and \autoref{ch:casestudysystem}, in this chapter the procedure (\autoref{ch:method}) and the used modeling language (PCM \cite{PCM}) are evaluated. The evaluation are also based on a GQM-plan \autoref{GQM_Expl}. The plan for the whole evaluation can be seen in \autoref{GQMPlan}. \\ First, we conduct the evaluation for the applicability of the presente dprocedure, then the expressibility of the modleing language. Afterwards, we summarize the results for the created case study. To conclude the chapter, we discuss the \textit{threats to validity} (\cite{TtoV}).
 
 \begin{figure}
 \includegraphics[scale=.8, origin=c ]{logos/OverviewEval.pdf}
@@ -25,7 +25,7 @@ The first aspect we are evaluating is the applicability of the introduced proced
 \subsection{Question: Is the introduced method applicable to an actual system?}
 To verify if the goal is achieved, we check if the introduced procedure is applicable to a software system that abstracts the selling process and warehousing of a supermarket group. The metric to answer the question is a successful application to an actual system.  
 \subsubsection{Application to the CoCoME system}
-The system we chose to apply the method on is CoCoME. We applied the procedure not the whole CoCoME system but only to an excerpt of it. The application to the excerpt and resulting case studies is conducted in \autoref{ch:cocome} and \autoref{casestudysystem}.\\ We successfully applied the procedure to an actual system and created a case study. Therefore, we conclude that the procedure is applicable.
+The system we chose to apply the method on is CoCoME. We applied the procedure not the whole CoCoME system but only to an excerpt of it. The application to the excerpt and resulting case studies is conducted in \autoref{ch:cocome} and \autoref{ch:casestudysystem}.\\ We successfully applied the procedure to an actual system and created a case study. Therefore, we conclude that the procedure is applicable.
 %\section{Usability of the created case study for data-based privacy analysis}
 %\label{usage_DBPA}
 %The next aspect we evaluated the usability of the created case study. A case study is not useful if it does not meet criteria. The criteria ensure that the case study is in a state where it can be used for data-based data privacy analysis. To ensure this, we evaluate two different parts of the case study. First, we evaluate the defined access rights, then the defined data flows. 
@@ -88,7 +88,7 @@ Further details on this evaluation can be seen in % ref
 Evered and Bögeholz \cite{CaseStudyAndAccessrigths}%
 defined seven criteria to review the quality of defined access rights. All in all, the criteria can be divided in three categories: Specification, Comprehensibility and Implementation. \\
 \textit{Specification} criteria review the definition of the access rights. \textit{Comprehensibility} criteria mainly reviews the notation and ho clear each is defined. \textit{Implementation} criteria reviews the embedding of the access rights in the implementation.\\
-The result of the evaluation are displayed in \autoref{AR_EVAL_SUM}.
+The result of the evaluation are displayed in \autoref{AR_EVAL_SUM2}.
 \begin{table}
 \begin{tabular}{|c|c|c|}
 \hline 
@@ -113,12 +113,12 @@ Implementation & Fundamental & n/a \\
 \hline 
 \end{tabular} 
 \caption{Summary for the evaluation of the defined access rights.} 
-\label{AR_EVAL_SUM}
+\label{AR_EVAL_SUM2}
 \end{table}  
 
 \subsection{Covered information flow classes}
-Further details on this evaluation can be seen in % ref
-In teh evaluation we examine which different information flows are covered by the created case study and may later be checked in a data-based privacy analysis. To define different information flow classes, we relied the problem statement \textit{Non-influence} \cite{Noninfluence}. This problem statement includes four different information flow classes: illegal information flow, information flow from high to low, direct information flow between roles and observable information flow. The summary of the covered information flow classes is displayed in 
+Further details on this evaluation can be seen in \autoref{Eval_infoFlowClasses2}.
+In the evaluation we examine which different information flows are covered by the created case study and may later be checked in a data-based privacy analysis. To define different information flow classes, we relied the problem statement \textit{Non-influence} \cite{Noninfluence}. This problem statement includes four different information flow classes: illegal information flow, information flow from high to low, direct information flow between roles and observable information flow. The summary of the covered information flow classes is displayed in 
 
 \begin{table}
 \centering
@@ -136,23 +136,17 @@ No observable information  flow & \xmark \\
 \hline 
 \end{tabular}
 \caption{Summary for the evaluation of the covered information flow classes of the case study.}
-\label{Eval_infoFlowClasses}
+\label{Eval_infoFlowClasses2}
 \end{table}
 
 \subsection{Summary for the evaluation of the case study}
 We achieved to cover three out of seven criteria (~43\%) for good access right. The evaluation of the criteria in the \textit{Comprehensibilty} class would have exceeded the scope of the thesis. So we cannot make a qualified statement for these criteria. The criteria associated with \textit{Implementaation} class may be omitted in a purely conceptual case study. For instance, this may happen when a complete system is modeled but not implemented yet. We achieved all of the \textit{Specification} criteria with our defined access rights.\\ All in all, we say the number of applicable criteria are dependent on the goal for that the specific case study is created. \newline
 We also achieved to cover 50\% of the information flow classes. We coul not achieve to cover all classes due to time constraints of the thesis and therefore missing scenarios.
 
-%TODO in die conclusion
-%After all the evaluations are conducted, we discuss the findings. This discussion will be divided into three parts. Each parts covers one of the evaluation aspects shown in \autoref{GQMPlan}.\\
-%We were able to verify that the method is applicable to a system that models a pickup shop. The method should also be applied to other systems. Possible other systems are flight booking systems, food suppliers, etc. The weakness in this part of the evaluation is that the method has not been applied often enough to different systems to make a statement about its applicability.\\
-%In the next part, the evaluation results of the access rights and data flows are discussed. First, the defined access rights in the case study. We evaluated based on predefined criteria by Evered and Bögeholz \cite{CaseStudyAndAccessrigths} the access rights. Not all criteria were applicable to the case study, because for some criteria one need running code which is not in the scope of the case study. Other criteria weren't applicable due to time constraints. All in all, as shown in \autoref{eval_AR}, we achieved with our definition of the access rights all three criteria. There is surely some work to be done to allow to check more criteria, like conducting a survey for the criteria clear and concise. For the criteria fundamental and efficient a deployment of CoCoME which includes the access rights is needed. The evaluation of the access rights has to be taken with a grain of salt. Since the access rights depend on the security-relevant data and the roles defined in the system, they must be reevaluated if something has changed.  The evaluation is therefore only a snapshot of the current quality of the access rights. Next, we discuss the evaluation for the different covered information flow classes. We achieved to cover two of the four information flow classes, which is a pretty solid. As we see it, the desirable state is to cover all information flow classes in width and depth. Width means that at least each class is covered by at least one data flow. Depth means that for each class a data flow is defined that is illegal for the class and one that it is not.As shown in \autoref{eval_DF}, we only cover two information flow classes. 
-%At last we discuss the results for our modeling language PCM. We defined five types of data processing and evaluated whether they are possible to model in PCM. The result is shown in \autoref{eval_MM}. As shown, all types of data processing are modeled. Therefore, we conclude it is be possible to model all created case studies with PCM. But it is not possible to store the ACM in the same model. 
-%To conclude the evaluation, one can say that we introduced an applicable method for a certain typ eof systems to create data flows for a data-based privacy analysis. For the sample case study, we say it is a proof-of-concept, because only two class of information are modeled. The defined access rights are well defined in the current evaluation, but it is imperative to apply the other criteria to get a more complete picture. It must also be said that access rights are relatively volatile, as there is a need to check even small changes in the system. At last, the used modeling language is able to model all types of data processing and is therefore usable for data-based privacy analysis. The only throwback for the modeling language is that the ACM must be stored separately, this may lead to inconsistency and should be fixed soon.
 
 \section{Threats to validity}
 
-In this section we discuss possible threats to the validity of the evaluation. The general description for this threats are published by Runeson and Höst \cite{TtoV} %hie rmal von HEinrich klauen, eventuell
+In this section we discuss possible threats to the validity of the evaluation. The general description for this threats are published by Runeson and Höst \cite{CaseStudySoftware} %hie rmal von HEinrich klauen, eventuell
 The possible threats are divided into four categories: internal validity, external validity, construct validity and conclusion validity.
 \paragraph{Internal validity}
 Internal validity describes if the evaluation supports the conclusion. 

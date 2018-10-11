@@ -1,25 +1,22 @@
 [0] Config.pm:354> INFO - This is Biber 2.6
 [0] Config.pm:357> INFO - Logfile is 'thesis.blg'
-[19] biber:302> INFO - === Do Okt 11, 2018, 19:47:39
-[38] Biber.pm:359> INFO - Reading 'thesis.bcf'
-[88] Biber.pm:823> INFO - Found 20 citekeys in bib section 0
-[99] Biber.pm:3658> INFO - Processing section 0
-[111] Biber.pm:3828> INFO - Looking for bibtex format file 'thesis.bib' for section 0
-[114] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
-[117] bibtex.pm:1282> INFO - Found BibTeX data source 'thesis.bib'
-[157] Utils.pm:164> WARN - Possible typo (case mismatch) between citation and datasource keys: 'NonInfluence' and 'Noninfluence' in file 'thesis.bib'
-[158] Utils.pm:164> WARN - I didn't find a database entry for 'CaseStudysoftwaresystems' (section 0)
-[158] Utils.pm:164> WARN - I didn't find a database entry for 'NonInfluence' (section 0)
-[159] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/uml/2002' in entry 'UMLSec' - ignoring (section 0)
-[159] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/acsw/2004' in entry 'CaseStudyAndAccessrigths' - ignoring (section 0)
-[159] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/esorics/2004' in entry 'Noninfluence' - ignoring (section 0)
-[159] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/sp/1990' in entry 'McLean90' - ignoring (section 0)
-[159] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/socialcom/2013' in entry 'ModelDriven' - ignoring (section 0)
-[159] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/socialcom/2013' in entry 'Travelsystem' - ignoring (section 0)
-[175] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[175] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[175] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[175] Biber.pm:3493> INFO - No sort tailoring available for locale 'en-US'
-[187] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[189] bbl.pm:701> INFO - Output to thesis.bbl
-[190] Biber.pm:109> INFO - WARNINGS: 9
+[23] biber:302> INFO - === Do Okt 11, 2018, 21:29:24
+[43] Biber.pm:359> INFO - Reading 'thesis.bcf'
+[96] Biber.pm:823> INFO - Found 18 citekeys in bib section 0
+[106] Biber.pm:3658> INFO - Processing section 0
+[119] Biber.pm:3828> INFO - Looking for bibtex format file 'thesis.bib' for section 0
+[122] bibtex.pm:1425> INFO - Decoding LaTeX character macros into UTF-8
+[125] bibtex.pm:1282> INFO - Found BibTeX data source 'thesis.bib'
+[167] Utils.pm:164> WARN - I didn't find a database entry for 'TtoV' (section 0)
+[167] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/uml/2002' in entry 'UMLSec' - ignoring (section 0)
+[168] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/acsw/2004' in entry 'CaseStudyAndAccessrigths' - ignoring (section 0)
+[168] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/esorics/2004' in entry 'Noninfluence' - ignoring (section 0)
+[168] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/sp/1990' in entry 'McLean90' - ignoring (section 0)
+[168] Utils.pm:164> WARN - I didn't find a database entry for crossref 'DBLP:conf/socialcom/2013' in entry 'Travelsystem' - ignoring (section 0)
+[184] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[184] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[184] Biber.pm:3487> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[184] Biber.pm:3493> INFO - No sort tailoring available for locale 'en-US'
+[197] bbl.pm:597> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[199] bbl.pm:701> INFO - Output to thesis.bbl
+[200] Biber.pm:109> INFO - WARNINGS: 6

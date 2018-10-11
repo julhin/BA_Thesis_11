@@ -182,47 +182,47 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.1}Description}{41}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Description of a new use case}{42}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Description of a new use case}{43}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.2.1}Description the new role: Support employee}{42}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {6.3.2.1}Description the new role: Support employee}{43}{subsubsection.6.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Role description}{42}{section*.26}
+\contentsline {paragraph}{\nonumberline Role description}{43}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline access rights}{42}{section*.27}
+\contentsline {paragraph}{\nonumberline access rights}{43}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.2.2}Description of use case 14}{42}{subsubsection.6.3.2.2}
+\contentsline {subsubsection}{\numberline {6.3.2.2}Description of use case 14}{43}{subsubsection.6.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Extract the data types, access rights and types of data processing for the scenario}{43}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Extract the data types, access rights and types of data processing for the scenario}{44}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.4}Component behavior}{44}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.4}Component behavior}{45}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.4.1}Observable behavior}{44}{subsubsection.6.3.4.1}
+\contentsline {subsubsection}{\numberline {6.3.4.1}Observable behavior}{45}{subsubsection.6.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.4.2}Data flow definition}{45}{subsubsection.6.3.4.2}
+\contentsline {subsubsection}{\numberline {6.3.4.2}Data flow definition}{46}{subsubsection.6.3.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Evaluation of the scenarios}{45}{section.6.4}
+\contentsline {section}{\numberline {6.4}Evaluation of the scenarios}{46}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Goal: Evaluation for the created case study}{45}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Goal: Evaluation for the created case study}{46}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Question: Is the case study usable for a data-based privacy analysis?}{47}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Question: Is the case study usable for a data-based privacy analysis?}{48}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.4.2.1}Number of different covered information flow classes}{47}{subsubsection.6.4.2.1}
+\contentsline {subsubsection}{\numberline {6.4.2.1}Number of different covered information flow classes}{48}{subsubsection.6.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Illegal information flow}{47}{section*.28}
+\contentsline {paragraph}{\nonumberline Illegal information flow}{48}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Information flow from high to low}{48}{section*.29}
+\contentsline {paragraph}{\nonumberline Information flow from high to low}{49}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Direct information flow between roles}{48}{section*.30}
+\contentsline {paragraph}{\nonumberline Direct information flow between roles}{49}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Observable information flow}{48}{section*.31}
+\contentsline {paragraph}{\nonumberline Observable information flow}{49}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Conclusion}{48}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Conclusion}{49}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Conclude the procedure}{48}{section*.32}
+\contentsline {paragraph}{\nonumberline Conclude the procedure}{49}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline The procedure may not be concluded}{48}{section*.33}
+\contentsline {paragraph}{\nonumberline The procedure may not be concluded}{49}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Discussion}{49}{section.6.5}
+\contentsline {section}{\numberline {6.5}Discussion}{50}{section.6.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Evaluation}{51}{chapter.7}
 \defcounter {refsection}{0}\relax 
@@ -302,4 +302,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Appendix}{63}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}First Appendix Section}{63}{section.A.1}
+\contentsline {section}{\numberline {A.1}Git repository for the PCM models}{63}{section.A.1}
