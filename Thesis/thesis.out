@@ -53,13 +53,13 @@
 \BOOKMARK [2][-]{subsection.6.2.3}{Conclusion}{section.6.2}% 53
 \BOOKMARK [1][-]{section.6.3}{Discussion}{chapter.6}% 54
 \BOOKMARK [0][-]{chapter.7}{Evaluation}{}% 55
-\BOOKMARK [1][-]{section.7.1}{Goal: Applicability of the introduced procedure}{chapter.7}% 56
-\BOOKMARK [2][-]{subsection.7.1.1}{Question: Is the introduced method applicable to an actual system?}{section.7.1}% 57
-\BOOKMARK [1][-]{section.7.2}{Goal: Expressiveness of data-centric PCM}{chapter.7}% 58
-\BOOKMARK [2][-]{subsection.7.2.1}{Is the created case study expressible with data-centric PCM ?}{section.7.2}% 59
+\BOOKMARK [1][-]{section.7.1}{Evaluation of the procedure}{chapter.7}% 56
+\BOOKMARK [2][-]{subsection.7.1.1}{Goal: Applicability of the introduced procedure}{section.7.1}% 57
+\BOOKMARK [1][-]{section.7.2}{Evaluation of the modeling language}{chapter.7}% 58
+\BOOKMARK [2][-]{subsection.7.2.1}{Goal: Expressiveness of data-centric PCM}{section.7.2}% 59
 \BOOKMARK [1][-]{section.7.3}{Evaluation of the created case study}{chapter.7}% 60
-\BOOKMARK [2][-]{subsection.7.3.1}{Access rights}{section.7.3}% 61
-\BOOKMARK [2][-]{subsection.7.3.2}{Covered information flow classes}{section.7.3}% 62
+\BOOKMARK [2][-]{subsection.7.3.1}{Evaluation of the access rights}{section.7.3}% 61
+\BOOKMARK [2][-]{subsection.7.3.2}{Evaluation of the covered information flow classes}{section.7.3}% 62
 \BOOKMARK [2][-]{subsection.7.3.3}{Summary for the evaluation of the case study}{section.7.3}% 63
 \BOOKMARK [1][-]{section.7.4}{Threats to validity}{chapter.7}% 64
 \BOOKMARK [2][-]{subsection.7.4.1}{Analysis of the evaluation}{section.7.4}% 65
@@ -72,4 +72,4 @@
 \BOOKMARK [2][-]{subsection.8.3.3}{Meta model extension}{section.8.3}% 72
 \BOOKMARK [0][-]{chapter*.53}{Bibliography}{}% 73
 \BOOKMARK [0][-]{appendix.A}{Appendix}{}% 74
-\BOOKMARK [1][-]{section.A.1}{Git repository for the PCM models}{appendix.A}% 75
+\BOOKMARK [1][-]{section.A.1}{Git repositories for the PCM models}{appendix.A}% 75

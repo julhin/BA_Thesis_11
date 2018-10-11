@@ -19,43 +19,44 @@ After we evaluated the created case study in \autoref{ch:cocome} and \autoref{ch
 \caption{The GQM plan for the three parts of the evaluation. Each part is divided into }
 \label{GQMPlan}
 \end{figure}
-
-\section{Goal: Applicability of the introduced procedure}
+\section{Evaluation of the procedure}
+The evaluation of the procedure follows a GQM-plan (\autoref{GQMPlan}). The general layout of this section is as follows. First the goal is described, secondly, the question to verify the goal. At last, the metrics to verify if the question is answered are presented.
+\subsection{Goal: Applicability of the introduced procedure}
 The first aspect we are evaluating is the applicability of the introduced procedure to create case studies from software systems. We evaluate the applicability to verify if its possible to create case studies that later may be used to evaluate approaches for a data-based privacy analysis. The examination if the quality of the created study is sufficient is a separate part and has to be done on a case-by-case basis.  
-\subsection{Question: Is the introduced method applicable to an actual system?}
+\subsubsection{Question: Is the introduced method applicable to an actual system?}
 To verify if the goal is achieved, we check if the introduced procedure is applicable to a software system that abstracts the selling process and warehousing of a supermarket group. The metric to answer the question is a successful application to an actual system.  
-\subsubsection{Application to the CoCoME system}
+\paragraph{Metric: Application to the CoCoME system}
 The system we chose to apply the method on is CoCoME. We applied the procedure not the whole CoCoME system but only to an excerpt of it. The application to the excerpt and resulting case studies is conducted in \autoref{ch:cocome} and \autoref{ch:casestudysystem}.\\ We successfully applied the procedure to an actual system and created a case study. Therefore, we conclude that the procedure is applicable.
 %\section{Usability of the created case study for data-based privacy analysis}
 %\label{usage_DBPA}
 %The next aspect we evaluated the usability of the created case study. A case study is not useful if it does not meet criteria. The criteria ensure that the case study is in a state where it can be used for data-based data privacy analysis. To ensure this, we evaluate two different parts of the case study. First, we evaluate the defined access rights, then the defined data flows. 
-
-
-\section{Goal: Expressiveness of data-centric PCM}
+\section{Evaluation of the modeling language}
+The evaluation of the procedure follows a GQM-plan (\autoref{GQMPlan}). The general layout of this section is as follows. First the goal is described, secondly, the question to verify the goal. At last, the metrics to verify if the question is answered are presented.
+\subsection{Goal: Expressiveness of data-centric PCM}
 In this part, we evaluate the modeling language that is used for the case study. To model the case study, technically speaking, it have to be possible to add two extensions to the system model. First the data flows and ,Secondly ,the defined ACM.\\ We chose to use data-centric PCM as the modeling language % ref auf foundations
 By default it is not possible with data-centric PCM to extend models by data flows and an ACM. Therefore we went for the meta-model extension for data-centric PCM from Seifermann \cite{MMextension}. So, this part of the evaluation will mainly focus on the meta model extension for data-centric PCM. 
 
-\subsection{Is the created case study expressible with data-centric PCM ?}
+\subsubsection{Question: Is the created case study expressible with data-centric PCM ?}
 To verify, if the case study is expressible with data-centric PCM, we ar eusijgn two metrics. First we measure which elements are available and then which elements are missing.
-\subsubsection{Number of available elements to model the different types of data processing}
+\paragraph{Metric: Number of available elements to model the different types of data processing}
 The main focus is to verify, if the created case study is expressible with data-centric PCM. We check if it is possible to model all defined operations in the OpM. %ref OpM !!! 
 This is also done in a checklist manner.
 We defined four operations for the case study in the OpM: transmission of data, alternation of data, operations for relational algebra and operations to model user interaction. 
-
-\paragraph{Transmission data}
+\begin{itemize}
+\item \textbf{Transmission data} \\
 This operation describes if components transmit data. An operation for this available in the meta model extension.
 
-\paragraph{Alternation of data}
+\item \textbf{Alternation of data} \\
 This is a larger type of operations. All in all, this type describes the alternation of data. This includes
 creation of data, merging many points in, for example, into list or set, the splitting of data, like lists, in the single data, etc. With the alternation of data it can happen that the class of data is changed and thus the applying access rights change. To describe the change of the applying access rights an operation is available in the meta model extension. 
 
-\paragraph{Operations relational algebra}
+\item \textbf{Operations relational algebra} \\
 This type of data processing describes the manipulation of database or data requested from databases. The operations for this are available in the meta model extension. 
 
-\paragraph{I/O- operations}
+\item \textbf{I/O- operations} \\
 Operations to model the user interactions are also available.
-
-\subsubsection{Number of missing elements for the different }
+\end{itemize}
+\paragraph{Metric: Number of missing elements for the different }
 Currently it is not possible to store the ACM in the same system model. It is possible to define access rights for each data in each component for each role. First, for each data a new access right has to be defined and , secondly, it is not or only with disproportionate effort possible to swap out the access rights or generating the ACM form the model. For the fact, we created our case study \textit{aspect-oriented} (see \cite{}) the current modeling contradicts the concept. Therefore, a model element for the ACM is missing.
 \subsubsection{Summary: expressiveness of data-centric PCM}
 Now that the two metrics have been collected, we summarize them. The summary of the both metrics is shown in \autoref{PCM_eval_sum}. As it is shown, the only flaw is that the ACM cannot be included in the system model. 
@@ -83,7 +84,7 @@ ACM in system model & \xmark \\
 \section{Evaluation of the created case study}
 The evaluation of the created case study is split into two parts: the quality of the access rights and the covered information flow classes. Each part is already conducted in % ref und ref
 Here we shortly summarize the results of the single evaluations.
-\subsection{Access rights}
+\subsection{Evaluation of the access rights}
 Further details on this evaluation can be seen in % ref
 Evered and Bögeholz \cite{CaseStudyAndAccessrigths}%
 defined seven criteria to review the quality of defined access rights. All in all, the criteria can be divided in three categories: Specification, Comprehensibility and Implementation. \\
@@ -116,7 +117,7 @@ Implementation & Fundamental & n/a \\
 \label{AR_EVAL_SUM2}
 \end{table}  
 
-\subsection{Covered information flow classes}
+\subsection{Evaluation of the covered information flow classes}
 Further details on this evaluation can be seen in \autoref{Eval_infoFlowClasses2}.
 In the evaluation we examine which different information flows are covered by the created case study and may later be checked in a data-based privacy analysis. To define different information flow classes, we relied the problem statement \textit{Non-influence} \cite{Noninfluence}. This problem statement includes four different information flow classes: illegal information flow, information flow from high to low, direct information flow between roles and observable information flow. The summary of the covered information flow classes is displayed in 
 
