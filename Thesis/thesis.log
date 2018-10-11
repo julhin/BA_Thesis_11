@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.8.27)  11 OCT 2018 21:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.8.27)  11 OCT 2018 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1976,14 +1976,14 @@ Package biblatex Warning: The following entry could not be found
 )
 Package biblatex Info: Reference section=0 on input line 88.
 Package biblatex Info: Reference segment=0 on input line 88.
- <logos/kitlogo_en_cmyk.pdf, id=325, 198.7425pt x 92.345pt>
+ <logos/kitlogo_en_cmyk.pdf, id=305, 198.7425pt x 92.345pt>
 File: logos/kitlogo_en_cmyk.pdf Graphic file (type pdf)
 
 <use logos/kitlogo_en_cmyk.pdf>
 Package pdftex.def Info: logos/kitlogo_en_cmyk.pdf used on input line 95.
 (pdftex.def)             Requested size: 110.22453pt x 51.21504pt.
 
-<logos/sdqlogo.pdf, id=326, 558.085pt x 280.24701pt>
+<logos/sdqlogo.pdf, id=306, 558.085pt x 280.24701pt>
 File: logos/sdqlogo.pdf Graphic file (type pdf)
  <use logos/sdqlogo.pdf>
 Package pdftex.def Info: logos/sdqlogo.pdf used on input line 95.
@@ -2067,7 +2067,7 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 7.9pt on input line 95.
 
-<title-background.pdf, id=327, 597.50786pt x 845.04686pt>
+<title-background.pdf, id=307, 597.50786pt x 845.04686pt>
 File: title-background.pdf Graphic file (type pdf)
 
 <use title-background.pdf>
@@ -2158,11 +2158,15 @@ Package babel Info: Redefining ngerman shorthand "~
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 12
 1.
- (./thesis.toc [5] [6])
+ (./thesis.toc [5])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [7] [8
+
+Underfull \vbox (badness 1102) has occurred while \output is active []
+
+ [6]
+[7] [8
 
 
 ]
@@ -2178,15 +2182,15 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 12
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 12
 4.
-
-(./thesis.lot)
+ (./thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
  [11] [12
 
 
-] (./sections/introduction.tex
+]
+(./sections/introduction.tex
 chapter 1.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/b/n' will be
 (Font)              scaled to size 15.89755pt on input line 15.
@@ -2225,7 +2229,7 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/sb/n' will be
 
 pdfTeX warning: /bin/pdflatex (file ./logos/Simple_Dataflow.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
-<logos/Simple_Dataflow.pdf, id=649, 469.755pt x 252.945pt>
+<logos/Simple_Dataflow.pdf, id=621, 469.755pt x 252.945pt>
 File: logos/Simple_Dataflow.pdf Graphic file (type pdf)
 
 <use logos/Simple_Dataflow.pdf>
@@ -2240,7 +2244,7 @@ Overfull \hbox (37.27191pt too wide) in paragraph at lines 22--23
 
 
  <./logos/Simple_Dataflow.pdf>]
-<logos/SimpleCBS.pdf, id=664, 426.59375pt x 246.9225pt>
+<logos/SimpleCBS.pdf, id=637, 426.59375pt x 246.9225pt>
 File: logos/SimpleCBS.pdf Graphic file (type pdf)
 
 <use logos/SimpleCBS.pdf>
@@ -2260,7 +2264,7 @@ chapter 3.
 
 ]
 chapter 4.
-<logos/Procedure.pdf, id=733, 600.2425pt x 463.7325pt>
+<logos/Procedure.pdf, id=706, 600.2425pt x 463.7325pt>
 File: logos/Procedure.pdf Graphic file (type pdf)
 
 <use logos/Procedure.pdf>
@@ -2274,7 +2278,7 @@ lid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-LF/sb/n' will be
 (Font)              scaled to size 11.03998pt on input line 135.
  [13] [14] [15]
-<logos/GQM_accessrights.pdf, id=802, 440.64626pt x 73.27374pt>
+<logos/GQM_accessrights.pdf, id=775, 440.64626pt x 73.27374pt>
 File: logos/GQM_accessrights.pdf Graphic file (type pdf)
 
 <use logos/GQM_accessrights.pdf>
@@ -2285,7 +2289,7 @@ Package pdftex.def Info: logos/GQM_accessrights.pdf used on input line 232.
 pdfTeX warning: /bin/pdflatex (file ./logos/GQM_accessrights.pdf): PDF inclusio
 n: invalid other resource which is no dict (key 'ProcSets', type <array>); igno
 red.
->] <logos/GQM_infloFlow.pdf, id=822, 440.64626pt x 73.27374pt>
+>] <logos/GQM_infloFlow.pdf, id=795, 440.64626pt x 73.27374pt>
 File: logos/GQM_infloFlow.pdf Graphic file (type pdf)
 
 <use logos/GQM_infloFlow.pdf>
@@ -2298,7 +2302,7 @@ invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
 .
 >]
 chapter 5.
-<logos/ArchPickupShop.pdf, id=839, 563.10374pt x 680.5425pt>
+<logos/ArchPickupShop.pdf, id=812, 563.10374pt x 680.5425pt>
 File: logos/ArchPickupShop.pdf Graphic file (type pdf)
 
 <use logos/ArchPickupShop.pdf>
@@ -2318,7 +2322,7 @@ pdfTeX warning: /bin/pdflatex (file ./logos/ArchPickupShop.pdf): PDF inclusion:
  invalid other resource which is no dict (key 'ProcSets', type <array>); ignore
 d.
 >] [22] [23] [24] [25]
-<logos/ExcerptRelComps.pdf, id=925, 433.62pt x 499.8675pt>
+<logos/ExcerptRelComps.pdf, id=898, 433.62pt x 499.8675pt>
 File: logos/ExcerptRelComps.pdf Graphic file (type pdf)
 
 <use logos/ExcerptRelComps.pdf>
@@ -2359,25 +2363,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 957--991
 
 ] [35] [36]
 chapter 6.
-<logos/ExcerptUC13.pdf, id=1032, 549.05125pt x 524.96124pt>
+<logos/ExcerptUC13.pdf, id=1005, 549.05125pt x 524.96124pt>
 File: logos/ExcerptUC13.pdf Graphic file (type pdf)
 
 <use logos/ExcerptUC13.pdf>
-Package pdftex.def Info: logos/ExcerptUC13.pdf used on input line 1055.
+Package pdftex.def Info: logos/ExcerptUC13.pdf used on input line 1056.
 (pdftex.def)             Requested size: 439.2416pt x 419.96956pt.
 
-Overfull \hbox (6.75964pt too wide) in paragraph at lines 1055--1056
+Overfull \hbox (6.75964pt too wide) in paragraph at lines 1056--1057
 [][] 
  []
 
-
-Underfull \vbox (badness 2521) has occurred while \output is active []
-
- [37
+[37
 
 
-]
-[38 <./logos/ExcerptUC13.pdf
+] [38 <./logos/ExcerptUC13.pdf
 
 pdfTeX warning: /bin/pdflatex (file ./logos/ExcerptUC13.pdf): PDF inclusion: in
 valid other resource which is no dict (key 'ProcSets', type <array>); ignored.
@@ -2385,81 +2385,74 @@ valid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 
 pdfTeX warning: /bin/pdflatex (file ./logos/Data_flow_UC13.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<logos/Data_flow_UC13.pdf, id=1069, 795.97375pt x 615.29875pt>
+<logos/Data_flow_UC13.pdf, id=1044, 795.97375pt x 615.29875pt>
 File: logos/Data_flow_UC13.pdf Graphic file (type pdf)
 
 <use logos/Data_flow_UC13.pdf>
-Package pdftex.def Info: logos/Data_flow_UC13.pdf used on input line 1164.
+Package pdftex.def Info: logos/Data_flow_UC13.pdf used on input line 1165.
 (pdftex.def)             Requested size: 557.17784pt x 430.70618pt.
  [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1173--1174
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
 
  []
 
-
-Underfull \vbox (badness 5022) has occurred while \output is active []
-
- [41]
-[42 <./logos/Data_flow_UC13.pdf>] [43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1279
+[41] [42 <./logos/Data_flow_UC13.pdf>] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
 
  []
 
-
-Overfull \hbox (0.66698pt too wide) in paragraph at lines 1302--1304
+[44]
+Overfull \hbox (0.66698pt too wide) in paragraph at lines 1305--1307
 \T1/LinuxLibertineT-TLF/m/n/12 (-20) trans-mit-ted via the \T1/LinuxLibertineT-
 TLF/m/it/12 (-20) Web-ser-vice \T1/LinuxLibertineT-TLF/m/n/12 (-20) com-po-nent
  and the \T1/LinuxLibertineT-TLF/m/it/12 (-20) Trad-ingsys-tem:inventory:applic
 ation:store
  []
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 1308--1311
+
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1314
 
  []
 
-
+[45]
 
 pdfTeX warning: /bin/pdflatex (file ./logos/DF_UC14.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<logos/DF_UC14.pdf, id=1120, 794.97pt x 614.295pt>
+<logos/DF_UC14.pdf, id=1097, 794.97pt x 614.295pt>
 File: logos/DF_UC14.pdf Graphic file (type pdf)
  <use logos/DF_UC14.pdf>
-Package pdftex.def Info: logos/DF_UC14.pdf used on input line 1318.
+Package pdftex.def Info: logos/DF_UC14.pdf used on input line 1321.
 (pdftex.def)             Requested size: 635.97687pt x 491.43666pt.
 
-Overfull \hbox (58.95471pt too wide) in paragraph at lines 1318--1319
+Overfull \hbox (58.95471pt too wide) in paragraph at lines 1321--1322
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 25.97685pt on input line 1321.
+LaTeX Warning: Float too large for page by 25.97685pt on input line 1324.
 
 [46] [47 <./logos/DF_UC14.pdf>]
-Underfull \vbox (badness 2213) has occurred while \output is active []
-
- [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1371
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1374
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1372--1373
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1375--1376
 
  []
 
-) (./sections/evaluation.tex [49] [50]
+) (./sections/evaluation.tex [49] [50
+
+
+]
 chapter 7.
-<logos/OverviewEval.pdf, id=1167, 433.62pt x 716.6775pt>
+<logos/OverviewEval.pdf, id=1144, 433.62pt x 716.6775pt>
 File: logos/OverviewEval.pdf Graphic file (type pdf)
 
 <use logos/OverviewEval.pdf>
 Package pdftex.def Info: logos/OverviewEval.pdf used on input line 18.
 (pdftex.def)             Requested size: 346.89647pt x 573.34279pt.
- [51
-
-
-] [52 <./logos/OverviewEval.pdf
+ [51] [52 <./logos/OverviewEval.pdf
 
 pdfTeX warning: /bin/pdflatex (file ./logos/OverviewEval.pdf): PDF inclusion: i
 nvalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
@@ -2511,19 +2504,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 937109E0EF3EB9AA5FF8578BF5E17ABC;6159.
+(rerunfilecheck)             Checksum: 3F164189FE8CADD0CC35075A0CE9EE96;5692.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25539 strings out of 493041
- 470364 string characters out of 6137190
- 1062634 words of memory out of 5000000
- 28011 multiletter control sequences out of 15000+600000
+ 25533 strings out of 493041
+ 470258 string characters out of 6137190
+ 1062671 words of memory out of 5000000
+ 28006 multiletter control sequences out of 15000+600000
  190121 words of font info for 323 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,20n,88p,8849b,3464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,20n,88p,8849b,2100s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/share/texlive/texm
 f-dist/fonts/enc/dvips/sourcesanspro/a_ggs4wk.enc}{/usr/share/texlive/texmf-dis
@@ -2538,10 +2531,10 @@ esanspro/SourceSansPro-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/adob
 e/sourcesanspro/SourceSansPro-Semibold.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/bera/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/za
 pfding/uzdr.pfb>
-Output written on thesis.pdf (79 pages, 878363 bytes).
+Output written on thesis.pdf (79 pages, 878569 bytes).
 PDF statistics:
- 1406 PDF objects out of 1440 (max. 8388607)
- 1244 compressed objects within 13 object streams
- 289 named destinations out of 1000 (max. 500000)
- 32967 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1381 PDF objects out of 1440 (max. 8388607)
+ 1219 compressed objects within 13 object streams
+ 288 named destinations out of 1000 (max. 500000)
+ 32927 words of extra memory for PDF output out of 35830 (max. 10000000)
 
