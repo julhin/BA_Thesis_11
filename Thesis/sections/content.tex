@@ -66,7 +66,7 @@ The meta models extends the Service Effect Specification (SEFF) for a component 
 \section{Privacy approaches}
 As mentioned before, the resulting case study can be used in data-based privacy analysis. The assurance for privacy is there evaluated by using information flows. As a fundamental work, we used the publication from McLean \cite{McLean90}.
 In this McLean describes different security models for different types of systems. McLean mainly focus information flows inside the different types of systems. Also the problem statement \textit{Non-interference} is mentioned. A problem statement describes a threat to the security of system.\\
-In this thesis, we use the problem statement \textit{Non-influence} described by Oheimb \cite{Noninfluence}. Non-influence consists of two problem statements: non-interference and non-leakage. Non-interference describes that in the program flow inputs from a high level user no influence on the outputs for a low level user. Non-leakage describes that for an outsider it is not possible to determine if an certain , like the authentication of an user, has taken place.
+In this thesis, we use the problem statement \textit{Non-influence} described by Oheimb \cite{Noninfluence}. Non-influence consists of two problem statements: non-interference and non-leakage. Non-interference describes that in the program flow inputs from a high level user no influence on the outputs for a low level user. Non-leakage describes that for an outsider it is not possible to determine if an certain, like the authentication of an user, has taken place.
 \section{Case study methodology}
 Case studies are already a probate tool in software engineering.  Runeson and Höst \cite{CaseStudySoftware} categorized the research methodology \textit{case study} in the context of other related methodologies like surveys. According to Rune and Höst case studies are a exploratory method with flexible design that produces qualitative data. Exploratory in this context refers to the process of finding out what happens in a specific case and generating new ideas for general research. Often case studies are seen to as an investigation how different challenges in software engineering are tackled and a discussion of the different solutions. But, case study also may be used for our purpose: investigating a system and find out how data is processed inside. \\
 Further, Runeson and Höst have published detailed instructions on how to create a case study and what to look out for during the creation process. The general process contains five steps.
@@ -337,12 +337,12 @@ On the other hand, CoCoME is more of a minimal solution to what is actually plan
 \section{Application of the method}
 \label{apllMethod}
 After an short overview over CoCoME in the previous section, we are starting with the procedure for the creation of a case study. The presented paper from Runeson and H\"ost \cite{CaseStudySoftware}, which is could be seen as a fundamental source for the creation of case studies, states that one should use more than one source of information for the investigated case. We used as our main source of information the CoCoME tech report \cite{CoCoMETechReport} and the CoCoMe book \cite{CoCoMEBook}, were the system is described in detail. Further we used the code of the implementation \cite{CoCoME_impl}.
-. If there are differences between documentation and code, the definitions from the documentation applies. We favour the documentation over the code because CoCoME is still in development. The documentation represents a stable version of CoCoME. In the implementation it may possible that at the moment new features are tested that are later quashed.\\  We do not apply the process to the entire CoCoME system, but concentrate on only part of the system. The selected part of CoCoME are components that belong to the PickupShop (\autoref{subsec:PS}).
+If there are differences between documentation and code, the definitions from the documentation applies. We favor the documentation over the code because CoCoME is still in development. The documentation represents a stable version of CoCoME. In the implementation it may possible that at the moment new features are tested that are later quashed.\\  We do not apply the process to the entire CoCoME system, but concentrate on only part of the system. The selected part of CoCoME are components that belong to the PickupShop (\autoref{subsec:PS}).
 \subsection{P1: Investigation of the current state of CoCoME}
 %done
 In this first step we take a first look at CoCoME. We are looking for two main aspects here. First, if the system is extendable. Secondly, how wide spread the system model already is defined. The CoCoME include a book \cite{CoCoMEBook}, a tech report \cite{CoCoMETechReport} and an implementation. In the documentation CoCoME various system models for CoCoME are available and CoCoME is modeled as an component-based system and therefore extendable. So we decided that the system is in viable state.%TODO githubs referenzieren
 %TODO hier noch genauer werden \\
-In the case of CoCoME, a tech report \cite{CoCoMETechReport}, a book \cite{CoCoMEBook} and an implementation is available. For the fact, that CoCoME is modelled as a component-based system, the system is also  extendable.
+In the case of CoCoME, a tech report \cite{CoCoMETechReport}, a book \cite{CoCoMEBook} and an implementation is available. For the fact, that CoCoME is modeled as a component-based system, the system is also  extendable.
 \subsection{P2: Extract the necessary system parts for the requirements}
 \label{reqCoCoME}
 In the next step, we identify the necessary system parts in CoCoME for the six requirements listed in \autoref{req_over_cocome}. In the following, for each requirement the related system parts are extracted. 
@@ -383,7 +383,7 @@ Since the amount of data is relatively large in the investigated excerpt of CoCo
 \item Account data \\ Account related data refers to the introduced accounts with he addition of the PickupShop. It is needed that each role is registered with an account in the system. The account data type holds the \textit{username} and the credentials for an account. %We classified this data as \textbf{security relevant}, because access to account data allows to log in as the role.
 \item System data \\ In this class mainly summarizes the created queries for access to the underlying database. %Access to the issued queries allows to cause damage in a lot of different ways. It is possible to, for example, alter the database, read user informations, etc. Therefore this data is classified \textbf{security relevant}.
 \end{itemize}
-The security relevance for each class is defined according to Breier's approach \cite{assetValue}. The approach is based on the possible damage the loss of an asset could cause. So for each asset the level of damage a loss of the asset could cause is defined. Further, for each asset the dependencies to other assets is defined. Based on this, it is possible to calculate the value of an asset. This approach is not one-to-one applicable to our case, but we can use the basic idea. We evaluated for each data class the possible impact a leak of data from this class may have in CoCoME. Keep in mind that the primary goal is to protect persons that are using CoCoME. Therefore, the customer data is the most relevant and defined as \textbf{security relevant}.\\ The account data allows to log in as the specific role, which may lead to leaks of the customer's personal data. So the account data is also \textbf{security relevant}. The system data mostly consists of queries. If one may gain access to the query, it is to alter the database. So this data is especially \textbf{security relevant}, because access to it may cause damage to the customer and the enterprise in the same scale.\\ At last, the product\&sales data is not considered strictly security relevant, because in the sales process the payment process as we identify it is part of the customer data. This data becomes relevant in composite data types or if it allows traceability to customer data. Nonetheless, leak in this class may cause heavy damages to the respective enterprise, which is not in the scope of the thesis.
+The security relevance for each class is defined according to Breier's approach \cite{assetValue}. The approach is based on the possible damage the loss of an asset could cause. So for each asset the level of damage a loss of the asset could cause is defined. Further, for each asset the dependencies to other assets is defined. Based on this, it is possible to calculate the value of an asset. This approach is not one-to-one applicable to our case, but we can use the basic idea. We evaluated for each data class the possible impact a leak of data from this class may have in CoCoME. Keep in mind that the primary goal is to protect persons that are using CoCoME. Therefore, the customer data is the most relevant and defined as \textbf{security relevant}.\\ The account data allows to log in as the specific role, which may lead to leaks of the customer's personal data. So the account data is also \textbf{security relevant}. The system data mostly consists of queries. If one may gain access to the query, it is to alter the database. So this data is especially \textbf{security relevant}, because access to it may cause damage to the customer and the enterprise in the same scale.\\ At last, the product\&sales data is not considered strictly security relevant, because in the sales process the payment process as we identify it is part of the customer data. This data becomes relevant in composite data types or if it allows tractability to customer data. Nonetheless, leak in this class may cause heavy damages to the respective enterprise, which is not in the scope of the thesis.
 \subsubsection{R4: roles}
 \label{req_roles}
 CoCoME defines six different roles. Five are defined in the CoCoME tech report \cite{CoCoMETechReport}. These are the \textit{Customer}, the \textit{Cashier}, the \textit{StoreManager}, the \textit{Enterprise manager}, and the \textit{Stockmanager}. The last role, the \textit{Admin},  appears in the code. In the documentation, there is no separate description of the roles. All the responsibilities are derived from the use cases described in the documentation and/or the implementation. The key information we are looking for, are the tasks that a role performs in the context of CoCoME and which data is provided/required by the role. 
@@ -423,7 +423,7 @@ ACM & Webfrontend & PickupShop & TS:inventory & TS:inventory \\
 & & & data & application \\
 \hline 
 
-customer 
+Customer 
 & \begin{tabular}{c|c}
 customer data & 3 \\
 account data & 3 \\
@@ -455,7 +455,7 @@ system data & 4 \\
 \end{tabular}
  \\ 
 \hline 
-cashier 
+Cashier 
 & 
 %WF
  \begin{tabular}{c|c}
@@ -725,7 +725,7 @@ Since the previous requirements are  fulfilled with the defined system extension
 ACM & Webfrontend & PickupShop & TS:inventory: & TS:inventory: \\ 
 & & & data & application \\
 \hline 
-customer 
+Customer 
 %WF
 & \begin{tabular}{c|c}
 customer data & 3 \\
@@ -759,7 +759,7 @@ system data & 4 \\
 \end{tabular}
  \\ 
 \hline 
-cashier 
+Cashier 
 & 
 %WF
  \begin{tabular}{c|c}
@@ -900,37 +900,37 @@ system data & 4 \\
 \end{tabular}
  \\ 
 \hline 
-admin & 
+Admin & 
 %WF
  \begin{tabular}{c|c}
-customer data & \textbf{1} \\
-account data & \textbf{1} \\
-p\&s data & \textbf{1} \\
-system data & \textbf{1} \\
+\textbf{customer data} & \textbf{1} \\
+\textbf{account data} & \textbf{1} \\
+\textbf{p\&s data} & \textbf{1} \\
+system data & 1 \\
 \end{tabular}
 &
 %PS
  \begin{tabular}{c|c}
-customer data & \textbf{1} \\
-account data & \textbf{1} \\
-p\&s data & \textbf{1} \\
-system data & \textbf{1} \\
+\textbf{customer data} & \textbf{1} \\
+\textbf{account data} & \textbf{1} \\
+\textbf{p\&s data} & \textbf{1} \\
+system data & 1 \\
 \end{tabular}
 &
 %TS:inv:data
  \begin{tabular}{c|c}
-customer data & \textbf{1} \\
-account data & \textbf{1} \\
-p\&s data & \textbf{1} \\
-system data & \textbf{1} \\
+customer data & 1 \\
+account data & 1 \\
+p\&s data & 1 \\
+system data & 1 \\
 \end{tabular}
 &
 %TS:inv:app
  \begin{tabular}{c|c}
-customer data & \textbf{1} \\
-account data & \textbf{1} \\
-p\&s data & \textbf{1} \\
-system data & \textbf{1} \\
+customer data & 1 \\
+account data & 1\\
+p\&s data & 1 \\
+system data & 1 \\
 \end{tabular}
  \\ 
 \hline 
@@ -1045,7 +1045,7 @@ For each requirement the associated system elements are stored.
 \chapter{Case study system}
 \label{ch:casestudysystem}
 %Was wir dheir geschehen und kurz einleiten
-After we reached the milestone in the last chapter, we are going to define scenarios, evaluating the defined scenarios and concluding the procedure in this one.
+After we reached the milestone in the last chapter, we are going to define scenarios, evaluating the defined scenarios and concluding the procedure in this one. 
 \section{P6: definition of scenarios}
 A scenario is a actual characteristics from, for example, a use case. But scenarios in general describe a actual interaction by one or more users with the system. This scenarios are later converted in data flows that are added to the system model. The scenario created by using the ACM \autoref{ACM_updated} and the OpM \autoref{typeMatrix}. We defined two scenarios for CoCoME.\\ The basic structure for each scenario is: First, the scenario is briefly described. Then the specific data types for the scenario are identified. We then describe the behavior of the individual components in a scenario. Finally, the resulting data flow is shown. \\
 After the generated data flows have been added to the system model, they are evaluated based on the number of covered information flow classes. \\
@@ -1378,4 +1378,4 @@ Given the fact, that not all information flow classes are covered, we could say 
 \section{Discussion}
 %TODO general discussion warum dinge so gemacht wurden wie sie gemacht wurden !!!!!
 % warum wir die query explizit definiert, warum wurde die DF notation angepasst, 
-In this section, we are going to discuss the single design decision that were made during the creation of the case study. One aspect is, that the 
+In this section, we are going to discuss the single design decision that were made during the creation of the case study. The query is explicitly defined in the data flow diagrams. This representation was chosen, because, conceptual speaking, the changes in this process its class. With the changing of the class, the access rights may change. Therefore, the change is stored in the diagram. The second reason is, the query is explicitly defined, because of the representation of the data flow, as mentioned, differs from the described in \autoref{ch:basiscs}. The processes in the data flow store the component in which the data is processed and the operation with which the data is processed.
